@@ -192,3 +192,19 @@ A singular matrix has no inverse. An ill-conditioned matrix may be invertible bu
 3. Verify that normalized dot-product scores equal cosine scores.
 4. Reverse scaling and rotation order and compare the resulting coordinates.
 5. Generate synthetic vectors in 2, 10, 100, and 1,000 dimensions and compare nearest-to-farthest distance ratios.
+
+## Visual Explorer
+
+The Streamlit application in `visualizations/app.py` connects these formulas to interactive geometry. Its numerical operations live in `visualizations/math_utils.py`, independent of the interface, and are covered by unit tests.
+
+The applied examples are deliberately synthetic:
+
+- feature scaling shows how a large-range coordinate can determine the nearest neighbor;
+- handcrafted embedding vectors show why cosine similarity and dot product may rank candidates differently;
+- seeded Gaussian vectors illustrate distance concentration without claiming a universal benchmark.
+
+Run it from the repository root:
+
+```bash
+python -m streamlit run 00-foundations/02-linear-algebra-vectors-matrices/visualizations/app.py
+```

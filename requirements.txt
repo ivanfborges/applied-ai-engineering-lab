@@ -1,6 +1,9 @@
 numpy
 pandas
 matplotlib
+plotly
+streamlit
+pillow
 scikit-learn
 jupyter
 ipykernel
