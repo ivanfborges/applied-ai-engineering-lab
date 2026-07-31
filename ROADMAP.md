@@ -1,6 +1,6 @@
 # Study Roadmap — Data Science and Applied AI Engineering
 
-This roadmap is designed for a daily 30–60 minute study routine. It can be followed sequentially, but topics can be reordered depending on interview priorities.
+This roadmap is designed for a daily 30–60 minute study routine. It can be followed sequentially, but topics can be reordered depending on professional development priorities.
 
 The roadmap is intentionally dense. Some topics may take more than one day if deeper implementation or portfolio work is needed.
 

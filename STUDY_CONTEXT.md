@@ -22,7 +22,7 @@ My professional experience includes:
 - Python and SQL;
 - production-oriented data and AI systems.
 
-I am looking for new opportunities and have been doing several interviews. Many interviews are theoretical, so I want to study consistently for 30–60 minutes per day to become stronger in both concepts and practice.
+I want to study consistently for 30–60 minutes per day to strengthen my theoretical foundations, improve my technical communication, and deepen my ability to design reliable AI systems.
 
 ## Target Positions
 
