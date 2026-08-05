@@ -25,3 +25,17 @@ data/interim/
 data/processed/
 models/
 outputs/
+
+# Curated Day 7 visual-learning assets are part of the public study module.
+!00-foundations/07-probability-essentials/outputs/
+00-foundations/07-probability-essentials/outputs/*
+!00-foundations/07-probability-essentials/outputs/event_operations.png
+!00-foundations/07-probability-essentials/outputs/conditional_probability.gif
+!00-foundations/07-probability-essentials/outputs/independence_comparison.png
+!00-foundations/07-probability-essentials/outputs/bayes_base_rate.gif
+!00-foundations/07-probability-essentials/outputs/bayes_surface.png
+!00-foundations/07-probability-essentials/outputs/expected_value_balance.png
+!00-foundations/07-probability-essentials/outputs/variance_spread.gif
+!00-foundations/07-probability-essentials/outputs/bernoulli_variance.png
+!00-foundations/07-probability-essentials/outputs/monte_carlo_convergence.gif
+!00-foundations/07-probability-essentials/outputs/expected_cost.png

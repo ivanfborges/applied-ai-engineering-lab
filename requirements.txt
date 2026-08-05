@@ -2,7 +2,7 @@ numpy
 pandas
 matplotlib
 plotly
-streamlit
+streamlit>=1.60
 pillow
 scikit-learn
 jupyter
