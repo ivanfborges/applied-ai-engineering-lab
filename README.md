@@ -6,14 +6,14 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 8 of 140 completed — Foundations in progress (8 of 15 topics).**
+**Day 9 of 140 completed — Foundations in progress (9 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
-optimization, probability, and probability distributions. Classical Machine
-Learning starts on Day 16.
+optimization, probability, probability distributions, and statistically
+rigorous exploratory analysis. Classical Machine Learning starts on Day 16.
 
-- Latest topic: [Probability Distributions Visual Laboratory](00-foundations/08-probability-distributions/)
+- Latest topic: [Exploratory Data Analysis with Statistical Rigor](00-foundations/09-exploratory-data-analysis/)
 - Current module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -44,12 +44,13 @@ published only after it contains a reviewed study.
 | 6 | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | Validated optimizer and convergence diagnostics |
 | 7 | [Probability essentials](00-foundations/07-probability-essentials/) | Streamlit laboratory, curated assets, and tests |
 | 8 | [Probability distributions](00-foundations/08-probability-distributions/) | Dashboard, simulations, estimators, and visual assets |
+| 9 | [Exploratory data analysis with statistical rigor](00-foundations/09-exploratory-data-analysis/) | Controlled synthetic experiment and tested descriptive-statistics core |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 8 completed** |
+| 0 | Foundations | 1–15 | **In progress — Day 9 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
