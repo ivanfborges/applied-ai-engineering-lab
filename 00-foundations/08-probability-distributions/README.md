@@ -69,6 +69,9 @@ unacceptable p99.
 ├── interview_questions.md
 ├── references.md
 ├── requirements.txt
+├── tests/
+│   ├── test_numerical_core.py
+│   └── test_streamlit_app.py
 └── outputs/
     ├── static/
     │   ├── distribution_overview.png
@@ -120,6 +123,7 @@ below render directly on GitHub.
   with `PillowWriter`.
 - `interactive_dashboard.py`: Streamlit and Plotly laboratory with bounded
   cached simulations.
+- `tests/`: numerical regression tests and a Streamlit `AppTest` smoke test.
 - `interview_questions.md`: senior-level conceptual, mathematical, practical,
   and system-design Q&A.
 - `references.md`: books and authoritative technical documentation.
@@ -284,6 +288,15 @@ Streamlit prints the local URL, normally:
 ```text
 http://localhost:8501
 ```
+
+### Tests
+
+```powershell
+python -m unittest discover -s tests -v
+```
+
+The suite checks the explicit estimators, validation and simulation utilities,
+and the default Streamlit view without starting a browser or server.
 
 ### Notebook
 
