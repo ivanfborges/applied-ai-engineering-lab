@@ -62,7 +62,7 @@ and a decision rule that reflects operational costs.
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Run the main experiment:
@@ -151,12 +151,12 @@ source .venv/bin/activate
 
 ### Install dependencies
 
-The repository-level `requirements.txt` is shared across topics and already
+The repository-level `pyproject.toml` is the canonical dependency source and
 contains NumPy, pandas, Matplotlib, Plotly, Streamlit, and Pillow:
 
 ```bash
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Move into the topic folder:
@@ -228,7 +228,7 @@ python -m unittest discover -s tests
 - **An animation is missing:** run `python generate_visual_assets.py`. The app
   shows an actionable message instead of crashing when an asset is absent.
 - **Streamlit is not found:** activate the repository virtual environment and
-  run `pip install -r requirements.txt` from the repository root.
+  run `python -m pip install -e ".[dev]"` from the repository root.
 - **A browser does not open:** use the local URL printed by Streamlit, normally
   `http://localhost:8501`.
 - **Port 8501 is busy:** run

@@ -11,6 +11,13 @@ applied-ai-engineering-lab/
 ├── LICENSE
 ├── ROADMAP.md
 ├── REPO_STRUCTURE.md
+├── pyproject.toml
+├── requirements.txt
+├── scripts/
+│   └── validate_repo.py
+├── .github/
+│   └── workflows/
+│       └── quality.yml
 ├── docs/
 │   └── methodology.md
 │
@@ -27,6 +34,10 @@ applied-ai-engineering-lab/
 ├── 10-interview-preparation/
 └── portfolio-projects/
 ```
+
+`pyproject.toml` is the canonical dependency and test-tool configuration.
+`requirements.txt` is only a compatibility entry point. The validation script
+provides the same syntax, link, test, and app-smoke commands used by CI.
 
 Only modules with reviewed public content need to exist in Git. The complete
 future sequence belongs in `ROADMAP.md`; empty placeholder directories should

@@ -39,7 +39,7 @@ In production semantic search, query and document vectors must use compatible mo
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Run the NumPy example:

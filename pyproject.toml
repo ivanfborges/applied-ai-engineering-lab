@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "applied-ai-engineering-lab"
+version = "0.1.0"
+description = "A structured study curriculum and technical portfolio for Data Science and Applied AI Engineering."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = [
+    "numpy>=1.26,<3",
+    "pandas>=2.1,<4",
+    "matplotlib>=3.8,<4",
+    "scipy>=1.11,<2",
+    "scikit-learn>=1.4,<2",
+    "plotly>=5.18,<7",
+    "streamlit>=1.60,<2",
+    "Pillow>=10,<13",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<10",
+]
+notebooks = [
+    "jupyter>=1,<2",
+    "ipykernel>=6,<8",
+]
+
+[tool.setuptools]
+packages = []
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
+testpaths = ["00-foundations"]
+python_files = ["test_*.py"]

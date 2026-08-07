@@ -68,7 +68,6 @@ unacceptable p99.
 ├── interactive_dashboard.py
 ├── interview_questions.md
 ├── references.md
-├── requirements.txt
 ├── tests/
 │   ├── test_numerical_core.py
 │   └── test_streamlit_app.py
@@ -200,17 +199,17 @@ Python 3.11 or newer is recommended.
 
 ### Windows PowerShell
 
-From this topic directory:
+From the repository root:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
-If you already use the repository-level virtual environment, activate that
-environment and install this topic's requirements without creating another.
+If the repository-level virtual environment already exists, activate it and
+run only the installation command.
 
 ### Linux or macOS
 
@@ -218,7 +217,7 @@ environment and install this topic's requirements without creating another.
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install --upgrade pip
-pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
 ## How to Run

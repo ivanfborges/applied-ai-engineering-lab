@@ -68,10 +68,10 @@ Linux or macOS:
 source .venv/bin/activate
 ```
 
-Install the dependencies:
+From the repository root, install the shared dependencies:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
 ## Generate the Assets

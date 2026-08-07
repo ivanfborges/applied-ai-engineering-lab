@@ -58,7 +58,7 @@ memory, latency, and reconstruction metrics.
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
 Run the scikit-learn example:
@@ -83,10 +83,10 @@ animations, 3D PCA projections, preprocessing comparisons, and low-rank SVD
 reconstructions. Every dataset and image is generated synthetically with a
 fixed seed.
 
-From this Day 4 folder, install the local requirements and generate all assets:
+From the Day 4 folder, generate all assets after completing the repository-level
+installation:
 
 ```bash
-python -m pip install -r requirements.txt
 python -m visual_lab.generate_visuals --all
 ```
 

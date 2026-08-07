@@ -34,7 +34,6 @@ Linear algebra is the computational language of feature matrices, linear models,
 - `from_scratch.py`: educational implementations of core vector and matrix operations without NumPy.
 - `interview_questions.md`: senior-level conceptual, mathematical, practical, and system-design Q&A.
 - `references.md`: authoritative documentation and further reading.
-- `requirements.txt`: focused dependencies for this module.
 - `visualizations/app.py`: Streamlit entry point for the complete visual explorer.
 - `visualizations/components.py`: reusable Plotly figure builders.
 - `visualizations/math_utils.py`: tested NumPy operations used by the interface.
@@ -47,13 +46,7 @@ Linear algebra is the computational language of feature matrices, linear models,
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
-```
-
-Alternatively, install only the dependencies for this topic:
-
-```bash
-python -m pip install -r 00-foundations/02-linear-algebra-vectors-matrices/requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 ### Run the visual explorer

@@ -33,7 +33,7 @@ Senior practitioners must distinguish a model capability from a production syste
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Run the end-to-end example:

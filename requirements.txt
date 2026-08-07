@@ -1,9 +1,3 @@
-numpy
-pandas
-matplotlib
-plotly
-streamlit>=1.60
-pillow
-scikit-learn
-jupyter
-ipykernel
+# Compatibility entry point. Canonical dependencies and version bounds live in
+# pyproject.toml. This installs runtime, test, and notebook dependencies.
+-e .[dev,notebooks]
