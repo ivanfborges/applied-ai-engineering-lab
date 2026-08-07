@@ -47,7 +47,8 @@ memory, latency, and reconstruction metrics.
 - `notebook.ipynb`: lightweight interactive entrypoint into the reusable visual
   package.
 - `visual_lab/`: modular static, animated, Plotly, and Streamlit learning lab.
-- `outputs/`: generated PNG, GIF, and standalone HTML assets.
+- `outputs/`: generated PNG, GIF, and standalone HTML assets. Four selected
+  previews are versioned; the remaining artifacts are generated on demand.
 - `interview_questions.md`: senior-level conceptual, mathematical, practical,
   and production questions with answers.
 - `references.md`: books, papers, course material, and official documentation.
@@ -128,11 +129,15 @@ commands, the conceptual purpose of every visual, and its limitations.
 
 ![Low-rank SVD reconstruction](outputs/static/svd_low_rank_reconstruction.png)
 
-Interactive standalone views:
+Interactive standalone views are generated locally and intentionally not
+versioned:
 
-- [3D PCA axes](outputs/interactive/pca_3d_axes.html)
-- [3D-to-2D PCA projection](outputs/interactive/pca_projection_3d_to_2d.html)
-- [SVD rank slider](outputs/interactive/svd_rank_slider.html)
+- `outputs/interactive/pca_3d_axes.html`
+- `outputs/interactive/pca_projection_3d_to_2d.html`
+- `outputs/interactive/svd_rank_slider.html`
+
+Generate them from this Day 4 folder with
+`python -m visual_lab.generate_visuals --all`.
 
 ## Key Takeaways
 
