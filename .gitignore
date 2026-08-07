@@ -4,6 +4,16 @@ __pycache__/
 .venv/
 venv/
 env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+.agents
 
 # Jupyter
 .ipynb_checkpoints/
@@ -16,8 +26,14 @@ env/
 # Environment/secrets
 .env
 *.env
+.env.*
+!.env.example
 secrets.json
 credentials.json
+.streamlit/secrets.toml
+
+# Local study material and portfolio-review working files
+.local/
 
 # Data artifacts
 data/raw/
@@ -25,6 +41,18 @@ data/interim/
 data/processed/
 models/
 outputs/
+
+# Curated Day 4 previews referenced by the public documentation.
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/
+00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/*
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/animations/
+00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/animations/*
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/animations/eigenvectors_transformation.gif
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/animations/svd_geometric_decomposition.gif
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/static/
+00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/static/*
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/static/covariance_and_principal_components.png
+!00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/static/svd_low_rank_reconstruction.png
 
 # Curated Day 7 visual-learning assets are part of the public study module.
 !00-foundations/07-probability-essentials/outputs/
