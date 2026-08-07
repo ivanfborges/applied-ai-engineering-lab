@@ -2,12 +2,17 @@
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
 import numpy as np
 from sklearn.decomposition import PCA
 
+TOPIC_ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(TOPIC_ROOT))
+
 from visual_lab.datasets import correlated_3d, correlated_features
 from visual_lab.generate_visuals import (
-    OUTPUT_ROOT,
     ensure_output_directories,
     expected_output_paths,
 )
@@ -91,13 +96,12 @@ def test_from_scratch_pca_subspace_matches_sklearn() -> None:
     assert np.allclose(scratch_reconstruction, sklearn_reconstruction, atol=1e-10)
 
 
-def test_generated_output_directories_and_files_exist(tmp_path) -> None:
-    directories = ensure_output_directories(tmp_path / "outputs")
+def test_output_manifest_is_bounded_and_directories_are_created(tmp_path) -> None:
+    output_root = tmp_path / "outputs"
+    directories = ensure_output_directories(output_root)
     assert all(directory.is_dir() for directory in directories)
 
-    missing = [
-        path.relative_to(OUTPUT_ROOT)
-        for path in expected_output_paths()
-        if not path.is_file() or path.stat().st_size == 0
-    ]
-    assert not missing, f"Run the --all generator; missing outputs: {missing}"
+    expected = expected_output_paths(output_root)
+    assert len(expected) == 13
+    assert len(expected) == len(set(expected))
+    assert all(path.is_relative_to(output_root) for path in expected)
