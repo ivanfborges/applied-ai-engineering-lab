@@ -4,6 +4,8 @@ A public, AI-assisted study curriculum and technical portfolio connecting
 theory, executable code, visual experiments, interview preparation, and
 production-oriented reasoning across Data Science and Applied AI Engineering.
 
+[![Repository quality](https://github.com/ivanfborges/applied-ai-engineering-lab/actions/workflows/quality.yml/badge.svg)](https://github.com/ivanfborges/applied-ai-engineering-lab/actions/workflows/quality.yml)
+
 ## Current Status
 
 **Day 9 of 140 completed — Foundations in progress (9 of 15 topics).**
@@ -85,11 +87,14 @@ Linux or macOS:
 source .venv/bin/activate
 ```
 
-Install the shared dependencies:
+Install the shared runtime, test, and notebook dependencies from the canonical
+`pyproject.toml`:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
+
+`requirements.txt` remains as a compatibility shortcut for the same command.
 
 Run a lightweight example:
 
@@ -103,13 +108,14 @@ Run a first-principles implementation:
 python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
 ```
 
-Run the Probability Essentials tests:
+Run all repository quality checks:
 
 ```bash
-python -m unittest discover \
-  -s 00-foundations/07-probability-essentials/tests \
-  -p "test_*.py"
+python scripts/validate_repo.py all
 ```
+
+The syntax, internal-link, test, and Streamlit smoke-test checks can also be
+run separately with `syntax`, `links`, `tests`, or `apps` in place of `all`.
 
 Start a local visual laboratory:
 
@@ -117,9 +123,9 @@ Start a local visual laboratory:
 streamlit run 00-foundations/07-probability-essentials/visual_lab.py
 ```
 
-Some larger topics have their own `requirements.txt`; use the topic README when
-running a notebook, dashboard, or asset generator that needs additional
-dependencies.
+Dependencies and version bounds are centralized in `pyproject.toml`. Topic
+READMEs document execution commands but do not maintain independent dependency
+lists.
 
 ## Study Format
 
