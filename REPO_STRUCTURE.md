@@ -8,42 +8,43 @@ This document defines the expected structure for the Applied AI Engineering Lab 
 applied-ai-engineering-lab/
 │
 ├── README.md
-├── START_HERE.md
+├── LICENSE
 ├── ROADMAP.md
-├── STUDY_CONTEXT.md
 ├── REPO_STRUCTURE.md
-├── DAILY_STUDY_PROMPT.md
-├── DAILY_STUDY_PROMPT_SHORT.md
-├── CODEX_PROMPT.md
-├── LINKEDIN_STRATEGY.md
-├── GITHUB_WORKFLOW.md
+├── docs/
+│   └── methodology.md
 │
 ├── 00-foundations/
-├── 01-statistics-experimentation/
-├── 02-classical-machine-learning/
-├── 03-unsupervised-recommender-systems/
+├── 01-classical-machine-learning/
+├── 02-unsupervised-recommender-systems/
+├── 03-statistics-experimentation/
 ├── 04-deep-learning/
 ├── 05-transformers-llms/
 ├── 06-rag-semantic-search/
 ├── 07-agents/
 ├── 08-mlops-llmops/
 ├── 09-ai-system-design/
+├── 10-interview-preparation/
 └── portfolio-projects/
 ```
+
+Only modules with reviewed public content need to exist in Git. The complete
+future sequence belongs in `ROADMAP.md`; empty placeholder directories should
+not be committed.
 
 ## Module Purpose
 
 ### `00-foundations/`
 Mathematics, probability, statistics, optimization and basic foundations required for ML and AI.
 
-### `01-statistics-experimentation/`
-Statistical inference, A/B testing, causal inference and product metrics.
-
-### `02-classical-machine-learning/`
+### `01-classical-machine-learning/`
 Supervised ML algorithms, model evaluation, feature engineering and explainability.
 
-### `03-unsupervised-recommender-systems/`
+### `02-unsupervised-recommender-systems/`
 Clustering, dimensionality reduction, anomaly detection and recommendation systems.
+
+### `03-statistics-experimentation/`
+Statistical inference, A/B testing, causal inference and product metrics.
 
 ### `04-deep-learning/`
 Neural networks, backpropagation, optimizers, CNNs, RNNs, autoencoders and PyTorch practice.
@@ -63,6 +64,9 @@ Model serving, monitoring, evals, CI/CD, cost, latency, security and cloud archi
 ### `09-ai-system-design/`
 System design exercises for AI products and senior-level interviews.
 
+### `10-interview-preparation/`
+Cross-topic technical interview review, mock interviews and technical storytelling.
+
 ### `portfolio-projects/`
 Larger projects extracted from the study track and polished as standalone portfolio assets.
 
@@ -75,7 +79,7 @@ Use numeric prefixes and lowercase kebab-case names.
 Examples:
 
 ```text
-02-classical-machine-learning/
+01-classical-machine-learning/
 ├── 01-linear-regression/
 ├── 02-logistic-regression/
 ├── 03-decision-trees/
@@ -120,6 +124,39 @@ references.md
 ```
 
 Not every file is mandatory for every topic.
+
+## Public and Local Study Material
+
+The public topic folder should contain reviewed material only. Raw study-session
+outputs and publication drafts remain useful locally, but they are not finished
+portfolio artifacts.
+
+Store local-only material under the ignored `.local/` directory:
+
+```text
+.local/
+├── workflow/
+│   ├── STUDY_CONTEXT.md
+│   ├── DAILY_STUDY_PROMPT.md
+│   ├── DAILY_STUDY_PROMPT_SHORT.md
+│   ├── CODEX_PROMPT.md
+│   ├── VISUAL_WORKFLOW.md
+│   └── GITHUB_WORKFLOW.md
+├── raw-study/
+├── linkedin-drafts/
+├── visual-prompts/
+├── archive/
+└── portfolio-review/
+```
+
+The author manually saves `day*_whole.md` working material under
+`.local/raw-study/` and manually extracts optional LinkedIn drafts under
+`.local/linkedin-drafts/`. Codex may read those sources but should not create,
+move, rewrite, or publish them. Move reusable technical insights into public
+topic documentation only after review.
+
+The public [methodology](docs/methodology.md) explains the publication process
+without exposing personal context, operational prompts, or private drafts.
 
 ### `README.md`
 Short, professional English summary.

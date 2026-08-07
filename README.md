@@ -1,142 +1,201 @@
 # Applied AI Engineering Lab
 
-A public learning and portfolio repository focused on **Data Science**, **Machine Learning**, **Deep Learning**, **LLMs**, **RAG**, **AI Agents**, **MLOps/LLMOps**, and **AI System Design**.
+A public, AI-assisted study curriculum and technical portfolio connecting
+theory, executable code, visual experiments, interview preparation, and
+production-oriented reasoning across Data Science and Applied AI Engineering.
 
-This repository is designed as a structured technical lab for strengthening senior-level theoretical foundations while building practical, interview-ready and portfolio-ready examples.
+## Current Status
 
-## Purpose
+**Day 8 of 140 completed — Foundations in progress (8 of 15 topics).**
 
-The goal is to document a continuous study path that connects:
+The repository is being built sequentially as the roadmap is studied. The
+current implementation covers AI system boundaries, linear algebra, calculus,
+optimization, probability, and probability distributions. Classical Machine
+Learning starts on Day 16.
 
-- mathematical and statistical foundations;
-- classical machine learning theory and implementation;
-- deep learning and neural network internals;
-- NLP, Transformers and Large Language Models;
-- embeddings, semantic search and Retrieval-Augmented Generation;
-- conversational agents and tool-using systems;
-- MLOps, LLMOps, monitoring, evaluation and production readiness;
-- AI system design for real-world business problems.
+- Latest topic: [Probability Distributions Visual Laboratory](00-foundations/08-probability-distributions/)
+- Current module: [Foundations](00-foundations/)
+- Full plan: [140-day study roadmap](ROADMAP.md)
 
-The repository is not intended to be a collection of disconnected notebooks. It is a structured technical portfolio showing the ability to understand, explain, implement and productionize AI systems.
+Planned modules are not presented as completed work. A module directory is
+published only after it contains a reviewed study.
 
-## Target Roles
+## Highlights
 
-This lab is aligned with interviews and practical expectations for roles such as:
+| Study | What it demonstrates | Entry points |
+|---|---|---|
+| [AI, ML, and GenAI Landscape](00-foundations/01-ai-ml-genai-landscape/) | System boundaries, abstention, retrieval, routing, and telemetry without hiding the underlying components behind an LLM | [`example.py`](00-foundations/01-ai-ml-genai-landscape/example.py), [`notes.md`](00-foundations/01-ai-ml-genai-landscape/notes.md) |
+| [Vectors and Matrices](00-foundations/02-linear-algebra-vectors-matrices/) | Vector retrieval metrics, transformation order, tested numerical helpers, and an interactive visual explorer | [`visualizations/app.py`](00-foundations/02-linear-algebra-vectors-matrices/visualizations/app.py), [`tests/`](00-foundations/02-linear-algebra-vectors-matrices/tests/) |
+| [Eigenvalues, PCA, and SVD](00-foundations/04-eigenvalues-eigenvectors-pca-svd/) | PCA/SVD equivalence, reconstruction, numerical interpretation, static assets, animations, and an interactive laboratory | [`visual_lab/`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/visual_lab/), [`notebook.ipynb`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/notebook.ipynb) |
+| [Probability Essentials](00-foundations/07-probability-essentials/) | Bayes, base rates, expected cost, Monte Carlo convergence, visual explanations, and unit-tested probability utilities | [`visual_lab.py`](00-foundations/07-probability-essentials/visual_lab.py), [`VISUAL_GUIDE.md`](00-foundations/07-probability-essentials/VISUAL_GUIDE.md) |
+| [Probability Distributions](00-foundations/08-probability-distributions/) | Distribution assumptions, simulation, likelihood connections, tail behavior, interactive parameter surfaces, and production-oriented examples | [`interactive_dashboard.py`](00-foundations/08-probability-distributions/interactive_dashboard.py), [`notes.md`](00-foundations/08-probability-distributions/notes.md) |
 
-- Senior Data Scientist
-- Machine Learning Engineer
-- Applied AI Engineer
-- AI Engineer
-- GenAI Engineer
-- Forward Deployed Engineer
-- LLM Engineer
-- AI Solutions Architect
+![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
 
-## Repository Structure
+## Completed Studies
 
-```text
-applied-ai-engineering-lab/
-├── README.md
-├── START_HERE.md
-├── ROADMAP.md
-├── STUDY_CONTEXT.md
-├── REPO_STRUCTURE.md
-├── DAILY_STUDY_PROMPT.md
-├── DAILY_STUDY_PROMPT_SHORT.md
-├── CODEX_PROMPT.md
-├── LINKEDIN_STRATEGY.md
-├── GITHUB_WORKFLOW.md
-│
-├── 00-foundations/
-├── 01-statistics-experimentation/
-├── 02-classical-machine-learning/
-├── 03-unsupervised-recommender-systems/
-├── 04-deep-learning/
-├── 05-transformers-llms/
-├── 06-rag-semantic-search/
-├── 07-agents/
-├── 08-mlops-llmops/
-├── 09-ai-system-design/
-└── portfolio-projects/
+| Day | Topic | Main evidence |
+|---:|---|---|
+| 1 | [AI/ML/GenAI landscape](00-foundations/01-ai-ml-genai-landscape/) | Executable routing and retrieval example |
+| 2 | [Vectors and matrices](00-foundations/02-linear-algebra-vectors-matrices/) | Visual explorer, GIFs, and unit tests |
+| 3 | [Vector spaces, bases, and projections](00-foundations/03-vector-spaces-bases-projections/) | Projection implementations and visualization generators |
+| 4 | [Eigenvalues, eigenvectors, PCA, and SVD](00-foundations/04-eigenvalues-eigenvectors-pca-svd/) | Visual laboratory, notebook, and numerical tests |
+| 5 | [Calculus for ML](00-foundations/05-calculus-for-ml/) | Gradient checks and guided visual exploration |
+| 6 | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | Validated optimizer and convergence diagnostics |
+| 7 | [Probability essentials](00-foundations/07-probability-essentials/) | Streamlit laboratory, curated assets, and tests |
+| 8 | [Probability distributions](00-foundations/08-probability-distributions/) | Dashboard, simulations, estimators, and visual assets |
+
+## Roadmap
+
+| Sequence | Module | Days | Status |
+|---:|---|---:|---|
+| 0 | Foundations | 1–15 | **In progress — Day 8 completed** |
+| 1 | Classical Machine Learning | 16–35 | Planned |
+| 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
+| 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
+| 4 | Deep Learning | 53–62 | Planned |
+| 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
+| 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
+| 7 | Agents and Agentic Workflows | 89–100 | Planned |
+| 8 | MLOps and LLMOps | 101–114 | Planned |
+| 9 | AI System Design | 115–122 | Planned |
+| 10 | Interview Preparation | 123–132 | Planned |
+| 11 | Portfolio Projects | 133–140 | Planned |
+
+See [ROADMAP.md](ROADMAP.md) for the complete day-by-day plan.
+
+## Quick Start
+
+Create and activate a virtual environment from the repository root:
+
+```bash
+python -m venv .venv
 ```
 
-Each study topic should ideally contain:
+Windows PowerShell:
+
+```powershell
+.venv\Scripts\Activate.ps1
+```
+
+Linux or macOS:
+
+```bash
+source .venv/bin/activate
+```
+
+Install the shared dependencies:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+Run a lightweight example:
+
+```bash
+python 00-foundations/01-ai-ml-genai-landscape/example.py
+```
+
+Run a first-principles implementation:
+
+```bash
+python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
+```
+
+Run the Probability Essentials tests:
+
+```bash
+python -m unittest discover \
+  -s 00-foundations/07-probability-essentials/tests \
+  -p "test_*.py"
+```
+
+Start a local visual laboratory:
+
+```bash
+streamlit run 00-foundations/07-probability-essentials/visual_lab.py
+```
+
+Some larger topics have their own `requirements.txt`; use the topic README when
+running a notebook, dashboard, or asset generator that needs additional
+dependencies.
+
+## Study Format
+
+Published topics are curated from a broader study session. Depending on the
+subject, a topic may contain:
 
 ```text
 README.md
 notes.md
-notebook.ipynb
 example.py
 from_scratch.py
+notebook.ipynb
 interview_questions.md
 references.md
+tests/
+visualizations/
 ```
 
-Not every topic requires all files. For example, some theoretical topics may not need `from_scratch.py`, while implementation-heavy topics should include it.
+Not every topic needs every file. The structure should follow the technical
+question rather than force a template.
 
-## Daily Study Format
+The intended evidence is:
 
-Each topic is designed to be studied in **30–60 minutes**, following this structure:
+- theory connected to executable behavior;
+- first-principles implementations where they clarify internals;
+- comparisons, failure modes, assumptions, and trade-offs;
+- deterministic synthetic experiments without invented benchmarks;
+- tests for reusable numerical logic;
+- selected visual assets when they materially improve understanding;
+- interview questions linked back to the underlying implementation;
+- observations and conclusions from experiments that were actually run.
 
-1. Executive overview
-2. Intuition
-3. Theoretical foundations
-4. Mathematical/statistical/logical foundations
-5. Practical applicability
-6. Common mistakes and pitfalls
-7. Comparisons with related methods
-8. Python example
-9. From-scratch implementation when useful
-10. Experiments to run
-11. Senior interview questions
-12. Interview-ready explanation
-13. GitHub file structure
-14. Short README in English
-15. LinkedIn post idea
-16. 30–60 minute checklist
+## Repository Layout
 
-## Philosophy
+```text
+applied-ai-engineering-lab/
+├── 00-foundations/
+├── 01-classical-machine-learning/          # published when started
+├── 02-unsupervised-recommender-systems/    # published when started
+├── 03-statistics-experimentation/          # published when started
+├── 04-deep-learning/                       # published when started
+├── 05-transformers-llms/                   # published when started
+├── 06-rag-semantic-search/                 # published when started
+├── 07-agents/                              # published when started
+├── 08-mlops-llmops/                        # published when started
+├── 09-ai-system-design/                    # published when started
+├── 10-interview-preparation/               # published when started
+└── portfolio-projects/                     # Days 133–140
+```
 
-The objective is not only to know how to use tools, but to understand:
+The public Git tree may contain only the modules that already have content.
+Future directories remain part of the roadmap without being presented as
+finished work.
 
-- why a method works;
-- when it fails;
-- what trade-offs it introduces;
-- how to evaluate it;
-- how to explain it in an interview;
-- how to apply it in production.
+## Scope and Reproducibility
 
-Senior-level AI work requires more than implementing models. It requires connecting theory, architecture, reliability, business impact and communication.
+- Examples run locally and do not require paid services or credentials.
+- Current studies use synthetic or code-defined data.
+- Generated outputs are ignored by default; only selected documentation
+  previews are versioned.
+- Visual and educational scripts are not production-grade library
+  replacements.
+- Reported values are demonstrations, not benchmark claims.
+- Deployment will be considered only when it adds technical evidence without
+  requiring unnecessary ongoing cost.
 
-## Suggested Workflow
+## AI-Assisted Workflow
 
-1. Study the daily topic using `DAILY_STUDY_PROMPT.md` in ChatGPT.
-2. Use the generated study content as input for Codex in VSCode.
-3. Ask Codex to create or update the topic folder following `CODEX_PROMPT.md`.
-4. Review the generated files manually.
-5. Run code locally.
-6. Commit with a clear message.
-7. Push to GitHub.
-8. Once or twice per week, publish a short LinkedIn post based on the strongest insight.
+AI tools were used as copilots for research, drafting, code suggestions, and
+editorial refinement. All published material is reviewed and validated by the
+author, who remains responsible for the technical decisions, experiments,
+interpretations, and conclusions.
 
-## Tech Stack
-
-Preferred stack for examples:
-
-- Python
-- NumPy
-- pandas
-- scikit-learn
-- matplotlib
-- PyTorch
-- FastAPI
-- SQL
-- BigQuery
-- Google Cloud Platform
-- Vertex AI
-- Vector Search / FAISS / pgvector when relevant
-- LangChain / LangGraph / LlamaIndex when relevant
+See [Study and Publication Methodology](docs/methodology.md) for the public
+workflow and curation principles.
 
 ## License
 
-This repository is intended for public learning and portfolio demonstration. Choose a license before publishing reusable code.
+This repository is available under the [MIT License](LICENSE). The examples and
+study material may be reused with attribution and without warranty.
