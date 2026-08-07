@@ -101,3 +101,19 @@ outputs/
 !00-foundations/08-probability-distributions/outputs/html/lognormal_surface.html
 !00-foundations/08-probability-distributions/outputs/html/binomial_probability_surface.html
 !00-foundations/08-probability-distributions/outputs/html/poisson_probability_surface.html
+
+# Curated Day 9 Statistical EDA Visual Lab previews.
+!00-foundations/09-exploratory-data-analysis/outputs/
+00-foundations/09-exploratory-data-analysis/outputs/*
+!00-foundations/09-exploratory-data-analysis/outputs/images/
+00-foundations/09-exploratory-data-analysis/outputs/images/*
+!00-foundations/09-exploratory-data-analysis/outputs/images/iqr_boxplot_anatomy.png
+!00-foundations/09-exploratory-data-analysis/outputs/images/pearson_vs_spearman.png
+!00-foundations/09-exploratory-data-analysis/outputs/images/simpsons_paradox.png
+!00-foundations/09-exploratory-data-analysis/outputs/images/ai_workload_dashboard.png
+!00-foundations/09-exploratory-data-analysis/outputs/images/latency_percentiles.png
+!00-foundations/09-exploratory-data-analysis/outputs/gifs/
+00-foundations/09-exploratory-data-analysis/outputs/gifs/*
+!00-foundations/09-exploratory-data-analysis/outputs/gifs/mean_vs_median_outlier.gif
+!00-foundations/09-exploratory-data-analysis/outputs/gifs/kurtosis_tail_behavior.gif
+!00-foundations/09-exploratory-data-analysis/outputs/gifs/robust_statistics.gif
