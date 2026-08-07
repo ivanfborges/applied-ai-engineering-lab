@@ -15,21 +15,21 @@ Machine learning uses the same geometry:
 
 ## 2. Vector Spaces and Subspaces
 
-A vector space (V) over a field such as (mathbb{R}) is closed under vector addition and scalar multiplication and satisfies the usual algebraic axioms: associativity, commutativity of addition, distributivity, a zero vector, and additive inverses.
+A vector space \(V\) over a field such as \(\mathbb{R}\) is closed under vector addition and scalar multiplication and satisfies the usual algebraic axioms: associativity, commutativity of addition, distributivity, a zero vector, and additive inverses.
 
-The familiar example is (mathbb{R}^d), but fixed-shape matrices, polynomials, signals, and parameter collections may also form vector spaces.
+The familiar example is \(\mathbb{R}^d\), but fixed-shape matrices, polynomials, signals, and parameter collections may also form vector spaces.
 
-A subset (S \subseteq V) is a subspace when:
+A subset \(S \subseteq V\) is a subspace when:
 
-1. (0 \in S);
-2. (u + v \in S) for all (u,v \in S);
-3. (a u \in S) for every scalar (a) and (u \in S).
+1. \(0 \in S\);
+2. \(u + v \in S\) for all \(u,v \in S\);
+3. \(a u \in S\) for every scalar \(a\) and \(u \in S\).
 
-The plane (z=0) is a subspace of (mathbb{R}^3). The plane (z=1) is not because it excludes the origin; it is an affine space, a translated subspace. This distinction explains why PCA centers data before finding a linear subspace.
+The plane \(z=0\) is a subspace of \(\mathbb{R}^3\). The plane \(z=1\) is not because it excludes the origin; it is an affine space, a translated subspace. This distinction explains why PCA centers data before finding a linear subspace.
 
 ## 3. Span, Independence, Basis, and Dimension
 
-Given vectors (v_1,\ldots,v_k), a linear combination is
+Given vectors \(v_1,\ldots,v_k\), a linear combination is
 
 \[
 \sum_{i=1}^{k} a_i v_i.
@@ -49,22 +49,22 @@ The vectors are linearly independent if
 \sum_{i=1}^{k}a_i v_i=0
 \]
 
-implies that every (a_i=0). Dependence means at least one vector is redundant because it can be written from the others.
+implies that every \(a_i=0\). Dependence means at least one vector is redundant because it can be written from the others.
 
 A basis is both linearly independent and spanning. Consequently, every vector in the space has exactly one coordinate representation in that basis. The dimension of a finite-dimensional vector space is the number of vectors in any basis.
 
-For a matrix (A), rank is the dimension of its column space (and also its row space). Full column rank means its columns are linearly independent.
+For a matrix \(A\), rank is the dimension of its column space (and also its row space). Full column rank means its columns are linearly independent.
 
 ### Ambient and intrinsic dimension
 
 - **Ambient dimension:** number of coordinates used to store a point.
 - **Intrinsic dimension:** number of independent directions needed to describe its meaningful variation, exactly or approximately.
 
-Data stored in (mathbb{R}^{768}) may concentrate near a much lower-dimensional structure. Effective dimension is numerical and data-dependent; it should not be inferred from array shape alone.
+Data stored in \(\mathbb{R}^{768}\) may concentrate near a much lower-dimensional structure. Effective dimension is numerical and data-dependent; it should not be inferred from array shape alone.
 
 ## 4. Coordinates and Change of Basis
 
-Let the columns of (B) be basis vectors and let (c) contain the coordinates of (x) in that basis:
+Let the columns of \(B\) be basis vectors and let \(c\) contain the coordinates of \(x\) in that basis:
 
 \[
 x = Bc.
@@ -76,7 +76,7 @@ For a square invertible basis matrix,
 c=B^{-1}x.
 \]
 
-In computation, solve (Bc=x) rather than explicitly forming (B^{-1}). If the basis is orthonormal, (B^\top B=I), so
+In computation, solve \(Bc=x\) rather than explicitly forming \(B^{-1}\). If the basis is orthonormal, \(B^\top B=I\), so
 
 \[
 c=B^\top x.
@@ -86,13 +86,13 @@ Orthonormal bases make coordinates simple dot products and avoid amplification c
 
 ## 5. Orthogonality and Gram-Schmidt
 
-Vectors (u) and (v) are orthogonal under the Euclidean inner product when
+Vectors \(u\) and \(v\) are orthogonal under the Euclidean inner product when
 
 \[
 u^\top v=0.
 \]
 
-A matrix (Q) has orthonormal columns when
+A matrix \(Q\) has orthonormal columns when
 
 \[
 Q^\top Q=I.
@@ -112,7 +112,7 @@ This is excellent for learning but can lose orthogonality for nearly dependent i
 
 ### Onto one direction
 
-For a nonzero direction (u), the projection of (x) must have the form (alpha u). Requiring the residual (x-\alpha u) to be perpendicular to (u) gives
+For a nonzero direction \(u\), the projection of \(x\) must have the form \(\alpha u\). Requiring the residual \(x-\alpha u\) to be perpendicular to \(u\) gives
 
 \[
 u^\top(x-\alpha u)=0
@@ -127,17 +127,17 @@ Therefore,
 =\frac{u^\top x}{u^\top u}u.
 \]
 
-For unit (u), this simplifies to ((u^\top x)u).
+For unit \(u\), this simplifies to \((u^\top x)u\).
 
 ### Onto a subspace
 
-Let the full-column-rank matrix (A \in \mathbb{R}^{n\times k}) span the target subspace. The closest point has the form (A\beta), where
+Let the full-column-rank matrix \(A \in \mathbb{R}^{n\times k}\) span the target subspace. The closest point has the form \(A\beta\), where
 
 \[
 \beta^\star=\arg\min_\beta \lVert x-A\beta\rVert_2^2.
 \]
 
-At the optimum, the residual is orthogonal to every column of (A):
+At the optimum, the residual is orthogonal to every column of \(A\):
 
 \[
 A^\top(x-A\beta)=0.
@@ -155,9 +155,9 @@ The algebraic projection matrix is
 P=A(A^\top A)^{-1}A^\top.
 \]
 
-This formula is useful for derivation, but production code should not explicitly invert (A^\top A). Forming it squares the 2-norm condition number: (kappa_2(A^\top A)=\kappa_2(A)^2). Prefer least-squares solvers based on QR or SVD.
+This formula is useful for derivation, but production code should not explicitly invert \(A^\top A\). Forming it squares the 2-norm condition number: \(\kappa_2(A^\top A)=\kappa_2(A)^2\). Prefer least-squares solvers based on QR or SVD.
 
-If (Q) is an orthonormal basis for the same column space,
+If \(Q\) is an orthonormal basis for the same column space,
 
 \[
 P=QQ^\top,
@@ -165,14 +165,14 @@ P=QQ^\top,
 \hat{x}=QQ^\top x.
 \]
 
-The operation first computes subspace coordinates (Q^\top x), then reconstructs (Q(Q^\top x)).
+The operation first computes subspace coordinates \(Q^\top x\), then reconstructs \(Q(Q^\top x)\).
 
 ### Defining properties
 
 An orthogonal projection matrix is:
 
-- symmetric: (P^\top=P);
-- idempotent: (P^2=P).
+- symmetric: \(P^\top=P\);
+- idempotent: \(P^2=P\).
 
 Every vector decomposes as
 
@@ -180,7 +180,7 @@ Every vector decomposes as
 x=\hat{x}+r,
 \]
 
-where (hat{x}) is in the subspace and (r=x-\hat{x}) is in its orthogonal complement. Thus (Q^\top r=0) and
+where \(\hat{x}\) is in the subspace and \(r=x-\hat{x}\) is in its orthogonal complement. Thus \(Q^\top r=0\) and
 
 \[
 \lVert x\rVert_2^2
@@ -199,7 +199,7 @@ Ordinary least squares solves
 \hat\beta=\arg\min_\beta\lVert y-X\beta\rVert_2^2.
 \]
 
-The fitted vector (\hat y=X\hat\beta) is the orthogonal projection of (y) onto the column space of (X), and the residual satisfies
+The fitted vector \(\hat y=X\hat\beta\) is the orthogonal projection of \(y\) onto the column space of \(X\), and the residual satisfies
 
 \[
 X^\top(y-\hat y)=0.
@@ -209,7 +209,7 @@ Rank deficiency makes coefficient representations non-unique even though a least
 
 ### PCA
 
-For a centered data matrix (X), let (W_k) contain the first (k) orthonormal principal directions. The compressed coordinates and reconstruction are
+For a centered data matrix \(X\), let \(W_k\) contain the first \(k\) orthonormal principal directions. The compressed coordinates and reconstruction are
 
 \[
 Z=XW_k,
@@ -217,7 +217,7 @@ Z=XW_k,
 \hat X=ZW_k^\top=XW_kW_k^\top.
 \]
 
-PCA chooses the (k)-dimensional linear subspace that minimizes squared reconstruction error. Its assumptions and trade-offs include:
+PCA chooses the \(k\)-dimensional linear subspace that minimizes squared reconstruction error. Its assumptions and trade-offs include:
 
 - observations must be centered;
 - scale-sensitive features may require standardization;
@@ -228,7 +228,7 @@ PCA chooses the (k)-dimensional linear subspace that minimizes squared reconstru
 
 ### Embeddings
 
-An embedding model maps an object into (mathbb{R}^d):
+An embedding model maps an object into \(\mathbb{R}^d\):
 
 \[
 f(x)\in\mathbb{R}^d.
@@ -242,7 +242,7 @@ The output belongs to a vector space mathematically, but semantic usefulness is 
 - local neighborhoods may be useful even when global linear analogies fail;
 - cosine similarity, dot product, and Euclidean distance are not interchangeable unless normalization and model training make them so.
 
-For unit vectors (x) and (y),
+For unit vectors \(x\) and \(y\),
 
 \[
 \lVert x-y\rVert_2^2=2-2x^\top y,
@@ -269,7 +269,7 @@ Dependent or nearly dependent feature columns can make coefficient estimates uns
 
 ### Removing a direction
 
-For a unit direction (u), remove its linear component from (x) with
+For a unit direction \(u\), remove its linear component from \(x\) with
 
 \[
 x_{\text{clean}}=x-(u^\top x)u.
@@ -287,7 +287,7 @@ Linear projection may be a poor model when the data lies on a nonlinear manifold
 - Calling a redundant spanning set a basis.
 - Equating the number of stored features with intrinsic dimension.
 - Treating an exact rank computed in floating point as an unquestionable fact; inspect singular values and tolerances.
-- Explicitly calculating ((A^\top A)^{-1}) instead of using a stable solver.
+- Explicitly calculating \((A^\top A)^{-1}\) instead of using a stable solver.
 - Assuming classical Gram-Schmidt is robust for nearly dependent vectors.
 - Forgetting to center data before PCA or fitting PCA before the train/test split.
 - Treating PCA as feature selection rather than construction of new linear combinations.
@@ -306,4 +306,4 @@ Linear projection may be a poor model when the data lies on a nonlinear manifold
 
 ## 11. Interview-ready Summary
 
-A basis is a minimal set of linearly independent directions that spans a vector space, and dimension is the number of vectors in a basis. Projection finds the closest representation of a vector inside a subspace. With orthonormal basis (Q), the projection is (QQ^\top x), and the residual is orthogonal to the subspace. This geometry underlies least squares and PCA. Embeddings are points in learned vector spaces, but their metrics and dimensions only have meaning relative to the model and training objective. Any compression or projection must therefore be versioned consistently and evaluated with downstream retrieval or prediction metrics.
+A basis is a minimal set of linearly independent directions that spans a vector space, and dimension is the number of vectors in a basis. Projection finds the closest representation of a vector inside a subspace. With orthonormal basis \(Q\), the projection is \(QQ^\top x\), and the residual is orthogonal to the subspace. This geometry underlies least squares and PCA. Embeddings are points in learned vector spaces, but their metrics and dimensions only have meaning relative to the model and training objective. Any compression or projection must therefore be versioned consistently and evaluated with downstream retrieval or prediction metrics.

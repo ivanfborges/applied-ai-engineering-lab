@@ -154,9 +154,8 @@ be multimodal, nonlinear, or heavy-tailed.
 
 ### 3. Interactive PCA Axes in 3D
 
-[`outputs/interactive/pca_3d_axes.html`](../outputs/interactive/pca_3d_axes.html)
-shows original axes and all three PCA axes. Rotate, zoom, and hover without a
-running server.
+The locally generated `outputs/interactive/pca_3d_axes.html` shows original
+axes and all three PCA axes. Rotate, zoom, and hover without a running server.
 
 **Observe:** PCA constructs a new orthogonal coordinate system through the
 data mean.
@@ -166,7 +165,7 @@ interpretation challenges present in higher dimensions.
 
 ### 4. Projection from 3D to 2D
 
-[`outputs/interactive/pca_projection_3d_to_2d.html`](../outputs/interactive/pca_projection_3d_to_2d.html)
+The locally generated `outputs/interactive/pca_projection_3d_to_2d.html`
 animates observations onto the PC1-PC2 plane. A representative subset of
 projection paths avoids visual clutter.
 
@@ -207,8 +206,8 @@ show rectangular mappings between spaces of different dimension.
 `outputs/static/svd_low_rank_reconstruction.png` compares ranks 1, 2, 5, 10,
 20, and full rank, alongside singular-value decay and error.
 
-[`outputs/interactive/svd_rank_slider.html`](../outputs/interactive/svd_rank_slider.html)
-provides a standalone rank selector.
+The locally generated `outputs/interactive/svd_rank_slider.html` provides a
+standalone rank selector.
 
 **Observe:** dominant singular triplets reconstruct broad structure before
 fine detail. Energy increases and MSE decreases with rank.
