@@ -1,7 +1,0 @@
-numpy
-matplotlib
-scikit-learn
-plotly
-streamlit
-pillow
-pytest

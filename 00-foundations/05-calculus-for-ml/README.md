@@ -51,14 +51,13 @@ goal.
 - `interview_questions.md`: senior-level conceptual, mathematical, practical,
   and Applied AI questions with answers.
 - `references.md`: books, course notes, papers, and official documentation.
-- `requirements.txt`: minimal dependencies for this topic.
 
 ## How to Run
 
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
 Run the NumPy example:
@@ -90,10 +89,10 @@ Pillow and require neither ffmpeg nor ImageMagick.
 
 ### Installation
 
-From this topic folder:
+Complete the repository-level installation before running the visual explorer:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev,notebooks]"
 ```
 
 Generate a reduced-frame visual tour:

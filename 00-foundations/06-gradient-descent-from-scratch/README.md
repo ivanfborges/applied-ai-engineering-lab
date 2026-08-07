@@ -59,7 +59,7 @@ biased data, or an objective that is misaligned with the product goal.
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Run the end-to-end example:

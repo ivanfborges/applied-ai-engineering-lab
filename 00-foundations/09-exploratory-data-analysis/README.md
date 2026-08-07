@@ -43,8 +43,6 @@ leakage, changing traffic composition, or upstream data-quality problems.
   spread, moments, IQR fences, and Pearson/Spearman correlation.
 - [`visualizations/`](visualizations/): six independently executable visual
   generators, shared deterministic data utilities, and the master generator.
-- [`requirements.txt`](requirements.txt): bounded dependencies used by this
-  topic, including Pillow for GIFs and Plotly for offline HTML.
 - [`tests/`](tests/): numerical, reproducibility, invalid-input, visual-data,
   and output-manifest tests.
 - [`interview_questions.md`](interview_questions.md): senior-level questions
@@ -163,14 +161,7 @@ Plotly for offline use.
 From the repository root, install the shared dependencies if needed:
 
 ```bash
-python -m pip install -r requirements.txt
-```
-
-To install only the visual lab dependencies:
-
-```bash
-python -m pip install -r \
-  00-foundations/09-exploratory-data-analysis/requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 Run both educational paths:

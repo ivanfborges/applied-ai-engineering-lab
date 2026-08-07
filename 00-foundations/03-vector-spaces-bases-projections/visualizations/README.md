@@ -23,7 +23,6 @@ visualizations/
 ├── generate_animations.py
 ├── interactive_3d.py
 ├── visualization_utils.py
-├── requirements.txt
 ├── README.md
 └── outputs/
     ├── images/
@@ -53,10 +52,10 @@ Linux or macOS:
 source .venv/bin/activate
 ```
 
-From this `visualizations` directory, install the minimal dependencies:
+From the repository root, install the shared dependencies:
 
 ```bash
-pip install -r requirements.txt
+python -m pip install -e ".[dev]"
 ```
 
 ## Generate Static Figures
