@@ -8,14 +8,15 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 9 of 140 completed — Foundations in progress (9 of 15 topics).**
+**Day 10 of 140 completed — Foundations in progress (10 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
-optimization, probability, probability distributions, and statistically
-rigorous exploratory analysis. Classical Machine Learning starts on Day 16.
+optimization, probability, probability distributions, statistically rigorous
+exploratory analysis, and sampling design. Classical Machine Learning starts
+on Day 16.
 
-- Latest topic: [Exploratory Data Analysis with Statistical Rigor](00-foundations/09-exploratory-data-analysis/)
+- Latest topic: [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/)
 - Current module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -31,6 +32,7 @@ published only after it contains a reviewed study.
 | [Eigenvalues, PCA, and SVD](00-foundations/04-eigenvalues-eigenvectors-pca-svd/) | PCA/SVD equivalence, reconstruction, numerical interpretation, static assets, animations, and an interactive laboratory | [`visual_lab/`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/visual_lab/), [`notebook.ipynb`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/notebook.ipynb) |
 | [Probability Essentials](00-foundations/07-probability-essentials/) | Bayes, base rates, expected cost, Monte Carlo convergence, visual explanations, and unit-tested probability utilities | [`visual_lab.py`](00-foundations/07-probability-essentials/visual_lab.py), [`VISUAL_GUIDE.md`](00-foundations/07-probability-essentials/VISUAL_GUIDE.md) |
 | [Probability Distributions](00-foundations/08-probability-distributions/) | Distribution assumptions, simulation, likelihood connections, tail behavior, interactive parameter surfaces, and production-oriented examples | [`interactive_dashboard.py`](00-foundations/08-probability-distributions/interactive_dashboard.py), [`notes.md`](00-foundations/08-probability-distributions/notes.md) |
+| [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/) | Sampling distributions, persistent selection bias, stratification, weighting, dependence, split leakage, and LLM evaluation design through 16 reproducible visual experiments | [`visual_lab.py`](00-foundations/10-sampling-bias-variance/visual_lab.py), [`tests/`](00-foundations/10-sampling-bias-variance/tests/) |
 
 ![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
 
@@ -47,12 +49,13 @@ published only after it contains a reviewed study.
 | 7 | [Probability essentials](00-foundations/07-probability-essentials/) | Streamlit laboratory, curated assets, and tests |
 | 8 | [Probability distributions](00-foundations/08-probability-distributions/) | Dashboard, simulations, estimators, and visual assets |
 | 9 | [Exploratory data analysis with statistical rigor](00-foundations/09-exploratory-data-analysis/) | Controlled synthetic experiment and tested descriptive-statistics core |
+| 10 | [Sampling, bias, and variance](00-foundations/10-sampling-bias-variance/) | Repeated-sampling experiment and tested estimator diagnostics |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 9 completed** |
+| 0 | Foundations | 1–15 | **In progress — Day 10 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |

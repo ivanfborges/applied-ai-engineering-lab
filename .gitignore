@@ -117,3 +117,15 @@ outputs/
 !00-foundations/09-exploratory-data-analysis/outputs/gifs/mean_vs_median_outlier.gif
 !00-foundations/09-exploratory-data-analysis/outputs/gifs/kurtosis_tail_behavior.gif
 !00-foundations/09-exploratory-data-analysis/outputs/gifs/robust_statistics.gif
+
+# Curated Day 10 Sampling, Bias, and Variance Visual Lab previews.
+!00-foundations/10-sampling-bias-variance/outputs/
+00-foundations/10-sampling-bias-variance/outputs/*
+!00-foundations/10-sampling-bias-variance/outputs/static/
+00-foundations/10-sampling-bias-variance/outputs/static/*
+!00-foundations/10-sampling-bias-variance/outputs/static/sample_size_vs_standard_error.png
+!00-foundations/10-sampling-bias-variance/outputs/static/sampling_strategy_comparison.png
+!00-foundations/10-sampling-bias-variance/outputs/gifs/
+00-foundations/10-sampling-bias-variance/outputs/gifs/*
+!00-foundations/10-sampling-bias-variance/outputs/gifs/sampling_distribution.gif
+!00-foundations/10-sampling-bias-variance/outputs/gifs/more_biased_data.gif
