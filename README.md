@@ -8,15 +8,15 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 10 of 140 completed — Foundations in progress (10 of 15 topics).**
+**Day 11 of 140 completed — Foundations in progress (11 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
 optimization, probability, probability distributions, statistically rigorous
-exploratory analysis, and sampling design. Classical Machine Learning starts
-on Day 16.
+exploratory analysis, sampling design, and CLT-based uncertainty estimation.
+Classical Machine Learning starts on Day 16.
 
-- Latest topic: [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/)
+- Latest topic: [Central Limit Theorem and Confidence Intervals](00-foundations/11-clt-confidence-intervals/)
 - Current module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -50,12 +50,13 @@ published only after it contains a reviewed study.
 | 8 | [Probability distributions](00-foundations/08-probability-distributions/) | Dashboard, simulations, estimators, and visual assets |
 | 9 | [Exploratory data analysis with statistical rigor](00-foundations/09-exploratory-data-analysis/) | Controlled synthetic experiment and tested descriptive-statistics core |
 | 10 | [Sampling, bias, and variance](00-foundations/10-sampling-bias-variance/) | Repeated-sampling experiment and tested estimator diagnostics |
+| 11 | [Central Limit Theorem and confidence intervals](00-foundations/11-clt-confidence-intervals/) | CLT and interval-coverage simulations with tested numerical helpers |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 10 completed** |
+| 0 | Foundations | 1–15 | **In progress — Day 11 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |

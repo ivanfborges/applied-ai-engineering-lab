@@ -129,3 +129,6 @@ outputs/
 00-foundations/10-sampling-bias-variance/outputs/gifs/*
 !00-foundations/10-sampling-bias-variance/outputs/gifs/sampling_distribution.gif
 !00-foundations/10-sampling-bias-variance/outputs/gifs/more_biased_data.gif
+
+# Day 11 visual-lab outputs remain regenerable until author curation.
+00-foundations/11-clt-confidence-intervals/assets/
