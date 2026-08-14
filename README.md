@@ -8,15 +8,16 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 11 of 140 completed — Foundations in progress (11 of 15 topics).**
+**Day 12 of 140 completed — Foundations in progress (12 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
 optimization, probability, probability distributions, statistically rigorous
-exploratory analysis, sampling design, and CLT-based uncertainty estimation.
+exploratory analysis, sampling design, CLT-based uncertainty estimation, and
+hypothesis testing for paired evaluations.
 Classical Machine Learning starts on Day 16.
 
-- Latest topic: [Central Limit Theorem and Confidence Intervals](00-foundations/11-clt-confidence-intervals/)
+- Latest topic: [Hypothesis Testing](00-foundations/12-hypothesis-testing/)
 - Current module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -33,6 +34,7 @@ published only after it contains a reviewed study.
 | [Probability Essentials](00-foundations/07-probability-essentials/) | Bayes, base rates, expected cost, Monte Carlo convergence, visual explanations, and unit-tested probability utilities | [`visual_lab.py`](00-foundations/07-probability-essentials/visual_lab.py), [`VISUAL_GUIDE.md`](00-foundations/07-probability-essentials/VISUAL_GUIDE.md) |
 | [Probability Distributions](00-foundations/08-probability-distributions/) | Distribution assumptions, simulation, likelihood connections, tail behavior, interactive parameter surfaces, and production-oriented examples | [`interactive_dashboard.py`](00-foundations/08-probability-distributions/interactive_dashboard.py), [`notes.md`](00-foundations/08-probability-distributions/notes.md) |
 | [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/) | Sampling distributions, persistent selection bias, stratification, weighting, dependence, split leakage, and LLM evaluation design through 16 reproducible visual experiments | [`visual_lab.py`](00-foundations/10-sampling-bias-variance/visual_lab.py), [`tests/`](00-foundations/10-sampling-bias-variance/tests/) |
+| [Hypothesis Testing](00-foundations/12-hypothesis-testing/) | Interactive p-value geometry, Type I/II errors, noncentral-t power, paired AI evaluation, randomization, multiplicity, and tested simulations | [`hypothesis_testing_visual_lab.py`](00-foundations/12-hypothesis-testing/hypothesis_testing_visual_lab.py), [`tests/`](00-foundations/12-hypothesis-testing/tests/) |
 
 ![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
 
@@ -51,12 +53,13 @@ published only after it contains a reviewed study.
 | 9 | [Exploratory data analysis with statistical rigor](00-foundations/09-exploratory-data-analysis/) | Controlled synthetic experiment and tested descriptive-statistics core |
 | 10 | [Sampling, bias, and variance](00-foundations/10-sampling-bias-variance/) | Repeated-sampling experiment and tested estimator diagnostics |
 | 11 | [Central Limit Theorem and confidence intervals](00-foundations/11-clt-confidence-intervals/) | CLT and interval-coverage simulations with tested numerical helpers |
+| 12 | [Hypothesis testing](00-foundations/12-hypothesis-testing/) | Interactive statistical lab, paired inference, GIF generators, and tested simulations |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 11 completed** |
+| 0 | Foundations | 1–15 | **In progress — Day 12 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
