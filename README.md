@@ -8,16 +8,17 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 12 of 140 completed — Foundations in progress (12 of 15 topics).**
+**Day 13 of 140 completed — Foundations in progress (13 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
 optimization, probability, probability distributions, statistically rigorous
 exploratory analysis, sampling design, CLT-based uncertainty estimation, and
-hypothesis testing for paired evaluations.
+hypothesis testing for paired evaluations, and causal reasoning about
+confounding and selection.
 Classical Machine Learning starts on Day 16.
 
-- Latest topic: [Hypothesis Testing](00-foundations/12-hypothesis-testing/)
+- Latest topic: [Correlation vs Causation](00-foundations/13-correlation-causation/)
 - Current module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -54,12 +55,13 @@ published only after it contains a reviewed study.
 | 10 | [Sampling, bias, and variance](00-foundations/10-sampling-bias-variance/) | Repeated-sampling experiment and tested estimator diagnostics |
 | 11 | [Central Limit Theorem and confidence intervals](00-foundations/11-clt-confidence-intervals/) | CLT and interval-coverage simulations with tested numerical helpers |
 | 12 | [Hypothesis testing](00-foundations/12-hypothesis-testing/) | Interactive statistical lab, paired inference, GIF generators, and tested simulations |
+| 13 | [Correlation vs causation](00-foundations/13-correlation-causation/) | Visual causality lab with tested confounding, Simpson reversal, collider, and intervention simulations |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 12 completed** |
+| 0 | Foundations | 1–15 | **In progress — Day 13 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |

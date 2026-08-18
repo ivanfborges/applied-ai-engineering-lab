@@ -132,3 +132,8 @@ outputs/
 
 # Day 11 visual-lab outputs remain regenerable until author curation.
 00-foundations/11-clt-confidence-intervals/assets/
+
+# Day 13 visual-lab outputs remain regenerable except for one README preview.
+!00-foundations/13-correlation-causation/visuals/
+00-foundations/13-correlation-causation/visuals/*
+!00-foundations/13-correlation-causation/visuals/causal_inference_visual_summary.png

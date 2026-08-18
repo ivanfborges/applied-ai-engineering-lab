@@ -44,8 +44,8 @@ CLT, standard error, confidence intervals and uncertainty communication.
 ### Day 12 — Hypothesis Testing
 Null hypothesis, alternative hypothesis, p-value, Type I/II errors and statistical power.
 
-### Day 13 — Correlation vs Causation
-Correlation types, confounders, spurious correlation and causal traps.
+    ### Day 13 — Correlation vs Causation
+    Correlation types, confounders, spurious correlation and causal traps.
 
 ### Day 14 — Maximum Likelihood Estimation and MAP
 Likelihood, log-likelihood, MLE, MAP and connection to model training.
