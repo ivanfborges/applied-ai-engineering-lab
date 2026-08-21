@@ -137,3 +137,11 @@ outputs/
 !00-foundations/13-correlation-causation/visuals/
 00-foundations/13-correlation-causation/visuals/*
 !00-foundations/13-correlation-causation/visuals/causal_inference_visual_summary.png
+
+# Day 14 MLE/MAP visual-lab outputs: four curated public previews.
+!00-foundations/14-maximum-likelihood-map/assets/
+00-foundations/14-maximum-likelihood-map/assets/*
+!00-foundations/14-maximum-likelihood-map/assets/likelihood_accumulation.gif
+!00-foundations/14-maximum-likelihood-map/assets/prior_likelihood_posterior.png
+!00-foundations/14-maximum-likelihood-map/assets/logistic_surface.png
+!00-foundations/14-maximum-likelihood-map/assets/mle_vs_map_surface.png
