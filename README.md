@@ -8,19 +8,19 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 14 of 140 completed — Foundations in progress (14 of 15 topics).**
+**Day 15 of 140 completed — Foundations complete (15 of 15 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
 optimization, probability, probability distributions, statistically rigorous
 exploratory analysis, sampling design, CLT-based uncertainty estimation, and
-hypothesis testing for paired evaluations, and causal reasoning about
-confounding and selection, plus likelihood-based training and prior-driven
-regularization.
+hypothesis testing for paired evaluations, causal reasoning about confounding
+and selection, likelihood-based training and prior-driven regularization, and
+information-theoretic classification and next-token objectives.
 Classical Machine Learning starts on Day 16.
 
-- Latest topic: [Maximum Likelihood Estimation and MAP](00-foundations/14-maximum-likelihood-map/)
-- Current module: [Foundations](00-foundations/)
+- Latest topic: [Entropy, Cross-Entropy, and KL Divergence](00-foundations/15-entropy-cross-entropy-kl-divergence/)
+- Completed module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -58,12 +58,13 @@ published only after it contains a reviewed study.
 | 12 | [Hypothesis testing](00-foundations/12-hypothesis-testing/) | Interactive statistical lab, paired inference, GIF generators, and tested simulations |
 | 13 | [Correlation vs causation](00-foundations/13-correlation-causation/) | Visual causality lab with tested confounding, Simpson reversal, collider, and intervention simulations |
 | 14 | [Maximum likelihood estimation and MAP](00-foundations/14-maximum-likelihood-map/) | Tested Beta-Bernoulli estimators and from-scratch logistic MLE/MAP optimization |
+| 15 | [Entropy, cross-entropy, and KL divergence](00-foundations/15-entropy-cross-entropy-kl-divergence/) | Visual lab, tested information measures, stable logit loss, and masked next-token NLL |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **In progress — Day 14 completed** |
+| 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
 | 1 | Classical Machine Learning | 16–35 | Planned |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |

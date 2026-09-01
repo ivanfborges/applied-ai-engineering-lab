@@ -145,3 +145,16 @@ outputs/
 !00-foundations/14-maximum-likelihood-map/assets/prior_likelihood_posterior.png
 !00-foundations/14-maximum-likelihood-map/assets/logistic_surface.png
 !00-foundations/14-maximum-likelihood-map/assets/mle_vs_map_surface.png
+
+# Day 15 information-theory lab: six previews and three interactive artifacts.
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/
+00-foundations/15-entropy-cross-entropy-kl-divergence/assets/*
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/bernoulli_entropy.png
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/cross_entropy_confidence.png
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/entropy_evolution.gif
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/kl_convergence.gif
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/temperature_entropy.gif
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/llm_token_learning.gif
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/kl_probability_simplex.html
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/temperature_interactive.html
+!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/information_theory_playground.html
