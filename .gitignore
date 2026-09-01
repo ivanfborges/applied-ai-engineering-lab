@@ -130,8 +130,12 @@ outputs/
 !00-foundations/10-sampling-bias-variance/outputs/gifs/sampling_distribution.gif
 !00-foundations/10-sampling-bias-variance/outputs/gifs/more_biased_data.gif
 
-# Day 11 visual-lab outputs remain regenerable until author curation.
-00-foundations/11-clt-confidence-intervals/assets/
+# Day 11 visual lab: three curated public previews; other outputs stay local.
+!00-foundations/11-clt-confidence-intervals/assets/
+00-foundations/11-clt-confidence-intervals/assets/*
+!00-foundations/11-clt-confidence-intervals/assets/02_clt_convergence.gif
+!00-foundations/11-clt-confidence-intervals/assets/07_ci_coverage.gif
+!00-foundations/11-clt-confidence-intervals/assets/11_independence_violation.png
 
 # Day 13 visual-lab outputs remain regenerable except for one README preview.
 !00-foundations/13-correlation-causation/visuals/
@@ -146,7 +150,7 @@ outputs/
 !00-foundations/14-maximum-likelihood-map/assets/logistic_surface.png
 !00-foundations/14-maximum-likelihood-map/assets/mle_vs_map_surface.png
 
-# Day 15 information-theory lab: six previews and three interactive artifacts.
+# Day 15 information-theory lab: six previews and one interactive artifact.
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/
 00-foundations/15-entropy-cross-entropy-kl-divergence/assets/*
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/bernoulli_entropy.png
@@ -155,6 +159,4 @@ outputs/
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/kl_convergence.gif
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/temperature_entropy.gif
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/llm_token_learning.gif
-!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/kl_probability_simplex.html
-!00-foundations/15-entropy-cross-entropy-kl-divergence/assets/temperature_interactive.html
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/information_theory_playground.html

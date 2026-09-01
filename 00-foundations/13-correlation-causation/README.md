@@ -171,7 +171,7 @@ The full-resolution generator was executed with the checked-in source.
   `top_k` effect was 1.200, the observational slope was -1.552, the randomized
   slope was 1.153, and correlation between randomized `top_k` and complexity
   was 0.014.
-- **Interpretation candidate for author review:** the rendered results are
+- **Interpretation:** the rendered results are
   consistent with correlation being sensitive to relationship shape,
   omitted-variable bias increasing with treatment-confounder association,
   aggregation reversing subgroup patterns, collider conditioning creating
@@ -211,7 +211,7 @@ only to the constructed models.
   \(X\) versus \(X^2\) Pearson correlation printed as -0.000000. Independent
   skills had population correlation -0.003; among the selected 5,000 cases,
   their correlation was -0.522.
-- **Interpretation candidate for author review:** within these deliberately
+- **Interpretation:** within these deliberately
   specified equations, the outputs are consistent with omitted-variable bias,
   randomization removing the treatment-confounder link, Pearson missing
   symmetric nonlinear dependence, and selection on a collider creating an

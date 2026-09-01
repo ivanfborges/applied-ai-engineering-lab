@@ -193,7 +193,7 @@ The complete visual lab was executed with the current source configuration.
   25.3428. Among 1,000 random samples of 50 from a 1% rare-event population,
   60.5% contained no rare event. Constructed LLM category scores aggregated to
   0.7725 under balanced diagnostic weights and 0.8715 under production weights.
-- **Interpretation candidate for author review:** the generated results are
+- **Interpretation:** the generated results are
   consistent with the mechanisms the lab was designed to expose. In this
   configuration, stratification removed segment-composition noise; increasing
   biased sample size stabilized the wrong estimand; unequal weights sharply
@@ -229,7 +229,7 @@ the configured synthetic population only.
   stratified sampling had mean 119.8560, bias 0.0507, variance 1.8122, and MSE
   1.8148. For every design, the computed MSE matched variance plus squared bias
   to displayed precision.
-- **Interpretation candidate for author review:** the result is consistent
+- **Interpretation:** the result is consistent
   with the hypothesis. Preferentially selecting the higher-spending segment
   made the estimate systematically high, whereas weighting the deliberately
   balanced sample by population shares recovered the target and reduced

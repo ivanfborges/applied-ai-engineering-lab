@@ -166,7 +166,6 @@ def main() -> None:
         f"Selected-only skill correlation: {collider.selected_correlation:.3f} "
         f"(n={collider.selected_count})"
     )
-    print("\nAuthor review required before adopting causal interpretations.")
 
 
 if __name__ == "__main__":

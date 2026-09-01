@@ -1171,7 +1171,7 @@ def main() -> None:
     show = args.show or not args.save
     print("Day 14 — MLE and MAP Visual Learning Lab")
     print("Synthetic or analytically specified data only.")
-    print("Interpretations remain candidates for author review.\n")
+    print("Interpretations apply only to the configured educational examples.\n")
     results = generate_demo(
         args.demo,
         args.output_dir,

@@ -53,8 +53,8 @@ quality; those require separate evaluation.
   distribution mismatch, confident mistakes, and token-weighted LLM loss.
 - [`visual_lab.py`](visual_lab.py): standalone Matplotlib animations and static
   figures plus self-contained Plotly explorations, organized by concept.
-- [`assets/`](assets/): six curated PNG/GIF previews, three linked interactive
-  HTML artifacts, and additional locally regenerable outputs.
+- [`assets/`](assets/): six curated PNG/GIF previews, one linked interactive
+  HTML artifact, and additional locally regenerable outputs.
 - [`tests/`](tests/): identities, edge cases, stability, masking, and input
   validation for the numerical core and visual generator.
 - [`interview_questions.md`](interview_questions.md): senior-level questions
@@ -147,18 +147,15 @@ educational probability path, not real Transformer training.
 
 ### Interactive explorations
 
-- [Forward-KL landscape on a probability simplex](assets/kl_probability_simplex.html):
-  hover over valid three-class predictions and locate `Q=P`, where KL is zero.
-- [Temperature, probabilities, and entropy](assets/temperature_interactive.html):
-  inspect class probabilities and entropy over `T` from `0.1` to `5.0`.
 - [Information-theory probability playground](assets/information_theory_playground.html):
   use the dropdown to compare entropy, cross-entropy, and both KL directions
   across six predefined `P`/`Q` scenarios.
 
-The HTML files embed Plotly for offline interaction and are intentionally
-versioned because they are linked here. Each is about 4.9 MB. The six embedded
-previews above are also versioned. Other generated PNGs and GIFs remain ignored
-and can be reproduced from `visual_lab.py`.
+The selected HTML embeds Plotly for offline interaction and is intentionally
+versioned because it is linked here. It is about 4.9 MB. The separate KL-simplex
+and temperature HTMLs remain local, ignored, and reproducible from
+`visual_lab.py`. The six embedded previews above are also versioned; other
+generated PNGs and GIFs remain ignored.
 
 ## What the implementation makes explicit
 
@@ -195,7 +192,7 @@ or distributed training code.
   `0.713350` and `6.907755` nats. Stable NLL for the large logits was
   `0.407606`. The five-valid-token mean was `0.406257` nats, perplexity was
   `1.501188`, and the masked position contributed zero.
-- **Interpretation candidate for author review:** these constructed outputs are
+- **Interpretation:** these constructed outputs are
   consistent with cross-entropy decomposing into target entropy plus forward
   KL, KL direction mattering, log loss penalizing confident mistakes, stable
   logit-space computation, and padding masks controlling token aggregation.
@@ -228,7 +225,7 @@ or distributed training code.
   approximately `4.33e-8` nats at `T=0.1` to `1.066327` at `T=5`. Raising the
   synthetic `Paris` probability from `0.10` to `0.90` reduced NLL from `2.303`
   to `0.105` and single-token perplexity from `10.000` to `1.111`.
-- **Interpretation candidate for author review:** within these constructions,
+- **Interpretation:** within these constructions,
   the visuals are consistent with uncertainty increasing with uniformity,
   cross-entropy retaining confidence information, forward KL isolating model
   mismatch, temperature reshaping a fixed-logit distribution, and next-token

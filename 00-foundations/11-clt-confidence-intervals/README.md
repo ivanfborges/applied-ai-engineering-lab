@@ -63,6 +63,8 @@ repair a biased measurement process.
   standalone interactive laboratory.
 - [`visualizations/`](visualizations/): reusable numerical, rendering,
   animation, applied-experiment, and Plotly modules.
+- [`assets/`](assets/): three curated public previews; all other generated
+  visual-lab outputs remain local and reproducible.
 - [`tests/`](tests/): formula, validation, reproducibility, simulation, and
   visual-manifest checks.
 - [`interview_questions.md`](interview_questions.md): senior-level conceptual
@@ -132,11 +134,22 @@ Every generated asset answers one statistical question:
 | `12_model_comparison_ci.png` | Why should two models be compared through uncertainty in their difference? |
 | `13_practical_vs_statistical_significance.png` | Why can a detectable effect still fall below a decision-relevant magnitude? |
 
-The outputs are written to `assets/` and remain ignored, regenerable artifacts
-until the author explicitly curates a small preview set. The standalone Plotly
+The outputs are written to `assets/`. Three previews are versioned below; the
+remaining generated files stay ignored and reproducible. The standalone Plotly
 HTML embeds its JavaScript for offline rotation, zoom, and hover and is about
-4.7 MiB, so it should remain local unless a specific publication strategy
-justifies that size.
+4.7 MiB, so it remains local unless a specific publication strategy justifies
+that size.
+
+### Curated public previews
+
+![CLT convergence as sample size increases](assets/02_clt_convergence.gif)
+
+![Repeated-sampling interpretation of confidence intervals](assets/07_ci_coverage.gif)
+
+![Effect of dependence on standard-error estimates](assets/11_independence_violation.png)
+
+This selection covers the central theorem, the repeated-sampling meaning of
+confidence, and a production-relevant failure of the IID assumption.
 
 ### Executed visual evidence
 
@@ -168,7 +181,7 @@ performance or benchmark evidence.
   interval for the difference was [-1.3988, 2.4388]. In the large-sample
   example, the estimated effect was 0.1423 with 95% CI [0.0932, 0.1914], below
   the explicitly illustrative practical threshold of 0.50.
-- **Interpretation candidate for author review:** the rendered evidence is
+- **Interpretation:** the rendered evidence is
   consistent with the mechanisms the lab was designed to expose: CLT
   convergence and the square-root SE law under IID finite-variance sampling;
   slower convergence for a skewed log-normal source; long-run rather than
@@ -182,13 +195,6 @@ performance or benchmark evidence.
   practical threshold is explicitly illustrative and not an industry
   standard. None of the visuals accounts for selection bias, leakage,
   measurement error, evaluator disagreement, or distribution shift.
-
-After author review, the strongest public-preview candidates are
-`02_clt_convergence.gif`, `07_ci_coverage.gif`, and
-`11_independence_violation.png`. They cover the central theorem, the correct
-confidence interpretation, and the most production-relevant assumption
-failure. They are recommendations only and remain ignored in the current
-worktree.
 
 ## Executed experiment record
 
@@ -209,7 +215,7 @@ results are evidence about a constructed population, not benchmark claims.
   and 0.2000. Sampling-distribution skewness decreased from 0.9114 to 0.3330
   and 0.1608. The separate Student-\(t\) experiment produced 93.61% empirical
   coverage and mean interval width 1.1162 at \(n=50\).
-- **Interpretation candidate for author review:** the configured results are
+- **Interpretation:** the configured results are
   consistent with the predicted square-root reduction in standard error and
   increasing symmetry of the sample mean. Coverage was close to, but below,
   the nominal 95%, which is consistent with treating the Student-\(t\) interval

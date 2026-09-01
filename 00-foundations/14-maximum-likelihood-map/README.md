@@ -156,7 +156,7 @@ The full visual lab was executed with the checked-in generator.
   1.461 to 0.450. Across prior standard deviations from 0.1 to 10, absolute
   MAP slope increased from 0.201 to 2.210. The two uncertainty examples had
   the same MAP, 0.5, with visibly different posterior concentration.
-- **Interpretation candidate for author review:** within these constructed
+- **Interpretation:** within these constructed
   models, the outputs are consistent with evidence concentrating likelihood,
   log-space preventing numerical underflow, explicit likelihood assumptions
   producing familiar losses, gradient descent navigating NLL geometry, and a
@@ -189,7 +189,7 @@ The full visual lab was executed with the checked-in generator.
   for MAP with \(\sigma=2.0\), and 1.765185 with \(\sigma=0.5\). Validation
   mean NLL values were 0.439507, 0.439467, and 0.440782; all three validation
   accuracies were 0.7933.
-- **Interpretation candidate for author review:** these constructed outputs are
+- **Interpretation:** these constructed outputs are
   consistent with a fixed prior becoming weaker relative to accumulating
   Bernoulli evidence and a tighter zero-mean Gaussian prior producing stronger
   logistic-coefficient shrinkage. The single validation split does not support

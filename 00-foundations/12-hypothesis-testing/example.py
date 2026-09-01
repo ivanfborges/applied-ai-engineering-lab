@@ -133,7 +133,6 @@ def main() -> None:
     print(f"Sign-flip p-value: {result.sign_flip_p_value:.6f}")
     print(f"Cohen's dz: {result.cohens_dz:.4f}")
     print(f"Illustrative practical threshold: {minimum_practical_improvement:.4f}")
-    print("Author review required: assess uncertainty, assumptions, and trade-offs.")
 
 
 if __name__ == "__main__":

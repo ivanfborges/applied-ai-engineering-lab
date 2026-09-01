@@ -1416,7 +1416,7 @@ def main() -> None:
     """Generate every visual and report diagnostics from the completed run."""
     args = parse_arguments()
     print("Day 13 — Correlation vs Causation Visual Lab")
-    print("Synthetic data only; causal interpretations require author review.\n")
+    print("Synthetic data only; results do not establish real-world causal effects.\n")
     results = generate_all(
         args.output_dir,
         seed=args.seed,

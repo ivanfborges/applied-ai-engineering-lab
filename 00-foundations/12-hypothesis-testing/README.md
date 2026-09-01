@@ -174,7 +174,7 @@ synthetic configurations only.
   `n = 10` to 0.0447 at `n = 500`. The final configured power value was 1.0000
   at `n = 500`. The true-null simulation produced 15 false positives among 250
   experiments, an empirical rate of 0.0600.
-- **Interpretation candidate for author review:** the rendered evidence is
+- **Interpretation:** the rendered evidence is
   consistent with the square-root uncertainty relationship, the separation of
   H₀ and H₁ as information increases, and finite Monte Carlo fluctuation around
   the nominal Type I rate.
@@ -202,7 +202,7 @@ claim.
   The mean paired difference was 0.0170, with 95% t interval
   `[0.0086, 0.0255]`, `t = 4.0147`, paired t-test `p = 0.000135`, sign-flip
   `p = 0.000200`, and Cohen's `dz = 0.4489`.
-- **Interpretation candidate for author review:** both configured procedures
+- **Interpretation:** both configured procedures
   find the positive synthetic difference difficult to reconcile with the
   zero-effect null. The interval excludes zero but spans values below and
   above the illustrative 0.02 threshold, so this run does not establish that

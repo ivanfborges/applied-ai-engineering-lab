@@ -205,5 +205,5 @@ These are suggestions and have not been run as part of this topic:
    unequal sequence lengths.
 
 Any empirical interpretation would need its hypothesis, configuration,
-observed result, interpretation candidate, and limitations recorded after
+observed result, interpretation, and limitations recorded after
 execution.
