@@ -160,3 +160,13 @@ outputs/
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/temperature_entropy.gif
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/llm_token_learning.gif
 !00-foundations/15-entropy-cross-entropy-kl-divergence/assets/information_theory_playground.html
+
+# Day 16 end-to-end ML pipeline: six curated visual-lab previews.
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/
+01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/*
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/ml_lifecycle.png
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/random_vs_temporal_split.png
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/data_leakage.png
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/threshold_tradeoff.png
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/covariate_vs_concept_drift.png
+!01-classical-machine-learning/01-end-to-end-ml-pipeline/outputs/concept_drift.gif

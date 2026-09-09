@@ -8,7 +8,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 15 of 140 completed — Foundations complete (15 of 15 topics).**
+**Day 16 of 140 completed — Classical Machine Learning in progress (1 of 20 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
@@ -16,10 +16,13 @@ optimization, probability, probability distributions, statistically rigorous
 exploratory analysis, sampling design, CLT-based uncertainty estimation, and
 hypothesis testing for paired evaluations, causal reasoning about confounding
 and selection, likelihood-based training and prior-driven regularization, and
-information-theoretic classification and next-token objectives.
-Classical Machine Learning starts on Day 16.
+information-theoretic classification and next-token objectives. Classical
+Machine Learning now begins with decision-first problem framing, leakage-safe
+training and validation, threshold policy, artifact persistence, and
+production monitoring.
 
-- Latest topic: [Entropy, Cross-Entropy, and KL Divergence](00-foundations/15-entropy-cross-entropy-kl-divergence/)
+- Latest topic: [End-to-End Machine Learning Pipeline](01-classical-machine-learning/01-end-to-end-ml-pipeline/)
+- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 1 of 20 topics completed
 - Completed module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -37,6 +40,7 @@ published only after it contains a reviewed study.
 | [Probability Distributions](00-foundations/08-probability-distributions/) | Distribution assumptions, simulation, likelihood connections, tail behavior, interactive parameter surfaces, and production-oriented examples | [`interactive_dashboard.py`](00-foundations/08-probability-distributions/interactive_dashboard.py), [`notes.md`](00-foundations/08-probability-distributions/notes.md) |
 | [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/) | Sampling distributions, persistent selection bias, stratification, weighting, dependence, split leakage, and LLM evaluation design through 16 reproducible visual experiments | [`visual_lab.py`](00-foundations/10-sampling-bias-variance/visual_lab.py), [`tests/`](00-foundations/10-sampling-bias-variance/tests/) |
 | [Hypothesis Testing](00-foundations/12-hypothesis-testing/) | Interactive p-value geometry, Type I/II errors, noncentral-t power, paired AI evaluation, randomization, multiplicity, and tested simulations | [`hypothesis_testing_visual_lab.py`](00-foundations/12-hypothesis-testing/hypothesis_testing_visual_lab.py), [`tests/`](00-foundations/12-hypothesis-testing/tests/) |
+| [End-to-End ML Pipeline](01-classical-machine-learning/01-end-to-end-ml-pipeline/) | Interactive validation boundaries, leakage, thresholds, business cost, model selection, drift, serving skew, monitoring, and retraining on controlled synthetic systems | [`streamlit_app.py`](01-classical-machine-learning/01-end-to-end-ml-pipeline/streamlit_app.py), [`tests/`](01-classical-machine-learning/01-end-to-end-ml-pipeline/tests/) |
 
 ![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
 
@@ -59,13 +63,14 @@ published only after it contains a reviewed study.
 | 13 | [Correlation vs causation](00-foundations/13-correlation-causation/) | Visual causality lab with tested confounding, Simpson reversal, collider, and intervention simulations |
 | 14 | [Maximum likelihood estimation and MAP](00-foundations/14-maximum-likelihood-map/) | Tested Beta-Bernoulli estimators and from-scratch logistic MLE/MAP optimization |
 | 15 | [Entropy, cross-entropy, and KL divergence](00-foundations/15-entropy-cross-entropy-kl-divergence/) | Visual lab, tested information measures, stable logit loss, and masked next-token NLL |
+| 16 | [End-to-end ML pipeline](01-classical-machine-learning/01-end-to-end-ml-pipeline/) | Interactive lifecycle lab, leakage-safe training, validation policy, drift simulations, persisted inference bundle, and tests |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | Planned |
+| 1 | Classical Machine Learning | 16–35 | **In progress — 1 of 20 topics completed** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
