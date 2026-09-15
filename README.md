@@ -8,7 +8,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 17 of 140 completed — Classical Machine Learning in progress (2 of 20 topics).**
+**Day 18 of 140 completed — Classical Machine Learning in progress (3 of 20 topics).**
 
 The repository is being built sequentially as the roadmap is studied. The
 current implementation covers AI system boundaries, linear algebra, calculus,
@@ -21,10 +21,12 @@ Machine Learning now begins with decision-first problem framing, leakage-safe
 training and validation, threshold policy, artifact persistence, and
 production monitoring. Day 17 adds development-only cross-validation,
 feature-selection leakage controls, group validation, and temporal label
-availability checks.
+availability checks. Day 18 adds OLS theory, coefficient interpretation,
+assumptions, tested synthetic residual diagnostics, and a 20-view interactive
+linear regression laboratory.
 
-- Latest topic: [Validation and Leakage](01-classical-machine-learning/17-validation-and-leakage/)
-- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 2 of 20 topics completed
+- Latest topic: [Linear Regression Theory](01-classical-machine-learning/18-linear-regression-theory/)
+- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 3 of 20 topics completed
 - Completed module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -43,6 +45,7 @@ published only after it contains a reviewed study.
 | [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/) | Sampling distributions, persistent selection bias, stratification, weighting, dependence, split leakage, and LLM evaluation design through 16 reproducible visual experiments | [`visual_lab.py`](00-foundations/10-sampling-bias-variance/visual_lab.py), [`tests/`](00-foundations/10-sampling-bias-variance/tests/) |
 | [Hypothesis Testing](00-foundations/12-hypothesis-testing/) | Interactive p-value geometry, Type I/II errors, noncentral-t power, paired AI evaluation, randomization, multiplicity, and tested simulations | [`hypothesis_testing_visual_lab.py`](00-foundations/12-hypothesis-testing/hypothesis_testing_visual_lab.py), [`tests/`](00-foundations/12-hypothesis-testing/tests/) |
 | [End-to-End ML Pipeline](01-classical-machine-learning/16-end-to-end-ml-pipeline/) | Interactive validation boundaries, leakage, thresholds, business cost, model selection, drift, serving skew, monitoring, and retraining on controlled synthetic systems | [`streamlit_app.py`](01-classical-machine-learning/16-end-to-end-ml-pipeline/streamlit_app.py), [`tests/`](01-classical-machine-learning/16-end-to-end-ml-pipeline/tests/) |
+| [Linear Regression Theory](01-classical-machine-learning/18-linear-regression-theory/) | Interactive OLS loss surfaces, projection geometry, animated optimization, residual failure modes, and measured Ridge bias-variance trade-offs | [Visual lab](01-classical-machine-learning/18-linear-regression-theory/linear_regression_visual_lab.py), [visual guide](01-classical-machine-learning/18-linear-regression-theory/VISUAL_GUIDE.md) |
 
 ![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
 
@@ -67,13 +70,14 @@ published only after it contains a reviewed study.
 | 15 | [Entropy, cross-entropy, and KL divergence](00-foundations/15-entropy-cross-entropy-kl-divergence/) | Visual lab, tested information measures, stable logit loss, and masked next-token NLL |
 | 16 | [End-to-end ML pipeline](01-classical-machine-learning/16-end-to-end-ml-pipeline/) | Interactive lifecycle lab, leakage-safe training, validation policy, drift simulations, persisted inference bundle, and tests |
 | 17 | [Train/validation/test split, cross-validation and leakage](01-classical-machine-learning/17-validation-and-leakage/) | Tested K-fold indices, development-only tuning, synthetic leakage controls, group boundaries, and temporal gaps |
+| 18 | [Linear regression theory](01-classical-machine-learning/18-linear-regression-theory/) | 20-view visual lab, OLS geometry, animated optimization, residual diagnostics, Ridge bias-variance experiments, and numerical/app tests |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | **In progress — 2 of 20 topics completed** |
+| 1 | Classical Machine Learning | 16–35 | **In progress — 3 of 20 topics completed** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |

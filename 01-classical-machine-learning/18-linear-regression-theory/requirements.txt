@@ -1,0 +1,4 @@
+# Run from the repository root:
+# python -m pip install -r 01-classical-machine-learning/18-linear-regression-theory/requirements.txt
+# Forward to the canonical repository dependencies; do not duplicate version bounds.
+-r ../../requirements.txt
