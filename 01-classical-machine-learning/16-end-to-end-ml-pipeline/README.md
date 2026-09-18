@@ -102,31 +102,30 @@ python -m pip install -e .[dev]
 Run the complete example:
 
 ```bash
-python 01-classical-machine-learning/01-end-to-end-ml-pipeline/example.py
+python 01-classical-machine-learning/16-end-to-end-ml-pipeline/example.py
 ```
 
 Start the interactive visual laboratory:
 
 ```bash
-streamlit run 01-classical-machine-learning/01-end-to-end-ml-pipeline/streamlit_app.py
+streamlit run 01-classical-machine-learning/16-end-to-end-ml-pipeline/streamlit_app.py
 ```
 
 Regenerate the selected visual candidates:
 
 ```bash
-python 01-classical-machine-learning/01-end-to-end-ml-pipeline/visualizations.py
+python 01-classical-machine-learning/16-end-to-end-ml-pipeline/visualizations.py
 ```
 
 Run the focused tests:
 
 ```bash
-python -m pytest -q 01-classical-machine-learning/01-end-to-end-ml-pipeline/tests
+python -m pytest -q 01-classical-machine-learning/16-end-to-end-ml-pipeline/tests
 ```
 
 The example writes `outputs/inference_bundle.pkl` relative to the topic
-folder. That model artifact remains ignored. Six reviewed previews in the same
-directory are intentionally unignored and referenced below; other generated
-outputs stay local. Load pickle artifacts only from trusted sources because
+folder. That model artifact remains ignored. Six preview filenames in the same directory are allowed by Git rules,
+but their files are not currently published; other generated outputs stay local. Load pickle artifacts only from trusted sources because
 deserialization is not a safe interchange format for untrusted files.
 
 ## Visual laboratory
@@ -148,19 +147,12 @@ Every major view states what it shows, why it matters, what can fail, and the
 senior interview takeaway. Controls are local to the active section so hidden
 experiments do not run on every interaction.
 
-### Visual gallery
+### Local visual previews
 
-![ML lifecycle with model training highlighted](outputs/ml_lifecycle.png)
-
-![Random versus temporal split under gradual drift](outputs/random_vs_temporal_split.png)
-
-![Invalid score gain caused by a future target proxy](outputs/data_leakage.png)
-
-![Probability scores, precision-recall, thresholds, and business cost](outputs/threshold_tradeoff.png)
-
-![Covariate drift versus concept drift](outputs/covariate_vs_concept_drift.png)
-
-![Concept drift changes the production boundary over time](outputs/concept_drift.gif)
+The preview files are not included in this checkout. Generate them with the
+`visualizations.py` command above and inspect the local `outputs/` directory.
+The generator covers lifecycle, temporal splits, leakage, threshold trade-offs
+and drift. No absent image is presented here as a published result.
 
 ## Executed experiment record
 

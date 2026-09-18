@@ -1,5 +1,7 @@
 # Applied AI Engineering Lab
 
+**English** | [Português](README.pt-BR.md)
+
 A public, AI-assisted study curriculum and technical portfolio connecting
 theory, executable code, visual experiments, interview preparation, and
 production-oriented reasoning across Data Science and Applied AI Engineering.
@@ -8,22 +10,11 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**Day 18 of 140 completed — Classical Machine Learning in progress (3 of 20 topics).**
+**18 implemented studies: 15 foundations and 3 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
-The repository is being built sequentially as the roadmap is studied. The
-current implementation covers AI system boundaries, linear algebra, calculus,
-optimization, probability, probability distributions, statistically rigorous
-exploratory analysis, sampling design, CLT-based uncertainty estimation, and
-hypothesis testing for paired evaluations, causal reasoning about confounding
-and selection, likelihood-based training and prior-driven regularization, and
-information-theoretic classification and next-token objectives. Classical
-Machine Learning now begins with decision-first problem framing, leakage-safe
-training and validation, threshold policy, artifact persistence, and
-production monitoring. Day 17 adds development-only cross-validation,
-feature-selection leakage controls, group validation, and temporal label
-availability checks. Day 18 adds OLS theory, coefficient interpretation,
-assumptions, tested synthetic residual diagnostics, and a 20-view interactive
-linear regression laboratory.
+The implemented material connects mathematical foundations to model evaluation
+and inference through synthetic experiments and tested numerical code. Topics
+16–18 cover the ML lifecycle, validation boundaries and linear regression.
 
 - Latest topic: [Linear Regression Theory](01-classical-machine-learning/18-linear-regression-theory/)
 - Current module: [Classical Machine Learning](01-classical-machine-learning/) — 3 of 20 topics completed
@@ -31,25 +22,29 @@ linear regression laboratory.
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
-published only after it contains a reviewed study.
+published when it contains an implemented study; interpretation-review status
+is documented separately.
 
-## Highlights
+## Start with a technical question
 
-| Study | What it demonstrates | Entry points |
+| Question | Selected study | Evidence and boundary |
 |---|---|---|
-| [AI, ML, and GenAI Landscape](00-foundations/01-ai-ml-genai-landscape/) | System boundaries, abstention, retrieval, routing, and telemetry without hiding the underlying components behind an LLM | [`example.py`](00-foundations/01-ai-ml-genai-landscape/example.py), [`notes.md`](00-foundations/01-ai-ml-genai-landscape/notes.md) |
-| [Vectors and Matrices](00-foundations/02-linear-algebra-vectors-matrices/) | Vector retrieval metrics, transformation order, tested numerical helpers, and an interactive visual explorer | [`visualizations/app.py`](00-foundations/02-linear-algebra-vectors-matrices/visualizations/app.py), [`tests/`](00-foundations/02-linear-algebra-vectors-matrices/tests/) |
-| [Eigenvalues, PCA, and SVD](00-foundations/04-eigenvalues-eigenvectors-pca-svd/) | PCA/SVD equivalence, reconstruction, numerical interpretation, static assets, animations, and an interactive laboratory | [`visual_lab/`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/visual_lab/), [`notebook.ipynb`](00-foundations/04-eigenvalues-eigenvectors-pca-svd/notebook.ipynb) |
-| [Probability Essentials](00-foundations/07-probability-essentials/) | Bayes, base rates, expected cost, Monte Carlo convergence, visual explanations, and unit-tested probability utilities | [`visual_lab.py`](00-foundations/07-probability-essentials/visual_lab.py), [`VISUAL_GUIDE.md`](00-foundations/07-probability-essentials/VISUAL_GUIDE.md) |
-| [Probability Distributions](00-foundations/08-probability-distributions/) | Distribution assumptions, simulation, likelihood connections, tail behavior, interactive parameter surfaces, and production-oriented examples | [`interactive_dashboard.py`](00-foundations/08-probability-distributions/interactive_dashboard.py), [`notes.md`](00-foundations/08-probability-distributions/notes.md) |
-| [Sampling, Bias, and Variance](00-foundations/10-sampling-bias-variance/) | Sampling distributions, persistent selection bias, stratification, weighting, dependence, split leakage, and LLM evaluation design through 16 reproducible visual experiments | [`visual_lab.py`](00-foundations/10-sampling-bias-variance/visual_lab.py), [`tests/`](00-foundations/10-sampling-bias-variance/tests/) |
-| [Hypothesis Testing](00-foundations/12-hypothesis-testing/) | Interactive p-value geometry, Type I/II errors, noncentral-t power, paired AI evaluation, randomization, multiplicity, and tested simulations | [`hypothesis_testing_visual_lab.py`](00-foundations/12-hypothesis-testing/hypothesis_testing_visual_lab.py), [`tests/`](00-foundations/12-hypothesis-testing/tests/) |
-| [End-to-End ML Pipeline](01-classical-machine-learning/16-end-to-end-ml-pipeline/) | Interactive validation boundaries, leakage, thresholds, business cost, model selection, drift, serving skew, monitoring, and retraining on controlled synthetic systems | [`streamlit_app.py`](01-classical-machine-learning/16-end-to-end-ml-pipeline/streamlit_app.py), [`tests/`](01-classical-machine-learning/16-end-to-end-ml-pipeline/tests/) |
-| [Linear Regression Theory](01-classical-machine-learning/18-linear-regression-theory/) | Interactive OLS loss surfaces, projection geometry, animated optimization, residual failure modes, and measured Ridge bias-variance trade-offs | [Visual lab](01-classical-machine-learning/18-linear-regression-theory/linear_regression_visual_lab.py), [visual guide](01-classical-machine-learning/18-linear-regression-theory/VISUAL_GUIDE.md) |
+| How do data, validation and inference fit together? | [End-to-end ML pipeline](01-classical-machine-learning/16-end-to-end-ml-pipeline/) | Synthetic churn, fold-local preprocessing, threshold policy, artifact round-trip and tests. No live retention deployment. |
+| Could the score be inflated by leakage? | [Validation and leakage](01-classical-machine-learning/17-validation-and-leakage/) | Random-label control, group boundaries and temporal label timing. Single-seed demonstrations, not general effect sizes. |
+| What does a fitted linear model actually establish? | [Linear regression theory](01-classical-machine-learning/18-linear-regression-theory/) | OLS geometry, residual diagnostics and tests. Training identities do not establish generalization or causality. |
+| Can I inspect the optimizer itself? | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | NumPy implementation and convergence diagnostics on synthetic data. Educational implementation; no dedicated test suite yet. |
+| Why is association insufficient for intervention? | [Correlation vs causation](00-foundations/13-correlation-causation/) | Known synthetic generators for confounding and selection. No causal identification on business data. |
 
-![Theory versus synthetic distribution samples](00-foundations/08-probability-distributions/outputs/static/distribution_overview.png)
+For a short visit, read the selected study's question and limitations, then
+inspect its code and tests. For the full curriculum, use the inventory below.
+Interpretations in topics 16–18 explicitly marked for author review remain
+pending; this curation does not approve them on the author's behalf.
 
-## Completed Studies
+For applied studies using external datasets, see the separate
+[TopVistos classification study](https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA)
+and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-analytics_engineering).
+
+## Implemented studies
 
 | Day | Topic | Main evidence |
 |---:|---|---|
@@ -58,7 +53,7 @@ published only after it contains a reviewed study.
 | 3 | [Vector spaces, bases, and projections](00-foundations/03-vector-spaces-bases-projections/) | Projection implementations and visualization generators |
 | 4 | [Eigenvalues, eigenvectors, PCA, and SVD](00-foundations/04-eigenvalues-eigenvectors-pca-svd/) | Visual laboratory, notebook, and numerical tests |
 | 5 | [Calculus for ML](00-foundations/05-calculus-for-ml/) | Gradient checks and guided visual exploration |
-| 6 | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | Validated optimizer and convergence diagnostics |
+| 6 | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | NumPy optimizer and convergence diagnostics |
 | 7 | [Probability essentials](00-foundations/07-probability-essentials/) | Streamlit laboratory, curated assets, and tests |
 | 8 | [Probability distributions](00-foundations/08-probability-distributions/) | Dashboard, simulations, estimators, and visual assets |
 | 9 | [Exploratory data analysis with statistical rigor](00-foundations/09-exploratory-data-analysis/) | Controlled synthetic experiment and tested descriptive-statistics core |
@@ -219,9 +214,10 @@ finished work.
 ## AI-Assisted Workflow
 
 AI tools were used as copilots for research, drafting, code suggestions, and
-editorial refinement. All published material is reviewed and validated by the
-author, who remains responsible for the technical decisions, experiments,
-interpretations, and conclusions.
+editorial refinement. Automated checks validate specific software behavior; they do not establish
+that every interpretation has been personally reviewed by the author. Items
+explicitly marked for author review remain pending. The author remains
+responsible for technical decisions and published conclusions.
 
 See [Study and Publication Methodology](docs/methodology.md) for the public
 workflow and curation principles.

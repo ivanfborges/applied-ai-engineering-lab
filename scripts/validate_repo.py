@@ -16,7 +16,7 @@ from urllib.parse import unquote, urlsplit
 REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
 STREAMLIT_APPS = (
     Path(
-        '01-classical-machine-learning/01-end-to-end-ml-pipeline/'
+        '01-classical-machine-learning/16-end-to-end-ml-pipeline/'
         'streamlit_app.py'
     ),
     Path('00-foundations/12-hypothesis-testing/hypothesis_testing_visual_lab.py'),

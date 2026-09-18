@@ -1,8 +1,11 @@
 # Study and Publication Methodology
 
-This repository is built sequentially from the public roadmap. Each completed
-topic passes through a study, implementation, validation, and editorial
-workflow before it is presented as portfolio material.
+[Português](methodology.pt-BR.md)
+
+This repository is built sequentially from the public roadmap. The workflow below describes the intended study and publication process.
+Implementation, automated validation and personal review of interpretations
+are distinct states; public topics can retain explicitly pending interpretation
+candidates. See the [curation record](CURATION.md).
 
 ## Workflow
 
@@ -21,8 +24,10 @@ workflow before it is presented as portfolio material.
    relative links are checked, generated assets are curated, and proposed
    experiments are kept distinct from experiments that were actually
    executed.
-6. **Publication:** only reviewed material is versioned. The root README is
-   updated to reflect actual progress rather than planned work.
+6. **Publication:** report implemented scope and verification evidence. Keep
+   any pending interpretation explicitly labeled; publication alone must not
+   imply author endorsement or production validation. Update the root README
+   to reflect implemented work rather than planned modules.
 
 ## Public Evidence
 
