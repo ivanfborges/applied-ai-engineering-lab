@@ -10,14 +10,24 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**18 implemented studies: 15 foundations and 3 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**21 implemented studies: 15 foundations and 6 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
-16–18 cover the ML lifecycle, validation boundaries and linear regression.
+16–21 cover the ML lifecycle, validation boundaries, linear regression theory
+and implementation, regularization, and logistic regression.
 
-- Latest topic: [Linear Regression Theory](01-classical-machine-learning/18-linear-regression-theory/)
-- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 3 of 20 topics completed
+Day 19 adds direct OLS and batch gradient descent implementations, scikit-learn
+parity checks, and a measured feature-scaling experiment. Day 20 adds fold-local
+regularization tuning, a tested proximal gradient solver, and measured shrinkage
+and sparsity comparisons. Day 21 adds stable logistic loss, tested binary
+optimization, conditional odds interpretation, and a measured comparison of
+fixed classification thresholds. Its 14-view visual lab adds animated decisions
+and optimization, offline 3D geometry, and measured representation and
+calibration experiments.
+
+- Latest topic: [Logistic Regression](01-classical-machine-learning/21-logistic-regression/)
+- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 6 of 20 topics completed
 - Completed module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -66,13 +76,16 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 16 | [End-to-end ML pipeline](01-classical-machine-learning/16-end-to-end-ml-pipeline/) | Interactive lifecycle lab, leakage-safe training, validation policy, drift simulations, persisted inference bundle, and tests |
 | 17 | [Train/validation/test split, cross-validation and leakage](01-classical-machine-learning/17-validation-and-leakage/) | Tested K-fold indices, development-only tuning, synthetic leakage controls, group boundaries, and temporal gaps |
 | 18 | [Linear regression theory](01-classical-machine-learning/18-linear-regression-theory/) | 20-view visual lab, OLS geometry, animated optimization, residual diagnostics, Ridge bias-variance experiments, and numerical/app tests |
+| 19 | [Linear regression from scratch](01-classical-machine-learning/19-linear-regression-from-scratch/) | Tested OLS and batch gradient descent, scikit-learn comparison, and a synthetic feature-scaling experiment |
+| 20 | [Regularization: Ridge, Lasso and ElasticNet](01-classical-machine-learning/20-regularization/) | Fold-local tuning, tested proximal optimization, and synthetic shrinkage and sparsity comparisons |
+| 21 | [Logistic Regression](01-classical-machine-learning/21-logistic-regression/) | Tested numerical core and 14-view visual lab with threshold/learning animations, offline 3D surfaces, and measured synthetic experiments |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | **In progress — 3 of 20 topics completed** |
+| 1 | Classical Machine Learning | 16–35 | **In progress — 6 of 20 topics completed** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |

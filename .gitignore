@@ -170,3 +170,18 @@ outputs/
 !01-classical-machine-learning/16-end-to-end-ml-pipeline/outputs/threshold_tradeoff.png
 !01-classical-machine-learning/16-end-to-end-ml-pipeline/outputs/covariate_vs_concept_drift.png
 !01-classical-machine-learning/16-end-to-end-ml-pipeline/outputs/concept_drift.gif
+
+# Day 19 visual lab: five documented previews; all other generated assets stay local.
+01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/*
+!01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/04_gradient_descent_path.gif
+!01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/03_loss_contour.png
+!01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/04b_regression_learning.gif
+!01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/06_scaling_geometry.png
+!01-classical-machine-learning/19-linear-regression-from-scratch/assets/day19/01_residuals.png
+
+# Day 21 logistic lab: four curated previews; all other outputs are regenerable.
+01-classical-machine-learning/21-logistic-regression/visuals/*
+!01-classical-machine-learning/21-logistic-regression/visuals/04_decision_boundary.png
+!01-classical-machine-learning/21-logistic-regression/visuals/05_threshold_animation.gif
+!01-classical-machine-learning/21-logistic-regression/visuals/07_gradient_descent.gif
+!01-classical-machine-learning/21-logistic-regression/visuals/12_full_pipeline.png
