@@ -6,10 +6,16 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**18 estudos implementados: 15 de fundamentos e 3 de ML clássico.** O roteiro
+**22 estudos implementados: 15 de fundamentos e 7 de ML clássico.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
+
+Os tópicos 19–22 acrescentam regressão linear implementada do zero,
+regularização, regressão logística e métricas de classificação. Cada um tem
+código, experimentos sintéticos e testes; o [inventário em inglês](README.md#implemented-studies)
+separa as evidências de cada estudo. O [tópico mais recente](01-classical-machine-learning/22-classification-metrics/)
+trata de métricas, limiares, prevalência e capacidade de revisão.
 
 ## Por onde começar
 
