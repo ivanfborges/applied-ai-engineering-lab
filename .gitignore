@@ -185,3 +185,10 @@ outputs/
 !01-classical-machine-learning/21-logistic-regression/visuals/05_threshold_animation.gif
 !01-classical-machine-learning/21-logistic-regression/visuals/07_gradient_descent.gif
 !01-classical-machine-learning/21-logistic-regression/visuals/12_full_pipeline.png
+
+# Day 22 classification metrics lab: four public previews; other assets regenerate.
+01-classical-machine-learning/22-classification-metrics/assets/*
+!01-classical-machine-learning/22-classification-metrics/assets/confusion_matrix_foundation.png
+!01-classical-machine-learning/22-classification-metrics/assets/accuracy_imbalance.png
+!01-classical-machine-learning/22-classification-metrics/assets/threshold_tradeoff.gif
+!01-classical-machine-learning/22-classification-metrics/assets/error_tradeoff_operational.png
