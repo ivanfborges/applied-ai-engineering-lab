@@ -10,11 +10,11 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**22 implemented studies: 15 foundations and 7 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**23 implemented studies: 15 foundations and 8 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
-16–22 cover the ML lifecycle, validation boundaries, linear regression theory
+16–23 cover the ML lifecycle, validation boundaries, linear regression theory
 and implementation, regularization, logistic regression, and classification metrics.
 
 Day 19 adds direct OLS and batch gradient descent implementations, scikit-learn
@@ -26,10 +26,11 @@ fixed classification thresholds. Its 14-view visual lab adds animated decisions
 and optimization, offline 3D geometry, and measured representation and
 calibration experiments. Day 22 adds tested confusion-matrix metrics, a measured synthetic
 baseline comparison, and a nine-view visual lab spanning thresholds,
-prevalence, and review capacity.
+prevalence, and review capacity. Day 23 adds validation-based threshold
+selection, pairwise ROC-AUC, and a measured ranking-versus-calibration example.
 
-- Latest topic: [Classification Metrics I](01-classical-machine-learning/22-classification-metrics/)
-- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 7 of 20 topics completed
+- Latest topic: [Classification Metrics II](01-classical-machine-learning/23-classification-metrics-ii/)
+- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 8 of 20 topics completed
 - Completed module: [Foundations](00-foundations/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -82,13 +83,14 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 20 | [Regularization: Ridge, Lasso and ElasticNet](01-classical-machine-learning/20-regularization/) | Fold-local tuning, tested proximal optimization, and synthetic shrinkage and sparsity comparisons |
 | 21 | [Logistic Regression](01-classical-machine-learning/21-logistic-regression/) | Tested numerical core and 14-view visual lab with threshold/learning animations, offline 3D surfaces, and measured synthetic experiments |
 | 22 | [Classification Metrics I](01-classical-machine-learning/22-classification-metrics/) | Tested metrics, synthetic baseline and threshold experiments, and a nine-view visual lab |
+| 23 | [Classification Metrics II](01-classical-machine-learning/23-classification-metrics-ii/) | Tested pairwise ROC-AUC and validation threshold policy; synthetic AP and calibration distortion experiment |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | **In progress — 7 of 20 topics completed** |
+| 1 | Classical Machine Learning | 16–35 | **In progress — 8 of 20 topics completed** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |

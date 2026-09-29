@@ -192,3 +192,12 @@ outputs/
 !01-classical-machine-learning/22-classification-metrics/assets/accuracy_imbalance.png
 !01-classical-machine-learning/22-classification-metrics/assets/threshold_tradeoff.gif
 !01-classical-machine-learning/22-classification-metrics/assets/error_tradeoff_operational.png
+
+# Day 23 classification metrics II visual lab: five small public previews.
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/
+01-classical-machine-learning/23-classification-metrics-ii/outputs/*
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/threshold_sweep.gif
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/roc_vs_pr.png
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/prevalence_pr_curves.png
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/metrics_vs_threshold.png
+!01-classical-machine-learning/23-classification-metrics-ii/outputs/ranking_vs_calibration.png
