@@ -216,3 +216,6 @@ outputs/
 !01-classical-machine-learning/25-naive-bayes/outputs/04_log_evidence_accumulation.gif
 !01-classical-machine-learning/25-naive-bayes/outputs/10_correlated_evidence.png
 
+# Day 30 visual lab: generated artifacts await author curation.
+01-classical-machine-learning/30-xgboost-lightgbm-catboost/visuals/
+
