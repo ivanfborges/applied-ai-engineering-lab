@@ -21,6 +21,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+imbalance = [
+    "imbalanced-learn>=0.14,<0.15",
+]
 boosting = [
     "xgboost>=2.1,<4",
     "lightgbm>=4.7,<5",

@@ -225,3 +225,8 @@ outputs/
 !01-classical-machine-learning/32-feature-engineering/visuals/06_interaction_2d.png
 !01-classical-machine-learning/32-feature-engineering/visuals/10_point_in_time_leakage.gif
 
+# Day 33 visual lab: three intentional previews; other artifacts regenerate locally.
+01-classical-machine-learning/33-imbalanced-data/assets/*
+!01-classical-machine-learning/33-imbalanced-data/assets/04_threshold_animation.gif
+!01-classical-machine-learning/33-imbalanced-data/assets/07_resampling_comparison.png
+!01-classical-machine-learning/33-imbalanced-data/assets/08_smote_geometry.gif
