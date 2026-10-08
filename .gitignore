@@ -219,3 +219,9 @@ outputs/
 # Day 30 visual lab: generated artifacts await author curation.
 01-classical-machine-learning/30-xgboost-lightgbm-catboost/visuals/
 
+# Day 32 visual lab: three selected previews; other artifacts regenerate locally.
+01-classical-machine-learning/32-feature-engineering/visuals/*
+!01-classical-machine-learning/32-feature-engineering/visuals/01_scaling_before_after.png
+!01-classical-machine-learning/32-feature-engineering/visuals/06_interaction_2d.png
+!01-classical-machine-learning/32-feature-engineering/visuals/10_point_in_time_leakage.gif
+
