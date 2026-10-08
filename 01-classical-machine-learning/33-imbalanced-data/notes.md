@@ -222,7 +222,10 @@ selection uncertainty.
 
 ## Executed experiment
 
-**Executed by Codex on 2026-10-07. Interpretation candidates: pending author review.**
+**Executed by Codex on 2026-10-07.** Interpretations received an AI-assisted
+technical review on October 8, 2026, delegated by the author; see the
+[curation record](../../docs/CURATION.md#delegated-technical-review--october-8-2026).
+No new execution was performed; the separate visual experiments remain pending.
 
 **Hypothesis.** Training interventions and cost threshold selection may change
 positive recall, alert volume, and error cost differently; balancing need not
@@ -270,15 +273,20 @@ labels [0, 1, 0, 1] selected threshold 0.3, one false positive, no false negativ
 and cost 1. The interpolation demo generated four rows lying on the defined
 synthetic line; it estimates no predictive benefit.
 
-**Interpretation candidates — author review required.**
+**Technical interpretations — delegated review.**
 
-- In this split, baseline threshold selection traded additional alerts for
-  higher recall and lower illustrative error cost, without changing ranking.
-- Balancing raised fixed-threshold recall, but it did not improve AP in this
-  comparison. ROC-AUC and AP ordered training interventions differently.
-- Weighted/resampled probability outputs had higher Brier loss here. The
-  effective training prior is a possible explanation, but Brier loss alone
-  cannot diagnose calibration or establish that mechanism.
+- In this recorded split, the baseline's validation-selected threshold traded
+  additional alerts for higher test recall and lower illustrative test error
+  cost. The fitted scores did not change, so ROC-AUC and AP stayed fixed.
+  This does not establish a test-optimal threshold or operational benefit.
+- All four balancing interventions increased recall at the fixed 0.5 threshold,
+  but had lower AP than the baseline here. ROC-AUC and AP ordered the strategies
+  differently. Different fit sizes and weighting under fixed C prevent an
+  isolated explanation in terms of minority exposure alone.
+- Weighted/resampled scores had higher Brier loss on the original test
+  distribution. A changed effective training prior is a possible contributor,
+  not an identified mechanism. Brier alone cannot attribute the difference to
+  miscalibration, and this experiment did not fit or evaluate a calibrator.
 
 **Limitations.** One IID synthetic seed, 40 test positives, and no uncertainty
 interval or repeated-seed comparison. The target is not a real business process.

@@ -176,6 +176,12 @@ implementations rather than production library replacements.
 
 ## Executed forest experiment
 
+Interpretations in this forest record and the linear control below received an
+AI-assisted technical review on October 8, 2026, delegated by the author; see
+the [curation record](../../docs/CURATION.md#delegated-technical-review--october-8-2026).
+No new execution was performed. The separate interactive lab and exports are
+outside the reviewed scope.
+
 **Hypothesis.** Correlated signal may receive different allocations under MDI,
 metric-based permutation, and SHAP. Joint permutation may reveal reliance not
 captured by either individual perturbation.
@@ -222,11 +228,19 @@ contributions were signal -0.251356, proxy -0.071259, context -0.054181 and
 noise +0.009238, reconstructing probability **0.096812** with the baseline.
 The maximum reconstruction error across 40 rows was **5.48e-08**.
 
-**Interpretation candidates — pending author review.** The joint versus
-individual score decreases are consistent with reliance on shared signal.
-MDI and SHAP magnitude do not have the same units or ranking as metric reliance.
-The enlarged replacement gap illustrates why this signal PDP must be inspected
-for unrealistic combinations. Reconstruction supports class/output bookkeeping.
+**Technical interpretations — delegated review.**
+
+- Joint permutation had a larger recorded AUC decrease than either individual
+  estimate. Under this frozen model and perturbation protocol, the dependent
+  pair matters as a group. This is consistent with reliance on their shared
+  signal, not proof of a unique mechanism, additive importance or causal effect.
+- MDI, probability SHAP magnitude and AUC decrease measure different quantities;
+  their magnitudes and rankings are not interchangeable. The enlarged
+  replacement gap shows disruption of the signal/proxy relationship and motivates
+  inspection of implausible PDP combinations; it is not a formal support test.
+- SHAP reconstruction and matched PDP/ICE calculations support class/output
+  bookkeeping and agreement for the specified rows, grid and reference. They do
+  not validate causality, calibration, explanation stability or deployment fitness.
 
 **Limitations.** One seed and population; modest evaluation and explanation
 samples; ten permutations; no background or model stability sweep. Differences
@@ -248,8 +262,10 @@ ten permutations scored with negative MSE.
 **Result.** Mean MSE increase was **7.654766** for x0 and numerically zero
 for x1. PDP predictions were **-2, 0, 2** to printed precision.
 
-**Interpretation candidate — pending author review.** This is consistent with
-the specified function, score sign and unused-feature behavior.
+**Technical interpretation — delegated review.** To the reported numerical
+precision, this control is consistent with the specified function, the
+negative-MSE score convention and zero reliance on the unused feature. It is
+a known-function implementation check, not validation on complex real inputs.
 
 **Limitation.** A noiseless known-function check is not an empirical estimate
 of explainability reliability on complex or dependent real inputs.

@@ -8,18 +8,24 @@ This document defines the expected structure for the Applied AI Engineering Lab 
 applied-ai-engineering-lab/
 │
 ├── README.md
+├── README.pt-BR.md
 ├── LICENSE
 ├── ROADMAP.md
 ├── REPO_STRUCTURE.md
 ├── pyproject.toml
 ├── requirements.txt
 ├── scripts/
-│   └── validate_repo.py
+│   ├── validate_repo.py
+│   └── tests/
 ├── .github/
 │   └── workflows/
 │       └── quality.yml
 ├── docs/
-│   └── methodology.md
+│   ├── methodology.md
+│   ├── methodology.pt-BR.md
+│   ├── validation.md
+│   ├── CURATION.md
+│   └── CURATION.pt-BR.md
 │
 ├── 00-foundations/
 ├── 01-classical-machine-learning/
@@ -38,8 +44,12 @@ applied-ai-engineering-lab/
 `pyproject.toml` is the canonical dependency and test-tool configuration.
 `requirements.txt` is only a compatibility entry point. The validation script
 provides the same syntax, link, test, and app-smoke commands used by CI.
+See [the validation contract](docs/validation.md) for extras, test isolation and
+what those commands do not certify.
 
-Only modules with reviewed public content need to exist in Git. The complete
+Only modules with curated, implemented public content need to exist in Git.
+Keep interpretation-review status explicit; publication is not scientific approval.
+The complete
 future sequence belongs in `ROADMAP.md`; empty placeholder directories should
 not be committed.
 
@@ -85,17 +95,18 @@ Larger projects extracted from the study track and polished as standalone portfo
 
 ## Topic Folder Naming Convention
 
-Use numeric prefixes and lowercase kebab-case names.
+Use the **global day number from ROADMAP.md** as the numeric prefix and
+lowercase kebab-case names. Do not restart day numbering within each module.
 
 Examples:
 
 ```text
 01-classical-machine-learning/
-├── 01-linear-regression/
-├── 02-logistic-regression/
-├── 03-decision-trees/
-├── 04-random-forest/
-└── 05-gradient-boosting/
+├── 19-linear-regression-from-scratch/
+├── 21-logistic-regression/
+├── 26-decision-trees/
+├── 27-random-forest/
+└── 29-gradient-boosting/
 ```
 
 For each folder, use clear names that communicate the topic without being too long.
@@ -103,10 +114,10 @@ For each folder, use clear names that communicate the topic without being too lo
 Good:
 
 ```text
-04-random-forest
-05-gradient-boosting
-03-rag-chunking
-02-tool-calling
+27-random-forest
+29-gradient-boosting
+32-feature-engineering
+35-explainability-classical-ml
 ```
 
 Avoid:
@@ -122,7 +133,7 @@ ml-topic
 
 ## Standard Topic Folder Structure
 
-Each topic folder should ideally contain:
+Choose files according to the topic's technical question. Possible files include:
 
 ```text
 README.md
@@ -263,7 +274,7 @@ Prefer:
 
 ## README Template for Topic Folders
 
-```markdown
+````markdown
 # Topic Name
 
 ## Overview
@@ -299,7 +310,7 @@ python example.py
 - Takeaway 1
 - Takeaway 2
 - Takeaway 3
-```
+````
 
 ---
 

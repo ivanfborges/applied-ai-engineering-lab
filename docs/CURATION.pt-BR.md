@@ -7,6 +7,37 @@ corrigir navegação e caminhos de execução e explicitar o estado da revisão.
 Não substitui os registros históricos, nem certifica todas as afirmações científicas
 ou altera autoria. Nenhum experimento histórico foi reexecutado para a edição.
 
+Atualização de navegação em 08/10/2026: o [índice de ML](../01-classical-machine-learning/)
+cobre os tópicos 16–35 implementados, e a entrada da raiz inclui perguntas dos
+dias 32, 33 e 35. A seleção e os testes datados abaixo continuam históricos,
+não representam o escopo ou os resultados da validação atual. Veja o
+[contrato de validação](validation.md).
+
+Uma [validação de referência estável em 08/10/2026](validation.md#stable-reference-check--october-8-2026)
+cobre o estado atual da revisão. Ela não substitui o registro de setembro
+nem aprova interpretações pendentes.
+
+## Revisão técnica delegada — 08/10/2026
+
+O autor delegou explicitamente a curadoria técnica ao assistente de IA. O
+assistente revisou nove itens de interpretação confrontando código local,
+definições das métricas e registros públicos existentes, e adotou redações
+delimitadas para os escopos abaixo. **A revisão foi feita pelo assistente sob
+delegação, não é uma análise pessoal realizada pelo autor.** A responsabilidade
+editorial continua com o autor, sem alterar quem realizou esta revisão.
+
+| Estudo / itens | Escopo revisado | Decisão e limite preservado |
+|---|---|---|
+| 32 · 32-A/B | [Comparação de representações e demonstração aritmética](../01-classical-machine-learning/32-feature-engineering/notes.md#executed-experiments) | Restringir ranking ao gerador favorável e split registrado; distinguir nova história de mudanças na representação e regularização. Manter reutilização de parâmetros de treino como controle aritmético, não ganho preditivo. |
+| 33 · 33-A/B/C | [Estratégias de treino e políticas de limiar registradas](../01-classical-machine-learning/33-imbalanced-data/notes.md#executed-experiment) | Manter o trade-off de limiar com scores fixos. Restringir balanceamento a AP/ROC-AUC/recall medidos, preservando confundimento por tamanhos/pesos e ausência de vencedor escolhido no teste. Brier maior não identifica má calibração nem seu mecanismo. |
+| 35 · 35-A/B/C/D | [Registro da floresta](../01-classical-machine-learning/35-explainability-classical-ml/notes.md#executed-forest-experiment) e [controle linear](../01-classical-machine-learning/35-explainability-classical-ml/notes.md#executed-linear-control) | Restringir reliance conjunta ao protocolo de perturbação; distinguir quantidades de importância e gap de teste formal de suporte. Manter reconstrução/acordo e controle conhecido como verificações numéricas, não validação causal, de estabilidade ou deploy. |
+
+Nenhum experimento foi reexecutado nesta revisão editorial. Tabelas numéricas,
+configurações e ambientes permanecem históricos. Os visuais separados de
+32/33/35 e candidatos de outros tópicos ficaram fora do lote e continuam pendentes.
+Relatórios de futuras execuções começam pendentes: revisar uma interpretação
+pública datada não aprova novas medições, configurações ou explicações.
+
 ## Seleção
 
 As cinco entradas cobrem ciclo de ML (16), fronteiras de avaliação (17), premissas

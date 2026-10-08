@@ -21,3 +21,9 @@ distinguir hipótese, configuração, resultado observado, interpretação e
 limitação. Simulações não são benchmarks de produção. Referências e créditos
 permanecem nos estudos. Contexto pessoal, rascunhos e prompts operacionais não
 constituem evidências públicas acabadas.
+
+Quando a revisão técnica das interpretações é delegada a um assistente de IA,
+a [curadoria](CURATION.pt-BR.md) identifica quem revisou, escopo e limitações.
+Essa revisão pode refinar uma interpretação publicada, mas não deve ser
+registrada como análise pessoal do autor. Testes automatizados, revisão técnica
+delegada e revisão pessoal continuam como formas distintas de evidência.

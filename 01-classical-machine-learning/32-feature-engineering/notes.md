@@ -182,6 +182,11 @@ customers at one cutoff, not a temporal deployment simulation.
 
 ## Executed experiments
 
+The interpretations below received an AI-assisted technical review on October
+8, 2026, delegated by the author. Scope and decisions are in the
+[curation record](../../docs/CURATION.md#delegated-technical-review--october-8-2026).
+No new execution was performed; visual experiments are outside this review.
+
 ### Fixed representation comparison
 
 **Hypothesis:** adding admissible history and explicit nonlinear terms may
@@ -220,10 +225,13 @@ AP is the recall-weighted average of precision increments, not trapezoidal
 integration of the PR curve. Both reported metrics assess ranking; neither
 establishes calibration or an operational threshold.
 
-**Interpretation candidate — pending author review:** in this generator and
-split, added history improved both ranking metrics, and the bundled nonlinear
-terms improved them further. The comparison is consistent with exposing the
-generator's signal to an additive model.
+**Technical interpretation — delegated review:** in the recorded comparison,
+the aggregate and engineered pipelines had successively higher holdout ROC-AUC
+and AP. Aggregates add historical source information absent from the baseline;
+bins and the interaction change the representation available to the additive
+model. The direction is consistent with the deliberately favorable generator,
+but the experiment does not isolate those mechanisms or regularization effects.
+It supports this specific comparison, not a general feature-engineering benefit.
 
 **Limitations:** deliberately favorable target specification; one seed and split;
 no uncertainty estimate; no separate bin/interaction ablation; fixed C across
@@ -246,9 +254,10 @@ holdout columns approximately `[0.07323923,3.86075365]`.
 The focused tests separately check StandardScaler parity and library bin
 assignments on distinct values, plus the documented tie policy.
 
-**Interpretation candidate — pending author review:** the printed transforms
-illustrate reuse of training parameters. This is an arithmetic demonstration,
-not evidence that these transforms improve prediction. **Limitation:** tiny,
+**Technical interpretation — delegated review:** the printed transforms
+illustrate reuse of fitted training means, scales and thresholds on the holdout
+rows. This is an arithmetic demonstration, not evidence that these transforms
+improve prediction. **Limitation:** tiny,
 dense, complete arrays; simplified bins; no sparse or missing-value handling.
 
 ## Suggested experiments — not executed

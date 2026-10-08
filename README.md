@@ -22,26 +22,9 @@ imbalanced classification with training-only resampling and validation-selected 
 missing-data strategies with frozen-model feature-loss checks, and explainability
 with grouped permutation, PDP/ICE agreement, and probability SHAP reconstruction.
 
-Day 19 adds direct OLS and batch gradient descent implementations, scikit-learn
-parity checks, and a measured feature-scaling experiment. Day 20 adds fold-local
-regularization tuning, a tested proximal gradient solver, and measured shrinkage
-and sparsity comparisons. Day 21 adds stable logistic loss, tested binary
-optimization, conditional odds interpretation, and a measured comparison of
-fixed classification thresholds. Its 14-view visual lab adds animated decisions
-and optimization, offline 3D geometry, and measured representation and
-calibration experiments. Day 22 adds tested confusion-matrix metrics, a measured synthetic
-baseline comparison, and a nine-view visual lab spanning thresholds,
-prevalence, and review capacity. Day 23 adds validation-based threshold
-selection, pairwise ROC-AUC, and a measured ranking-versus-calibration example.
-Day 24 adds tested neighbor voting and a measured synthetic scaling comparison.
-Day 25 adds a tested Multinomial Naive Bayes classifier. Day 26 adds tested
-impurity and split logic plus a synthetic comparison of tree growth controls.
-Day 27 adds an OOB and feature-importance example plus a tested educational
-bootstrap ensemble of randomized stumps.
-
 - Latest topic: [Explainability for Classical ML](01-classical-machine-learning/35-explainability-classical-ml/)
-- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 20 of 20 topics completed
-- Completed modules: [Foundations](00-foundations/) and [Classical Machine Learning](01-classical-machine-learning/)
+- Latest implemented module: [Classical Machine Learning](01-classical-machine-learning/) — 20 of 20 topics implemented
+- Implemented modules: [Foundations](00-foundations/) and [Classical Machine Learning](01-classical-machine-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -57,11 +40,15 @@ is documented separately.
 | What does a fitted linear model actually establish? | [Linear regression theory](01-classical-machine-learning/18-linear-regression-theory/) | OLS geometry, residual diagnostics and tests. Training identities do not establish generalization or causality. |
 | Can I inspect the optimizer itself? | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | NumPy implementation and convergence diagnostics on synthetic data. Educational implementation; no dedicated test suite yet. |
 | Why is association insufficient for intervention? | [Correlation vs causation](00-foundations/13-correlation-causation/) | Known synthetic generators for confounding and selection. No causal identification on business data. |
+| Were the features actually available at prediction time? | [Feature engineering](01-classical-machine-learning/32-feature-engineering/) | Event and availability cutoffs, train-fitted transforms and tests. Favorable synthetic target; not a deployment simulation. |
+| Is balancing the data the same as choosing an action policy? | [Imbalanced data](01-classical-machine-learning/33-imbalanced-data/) | Training-only resampling and validation-selected thresholds. Illustrative costs; no validated business benefit. |
+| What does an explanation measure, and what does it not prove? | [Explainability](01-classical-machine-learning/35-explainability-classical-ml/) | Permutation, PDP/ICE and SHAP reconstruction checks. No causal or calibration guarantee. |
 
 For a short visit, read the selected study's question and limitations, then
 inspect its code and tests. For the full curriculum, use the inventory below.
-Interpretations in topics 16–18 explicitly marked for author review remain
-pending; this curation does not approve them on the author's behalf.
+Interpretations explicitly marked for author review remain pending across the
+[ML module](01-classical-machine-learning/). Implementation and passing tests
+do not approve them on the author's behalf.
 
 For applied studies using external datasets, see the separate
 [TopVistos classification study](https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA)
@@ -111,8 +98,8 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
-| 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | **Complete — Day 35 completed** |
+| 0 | Foundations | 1–15 | **15/15 studies implemented** |
+| 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
@@ -170,11 +157,15 @@ python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
 Run all repository quality checks:
 
 ```bash
+python -m pip install -e ".[dev,imbalance,explainability,boosting]"
 python scripts/validate_repo.py all
 ```
 
 The syntax, internal-link, test, and Streamlit smoke-test checks can also be
 run separately with `syntax`, `links`, `tests`, or `apps` in place of `all`.
+The complete check needs the optional libraries above. Plain `python -m pytest`
+is not repository-wide; see the [validation contract](docs/validation.md) for
+isolated topic tests, coverage and limitations.
 
 Start a local visual laboratory:
 
@@ -222,7 +213,7 @@ The intended evidence is:
 ```text
 applied-ai-engineering-lab/
 ├── 00-foundations/
-├── 01-classical-machine-learning/          # published when started
+├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # published when started
 ├── 03-statistics-experimentation/          # published when started
 ├── 04-deep-learning/                       # published when started

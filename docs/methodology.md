@@ -54,3 +54,9 @@ interpretations, and conclusions.
 Raw study-session output, personal context, operational prompts, social-media
 drafts, and internal review plans are kept locally and are not treated as
 finished portfolio artifacts.
+
+When technical interpretation review is delegated to an AI assistant, the
+[curation record](CURATION.md) identifies the reviewer, scope and limitations.
+A delegated review can refine a published interpretation, but must not be
+recorded as the author's personal analysis. Automated validation, delegated
+technical review and personal author review remain distinct forms of evidence.

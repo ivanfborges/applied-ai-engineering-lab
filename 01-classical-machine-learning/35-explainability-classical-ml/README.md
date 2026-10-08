@@ -65,8 +65,10 @@ The executed forest run achieved held-out ROC-AUC **0.815720**. Joint permutatio
 of signal and proxy reduced ROC-AUC by **0.256499**; individual scratch estimates
 were 0.182565 and 0.019186. The largest SHAP reconstruction error was
 **5.48e-08**. See the [full experiment record](notes.md#executed-forest-experiment)
-for configuration and boundaries. **Interpretation candidates remain pending
-author review.** These measurements describe one synthetic run.
+for configuration and boundaries. The study-script interpretations received a
+scoped [delegated AI-assisted technical review](../../docs/CURATION.md#delegated-technical-review--october-8-2026),
+covering these recorded measurements from one synthetic run;
+the separate lab's interpretations remain pending.
 
 ## What to retain
 

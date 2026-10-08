@@ -71,7 +71,9 @@ AP means average precision, not trapezoidal PR area. Full results, including
 undersampling, oversampling, Brier scores, and the majority baseline, are in the
 [experiment record](notes.md#executed-experiment).
 These are descriptive measurements from one synthetic split, not benchmarks.
-**Interpretation candidates remain pending author review.**
+The study-script interpretations received a scoped
+[delegated AI-assisted technical review](../../docs/CURATION.md#delegated-technical-review--october-8-2026).
+The separate visual experiments remain pending.
 
 ## Key takeaways
 

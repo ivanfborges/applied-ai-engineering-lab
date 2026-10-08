@@ -7,6 +7,37 @@ Scope: select useful entry points, repair navigation and execution paths, and
 make review status explicit. This does not rerun or replace historical
 experiment records, certify every scientific statement, or change authorship.
 
+Navigation update on October 8, 2026: the [ML module index](../01-classical-machine-learning/)
+now covers implemented topics 16–35 and the root entry includes questions from
+32, 33 and 35. The dated selection and validation below remain historical, not
+the scope or results of the current checks. See the [validation contract](validation.md).
+
+A separate [stable reference check on October 8, 2026](validation.md#stable-reference-check--october-8-2026)
+covers the current review working tree. It does not replace the September
+record or approve pending interpretations.
+
+## Delegated technical review — October 8, 2026
+
+The author explicitly delegated technical curation to the AI assistant. The
+assistant reviewed nine interpretation items against the local study source,
+metric definitions and existing public records, and adopted bounded wording
+for the scopes below. **This was an AI-assisted review performed under delegation,
+not a personal analysis performed by the author.** The author retains editorial
+responsibility; that does not change who performed this review.
+
+| Study / items | Reviewed scope | Decision and retained boundary |
+|---|---|---|
+| 32 · 32-A/B | [Representation comparison and arithmetic demonstration](../01-classical-machine-learning/32-feature-engineering/notes.md#executed-experiments) | Restrict the ranking comparison to the favorable generator and recorded split; distinguish new history from representation and regularization changes. Retain training-parameter reuse as an arithmetic check, not predictive benefit. |
+| 33 · 33-A/B/C | [Recorded training strategies and threshold policies](../01-classical-machine-learning/33-imbalanced-data/notes.md#executed-experiment) | Retain the fixed-score threshold trade-off. Restrict balancing conclusions to measured AP/ROC-AUC/recall; keep fit-size/weight confounding and no test-selected winner. Higher Brier does not identify miscalibration or its mechanism. |
+| 35 · 35-A/B/C/D | [Forest record](../01-classical-machine-learning/35-explainability-classical-ml/notes.md#executed-forest-experiment) and [linear control](../01-classical-machine-learning/35-explainability-classical-ml/notes.md#executed-linear-control) | Restrict group reliance to the perturbation protocol; distinguish importance quantities and the gap diagnostic from a support test. Retain reconstruction/agreement and the known-function control as numerical checks, not causal, stability or deployment validation. |
+
+No experiments were rerun for this editorial review. Numerical tables,
+configurations and environment records remain historical. The separate visual
+experiments in 32/33/35 and interpretation candidates in other topics are outside
+this review and retain their pending status. Reports produced by future script
+runs start pending: reviewing a dated public interpretation does not pre-approve
+new measurements, configurations or explanations.
+
 ## Selection
 
 The five entry points cover complementary questions: lifecycle (16), evaluation
