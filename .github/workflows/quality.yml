@@ -37,7 +37,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip install -e ".[dev,explainability]"
+          python -m pip install -e ".[dev,imbalance,explainability]"
 
       - name: Check Python syntax
         run: python scripts/validate_repo.py syntax
