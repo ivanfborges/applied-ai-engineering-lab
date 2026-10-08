@@ -207,3 +207,12 @@ outputs/
 !01-classical-machine-learning/24-k-nearest-neighbors/assets/scaling_neighbors.png
 !01-classical-machine-learning/24-k-nearest-neighbors/assets/k_decision_boundary.gif
 !01-classical-machine-learning/24-k-nearest-neighbors/assets/distance_concentration.png
+
+# Day 25 Naive Bayes: four README previews; other generated outputs stay local.
+!01-classical-machine-learning/25-naive-bayes/outputs/
+01-classical-machine-learning/25-naive-bayes/outputs/*
+!01-classical-machine-learning/25-naive-bayes/outputs/01_bayes_update.png
+!01-classical-machine-learning/25-naive-bayes/outputs/03_token_evidence.png
+!01-classical-machine-learning/25-naive-bayes/outputs/04_log_evidence_accumulation.gif
+!01-classical-machine-learning/25-naive-bayes/outputs/10_correlated_evidence.png
+
