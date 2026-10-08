@@ -21,6 +21,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+explainability = [
+    "shap>=0.47,<0.51",
+]
 imbalance = [
     "imbalanced-learn>=0.14,<0.15",
 ]
