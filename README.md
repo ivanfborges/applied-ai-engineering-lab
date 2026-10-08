@@ -10,12 +10,17 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**24 implemented studies: 15 foundations and 9 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**35 implemented studies: 15 foundations and 20 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
-16–24 cover the ML lifecycle, validation boundaries, linear regression theory
-and implementation, regularization, logistic regression, and classification metrics.
+16–35 cover the ML lifecycle, validation boundaries, linear regression theory
+and implementation, regularization, logistic regression, classification metrics,
+neighbor and probabilistic models, tree ensembles through modern gradient boosting,
+support vector machines, feature engineering with point-in-time transaction aggregates,
+imbalanced classification with training-only resampling and validation-selected policies,
+missing-data strategies with frozen-model feature-loss checks, and explainability
+with grouped permutation, PDP/ICE agreement, and probability SHAP reconstruction.
 
 Day 19 adds direct OLS and batch gradient descent implementations, scikit-learn
 parity checks, and a measured feature-scaling experiment. Day 20 adds fold-local
@@ -29,10 +34,14 @@ baseline comparison, and a nine-view visual lab spanning thresholds,
 prevalence, and review capacity. Day 23 adds validation-based threshold
 selection, pairwise ROC-AUC, and a measured ranking-versus-calibration example.
 Day 24 adds tested neighbor voting and a measured synthetic scaling comparison.
+Day 25 adds a tested Multinomial Naive Bayes classifier. Day 26 adds tested
+impurity and split logic plus a synthetic comparison of tree growth controls.
+Day 27 adds an OOB and feature-importance example plus a tested educational
+bootstrap ensemble of randomized stumps.
 
-- Latest topic: [K-Nearest Neighbors](01-classical-machine-learning/24-k-nearest-neighbors/)
-- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 9 of 20 topics completed
-- Completed module: [Foundations](00-foundations/)
+- Latest topic: [Explainability for Classical ML](01-classical-machine-learning/35-explainability-classical-ml/)
+- Current module: [Classical Machine Learning](01-classical-machine-learning/) — 20 of 20 topics completed
+- Completed modules: [Foundations](00-foundations/) and [Classical Machine Learning](01-classical-machine-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -86,13 +95,24 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 22 | [Classification Metrics I](01-classical-machine-learning/22-classification-metrics/) | Tested metrics, synthetic baseline and threshold experiments, and a nine-view visual lab |
 | 23 | [Classification Metrics II](01-classical-machine-learning/23-classification-metrics-ii/) | Tested pairwise ROC-AUC and validation threshold policy; synthetic AP and calibration distortion experiment |
 | 24 | [K-Nearest Neighbors](01-classical-machine-learning/24-k-nearest-neighbors/) | Tested educational KNN, train-fitted scaling, and a fixed-k synthetic comparison |
+| 25 | [Naive Bayes](01-classical-machine-learning/25-naive-bayes/) | Tested Multinomial NB count implementation, synthetic text-routing check, and 11-view visual companion |
+| 26 | [Decision Trees](01-classical-machine-learning/26-decision-trees/) | Tested Gini split logic and a synthetic comparison of tree growth controls |
+| 27 | [Random Forest](01-classical-machine-learning/27-random-forest/) | Synthetic OOB and importance example; tested bootstrap and randomized-stump voting |
+| 28 | [ExtraTrees](01-classical-machine-learning/28-extratrees/) | Synthetic threshold and bootstrap comparison; tested recursive random splits and tree disagreement |
+| 29 | [Gradient Boosting Intuition](01-classical-machine-learning/29-gradient-boosting/) | Tested residual-fitting stumps and a synthetic learning-rate/stage experiment with validation-only selection |
+| 30 | [XGBoost, LightGBM and CatBoost](01-classical-machine-learning/30-xgboost-lightgbm-catboost/) | Numeric and mixed synthetic workflows with validation early stopping; tested Newton split objective and controlled XGBoost agreement |
+| 31 | [Support Vector Machines](01-classical-machine-learning/31-support-vector-machine/) | Tested mean-hinge subgradients and educational linear optimizer; fold-local joint C/gamma search on synthetic moons |
+| 32 | [Feature Engineering for Tabular Data](01-classical-machine-learning/32-feature-engineering/) | Tested transforms and point-in-time aggregation; synthetic representation comparison and a 13-view visual companion |
+| 33 | [Imbalanced Data](01-classical-machine-learning/33-imbalanced-data/) | Tested educational SMOTE and resampling; synthetic comparison with validation-only cost threshold selection |
+| 34 | [Missing Data](01-classical-machine-learning/34-missing-data/) | Tested training-median imputation and indicators; synthetic workflow comparison with validation selection and frozen-model missingness stress checks |
+| 35 | [Explainability for Classical ML](01-classical-machine-learning/35-explainability-classical-ml/) | Eight-tab interactive lab, three educational GIF exporters, tested permutation/PDP/ICE and probability SHAP; correlated-feature, support and leakage demonstrations |
 
 ## Roadmap
 
 | Sequence | Module | Days | Status |
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **Complete — Day 15 completed** |
-| 1 | Classical Machine Learning | 16–35 | **In progress — 9 of 20 topics completed** |
+| 1 | Classical Machine Learning | 16–35 | **Complete — Day 35 completed** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
