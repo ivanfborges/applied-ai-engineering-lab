@@ -230,3 +230,9 @@ outputs/
 !01-classical-machine-learning/33-imbalanced-data/assets/04_threshold_animation.gif
 !01-classical-machine-learning/33-imbalanced-data/assets/07_resampling_comparison.png
 !01-classical-machine-learning/33-imbalanced-data/assets/08_smote_geometry.gif
+# Day 34 visual suite: three public previews; other outputs regenerate locally.
+!01-classical-machine-learning/34-missing-data/outputs/
+01-classical-machine-learning/34-missing-data/outputs/*
+!01-classical-machine-learning/34-missing-data/outputs/01_mcar_mar_mnar.png
+!01-classical-machine-learning/34-missing-data/outputs/05_imputation_geometry.png
+!01-classical-machine-learning/34-missing-data/outputs/10_missingness_shift.png
