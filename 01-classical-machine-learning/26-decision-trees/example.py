@@ -9,7 +9,7 @@ SEED = 26
 
 
 def make_synthetic_data(n_samples=600):
-    """Axis-aligned class rule with independently flipped training labels."""
+    """Axis-aligned class rule with independently flipped labels before splitting."""
     if isinstance(n_samples, bool) or not isinstance(n_samples, int) or n_samples < 100:
         raise ValueError("n_samples must be an integer of at least 100")
     rng = np.random.default_rng(SEED)

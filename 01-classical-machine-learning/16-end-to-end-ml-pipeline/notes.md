@@ -18,31 +18,31 @@ prediction is made, what it predicts, and what action consumes it.
 
 A compact temporal formulation is
 
-\[
+$$
 X_t \longrightarrow P(Y_{t+h}=1 \mid X_t),
-\]
+$$
 
-where \(X_t\) contains only information available at prediction time \(t\),
-and \(h\) is the outcome horizon. A column can exist in an analytical table
-and still be invalid if it was populated after \(t\).
+where $X_t$ contains only information available at prediction time $t$,
+and $h$ is the outcome horizon. A column can exist in an analytical table
+and still be invalid if it was populated after $t$.
 
 The statistical objective is not training loss by itself. For parameters
-\(\theta\), empirical training risk is
+$\theta$, empirical training risk is
 
-\[
+$$
 \widehat R_{train}(\theta)
 = \frac{1}{n}\sum_{i=1}^{n}
 L\left(y_i, f_\theta(x_i)\right),
-\]
+$$
 
 but the operational concern is expected loss under the future production
 distribution:
 
-\[
+$$
 R_{production}(\theta)
 = \mathbb E_{(X,Y)\sim P_{production}}
 \left[L\left(Y,f_\theta(X)\right)\right].
-\]
+$$
 
 Validation is useful only to the extent that it approximates this second
 quantity and the decisions built on top of it.
@@ -136,28 +136,28 @@ category rates.
 For binary classification, logistic regression estimates a score interpreted
 as
 
-\[
+$$
 p(x) = P(Y=1\mid X=x).
-\]
+$$
 
 The downstream action applies a threshold:
 
-\[
+$$
 \widehat y_t =
 \begin{cases}
 1, & p(x) \ge t,\\
 0, & p(x) < t.
 \end{cases}
-\]
+$$
 
-Changing \(t\) does not retrain the probability model. It changes the error
+Changing $t$ does not retrain the probability model. It changes the error
 trade-off and the workload created by the system. If false-positive and
 false-negative costs are known, a simplified decision objective is
 
-\[
+$$
 \operatorname{Cost}(t)
 = C_{FP}FP(t) + C_{FN}FN(t).
-\]
+$$
 
 Capacity can be a constraint as well: the number of predicted positives may
 not exceed the cases a team can review.
@@ -204,22 +204,22 @@ Monitoring should cover several layers:
 |---|---|---|
 | Service | latency, throughput, error rate, resource use | Is inference available and timely? |
 | Contract | missing fields, type errors, unknown categories, range violations | Are requests valid? |
-| Inputs | distributions, correlations, population mix | Has \(P(X)\) changed? |
+| Inputs | distributions, correlations, population mix | Has $P(X)$ changed? |
 | Predictions | score distribution, positive rate, calibration proxies | Is model behavior changing? |
 | Delayed labels | ROC-AUC, precision, recall, calibration, slice performance | Is predictive quality changing? |
 | Decision outcomes | outreach capacity, conversion, cost, guardrails | Is the system improving the intended decision? |
 
 Covariate shift means
 
-\[
+$$
 P_{old}(X) \ne P_{new}(X),
-\]
+$$
 
 while concept drift means
 
-\[
+$$
 P_{old}(Y\mid X) \ne P_{new}(Y\mid X).
-\]
+$$
 
 Input drift does not prove performance degradation, and stable marginals do
 not prove the conditional relationship is stable. Retraining should be

@@ -288,9 +288,9 @@ calibration, dual coefficients, optimized solvers, and automatic stopping.
 
 ## Suggested follow-ups, not executed
 
-Repeat the joint search across seeds to assess selection variability; compare
-scaled and unscaled features after multiplying one feature by 1000; evaluate
-linear, polynomial, and RBF kernels under equal tuning budgets; or study
-class weights and calibration on a separate imbalanced generator. Visual
-margin and kernel experiments belong to the separate visual phase and have
-not been performed in this topic.
+Repeat the joint search across seeds to assess selection variability; extend
+the scaling comparison across datasets; evaluate linear, polynomial, and RBF
+kernels under equal tuning budgets; or study class weights and calibration on
+a separate imbalanced generator. The separate [visual laboratory](README_VISUALS.md)
+already records margin/kernel demonstrations and one feature-scaling comparison.
+The larger comparative studies above remain suggestions, not executed results.

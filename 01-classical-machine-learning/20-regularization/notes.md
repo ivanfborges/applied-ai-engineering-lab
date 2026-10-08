@@ -2,22 +2,22 @@
 
 ## One objective, explicit conventions
 
-Let \(X\in\mathbb R^{n\times p}\), \(y\in\mathbb R^n\), intercept \(b\), and
-coefficients \(w\). This study uses
+Let $X\in\mathbb R^{n\times p}$, $y\in\mathbb R^n$, intercept $b$, and
+coefficients $w$. This study uses
 
-\[
+$$
 J(b,w)=\frac{1}{2n}\|y-b\mathbf1-Xw\|_2^2
 +\alpha\rho\|w\|_1+\frac{\alpha(1-\rho)}2\|w\|_2^2.
-\]
+$$
 
-The intercept is unpenalized. With \(\alpha>0\), \(\rho=0\) gives Ridge,
-\(\rho=1\) gives Lasso, and \(0<\rho<1\) gives ElasticNet. With \(\alpha=0\),
-the objective is OLS regardless of \(\rho\). ElasticNet's `l1_ratio` is
-**exactly** \(\rho\) for this convention.
+The intercept is unpenalized. With $\alpha>0$, $\rho=0$ gives Ridge,
+$\rho=1$ gives Lasso, and $0<\rho<1$ gives ElasticNet. With $\alpha=0$,
+the objective is OLS regardless of $\rho$. ElasticNet's `l1_ratio` is
+**exactly** $\rho$ for this convention.
 
 Scikit-learn's ElasticNet uses this normalization. Ridge instead minimizes
 SSE plus `alpha` times the squared coefficient norm, so matching the pure-L2
-objectives requires \(\alpha_{\text{Ridge}}=n\alpha\). Equal numerical alpha
+objectives requires $\alpha_{\text{Ridge}}=n\alpha$. Equal numerical alpha
 values across these APIs are not equal penalties. See the
 [ElasticNet objective](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.ElasticNet.html)
 and [Ridge objective](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.Ridge.html).
@@ -30,26 +30,26 @@ differ. That is the usual native-parameter search, not a matched-penalty study.
 
 ## Ridge: weak directions and bias
 
-Centering \(X,y\) removes the intercept from the optimization. Writing the
-centered arrays as \(X_c,y_c\),
+Centering $X,y$ removes the intercept from the optimization. Writing the
+centered arrays as $X_c,y_c$,
 
-\[
+$$
 (X_c^\top X_c+n\alpha I)\hat w=X_c^\top y_c,\qquad
 \hat b=\bar y-\bar X^\top\hat w.
-\]
+$$
 
-For \(\alpha>0\), the coefficient system is positive definite even when the
+For $\alpha>0$, the coefficient system is positive definite even when the
 design is rank deficient. Solve the linear system or use SVD; explicitly
 forming an inverse adds numerical error and unnecessary work.
 
-With \(X_c=UDV^\top\), Ridge has
+With $X_c=UDV^\top$, Ridge has
 
-\[
+$$
 \hat w=V\,\mathrm{diag}\left(\frac{d_j}{d_j^2+n\alpha}\right)U^\top y_c.
-\]
+$$
 
 Relative to an identifiable OLS direction, the shrinkage multiplier is
-\(d_j^2/(d_j^2+n\alpha)\). Small singular values are damped most. This explains
+$d_j^2/(d_j^2+n\alpha)$. Small singular values are damped most. This explains
 why nearly duplicate predictors can produce large opposing OLS coefficients
 while Ridge prefers a smaller combination with similar fitted predictions.
 Null directions have zero contribution for positive alpha.
@@ -61,27 +61,27 @@ Ridge can have zeros by symmetry or zero signal; it has no L1-style threshold
 that generally makes whole ranges of weak signals exactly zero.
 
 Under a correctly specified fixed-design linear model with mean-zero,
-homoscedastic errors of variance \(\sigma^2\), write
-\(A=X_c^\top X_c\). For coefficients, conditional on \(X_c\),
+homoscedastic errors of variance $\sigma^2$, write
+$A=X_c^\top X_c$. For coefficients, conditional on $X_c$,
 
-\[
+$$
 E[\hat w\mid X_c]-w=-n\alpha(A+n\alpha I)^{-1}w,
-\]
-\[
+$$
+$$
 \mathrm{Cov}(\hat w\mid X_c)
 =\sigma^2(A+n\alpha I)^{-1}A(A+n\alpha I)^{-1}.
-\]
+$$
 
 These equations describe fixed alpha, not the additional randomness of
 data-driven tuning. In identified eigendirections the variance is reduced,
 at the cost of bias toward zero. A prediction's error at a fixed input has
 the decomposition
 
-\[
+$$
 E_{D,\epsilon}[(y-\hat f_D(x))^2]
 =(E_D[\hat f_D(x)]-f(x))^2
 +\mathrm{Var}_D(\hat f_D(x))+\sigma^2(x).
-\]
+$$
 
 Reducing variance can outweigh increased squared bias. Excessive shrinkage
 underfits; regularization does not guarantee a lower realized test error.
@@ -90,33 +90,33 @@ One fitted model cannot estimate this repeated-sampling decomposition.
 ## Lasso: why zero is an optimum
 
 For a zero coefficient, the subgradient of absolute value is the interval
-\([-1,1]\). Set \(r=y_c-X_cw\). Lasso's optimality conditions are
+$[-1,1]$. Set $r=y_c-X_cw$. Lasso's optimality conditions are
 
-\[
+$$
 X_{c,j}^\top r/n=\alpha\,\mathrm{sign}(w_j)\quad(w_j\ne0),
-\]
-\[
+$$
+$$
 |X_{c,j}^\top r/n|\le\alpha\quad(w_j=0).
-\]
+$$
 
 A range of residual correlations is therefore compatible with a zero
-coefficient. For centered orthonormal columns, \(X_c^\top X_c/n=I\),
-let \(z=X_c^\top y_c/n\). Then
+coefficient. For centered orthonormal columns, $X_c^\top X_c/n=I$,
+let $z=X_c^\top y_c/n$. Then
 
-\[
+$$
 \hat w_j=S(z_j,\alpha),\qquad
 S(z,t)=\mathrm{sign}(z)\max(|z|-t,0).
-\]
+$$
 
 For ElasticNet in the same orthonormal setting,
 
-\[
+$$
 \hat w_j=\frac{S(z_j,\alpha\rho)}{1+\alpha(1-\rho)}.
-\]
+$$
 
 The tests use this independent analytic solution. For general correlated
 designs, thresholding the OLS coefficients once is not the Lasso solution.
-At \(\alpha\ge\|X_c^\top y_c\|_\infty/n\), pure Lasso admits the all-zero
+At $\alpha\ge\|X_c^\top y_c\|_\infty/n$, pure Lasso admits the all-zero
 coefficient vector, while retaining the target mean as its intercept.
 
 The constrained view minimizes squared error subject to an L1 or L2 budget.
@@ -148,15 +148,15 @@ can still carry useful predictive information.
 
 ## Scaling, priors, and interpretation
 
-For \(z_j=(x_j-\mu_j)/s_j\), a standardized coefficient measures a change in
+For $z_j=(x_j-\mu_j)/s_j$, a standardized coefficient measures a change in
 target units per training standard deviation of that predictor. Convert back
 using
 
-\[
+$$
 w_{\text{original},j}=w_{\text{standardized},j}/s_j,\qquad
 b_{\text{original}}=b_{\text{standardized}}
 -\sum_j\mu_j w_{\text{standardized},j}/s_j.
-\]
+$$
 
 Changing units without scaling changes the effective regularization. Scaling
 is itself a modeling choice: rare binary indicators, outliers, and domain
@@ -164,10 +164,10 @@ constraints can justify alternatives to unit variance. The example's reported
 norms all refer to the same full-development standardized feature space.
 They cannot be compared directly with the generator's raw-unit coefficients.
 
-For independent Gaussian errors with known variance \(\sigma^2\), a Gaussian
-coefficient prior with variance \(\tau^2\) yields Ridge MAP with
-\(\alpha=\sigma^2/(n\tau^2)\) in this convention. A Laplace prior with scale
-\(s\) yields Lasso MAP with \(\alpha=\sigma^2/(ns)\). These are statements about
+For independent Gaussian errors with known variance $\sigma^2$, a Gaussian
+coefficient prior with variance $\tau^2$ yields Ridge MAP with
+$\alpha=\sigma^2/(n\tau^2)$ in this convention. A Laplace prior with scale
+$s$ yields Lasso MAP with $\alpha=\sigma^2/(ns)$. These are statements about
 a posterior **mode**. A continuous Laplace prior does not assign positive
 posterior probability mass to an exactly zero coefficient.
 
@@ -201,22 +201,22 @@ features, outliers under squared loss, or nonlinear misspecification.
 
 The smooth part of the objective has gradient
 
-\[
+$$
 g(w)=X_c^\top(X_cw-y_c)/n+\alpha(1-\rho)w.
-\]
+$$
 
-Its Lipschitz constant is \(L=\|X_c\|_2^2/n+\alpha(1-\rho)\). The implementation
-uses \(\eta=1/L\) and iterates
+Its Lipschitz constant is $L=\|X_c\|_2^2/n+\alpha(1-\rho)$. The implementation
+uses $\eta=1/L$ and iterates
 
-\[
+$$
 w^+=S(w-\eta g(w),\eta\alpha\rho).
-\]
+$$
 
 Centering yields the unpenalized intercept; scaling remains the caller's
-responsibility. If \(L=0\), the zero initial coefficients already satisfy
+responsibility. If $L=0$, the zero initial coefficients already satisfy
 optimality. The solver measures the largest KKT violation: on active
-coordinates it uses \(|g_j+\alpha\rho\,\mathrm{sign}(w_j)|\); on inactive
-coordinates it uses \(\max(|g_j|-\alpha\rho,0)\).
+coordinates it uses $|g_j+\alpha\rho\,\mathrm{sign}(w_j)|$; on inactive
+coordinates it uses $\max(|g_j|-\alpha\rho,0)$.
 
 The absolute stopping tolerance depends on data units. A tiny update alone
 would be misleading with a tiny learning rate. A finite iteration budget
@@ -250,9 +250,9 @@ accordingly. No external dataset is used.
 
 The split uses seed 20 and reserves 25% (125 rows) for test. Five shuffled
 development folds use seed 20. Ridge searches 13 log-spaced native alphas
-from \(10^{-3}\) to \(10^3\); Lasso and ElasticNet search 13 from \(10^{-3}\)
-to \(10^1\). ElasticNet searches ratios 0.2, 0.5, and 0.8. L1 solvers use
-100,000 maximum iterations and tolerance \(10^{-7}\); convergence warnings
+from $10^{-3}$ to $10^3$; Lasso and ElasticNet search 13 from $10^{-3}$
+to $10^1$. ElasticNet searches ratios 0.2, 0.5, and 0.8. L1 solvers use
+100,000 maximum iterations and tolerance $10^{-7}$; convergence warnings
 are treated as errors. Ridge uses SVD. Scaling is inside the searched
 pipeline; all candidates use the same splits.
 
@@ -289,9 +289,9 @@ without penalizing the intercept.
 **Configuration:** `from_scratch.py`; seed 20; 300 rows, four independent
 standard-normal predictors, target intercept 3, coefficients (4, 0, -2, 0),
 normal noise SD 1. The predictors are standardized on these demonstration
-rows. Alpha 0.1, ratio 0.8, KKT tolerance \(10^{-8}\), budget 50,000 updates.
+rows. Alpha 0.1, ratio 0.8, KKT tolerance $10^{-8}$, budget 50,000 updates.
 
-**Result:** 12 updates; KKT residual \(1.712\times10^{-9}\); objective decreased
+**Result:** 12 updates; KKT residual $1.712\times10^{-9}$; objective decreased
 from 10.649449 to 1.164334. Standardized coefficients:
 (3.994716, 0, -1.770931, 0); standardized-space intercept 2.627653.
 
@@ -313,5 +313,7 @@ support recovery or performance on large ill-conditioned inputs.
   pair-level prediction contribution as well as individual coefficients.
 - Compare dense and sparse true signals over several sample sizes; select
   penalties within each replicate's development data.
-- Inspect coefficient paths using a common training-fitted scaler. A future
-  visual phase can plot them; no visual artifacts were generated here.
+- Extend coefficient-path comparisons across samples using a common
+  training-fitted scaler. The separate [visual laboratory](VISUAL_GUIDE.md)
+  already documents the implemented path views; those visual runs are distinct
+  from the study-script records above.

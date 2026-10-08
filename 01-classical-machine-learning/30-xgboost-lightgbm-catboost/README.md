@@ -38,6 +38,10 @@ See the [official sources](references.md) and [technical notes](notes.md).
 | [from_scratch.py](from_scratch.py) | Stable logistic derivatives, L2 leaf weights, regularized split gain, and one-feature Newton stump |
 | [notes.md](notes.md) | Derivation, categorical intuition, capacity trade-offs, mistakes, and executed experiment records |
 | [tests/test_boosting.py](tests/test_boosting.py) | Finite differences, direct objective oracle, split constraints, data boundaries, and controlled XGBoost agreement |
+| [tests/test_boosting_integration.py](tests/test_boosting_integration.py) | Small numeric/mixed smoke tests of the three installed library workflows |
+| [VISUAL_GUIDE.md](VISUAL_GUIDE.md) | Thirteen concept-specific views, local generation, and interpretation boundaries |
+| [visualize_day30.py](visualize_day30.py) | Reproducible visual generator; generated files remain ignored |
+| [tests/test_visualize_day30.py](tests/test_visualize_day30.py) | Visual numerical helpers, dependency handling, and temporary-file rendering |
 | [interview_questions.md](interview_questions.md) | Questions tied to the math and workflow choices |
 | [references.md](references.md) | Original papers and official API documentation |
 
@@ -74,8 +78,10 @@ The scripts write `outputs/numeric_experiment.json` and
 reruns. Those generated records include configurations, split indices, package
 versions, measured results, limitations, and pending review status. They remain
 ignored; the intentional public summaries are in the
-[executed records](notes.md#executed-experiment-records). No visual phase or
-public output previews are included.
+[executed records](notes.md#executed-experiment-records). The separate
+[visual companion](VISUAL_GUIDE.md) uses its own configurations and records;
+do not combine its measurements with these examples. No generated visual
+previews are currently selected for public versioning.
 
 ## Takeaways and limits
 

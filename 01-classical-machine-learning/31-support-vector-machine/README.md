@@ -24,6 +24,9 @@ This folder implements synthetic binary classification only.
 | [example.py](example.py) | Joint RBF `C`/`gamma` search with scaling inside cross-validation folds and a reserved test set |
 | [from_scratch.py](from_scratch.py) | NumPy mean-hinge objective, subgradients, and an educational linear optimizer |
 | [tests/test_svm.py](tests/test_svm.py) | Numerical derivatives, kink behavior, analytic optima, library comparison, input errors, fold-local scaling, and dual-score reconstruction |
+| [README_VISUALS.md](README_VISUALS.md) | Visual geometry, recorded experiments, limitations, and local regeneration |
+| [visualize_svm.py](visualize_svm.py) | Static plots, parameter GIFs and self-contained 3D explorers |
+| [tests/test_visualize_svm.py](tests/test_visualize_svm.py) | Numerical visual contracts and temporary-file rendering |
 | [interview_questions.md](interview_questions.md) | Focused mathematical and operational questions with answers |
 | [references.md](references.md) | Original research, official APIs, and synthetic data generators |
 
@@ -54,6 +57,21 @@ the script: `kernel_search.json` or `linear_solver.json`. These contain the
 hypothesis, configuration, versions, results, limitations, and review status.
 No generated artifacts are selected for versioning. Public measured summaries
 are in the [experiment records](notes.md#executed-experiments).
+
+## Separate visual laboratory
+
+The [visual guide](README_VISUALS.md) connects margins, hinge loss, scaling,
+kernel geometry and joint C/gamma behavior. Generate locally from the root:
+
+```bash
+python 01-classical-machine-learning/31-support-vector-machine/visualize_svm.py --skip-gifs
+```
+
+Omit `--skip-gifs` to include animations. Generated files stay ignored under
+`outputs/`; no preview is linked until deliberately selected and unignored.
+The visual experiments use separate configurations from the two study scripts.
+Interpretations require author review; decision scores are not probabilities,
+and the explicit finite lift is not an RBF feature mapping.
 
 ## What the executed examples establish
 

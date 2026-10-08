@@ -8,7 +8,7 @@
 
 2. **Explain exact zeros without relying only on the diamond picture.**
    At zero, the L1 subgradient spans [-1, 1]. For Lasso, a feature whose
-   residual correlation satisfies \(|X_j^\top r/n|\le\alpha\) can have zero
+   residual correlation satisfies $|X_j^\top r/n|\le\alpha$ can have zero
    weight at the optimum. The proximal step implements this interval using
    soft thresholding. A smooth L2 penalty does not create that interval.
 

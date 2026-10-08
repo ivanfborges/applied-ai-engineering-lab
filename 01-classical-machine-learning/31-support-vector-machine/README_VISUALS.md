@@ -3,7 +3,8 @@
 [visualize_svm.py](visualize_svm.py) generates static geometry, two looping
 parameter animations, and two offline 3D explorers. Every visual answers a
 specific question. All data are synthetic and all displayed measurements are
-computed during the run. The root and topic READMEs are unchanged.
+computed during the run. Study scripts and visual experiments use separate
+configurations; their metrics should not be merged.
 
 ## Run
 
@@ -193,29 +194,10 @@ selecting previews and deliberately unignoring those files; otherwise links
 would point at private local outputs. The HTML files are useful for local
 rotation/zoom, rather than GitHub social previews.
 
-## Optional section for the Day 31 README
+## Study navigation
 
-```markdown
-## Visual Experiments
-
-Run `python visualize_svm.py` from this topic directory to generate static
-plots, looping GIFs, and offline 3D explorers in `outputs/`.
-Use `--skip-gifs` for a faster static run or `--show` to open the explorers.
-
-The margin plot connects hyperplanes, geometric distance, and support vectors.
-The hinge-loss plot distinguishes correct classification from satisfying the
-margin. The C/gamma animations and grid show violation cost and kernel locality;
-the scaling comparison shows how feature units change distance geometry.
-The 3D views connect an educational explicit lift and a decision-score surface
-to their 2D counterparts. The finite lift is not an RBF mapping, and scores
-are not probabilities.
-
-Recommended preview candidates: `01_maximum_margin.png`,
-`09_gamma_effect.gif`, and `10_C_gamma_grid.png`. Generated files remain
-ignored until selected and deliberately unignored. These synthetic
-experiments illustrate conditional behavior; interpretations require author
-review and do not establish universal SVM performance.
-```
+Return to the [topic overview](README.md) for the runnable study examples and
+to [notes.md](notes.md) for their separate mathematical and experiment records.
 
 Offline export background:
 [Plotly HTML export documentation](https://plotly.com/python/interactive-html-export/).

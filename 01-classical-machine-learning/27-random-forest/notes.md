@@ -4,27 +4,27 @@
 
 A decision tree greedily partitions the training data. A small change in rows can change an early split and all its descendants. Bagging fits multiple trees on different bootstrap samples and averages their predictions. If one strong predictor appears at the root of almost every tree, their errors may remain similar. Random Forest also restricts split search to a newly sampled feature subset at **each node**, creating more diversity. Restricting too aggressively can weaken individual trees; `max_features` controls this trade-off.
 
-For regression predictions from \(B\) trees with equal variance \(\sigma^2\) and equal pairwise correlation \(\rho\), the average has variance
+For regression predictions from $B$ trees with equal variance $\sigma^2$ and equal pairwise correlation $\rho$, the average has variance
 
-\[
+$$
 \operatorname{Var}(\bar T)=\sigma^2\left(\rho+\frac{1-\rho}{B}\right).
-\]
+$$
 
-This identity follows by expanding the variance of a sum under those assumptions. It describes prediction variance at a fixed input, not a guaranteed change in classification accuracy. As \(B\) grows, the correlation term remains. Bootstrap sampling and feature subsets aim to lower correlation while keeping useful trees.
+This identity follows by expanding the variance of a sum under those assumptions. It describes prediction variance at a fixed input, not a guaranteed change in classification accuracy. As $B$ grows, the correlation term remains. Bootstrap sampling and feature subsets aim to lower correlation while keeping useful trees.
 
 ## Bootstrap and out-of-bag predictions
 
-For \(n\) training rows, one tree draws \(n\) indices **with replacement**. The probability that a given row is never drawn is \((1-1/n)^n\), approaching \(e^{-1}\approx0.368\). Thus about 63.2% of original rows are represented at least once for large \(n\), despite the bootstrap sample containing \(n\) draws.
+For $n$ training rows, one tree draws $n$ indices **with replacement**. The probability that a given row is never drawn is $(1-1/n)^n$, approaching $e^{-1}\approx0.368$. Thus about 63.2% of original rows are represented at least once for large $n$, despite the bootstrap sample containing $n$ draws.
 
-Let \(O_i\) be the set of trees whose bootstrap samples omit row \(i\). An OOB classifier aggregates predictions from \(O_i\) only, then scores the training rows that have OOB predictions. The scikit-learn example uses `oob_score_`, whose classifier default is accuracy. With too few trees, some rows may receive no OOB prediction; the scratch example reports coverage explicitly. OOB uses only training data and is separate from the held-out test score.
+Let $O_i$ be the set of trees whose bootstrap samples omit row $i$. An OOB classifier aggregates predictions from $O_i$ only, then scores the training rows that have OOB predictions. The scikit-learn example uses `oob_score_`, whose classifier default is accuracy. With too few trees, some rows may receive no OOB prediction; the scratch example reports coverage explicitly. OOB uses only training data and is separate from the held-out test score.
 
 OOB is a reasonable internal check when independent rows are sampled from a stable population. Patient visits, customer histories, repeated documents, or future observations require group-aware or time-aware validation. Fit preprocessing inside the training boundary and keep a final test set for evaluation. Repeatedly selecting hyperparameters against OOB also makes it a tuning signal, so it is no longer an untouched final assessment.
 
 ## Feature importance answers different questions
 
-For a classification split at node \(t\), Gini impurity is \(1-\sum_k p_k^2\). The impurity decrease is the parent impurity minus the child impurities weighted by their row counts. Mean decrease in impurity (MDI) adds the weighted decreases attributed to a feature across the fitted trees and normalizes the result. It is fast, but uses training splits and can favor variables with many candidate thresholds.
+For a classification split at node $t$, Gini impurity is $1-\sum_k p_k^2$. The impurity decrease is the parent impurity minus the child impurities weighted by their row counts. Mean decrease in impurity (MDI) adds the weighted decreases attributed to a feature across the fitted trees and normalizes the result. It is fast, but uses training splits and can favor variables with many candidate thresholds.
 
-For a score where larger is better, permutation importance is \(M_{\text{baseline}}-M_{\text{shuffled }j}\). The example computes it on untouched test rows after fitting, using accuracy as the score. This measures how much that model and metric depend on feature \(j\) under a particular shuffle. With correlated features, another feature may substitute for the shuffled one; shuffling can also create implausible combinations. Neither method measures causal effect or proves a feature should be collected in production.
+For a score where larger is better, permutation importance is $M_{\text{baseline}}-M_{\text{shuffled }j}$. The example computes it on untouched test rows after fitting, using accuracy as the score. This measures how much that model and metric depend on feature $j$ under a particular shuffle. With correlated features, another feature may substitute for the shuffled one; shuffling can also create implausible combinations. Neither method measures causal effect or proves a feature should be collected in production.
 
 ## Applications and limits
 

@@ -50,8 +50,9 @@ class SkipVisualization(RuntimeError):
 def require_optional(*names):
     missing = [name for name in names if not OPTIONAL_AVAILABLE[name]]
     if missing:
+        extra = "dev,boosting" if any(name != "plotly" for name in missing) else "dev"
         raise SkipVisualization("Missing packages: " + ", ".join(missing)
-                                + ". Install with: python -m pip install " + " ".join(missing))
+                                + f'. From the repository root install: python -m pip install -e ".[{extra}]"')
 
 
 def model_classes():

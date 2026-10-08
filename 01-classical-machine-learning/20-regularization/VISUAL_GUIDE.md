@@ -83,10 +83,10 @@ are preserved rather than deleted.
 
 All penalty paths, surfaces, and fixed-alpha simulations use
 
-\[
+$$
 \frac{1}{2n}\|y-b-Xw\|^2
 +\alpha\rho\|w\|_1+\frac{\alpha(1-\rho)}2\|w\|^2.
-\]
+$$
 
 Ridge calls use native `alpha = n_train * normalized_alpha`. Lasso and
 ElasticNet use the normalized alpha directly. The polynomial prediction

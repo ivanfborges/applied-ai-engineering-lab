@@ -96,7 +96,7 @@ def test_missing_optional_packages_skip_only_dependent_view(monkeypatch, tmp_pat
     output = capsys.readouterr().out
     assert "[OK] 02_gradient_hessian_geometry.png" in output
     assert "[SKIP] 11_decision_surface_3d.html" in output
-    assert "python -m pip install plotly" in output
+    assert 'python -m pip install -e ".[dev]"' in output
     assert "![Gradient Hessian](visuals/02_gradient_hessian_geometry.png)" in output
     assert "[Open the offline" not in output
     assert not plt.get_fignums()
@@ -104,6 +104,13 @@ def test_missing_optional_packages_skip_only_dependent_view(monkeypatch, tmp_pat
         picture.verify()
     record = json.loads(next(lab.OUTPUT_DIR.glob("experiment_records_*.json")).read_text(encoding="utf-8"))
     assert record["records"]["gradient_hessian"]["review_status"] == "pending author review"
+
+
+def test_missing_model_library_uses_canonical_boosting_extra(monkeypatch):
+    monkeypatch.setitem(lab.OPTIONAL_AVAILABLE, "xgboost", False)
+    with pytest.raises(lab.SkipVisualization, match="Missing packages: xgboost") as error:
+        lab.require_optional("xgboost")
+    assert 'python -m pip install -e ".[dev,boosting]"' in str(error.value)
 
 
 def test_unexpected_rendering_error_is_reported_and_returns_failure(monkeypatch, tmp_path, capsys):

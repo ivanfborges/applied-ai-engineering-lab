@@ -6,11 +6,11 @@ For each feature, inspect thresholds between distinct training values. For every
 
 ## Why weight child impurity?
 
-Without weights, a tiny pure leaf could appear as valuable as a large well-separated group. A child with \(N_L\) of \(N\) rows contributes \(N_L/N\) of its impurity to the split score.
+Without weights, a tiny pure leaf could appear as valuable as a large well-separated group. A child with $N_L$ of $N$ rows contributes $N_L/N$ of its impurity to the split score.
 
 ## How do Gini and entropy differ?
 
-Gini is \(1-\sum p_k^2\); entropy is \(-\sum p_k\log_2p_k\). Both are zero at purity and peak for balanced classes. Entropy reduction is information gain. They may choose different splits, so any claim that they are equivalent requires an actual comparison.
+Gini is $1-\sum p_k^2$; entropy is $-\sum p_k\log_2p_k$. Both are zero at purity and peak for balanced classes. Entropy reduction is information gain. They may choose different splits, so any claim that they are equivalent requires an actual comparison.
 
 ## Why can a deep tree overfit?
 

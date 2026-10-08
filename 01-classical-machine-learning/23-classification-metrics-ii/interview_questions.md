@@ -10,9 +10,10 @@ AP summarizes precision over recall increments, and the no-skill level is approx
 No. ROC-AUC remains a legitimate ranking measure. However, a low FPR can still produce many false alerts when negatives are numerous; inspect counts and PR behavior as well.
 
 **How would you set a threshold for a review queue?**  
-Define the target, such as a minimum precision or maximum daily alerts. Select the cutoff on validation data, report the resulting counts and uncertainty, then apply it once to an untouched test set. For a hard fixed capacity, compare a top-\(K\) policy.
+Define the target, such as a minimum precision or maximum daily alerts. Select the cutoff on validation data, report the resulting counts and uncertainty, then apply it once to an untouched test set. For a hard fixed capacity, compare a top-$K$ policy.
 
-**When does the cost-based threshold equal \(C_{FP}/(C_{FP}+C_{FN})\)?**  
+**When does the cost-based threshold equal $C_{FP}/(C_{FP}+C_{FN})$?**
+
 When scores are calibrated probabilities and the only outcomes are constant false-positive and false-negative costs. Capacity limits, intervention effects, or heterogeneous costs break that simple rule.
 
 **Can AUC stay fixed while calibration changes?**  
