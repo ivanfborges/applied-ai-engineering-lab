@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**38 estudos implementados: 15 de fundamentos, 20 de ML clássico e 3 de aprendizado não supervisionado.** O roteiro
+**39 estudos implementados: 15 de fundamentos, 20 de ML clássico e 4 de aprendizado não supervisionado.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -15,15 +15,15 @@ O [módulo de ML clássico](01-classical-machine-learning/) tem os 20 tópicos
 16–35 implementados: ciclo de ML, validação, regressão, classificação, ensembles,
 SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade.
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
-estudo. O [tópico mais recente, Dia 38 — Clustering Hierárquico](02-unsupervised-recommender-systems/38-hierarchical-clustering/),
-conecta os quatro critérios de linkage a comparações sintéticas, cortes da mesma
-árvore de Ward e implementação NumPy de average linkage testada, incluindo a
-escala das alturas e os limites de cortes com empates. O
+estudo. O [tópico mais recente, Dia 39 — PCA na Prática](02-unsupervised-recommender-systems/39-pca-in-practice/),
+conecta variância explicada, projeção e reconstrução a uma comparação no Wine
+com pré-processamento dentro dos folds, implementação NumPy testada e controle
+sintético de sinal em baixa variância. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **3 de 9 tópicos implementados**; os Dias 39–44 continuam planejados.
+tem **4 de 9 tópicos implementados**; os Dias 40–44 continuam planejados.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (3/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–38 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (4/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–39 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
@@ -93,7 +93,8 @@ Testes verificam comportamentos específicos; não comprovam revisão pessoal de
 todas as interpretações. O autor mantém a responsabilidade pelas decisões e
 conclusões. [Metodologia](docs/methodology.pt-BR.md).
 
-Os exemplos usam dados sintéticos ou definidos em código. Valores observados
+Os exemplos usam dados sintéticos ou definidos em código, além do Wine público
+distribuído com scikit-learn, com [fonte documentada](02-unsupervised-recommender-systems/39-pca-in-practice/references.md). Valores observados
 não representam ganhos em produção. Código didático não substitui bibliotecas
 validadas; roteiros futuros não indicam experiência de implantação nessas áreas.
 Os créditos e referências de cada estudo estão preservados. [Licença MIT](LICENSE).

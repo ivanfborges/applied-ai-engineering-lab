@@ -257,3 +257,10 @@ outputs/
 !02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/02_linkage_methods.gif
 !02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/03_dendrogram_construction.gif
 !02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/07_ward_variance.gif
+
+# Three inspected Day 39 teaching previews; HTML, other exports and run records regenerate locally.
+!02-unsupervised-recommender-systems/39-pca-in-practice/outputs/
+02-unsupervised-recommender-systems/39-pca-in-practice/outputs/*
+!02-unsupervised-recommender-systems/39-pca-in-practice/outputs/01_pca_geometry.gif
+!02-unsupervised-recommender-systems/39-pca-in-practice/outputs/02_explained_variance.png
+!02-unsupervised-recommender-systems/39-pca-in-practice/outputs/06_variance_vs_predictive_information.png
