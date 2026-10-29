@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**35 implemented studies: 15 foundations and 20 classical ML topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**36 implemented studies: 15 foundations, 20 classical ML topics and 1 unsupervised learning topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -21,10 +21,12 @@ support vector machines, feature engineering with point-in-time transaction aggr
 imbalanced classification with training-only resampling and validation-selected policies,
 missing-data strategies with frozen-model feature-loss checks, and explainability
 with grouped permutation, PDP/ICE agreement, and probability SHAP reconstruction.
+Day 36 starts unsupervised learning with tested K-Means updates, synthetic
+scaling and cluster-count diagnostics, and frozen-pipeline inference.
 
-- Latest topic: [Explainability for Classical ML](01-classical-machine-learning/35-explainability-classical-ml/)
-- Latest implemented module: [Classical Machine Learning](01-classical-machine-learning/) — 20 of 20 topics implemented
-- Implemented modules: [Foundations](00-foundations/) and [Classical Machine Learning](01-classical-machine-learning/)
+- Latest topic: [Day 36 — K-Means Clustering](02-unsupervised-recommender-systems/36-k-means-clustering/)
+- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 1 of 9 topics implemented
+- Implemented modules: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/) and [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -49,6 +51,8 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
+Day 36 interpretation candidates in the
+[unsupervised module](02-unsupervised-recommender-systems/) also await author review.
 
 For applied studies using external datasets, see the separate
 [TopVistos classification study](https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA)
@@ -93,6 +97,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 33 | [Imbalanced Data](01-classical-machine-learning/33-imbalanced-data/) | Tested educational SMOTE and resampling; synthetic comparison with validation-only cost threshold selection |
 | 34 | [Missing Data](01-classical-machine-learning/34-missing-data/) | Tested training-median imputation and indicators; synthetic workflow comparison with validation selection and frozen-model missingness stress checks |
 | 35 | [Explainability for Classical ML](01-classical-machine-learning/35-explainability-classical-ml/) | Eight-tab interactive lab, three educational GIF exporters, tested permutation/PDP/ICE and probability SHAP; correlated-feature, support and leakage demonstrations |
+| 36 | [K-Means Clustering](02-unsupervised-recommender-systems/36-k-means-clustering/) | Tested NumPy Lloyd loop, synthetic raw/standardized K sweeps, matched-initialization comparison and frozen-pipeline inference |
 
 ## Roadmap
 
@@ -100,7 +105,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
-| 2 | Unsupervised Learning and Recommender Systems | 36–44 | Planned |
+| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **1/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
@@ -214,7 +219,7 @@ The intended evidence is:
 applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
-├── 02-unsupervised-recommender-systems/    # published when started
+├── 02-unsupervised-recommender-systems/    # Day 36 implemented; 37–44 planned
 ├── 03-statistics-experimentation/          # published when started
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
