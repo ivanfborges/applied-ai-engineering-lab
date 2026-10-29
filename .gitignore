@@ -250,3 +250,10 @@ outputs/
 !02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/01_epsilon_neighborhood.gif
 !02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/03_dbscan_expansion.gif
 !02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/04_kmeans_vs_dbscan.png
+
+# Selected Day 38 teaching previews; other visual exports remain regenerable.
+!02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/
+02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/*
+!02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/02_linkage_methods.gif
+!02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/03_dendrogram_construction.gif
+!02-unsupervised-recommender-systems/38-hierarchical-clustering/outputs/07_ward_variance.gif
