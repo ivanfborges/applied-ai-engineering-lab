@@ -156,6 +156,7 @@ def test_gif_and_offline_html_exports_in_temporary_directory(tmp_path):
     html = html_path.read_text(encoding="utf-8")
     assert "Plotly.newPlot" in html and "Plotly.addFrames" in html
     assert "kmeans-3d-lab" in html
+    assert "Plotly.animate('kmeans-3d-lab', null)" not in html
     assert not re.search(r"<script\b[^>]*\bsrc\s*=", html, flags=re.IGNORECASE)
     assert html_path.stat().st_size > 1_000_000
 

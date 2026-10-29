@@ -236,3 +236,10 @@ outputs/
 !01-classical-machine-learning/34-missing-data/outputs/01_mcar_mar_mnar.png
 !01-classical-machine-learning/34-missing-data/outputs/05_imputation_geometry.png
 !01-classical-machine-learning/34-missing-data/outputs/10_missingness_shift.png
+
+# Day 36: three inspected documentation previews; HTML/reports remain local.
+!02-unsupervised-recommender-systems/36-k-means-clustering/outputs/
+02-unsupervised-recommender-systems/36-k-means-clustering/outputs/*
+!02-unsupervised-recommender-systems/36-k-means-clustering/outputs/01_kmeans_convergence.gif
+!02-unsupervised-recommender-systems/36-k-means-clustering/outputs/02_feature_scaling_comparison.png
+!02-unsupervised-recommender-systems/36-k-means-clustering/outputs/03_k_selection.png

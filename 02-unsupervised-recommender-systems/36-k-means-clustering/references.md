@@ -22,3 +22,13 @@ change with later releases; measured results retain their environment in
   — source of the synthetic generator. The example specifies all centers,
   dispersions, sample count, random seed and the additional scale distortion
   directly in code; no external dataset is downloaded.
+
+Visual implementation references, also checked on October 29, 2026:
+
+- [Plotly graph-object animation frames](https://plotly.com/python/animations/)
+  — explicit frames, fixed axis ranges and redraw behavior. The lab uses exact
+  3D states with zero-duration transitions rather than smooth 3D interpolation.
+- [Plotly interactive HTML export](https://plotly.com/python/interactive-html-export/)
+  — self-contained HTML with the JavaScript bundle embedded for offline use.
+- [Matplotlib PillowWriter](https://matplotlib.org/stable/api/_as_gen/matplotlib.animation.PillowWriter.html)
+  — GIF export using Pillow without FFmpeg or ImageMagick.

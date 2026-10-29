@@ -115,8 +115,8 @@ def save_png(fig, path):
 def convergence_scene(path, seed):
     X, initial = convergence_data(seed)
     states = lloyd_trace(X, initial)
-    fig, (ax, objective) = plt.subplots(1, 2, figsize=(12, 6.8), gridspec_kw={"width_ratios": [1.7, 1]})
-    fig.subplots_adjust(left=0.075, right=0.96, top=0.81, bottom=0.23, wspace=0.32)
+    fig, (ax, objective) = plt.subplots(1, 2, figsize=(12, 7.8), gridspec_kw={"width_ratios": [1.7, 1]})
+    fig.subplots_adjust(left=0.075, right=0.96, top=0.81, bottom=0.32, wspace=0.32)
     page(fig, "01 / Watch Lloyd's algorithm", "One run, fixed center identities, exact assignment and mean-update states.",
          "Colored points = displayed assignments. X = centroid. Arrows = exact mean updates.\n"
          "No interpolated optimization steps; empty centers retain their previous position. Cluster IDs are arbitrary.")
@@ -159,7 +159,7 @@ def convergence_scene(path, seed):
         explanation.set_text(phase_text[state.phase] if not state.converged else
                              "CONVERGED\nNo assignments changed after the mean update.\nThis is a local solution, not a global guarantee.")
 
-    explanation = fig.text(0.075, 0.135, "", fontsize=10, color=INK, linespacing=1.3)
+    explanation = fig.text(0.075, 0.205, "", fontsize=10, color=INK, linespacing=1.5, va="top")
     schedule = [0, 0] + list(range(1, len(states))) + [len(states) - 1] * 4
     animation = FuncAnimation(fig, draw, frames=schedule, interval=650, repeat=True)
     animation.save(path, writer=PillowWriter(fps=1.5), dpi=90)
@@ -239,7 +239,7 @@ def elbow_scene(path, seed, k_min=2, k_max=10):
 def three_d_figure(seed):
     X, scaler, scaled, initial = three_dimensional_data(seed)
     states = [s for s in lloyd_trace(scaled, initial) if s.phase == "assignment"]
-    labels = ["processing_time (hours)", "interaction_count (continuous proxy)", "rework_score (synthetic units)"]
+    labels = ["processing_time (h)", "interaction_count", "rework_score"]
 
     def traces(state):
         centers = scaler.inverse_transform(state.centers)
@@ -268,16 +268,17 @@ def three_d_figure(seed):
     scene = {axis: {"title": labels[i], "range": [float(lower[i]), float(upper[i])],
                     "backgroundcolor": "white", "gridcolor": "#DFE5EE"}
              for i, axis in enumerate(("xaxis", "yaxis", "zaxis"))}
-    scene.update({"aspectmode": "cube", "uirevision": "keep-camera", "dragmode": "orbit"})
+    scene.update({"aspectmode": "cube", "uirevision": "keep-camera", "dragmode": "orbit",
+                  "camera": {"eye": {"x": 1.8, "y": 1.8, "z": 1.4}}})
     fig.update_layout(title={"text": title(states[0]), "x": 0.04}, template="plotly_white",
         font={"family": "Arial, sans-serif", "size": 13, "color": INK}, paper_bgcolor=PAPER,
-        height=780, margin={"l": 25, "r": 25, "t": 100, "b": 145}, scene=scene,
+        height=860, margin={"l": 25, "r": 25, "t": 100, "b": 210}, scene=scene,
         legend={"title": "Arbitrary cluster IDs", "x": 1, "xanchor": "right", "y": 1},
         sliders=[{"active": 0, "currentvalue": {"prefix": "Exact mean updates: "}, "pad": {"t": 25},
                   "steps": [{"label": str(s.iteration), "method": "animate", "args": [[str(s.iteration)],
                              {"mode": "immediate", "frame": {"duration": 0, "redraw": True}, "transition": {"duration": 0}}]} for s in states]}],
         annotations=[{"text": "Fit: StandardScaler space. Display: original feature units. Slider states are exact nearest-center assignments.<br>Drag to rotate; scroll to zoom; use the modebar to pan. No server, CDN or artificial third coordinate.",
-                      "xref": "paper", "yref": "paper", "x": 0, "y": -0.23, "showarrow": False, "align": "left", "font": {"size": 12}}])
+                      "xref": "paper", "yref": "paper", "x": 0, "y": -0.27, "yanchor": "top", "showarrow": False, "align": "left", "font": {"size": 12}}])
     return fig, {"n": len(X), "dimensions": 3, "fit_space": "StandardScaler", "display_space": "original units",
                  "initial_centers_standardized": initial.tolist(), "slider_iterations": [s.iteration for s in states],
                  "inertias": [s.inertia for s in states], "converged": bool(states[-1].converged)}
@@ -285,7 +286,7 @@ def three_d_figure(seed):
 
 def three_d_scene(path, seed):
     fig, result = three_d_figure(seed)
-    fig.write_html(path, include_plotlyjs=True, full_html=True, auto_open=False,
+    fig.write_html(path, include_plotlyjs=True, full_html=True, auto_open=False, auto_play=False,
                    config={"responsive": True, "scrollZoom": True, "displaylogo": False},
                    div_id="kmeans-3d-lab")
     return None, result

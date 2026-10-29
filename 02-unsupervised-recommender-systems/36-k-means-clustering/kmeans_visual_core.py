@@ -86,7 +86,7 @@ def convergence_data(seed):
 def scaling_experiment(seed):
     latent, truth = make_blobs(n_samples=360, centers=[(-4, -1), (0, 4), (4, -1)],
                                cluster_std=[0.65, 0.85, 0.65], random_state=seed)
-    X = np.column_stack(((latent[:, 1] + 3) * 60, latent[:, 0] + 5))
+    X = np.column_stack(((latent[:, 1] + 3) * 60, latent[:, 0] + 6))
     scaler = StandardScaler().fit(X)
     scaled = scaler.transform(X)
     raw_model = fit_reference(X, 3, seed=seed)

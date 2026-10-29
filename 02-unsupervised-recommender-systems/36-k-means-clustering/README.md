@@ -36,6 +36,10 @@ need not be monotone. Inertia alone therefore cannot choose $K$.
 | [tests/test_kmeans.py](tests/test_kmeans.py) | Hand-computed cases, monotonicity, stopping, invalid inputs, library agreement and frozen preprocessing |
 | [interview_questions.md](interview_questions.md) | Questions about objective, validation, stability and embedding use |
 | [references.md](references.md) | Official algorithm, metric and synthetic-generator sources |
+| [VISUAL_LAB.md](VISUAL_LAB.md) | Seven-scene walkthrough, interpretation prompts, separate visual experiment record and output policy |
+| [visualize_kmeans.py](visualize_kmeans.py) | GIF/PNG exports, offline Plotly 3D iteration slider and local HTML gallery |
+| [kmeans_visual_core.py](kmeans_visual_core.py) | Exact assignment/update states and small deterministic synthetic controls |
+| [tests/test_visual_kmeans.py](tests/test_visual_kmeans.py) | Trace/scale/frame invariants, temporary GIF/HTML exports and headless CLI checks |
 
 From the repository root, with stable Python 3.11+ and the canonical
 [dependencies](../../pyproject.toml):
@@ -47,9 +51,34 @@ python 02-unsupervised-recommender-systems/36-k-means-clustering/from_scratch.py
 python -m pytest -q 02-unsupervised-recommender-systems/36-k-means-clustering/tests/test_kmeans.py
 ```
 
-Both scripts print to the terminal and write no data, plots or model artifacts.
-No notebook or separate visual phase is included. Generated caches remain
-ignored; no preview assets are selected for publication.
+The two study scripts print to the terminal and write no data, plots or model
+artifacts. The separate visual companion generates seven scenes and an offline
+gallery. From the repository root:
+
+```bash
+python 02-unsupervised-recommender-systems/36-k-means-clustering/visualize_kmeans.py --all --save --no-show
+```
+
+Open the generated `outputs/index.html` beside the visual script to follow the
+lab and launch its standalone 3D explorer. The [visual guide](VISUAL_LAB.md)
+documents individual scenes, CLI options, observations and limitations.
+
+## Selected visual previews
+
+These three inspected, deliberately unignored previews illustrate the exact
+updates, feature geometry and K diagnostics. Other exports, including the bundled
+3D HTML, are generated locally and stay ignored. The gallery links the HTML as
+a file; interactive HTML is not assumed to render inline on GitHub.
+
+![Exact Lloyd assignment and update states with centroid trails and current inertia](outputs/01_kmeans_convergence.gif)
+
+![Raw and standardized partitions in original coordinates, with squared-distance feature shares](outputs/02_feature_scaling_comparison.png)
+
+![Inertia, silhouette and cluster sizes across an evaluated range of K](outputs/03_k_selection.png)
+
+Visual observations use smaller controls than the study-script experiment below;
+see the separate [dated visual record](VISUAL_LAB.md#executed-visual-record--october-29-2026).
+Automated validation does not approve interpretation candidates on the author's behalf.
 
 ## Executed study record — October 29, 2026
 
@@ -144,11 +173,13 @@ dimensions can still make K-Means unsuitable. Every new point receives an
 assignment, even far from all centers. Distances are not membership or anomaly
 probabilities. Keep the scaler, feature schema and centroids together at inference.
 
-The following remain **suggestions, not executed experiments**: compare random
-versus K-Means++ initialization over multiple seeds; resample rows and assess
-partition stability; add outliers; test elongated groups or moons; compare
-MiniBatchKMeans or a density-based method. Evaluate downstream usefulness before
-assigning semantic names or using clusters in recommendation or retrieval.
+The visual companion now executes small initialization, elongated-group, moons,
+outlier and DBSCAN controls, with their own configurations and explicitly pending
+interpretations in the [visual guide](VISUAL_LAB.md). This does not replace or
+extend the population in the historical study-script record above.
+Resampling stability, MiniBatchKMeans comparisons, real-data profiles and
+downstream utility remain **suggestions, not executed experiments**. Evaluate
+those before assigning semantic names or using clusters in recommendation or retrieval.
 
 Implementation and automated validation are complete for this scope.
 Interpretation candidates above still require the author's explicit review.

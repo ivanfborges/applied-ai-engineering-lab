@@ -37,8 +37,9 @@ mathematical details are in [notes.md](notes.md).
 6. **How do you compare runs if label zero becomes label two?**
    Compare partitions using ARI on the same evaluation rows, or match centers
    and profiles in a common representation. Direct equality of raw IDs is not
-   appropriate. Multiple seeds and resampling answer different stability questions;
-   neither study is included in the current experiment.
+   appropriate. Multiple seeds and resampling answer different stability questions.
+   The [visual companion](VISUAL_LAB.md) includes fixed-corpus seed controls;
+   resampling stability remains an unexecuted suggestion.
 
 7. **What happens to empty clusters and outliers?**
    Empty clusters have no mean and need a policy. The teaching loop retains
