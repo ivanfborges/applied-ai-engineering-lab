@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**36 estudos implementados: 15 de fundamentos, 20 de ML clássico e 1 de aprendizado não supervisionado.** O roteiro
+**37 estudos implementados: 15 de fundamentos, 20 de ML clássico e 2 de aprendizado não supervisionado.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -15,14 +15,15 @@ O [módulo de ML clássico](01-classical-machine-learning/) tem os 20 tópicos
 16–35 implementados: ciclo de ML, validação, regressão, classificação, ensembles,
 SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade.
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
-estudo. O [tópico mais recente, Dia 36 — K-Means](02-unsupervised-recommender-systems/36-k-means-clustering/),
-conecta centroides, inércia, escolha de K e escala a experimentos sintéticos e
-uma implementação NumPy testada. O
+estudo. O [tópico mais recente, Dia 37 — DBSCAN](02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/),
+conecta densidade, ruído e clusters não convexos a varreduras sintéticas de
+parâmetros, uma comparação com K-Means e expansão NumPy testada, incluindo a
+ambiguidade de pontos de borda. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **1 de 9 tópicos implementado**; os Dias 37–44 continuam planejados.
+tem **2 de 9 tópicos implementados**; os Dias 38–44 continuam planejados.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (1/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação do Dia 36 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (2/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–37 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar

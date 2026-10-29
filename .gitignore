@@ -243,3 +243,10 @@ outputs/
 !02-unsupervised-recommender-systems/36-k-means-clustering/outputs/01_kmeans_convergence.gif
 !02-unsupervised-recommender-systems/36-k-means-clustering/outputs/02_feature_scaling_comparison.png
 !02-unsupervised-recommender-systems/36-k-means-clustering/outputs/03_k_selection.png
+
+# Three inspected Day 37 preview candidates; HTML, reports and other exports regenerate locally.
+!02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/
+02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/*
+!02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/01_epsilon_neighborhood.gif
+!02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/03_dbscan_expansion.gif
+!02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/outputs/04_kmeans_vs_dbscan.png
