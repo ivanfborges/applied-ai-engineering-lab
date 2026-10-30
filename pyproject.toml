@@ -21,6 +21,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+manifold = [
+    "umap-learn>=0.5.7,<0.6",
+]
 explainability = [
     "shap>=0.47,<0.51",
 ]

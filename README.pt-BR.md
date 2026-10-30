@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**39 estudos implementados: 15 de fundamentos, 20 de ML clássico e 4 de aprendizado não supervisionado.** O roteiro
+**40 estudos implementados: 15 de fundamentos, 20 de ML clássico e 5 de aprendizado não supervisionado.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -15,15 +15,16 @@ O [módulo de ML clássico](01-classical-machine-learning/) tem os 20 tópicos
 16–35 implementados: ciclo de ML, validação, regressão, classificação, ensembles,
 SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade.
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
-estudo. O [tópico mais recente, Dia 39 — PCA na Prática](02-unsupervised-recommender-systems/39-pca-in-practice/),
-conecta variância explicada, projeção e reconstrução a uma comparação no Wine
-com pré-processamento dentro dos folds, implementação NumPy testada e controle
-sintético de sinal em baixa variância. O
+estudo. O [tópico mais recente, Dia 40 — t-SNE e UMAP](02-unsupervised-recommender-systems/40-t-sne-umap/),
+compara preservação de vizinhos nos dígitos públicos, parâmetros e sementes,
+com afinidades t-SNE didáticas, gradiente KL verificado por diferenças finitas e
+laboratório visual offline de dez módulos: embeddings 3D reais, otimização
+registrada, grafos fuzzy e erros de interpretação. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **4 de 9 tópicos implementados**; os Dias 40–44 continuam planejados.
+tem **5 de 9 tópicos implementados**; os Dias 41–44 continuam planejados.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (4/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–39 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (5/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–40 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
@@ -68,7 +69,7 @@ python 00-foundations/01-ai-ml-genai-landscape/example.py
 Para a suíte integral, inclua as bibliotecas opcionais utilizadas pelos estudos:
 
 ```sh
-python -m pip install -e ".[dev,imbalance,explainability,boosting]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold]"
 python scripts/validate_repo.py all
 ```
 
@@ -93,8 +94,10 @@ Testes verificam comportamentos específicos; não comprovam revisão pessoal de
 todas as interpretações. O autor mantém a responsabilidade pelas decisões e
 conclusões. [Metodologia](docs/methodology.pt-BR.md).
 
-Os exemplos usam dados sintéticos ou definidos em código, além do Wine público
-distribuído com scikit-learn, com [fonte documentada](02-unsupervised-recommender-systems/39-pca-in-practice/references.md). Valores observados
+Os exemplos usam dados sintéticos ou definidos em código, além do
+[Wine](02-unsupervised-recommender-systems/39-pca-in-practice/references.md) e dos
+[dígitos manuscritos](02-unsupervised-recommender-systems/40-t-sne-umap/references.md)
+públicos distribuídos com scikit-learn, com fontes documentadas. Valores observados
 não representam ganhos em produção. Código didático não substitui bibliotecas
 validadas; roteiros futuros não indicam experiência de implantação nessas áreas.
 Os créditos e referências de cada estudo estão preservados. [Licença MIT](LICENSE).

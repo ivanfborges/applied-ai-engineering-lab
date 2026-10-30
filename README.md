@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**39 implemented studies: 15 foundations, 20 classical ML topics and 4 unsupervised learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**40 implemented studies: 15 foundations, 20 classical ML topics and 5 unsupervised learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -29,9 +29,12 @@ Day 38 adds tested average-linkage merges, four-linkage comparisons, Ward tree
 cuts and tied-height boundaries for interpreting dendrograms.
 Day 39 adds tested PCA projection/reconstruction, a fold-local Wine classification
 comparison and a synthetic low-variance-signal counterexample.
+Day 40 adds t-SNE/UMAP neighborhood diagnostics on public digits, controlled
+parameter/seed comparisons, a finite-difference-tested educational KL gradient
+and a ten-module offline visual lab with real 3D fits and recorded optimization.
 
-- Latest topic: [Day 39 — PCA in Practice](02-unsupervised-recommender-systems/39-pca-in-practice/)
-- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 4 of 9 topics implemented
+- Latest topic: [Day 40 — t-SNE and UMAP](02-unsupervised-recommender-systems/40-t-sne-umap/)
+- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 5 of 9 topics implemented
 - Implemented modules: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/) and [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -57,7 +60,7 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-Days 36–39 interpretation candidates in the
+Days 36–40 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
 
 For applied studies using external datasets, see the separate
@@ -107,6 +110,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 37 | [DBSCAN and Density-Based Clustering](02-unsupervised-recommender-systems/37-dbscan-density-based-clustering/) | Tested NumPy core expansion and ambiguous borders; synthetic density sweeps, self-inclusive neighbor diagnostics and K-Means comparison |
 | 38 | [Hierarchical Clustering](02-unsupervised-recommender-systems/38-hierarchical-clustering/) | Tested NumPy average linkage, full-tree conversion, Ward height units and tied cuts; synthetic four-linkage comparison and nested K sweep |
 | 39 | [PCA in Practice](02-unsupervised-recommender-systems/39-pca-in-practice/) | Tested NumPy covariance PCA, SVD subspace agreement and reconstruction identities; fold-local public Wine comparison and synthetic low-variance-signal counterexample |
+| 40 | [t-SNE and UMAP](02-unsupervised-recommender-systems/40-t-sne-umap/) | Public digits neighborhood fidelity, tested KL gradient and ten-module offline lab: real 3D fits, adaptive affinities, recorded t-SNE optimization, fuzzy graphs and interpretation traps |
 
 ## Roadmap
 
@@ -114,7 +118,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
-| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **4/9 studies implemented; interpretation review pending** |
+| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **5/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
@@ -171,7 +175,7 @@ python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
 Run all repository quality checks:
 
 ```bash
-python -m pip install -e ".[dev,imbalance,explainability,boosting]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold]"
 python scripts/validate_repo.py all
 ```
 
@@ -228,7 +232,7 @@ The intended evidence is:
 applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
-├── 02-unsupervised-recommender-systems/    # Days 36–39 implemented; 40–44 planned
+├── 02-unsupervised-recommender-systems/    # Days 36–40 implemented; 41–44 planned
 ├── 03-statistics-experimentation/          # published when started
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
@@ -247,8 +251,10 @@ finished work.
 ## Scope and Reproducibility
 
 - Examples run locally and do not require paid services or credentials.
-- Current studies use synthetic or code-defined data, plus the bundled public
-  Wine dataset with [source attribution](02-unsupervised-recommender-systems/39-pca-in-practice/references.md).
+- Current studies use synthetic or code-defined data, plus bundled public
+  [Wine](02-unsupervised-recommender-systems/39-pca-in-practice/references.md)
+  and [handwritten digits](02-unsupervised-recommender-systems/40-t-sne-umap/references.md)
+  datasets with source attribution.
 - Generated outputs are ignored by default; only selected documentation
   previews are versioned.
 - Visual and educational scripts are not production-grade library

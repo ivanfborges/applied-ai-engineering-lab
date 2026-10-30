@@ -264,3 +264,14 @@ outputs/
 !02-unsupervised-recommender-systems/39-pca-in-practice/outputs/01_pca_geometry.gif
 !02-unsupervised-recommender-systems/39-pca-in-practice/outputs/02_explained_variance.png
 !02-unsupervised-recommender-systems/39-pca-in-practice/outputs/06_variance_vs_predictive_information.png
+
+# Day 40: three inspected teaching previews; HTML, caches and run records regenerate locally.
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/
+02-unsupervised-recommender-systems/40-t-sne-umap/outputs/*
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/animations/
+02-unsupervised-recommender-systems/40-t-sne-umap/outputs/animations/*
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/animations/03_neighborhood_probabilities.gif
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/animations/04_tsne_optimization.gif
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/
+02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/*
+!02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/09_geometry_traps.png
