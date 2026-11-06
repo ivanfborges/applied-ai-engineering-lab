@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 2 spans global Days 36–44. **6 of 9 studies are implemented**: Day 36
+Module 2 spans global Days 36–44. **7 of 9 studies are implemented**: Day 36
 connects the K-Means objective to representation choices, cluster-count
 diagnostics and tested Lloyd updates. Day 37 adds density connectivity,
 core/border/noise semantics and DBSCAN parameter sensitivity. Day 38 adds
@@ -15,8 +15,11 @@ Its ten-module offline visual lab adds real 3D fits, adaptive affinities, saved
 optimization steps, fuzzy graphs and measured interpretation counterexamples.
 Day 41 adds normal-only anomaly detection with MAD, Isolation Forest and
 One-Class SVM, independent calibration, frozen-score policy comparisons and a
-tested educational isolation forest. The other three
-topics remain planned.
+tested educational isolation forest. Day 42 adds explicit-rating collaborative
+filtering, overlap-aware similarity, cold-start fallback policies and a synthetic
+temporal rating-error comparison by history segment. Its ten-scene offline visual
+lab adds recommendation arithmetic, masked 3D factorization, onboarding,
+ranking evaluation and exposure-loop simulations. The other two topics remain planned.
 
 | Day | Implemented study | Evidence |
 |---:|---|---|
@@ -26,9 +29,10 @@ topics remain planned.
 | 39 | [PCA in practice](39-pca-in-practice/) | Tested covariance PCA, full-SVD subspace agreement, reconstruction identities and fold-local fitting; Wine/synthetic comparisons plus eight-demo visual lab with basis/projection GIFs and offline k-selectable 3D reconstruction |
 | 40 | [t-SNE and UMAP](40-t-sne-umap/) | Public digits fidelity and tested KL gradient; ten-module offline visual lab with Swiss Roll, real 3D, adaptive affinities, saved optimization, fuzzy graphs, controlled sweeps and interpretation traps |
 | 41 | [Anomaly detection](41-anomaly-detection/) | Synthetic MAD/Isolation Forest/One-Class SVM comparison, held-out normal calibration, threshold-policy metrics and tested leaf correction/robust statistics |
+| 42 | [Recommender systems I](42-recommender-systems-i/) | Tested overlap Pearson, cold-start fallbacks and temporal holdout; ten-scene offline lab with neighbor arithmetic, masked 3D factors, onboarding, ranking and exposure loops |
 
 Implementation and automated validation are separate from author review of
-interpretations. The dated experiment records in Days 36–41 contain measured
+interpretations. The dated experiment records in Days 36–42 contain measured
 observations and explicitly pending interpretation candidates. These establish
 neither real-world segmentation or incident-detection quality nor recommendation or retrieval gains.
 See the [publication methodology](../docs/methodology.md).
@@ -44,5 +48,5 @@ documents exact neighborhood/expansion GIFs, density and scaling controls,
 standalone offline parameter/3D explorers and three inspected preview candidates.
 Its visual interpretation candidates also remain pending author review.
 
-Future work follows the roadmap: recommender systems and ranking metrics.
+Future work follows the roadmap: matrix factorization, hybrid recommenders and ranking metrics.
 No placeholder topic folders are published.

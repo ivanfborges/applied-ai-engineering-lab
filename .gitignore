@@ -275,3 +275,12 @@ outputs/
 !02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/
 02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/*
 !02-unsupervised-recommender-systems/40-t-sne-umap/outputs/figures/09_geometry_traps.png
+
+# Day 42: three teaching previews; other lab exports and dated reports regenerate locally.
+!02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/
+02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/*
+!02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/
+02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/*
+!02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/01_user_item_matrix.png
+!02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/04_neighborhood_steps.gif
+!02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/07_cold_start.gif

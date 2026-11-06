@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**41 implemented studies: 15 foundations, 20 classical ML topics and 6 unsupervised learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**42 implemented studies: 15 foundations, 20 classical ML topics and 7 unsupervised learning/recommender topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -35,9 +35,14 @@ and a ten-module offline visual lab with real 3D fits and recorded optimization.
 Day 41 adds synthetic normal-only anomaly detection with MAD, Isolation Forest
 and One-Class SVM, separate threshold calibration, frozen-score policy comparisons
 and tested educational isolation paths.
+Day 42 adds explicit-rating collaborative filtering with tested overlap Pearson,
+positive-neighbor predictions, cold-start fallbacks and a synthetic frozen-time
+rating-error comparison with separate warm/cold reporting. Its ten-scene offline
+visual lab adds traced neighbor contributions, real masked 3D factorization,
+onboarding animations, ranking metrics and a declared exposure-loop simulation.
 
-- Latest topic: [Day 41 — Anomaly Detection](02-unsupervised-recommender-systems/41-anomaly-detection/)
-- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 6 of 9 topics implemented
+- Latest topic: [Day 42 — Recommender Systems I](02-unsupervised-recommender-systems/42-recommender-systems-i/)
+- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 7 of 9 topics implemented
 - Implemented modules: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/) and [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -63,7 +68,7 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-Days 36–41 interpretation candidates in the
+Days 36–42 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
 
 For applied studies using external datasets, see the separate
@@ -115,6 +120,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 39 | [PCA in Practice](02-unsupervised-recommender-systems/39-pca-in-practice/) | Tested NumPy covariance PCA, SVD subspace agreement and reconstruction identities; fold-local public Wine comparison and synthetic low-variance-signal counterexample |
 | 40 | [t-SNE and UMAP](02-unsupervised-recommender-systems/40-t-sne-umap/) | Public digits neighborhood fidelity, tested KL gradient and ten-module offline lab: real 3D fits, adaptive affinities, recorded t-SNE optimization, fuzzy graphs and interpretation traps |
 | 41 | [Anomaly Detection](02-unsupervised-recommender-systems/41-anomaly-detection/) | Synthetic normal-only MAD/Isolation Forest/One-Class SVM comparison, separate calibration and frozen-score threshold policies; tested educational isolation forest and robust statistics |
+| 42 | [Recommender Systems I](02-unsupervised-recommender-systems/42-recommender-systems-i/) | Tested overlap Pearson, cold-start fallbacks and temporal rating holdout; ten-scene offline lab with traced recommendations, masked 3D factors, onboarding, ranking and exposure simulations |
 
 ## Roadmap
 
@@ -122,7 +128,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
-| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **6/9 studies implemented; interpretation review pending** |
+| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **7/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
@@ -236,7 +242,7 @@ The intended evidence is:
 applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
-├── 02-unsupervised-recommender-systems/    # Days 36–41 implemented; 42–44 planned
+├── 02-unsupervised-recommender-systems/    # Days 36–42 implemented; 43–44 planned
 ├── 03-statistics-experimentation/          # published when started
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
