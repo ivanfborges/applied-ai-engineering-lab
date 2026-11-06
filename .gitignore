@@ -284,3 +284,14 @@ outputs/
 !02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/01_user_item_matrix.png
 !02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/04_neighborhood_steps.gif
 !02-unsupervised-recommender-systems/42-recommender-systems-i/outputs/day42/07_cold_start.gif
+
+# Day 43: three inspected previews; standalone HTML, records and other exports stay local.
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/
+02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/*
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/images/
+02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/images/*
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/images/01_matrix_factorization.png
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/images/06_hybrid_preview.png
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/
+02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/*
+!02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/04_bpr_training.gif

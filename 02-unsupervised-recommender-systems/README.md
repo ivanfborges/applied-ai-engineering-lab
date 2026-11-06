@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 2 spans global Days 36–44. **7 of 9 studies are implemented**: Day 36
+Module 2 spans global Days 36–44. **8 of 9 studies are implemented**: Day 36
 connects the K-Means objective to representation choices, cluster-count
 diagnostics and tested Lloyd updates. Day 37 adds density connectivity,
 core/border/noise semantics and DBSCAN parameter sensitivity. Day 38 adds
@@ -19,7 +19,16 @@ tested educational isolation forest. Day 42 adds explicit-rating collaborative
 filtering, overlap-aware similarity, cold-start fallback policies and a synthetic
 temporal rating-error comparison by history segment. Its ten-scene offline visual
 lab adds recommendation arithmetic, masked 3D factorization, onboarding,
-ranking evaluation and exposure-loop simulations. The other two topics remain planned.
+ranking evaluation and exposure-loop simulations. Day 43 adds SVD/BPR/content
+and popularity comparisons, tested pairwise gradients, validation-selected
+fusion, candidate-recall boundaries and metadata-only item admission on
+globally time-split synthetic interactions. Day 44 remains planned.
+
+Day 43's [interactive visual lab](43-recommender-systems-ii/visualizations/README.md)
+makes factorization, embedding training, BPR steps, hybrid contributions and
+candidate budgets inspectable in ten scenes, with separate cold-start and
+exposure simulations. Its three-factor visual run is recorded separately from
+the topic's historical twelve-factor study; interpretation review remains pending.
 
 | Day | Implemented study | Evidence |
 |---:|---|---|
@@ -30,9 +39,10 @@ ranking evaluation and exposure-loop simulations. The other two topics remain pl
 | 40 | [t-SNE and UMAP](40-t-sne-umap/) | Public digits fidelity and tested KL gradient; ten-module offline visual lab with Swiss Roll, real 3D, adaptive affinities, saved optimization, fuzzy graphs, controlled sweeps and interpretation traps |
 | 41 | [Anomaly detection](41-anomaly-detection/) | Synthetic MAD/Isolation Forest/One-Class SVM comparison, held-out normal calibration, threshold-policy metrics and tested leaf correction/robust statistics |
 | 42 | [Recommender systems I](42-recommender-systems-i/) | Tested overlap Pearson, cold-start fallbacks and temporal holdout; ten-scene offline lab with neighbor arithmetic, masked 3D factors, onboarding, ranking and exposure loops |
+| 43 | [Recommender systems II](43-recommender-systems-ii/) | Tested BPR gradients/SGD, synthetic global-round SVD/BPR/content/popularity comparison, validation-selected fusion, candidate budgets and metadata-only item admission |
 
 Implementation and automated validation are separate from author review of
-interpretations. The dated experiment records in Days 36–42 contain measured
+interpretations. The dated experiment records in Days 36–43 contain measured
 observations and explicitly pending interpretation candidates. These establish
 neither real-world segmentation or incident-detection quality nor recommendation or retrieval gains.
 See the [publication methodology](../docs/methodology.md).
@@ -48,5 +58,5 @@ documents exact neighborhood/expansion GIFs, density and scaling controls,
 standalone offline parameter/3D explorers and three inspected preview candidates.
 Its visual interpretation candidates also remain pending author review.
 
-Future work follows the roadmap: matrix factorization, hybrid recommenders and ranking metrics.
+Future work follows the roadmap: Day 44 covers ranking metrics in greater depth.
 No placeholder topic folders are published.

@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**42 estudos implementados: 15 de fundamentos, 20 de ML clássico e 7 de aprendizado não supervisionado/recomendação.** O roteiro
+**43 estudos implementados: 15 de fundamentos, 20 de ML clássico e 8 de aprendizado não supervisionado/recomendação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -15,18 +15,18 @@ O [módulo de ML clássico](01-classical-machine-learning/) tem os 20 tópicos
 16–35 implementados: ciclo de ML, validação, regressão, classificação, ensembles,
 SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade.
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
-estudo. O [tópico mais recente, Dia 42 — Sistemas de Recomendação I](02-unsupervised-recommender-systems/42-recommender-systems-i/)
-implementa filtragem colaborativa com notas explícitas sintéticas, Pearson em
-itens coavaliados, previsões por vizinhos positivos e fallbacks para cold start.
-A avaliação usa um corte temporal global e reporta erros separados para pares
-com histórico e usuários/itens novos. O laboratório visual offline tem dez cenas,
-com cálculo animado por vizinhos, fatoração mascarada em 3D, evolução do cold start,
-métricas de ranking e simulação explícita de exposição. O
+estudo. O [Dia 42 — Sistemas de Recomendação I](02-unsupervised-recommender-systems/42-recommender-systems-i/)
+implementa vizinhos com notas explícitas, fallbacks e um laboratório visual offline.
+O [tópico mais recente, Dia 43 — Sistemas de Recomendação II](02-unsupervised-recommender-systems/43-recommender-systems-ii/)
+adiciona fatoração BPR e gradientes testados, comparação com SVD, conteúdo e
+popularidade, seleção do peso híbrido na validação e avaliação de candidatos.
+As interações são sintéticas, com cortes temporais globais. Um caso separado
+verifica a entrada de item novo por metadados, sem medir sua relevância. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **7 de 9 tópicos implementados**; os Dias 43–44 continuam planejados.
+tem **8 de 9 tópicos implementados**; o Dia 44 continua planejado.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (7/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–42 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (8/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–43 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
