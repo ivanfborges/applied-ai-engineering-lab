@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**40 estudos implementados: 15 de fundamentos, 20 de ML clássico e 5 de aprendizado não supervisionado.** O roteiro
+**41 estudos implementados: 15 de fundamentos, 20 de ML clássico e 6 de aprendizado não supervisionado.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -15,16 +15,15 @@ O [módulo de ML clássico](01-classical-machine-learning/) tem os 20 tópicos
 16–35 implementados: ciclo de ML, validação, regressão, classificação, ensembles,
 SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade.
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
-estudo. O [tópico mais recente, Dia 40 — t-SNE e UMAP](02-unsupervised-recommender-systems/40-t-sne-umap/),
-compara preservação de vizinhos nos dígitos públicos, parâmetros e sementes,
-com afinidades t-SNE didáticas, gradiente KL verificado por diferenças finitas e
-laboratório visual offline de dez módulos: embeddings 3D reais, otimização
-registrada, grafos fuzzy e erros de interpretação. O
+estudo. O [tópico mais recente, Dia 41 — Detecção de Anomalias](02-unsupervised-recommender-systems/41-anomaly-detection/)
+compara MAD, Isolation Forest e One-Class SVM em telemetria sintética, com
+ajuste e calibração normal-only separados da avaliação, políticas de limiar
+sobre escores congelados e floresta de isolamento didática testada. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **5 de 9 tópicos implementados**; os Dias 41–44 continuam planejados.
+tem **6 de 9 tópicos implementados**; os Dias 42–44 continuam planejados.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (5/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–40 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (6/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–41 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
