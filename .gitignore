@@ -295,3 +295,8 @@ outputs/
 !02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/
 02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/*
 !02-unsupervised-recommender-systems/43-recommender-systems-ii/visualizations/outputs/gifs/04_bpr_training.gif
+
+# Day 44: two selected teaching GIFs; other visual exports regenerate locally.
+02-unsupervised-recommender-systems/44-ranking-metrics/ranking_metrics_visual_lab/assets/*
+!02-unsupervised-recommender-systems/44-ranking-metrics/ranking_metrics_visual_lab/assets/02_ap_cumulative.gif
+!02-unsupervised-recommender-systems/44-ranking-metrics/ranking_metrics_visual_lab/assets/04_ndcg_gain.gif

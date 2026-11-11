@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**43 implemented studies: 15 foundations, 20 classical ML topics and 8 unsupervised learning/recommender topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**44 implemented studies: 15 foundations, 20 classical ML topics and 9 unsupervised learning/recommender topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -43,9 +43,15 @@ onboarding animations, ranking metrics and a declared exposure-loop simulation.
 Day 43 adds tested BPR gradients and factorization, SVD/content/popularity
 comparisons, validation-selected fusion, candidate-recall boundaries and a
 metadata-only item admission probe on globally time-split synthetic interactions.
+Day 44 adds tested Precision@K, Recall@K, AP/MAP, RR/MRR and graded NDCG,
+explicit denominator and no-answer policies, scikit-learn agreement and synthetic
+order/candidate-universe diagnostics with multiple relevant items per query.
+Its eight-section Streamlit visual lab adds editable rankings, AP/RR/NDCG
+animations, a discrete 3D landscape, four GIF exporters and a synthetic
+RAG reranking/context-budget simulation, with interpretation review pending.
 
-- Latest topic: [Day 43 — Recommender Systems II](02-unsupervised-recommender-systems/43-recommender-systems-ii/)
-- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 8 of 9 topics implemented
+- Latest topic: [Day 44 — Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/)
+- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 9 of 9 topics implemented
 - Implemented modules: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/) and [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -71,7 +77,7 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-Days 36–43 interpretation candidates in the
+Days 36–44 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
 
 For applied studies using external datasets, see the separate
@@ -125,6 +131,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 41 | [Anomaly Detection](02-unsupervised-recommender-systems/41-anomaly-detection/) | Synthetic normal-only MAD/Isolation Forest/One-Class SVM comparison, separate calibration and frozen-score threshold policies; tested educational isolation forest and robust statistics |
 | 42 | [Recommender Systems I](02-unsupervised-recommender-systems/42-recommender-systems-i/) | Tested overlap Pearson, cold-start fallbacks and temporal rating holdout; ten-scene offline lab with traced recommendations, masked 3D factors, onboarding, ranking and exposure simulations |
 | 43 | [Recommender Systems II](02-unsupervised-recommender-systems/43-recommender-systems-ii/) | Tested BPR gradients/SGD and ranking helpers; synthetic global-round SVD/BPR/content/popularity comparison, validation-selected fusion, candidate budgets and metadata-only item admission |
+| 44 | [Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested ID-based metrics and scikit-learn agreement; eight-section Streamlit lab with editable rankings, AP/RR/NDCG animations, exact 3D permutations, synthetic RAG/context budgets and four GIF exporters |
 
 ## Roadmap
 
@@ -132,7 +139,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 |---:|---|---:|---|
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
-| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **8/9 studies implemented; interpretation review pending** |
+| 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |

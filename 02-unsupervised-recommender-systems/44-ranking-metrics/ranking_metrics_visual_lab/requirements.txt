@@ -1,0 +1,3 @@
+# Canonical dependency bounds live in the repository pyproject.toml.
+# Run pip install -r requirements.txt from this laboratory directory.
+-e ../../..[dev]

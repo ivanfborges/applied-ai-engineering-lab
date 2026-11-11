@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**43 estudos implementados: 15 de fundamentos, 20 de ML clássico e 8 de aprendizado não supervisionado/recomendação.** O roteiro
+**44 estudos implementados: 15 de fundamentos, 20 de ML clássico e 9 de aprendizado não supervisionado/recomendação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,16 +17,23 @@ SVM, engenharia de atributos, desbalanceamento, dados ausentes e explicabilidade
 O [inventário em inglês](README.md#implemented-studies) separa as evidências por
 estudo. O [Dia 42 — Sistemas de Recomendação I](02-unsupervised-recommender-systems/42-recommender-systems-i/)
 implementa vizinhos com notas explícitas, fallbacks e um laboratório visual offline.
-O [tópico mais recente, Dia 43 — Sistemas de Recomendação II](02-unsupervised-recommender-systems/43-recommender-systems-ii/)
+O [Dia 43 — Sistemas de Recomendação II](02-unsupervised-recommender-systems/43-recommender-systems-ii/)
 adiciona fatoração BPR e gradientes testados, comparação com SVD, conteúdo e
 popularidade, seleção do peso híbrido na validação e avaliação de candidatos.
 As interações são sintéticas, com cortes temporais globais. Um caso separado
-verifica a entrada de item novo por metadados, sem medir sua relevância. O
+verifica a entrada de item novo por metadados, sem medir sua relevância.
+O [tópico mais recente, Dia 44 — Métricas de Ranking](02-unsupervised-recommender-systems/44-ranking-metrics/)
+adiciona Precision@K, Recall@K, AP/MAP, RR/MRR e NDCG testados, múltiplos
+relevantes por consulta, convenções explícitas e comparação com scikit-learn.
+Os casos sintéticos separam efeitos da ordenação e do universo de candidatos.
+O laboratório visual em Streamlit tem oito seções: rankings editáveis,
+animações de AP/RR/NDCG, permutações exatas em 3D, simulação RAG com orçamento
+de contexto e exportação de quatro GIFs. As interpretações aguardam revisão. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
-tem **8 de 9 tópicos implementados**; o Dia 44 continua planejado.
+tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
 São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (8/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–43 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9). Os módulos 3–11 continuam
+planejados. Os candidatos de interpretação dos Dias 36–44 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
