@@ -1,0 +1,2 @@
+# Run pip from this topic folder; dependency versions remain in pyproject.toml.
+-e ../..[experimentation]
