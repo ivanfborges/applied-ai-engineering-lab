@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 3 spans global Days 45–52. **7 of 8 studies are implemented.** The public
+Module 3 spans global Days 45–52. **8 of 8 studies are implemented.** The public
 directory follows the canonical `03-statistics-experimentation` name in the
 repository structure. Future topics remain planned in the roadmap.
 
@@ -15,6 +15,7 @@ repository structure. Future topics remain planned in the roadmap.
 | 49 | [Causal inference I: DAGs and confounders](49-causal-inference-i-dags-confounders/) | Tested d-separation and original backdoor criterion, FWL/OLS agreement and standardization; repeated synthetic adjustment comparison with known total/direct effects; interpretation review pending |
 | 50 | [Causal inference II: propensity score and matching](50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weights, SMD and ESS; nine-chapter Matplotlib lab, native sliders, true/fitted 3D surface, six Pillow GIFs, repeated estimation and hidden confounding; interpretation review pending |
 | 51 | [Difference-in-Differences](51-difference-in-differences/) | Tested balanced-panel manual/TWFE agreement, team-clustered intervals and paired synthetic trend/pre-placebo diagnostics; interpretation review pending |
+| 52 | [Uplift modeling](52-uplift-modeling/) | Tested T-Learner and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity targeting and overlap; interpretation review pending |
 
 Day 45 connects a hypothetical AI-workflow change to a binary user outcome,
 making the randomization unit, observation window, denominator and stopping
@@ -94,8 +95,22 @@ compares a single-date rollout, a differential untreated trend and genuine
 pre-period placebos. **Author review of interpretations is pending.** Agreement
 between estimators does not establish parallel trends or a real AI benefit.
 
-Day 52 is planned: uplift modeling.
-No placeholder folders are added.
+Day 52 connects response modeling to incremental targeting and fixed-policy
+evaluation. Its [dated synthetic study](52-uplift-modeling/notes.md#executed-synthetic-study--2026-11-12)
+compares a T-Learner, control-response ranking and training-only strata on
+independent randomized holdouts, with cost-aware policies and a homogeneous
+effect control. **Author review of interpretations is pending.** The results
+do not establish T-Learner superiority or real-world incremental profit.
+
+Its separate [offline visual laboratory](52-uplift-modeling/VISUAL_LAB.md)
+uses a nonlinear two-feature generator, shared S/T training data, independent
+holdout evaluation, subgroup sampling and three assignment regimes. Nine
+modules include synchronized 3D probability/CATE surfaces, four GIFs and
+interactive cost/capacity policies. Browser controls operate offline; generated
+HTML and images remain ignored, with interpretation review pending.
+
+All eight module studies are implemented; future modules remain planned in
+the roadmap. No placeholder folders are added.
 
 Use each topic's execution instructions and focused tests. The shared
 [validation contract](../docs/validation.md) describes repository checks and

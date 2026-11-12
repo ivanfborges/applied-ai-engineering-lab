@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**51 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 7 de experimentação.** O roteiro
+**52 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 8 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -33,7 +33,7 @@ de contexto e exportação de quatro GIFs. As interpretações aguardam revisão
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
 O [Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
 inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
-agora com **7 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
+agora com **8 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
 análise por intenção de tratar, teste Z com variância combinada sob a hipótese
 nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
 SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
@@ -72,15 +72,22 @@ O laboratório visual separado em Matplotlib tem nove capítulos, superfície
 comparação repetida de ATE/ATT e confundimento oculto. Nesse gerador, efeitos
 negativos significam minutos economizados; os registros do estudo anterior
 permanecem separados e a revisão das interpretações continua pendente.
-O [tópico mais recente, Dia 51 — Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/)
+O [Dia 51 — Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/)
 adiciona um painel balanceado sintético com equivalência testada entre DiD
 manual e TWFE, intervalos agrupados por equipe, tendência diferencial e
 placebo restrito aos períodos pré-tratamento. A unidade é ponto de produtividade
 sintética; as interpretações aguardam revisão do autor.
+O [tópico mais recente, Dia 52 — Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/)
+adiciona T-Learner com Random Forest, estratos ajustados no treino, ganhos e
+valor líquido por IPW testados. Repetições sintéticas com efeitos heterogêneos
+e constantes comparam políticas fixas de targeting com custos e capacidade;
+o laboratório offline separado tem nove módulos, superfícies CATE 3D
+sincronizadas, comparação S/T-Learner, quatro GIFs, intervalos por subgrupo,
+targeting IPW, custos, capacidade e overlap. As interpretações aguardam revisão.
 São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
-aprendizado não supervisionado e recomendação (9/9) e experimentação (7/8).
-O Dia 52 e os módulos 4–11 continuam planejados. Os candidatos de
-interpretação dos Dias 36–51 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9) e experimentação (8/8).
+Os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–52 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar

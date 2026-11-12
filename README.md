@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**51 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 7 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**52 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 8 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -92,8 +92,15 @@ manual/TWFE agreement, team-clustered intervals, a paired differential-trend
 scenario and a genuine-pre-period placebo. All outcomes are synthetic
 productivity points; interpretation review remains pending.
 
-- Latest topic: [Day 51 — Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/)
-- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 7 of 8 topics implemented
+Day 52 adds a tested synthetic Random Forest T-Learner, training-only uplift
+strata, IPW ranking and fixed cost/capacity policies. Repeated heterogeneous
+and constant-effect controls separate response prediction from incremental
+value. Its nine-module offline visual lab adds synchronized 3D CATE surfaces,
+S/T-Learner contrasts, four GIFs, subgroup intervals and interactive IPW
+targeting, costs and overlap. Interpretation review remains pending.
+
+- Latest topic: [Day 52 — Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/)
+- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 8 of 8 topics implemented
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) and [Experimentation, Causality and Product Thinking](03-statistics-experimentation/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -121,7 +128,7 @@ Interpretations explicitly marked for author review remain pending across the
 do not approve them on the author's behalf.
 Days 36–44 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
-Days 45–51 interpretation candidates in the
+Days 45–52 interpretation candidates in the
 [experimentation module](03-statistics-experimentation/) also remain pending.
 
 For applied studies using external datasets, see the separate
@@ -183,6 +190,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 49 | [Causal Inference I: DAGs and Confounders](03-statistics-experimentation/49-causal-inference-i-dags-confounders/) | Tested d-separation/backdoor rules, FWL/OLS agreement and standardization; repeated synthetic confounder/mediator/collider comparison with known intervention truth; interpretation review pending |
 | 50 | [Causal Inference II: Propensity Score and Matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weighting, balance and ESS; nine-chapter Matplotlib lab, native sliders, 3D assignment surface, six Pillow GIFs, repeated estimation and hidden confounding; interpretation review pending |
 | 51 | [Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/) | Tested manual/TWFE agreement, team-clustered intervals and synthetic differential-trend/pre-placebo diagnostics; interpretation review pending |
+| 52 | [Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/) | Tested T-Learner, strata and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity policies and overlap diagnostics; interpretation review pending |
 
 ## Roadmap
 
@@ -191,7 +199,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
-| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **7/8 studies implemented; interpretation review pending** |
+| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
@@ -305,7 +313,7 @@ applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
-├── 03-statistics-experimentation/          # Days 45–51 implemented; 52 planned
+├── 03-statistics-experimentation/          # Days 45–52 implemented
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started
