@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**46 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 2 de experimentação.** O roteiro
+**47 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 3 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -33,20 +33,28 @@ de contexto e exportação de quatro GIFs. As interpretações aguardam revisão
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
 O [Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
 inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
-agora com **2 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
+agora com **3 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
 análise por intenção de tratar, teste Z com variância combinada sob a hipótese
 nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
 SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
 não foram medidos; as interpretações aguardam revisão.
-O [tópico mais recente, Dia 46 — Poder estatístico e tamanho de amostra](03-statistics-experimentation/46-power-analysis/)
+O [Dia 46 — Poder estatístico e tamanho de amostra](03-statistics-experimentation/46-power-analysis/)
 adiciona dimensionamento testado com SciPy/statsmodels e um laboratório
 Streamlit com oito módulos: regiões de erro, curvas e superfície 3D de poder,
 Monte Carlo com incerteza, correlação, maturação dos resultados e relevância
 prática. Inclui três GIFs reproduzíveis; as interpretações aguardam revisão.
+O [tópico mais recente, Dia 47 — Métricas de produto e guardrails](03-statistics-experimentation/47-product-metrics-guardrails/)
+adiciona um scorecard sintético testado e laboratório Streamlit com nove seções:
+incerteza de conversão, atividade coerente e sobrevivência de assinantes com
+censura, caudas de latência, break-even, eventos raros de segurança, fronteira
+de Pareto factível em 3D, política conservadora de rollout, armadilhas de
+agregação e dois GIFs sob demanda. O estudo histórico com comparações pontuais
+permanece separado; as interpretações aguardam revisão e não há autorização
+de implantação.
 São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
-aprendizado não supervisionado e recomendação (9/9) e experimentação (2/8).
-Os Dias 47–52 e os módulos 4–11 continuam planejados. Os candidatos de
-interpretação dos Dias 36–46 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9) e experimentação (3/8).
+Os Dias 48–52 e os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–47 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar

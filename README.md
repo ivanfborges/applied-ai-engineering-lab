@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**46 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 2 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**47 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 3 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -61,8 +61,15 @@ lab connects hypothesis regions, a 3D power surface, Monte Carlo uncertainty,
 correlated observations, outcome maturity and practical significance, with
 three reproducible GIFs. Interpretation review remains pending.
 
-- Latest topic: [Day 46 — Power Analysis and Sample Size](03-statistics-experimentation/46-power-analysis/)
-- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 2 of 8 topics implemented
+Day 47 adds a tested synthetic product scorecard and nine-section Streamlit lab:
+conversion uncertainty, coherent activity and censored subscription survival,
+latency tails, break-even economics, rare safety events, feasible Pareto sets,
+an illustrative confidence-bound rollout policy, aggregation traps and two
+on-demand GIFs. The historical point-check study remains separate; interpretation
+review is pending and no release approval is implied.
+
+- Latest topic: [Day 47 — Product Metrics and Guardrails](03-statistics-experimentation/47-product-metrics-guardrails/)
+- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 3 of 8 topics implemented
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) and [Experimentation, Causality and Product Thinking](03-statistics-experimentation/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -90,7 +97,7 @@ Interpretations explicitly marked for author review remain pending across the
 do not approve them on the author's behalf.
 Days 36–44 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
-Days 45–46 interpretation candidates in the
+Days 45–47 interpretation candidates in the
 [experimentation module](03-statistics-experimentation/) also remain pending.
 
 For applied studies using external datasets, see the separate
@@ -147,6 +154,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 44 | [Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested ID-based metrics and scikit-learn agreement; eight-section Streamlit lab with editable rankings, AP/RR/NDCG animations, exact 3D permutations, synthetic RAG/context budgets and four GIF exporters |
 | 45 | [A/B Testing from Scratch](03-statistics-experimentation/45-ab-testing/) | Synthetic user-randomized ITT experiment; tested pooled Z-test and unpooled interval, exact SRM, SciPy agreement, repeated A/A calibration and fixed-horizon power checks; interpretation review pending |
 | 46 | [Power Analysis and Sample Size](03-statistics-experimentation/46-power-analysis/) | Tested sizing and statsmodels agreement; eight-module Streamlit lab, offline 3D surface, seeded Monte Carlo with uncertainty, three GIFs and traffic/maturity planning; interpretation review pending |
+| 47 | [Product Metrics and Guardrails](03-statistics-experimentation/47-product-metrics-guardrails/) | Nine-section Streamlit lab, coherent/censored retention, latency animations, break-even economics, exact safety bounds, feasible 3D Pareto set, conservative rollout policy, aggregation traps and two on-demand GIFs; interpretation review pending |
 
 ## Roadmap
 
@@ -155,7 +163,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
-| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **2/8 studies implemented; interpretation review pending** |
+| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **3/8 studies implemented; interpretation review pending** |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
@@ -269,7 +277,7 @@ applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
-├── 03-statistics-experimentation/          # Days 45–46 implemented; 47–52 planned
+├── 03-statistics-experimentation/          # Days 45–47 implemented; 48–52 planned
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started

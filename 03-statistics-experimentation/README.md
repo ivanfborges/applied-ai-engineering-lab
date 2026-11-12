@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 3 spans global Days 45–52. **2 of 8 studies are implemented.** The public
+Module 3 spans global Days 45–52. **3 of 8 studies are implemented.** The public
 directory follows the canonical `03-statistics-experimentation` name in the
 repository structure. Future topics remain planned in the roadmap.
 
@@ -10,6 +10,7 @@ repository structure. Future topics remain planned in the roadmap.
 |---:|---|---|
 | 45 | [A/B testing from scratch](45-ab-testing/) | Synthetic user-level ITT experiment and tested inference; twelve visual modules, five GIFs and offline browser verification across 42 scenarios; interpretation review pending |
 | 46 | [Power analysis and sample size](46-power-analysis/) | Tested sizing and statsmodels agreement; eight-module Streamlit lab, 3D power surface, seeded Monte Carlo, three GIFs and maturity-aware traffic planning; interpretation review pending |
+| 47 | [Product metrics and guardrails](47-product-metrics-guardrails/) | Nine-section Streamlit lab, coherent activity and censored survival, latency/economics/safety, feasible 3D Pareto set, conservative rollout policy, aggregation traps and two on-demand GIFs; interpretation review pending |
 
 Day 45 connects a hypothetical AI-workflow change to a binary user outcome,
 making the randomization unit, observation window, denominator and stopping
@@ -32,8 +33,21 @@ The separate [visual laboratory](46-power-analysis/VISUAL_LAB.md) adds
 synthetic outcomes and Monte Carlo uncertainty; its run configuration and
 interpretations are recorded separately from that analytical study.
 
-Days 47–52 are planned: product metrics and guardrails,
-multiple testing, DAGs and confounders, propensity scores and matching,
+Day 47 turns the metric contract into an executable
+[product scorecard](47-product-metrics-guardrails/). Its
+[dated synthetic study](47-product-metrics-guardrails/notes.md#executed-synthetic-study--2026-11-12)
+separates generating probabilities, measured outcomes, conversion uncertainty
+and illustrative guardrail point checks. **Author review is pending.** The
+checks establish no statistical non-inferiority, production safety or rollout
+authorization.
+
+Its separate [visual lab](47-product-metrics-guardrails/VISUAL_LAB.md) adds
+interactive parameters, coherent activity trajectories, censored subscription
+survival, latency-tail animations, break-even economics, detector sensitivity,
+population trade-off geometry and an illustrative uncertainty-aware policy.
+Generated GIFs stay ignored; author interpretation review remains pending.
+
+Days 48–52 are planned: multiple testing, DAGs and confounders, propensity scores and matching,
 difference-in-differences and uplift modeling. No placeholder folders are added.
 
 Use each topic's execution instructions and focused tests. The shared
