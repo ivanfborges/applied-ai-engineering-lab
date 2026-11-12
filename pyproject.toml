@@ -21,6 +21,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+experimentation = [
+    "statsmodels>=0.14.6,<0.16",
+]
 manifold = [
     "umap-learn>=0.5.7,<0.6",
 ]

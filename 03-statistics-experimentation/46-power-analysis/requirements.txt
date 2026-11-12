@@ -1,0 +1,2 @@
+# Compatibility entry point. Run from this topic folder; bounds live at the root.
+-e ../..[dev,experimentation]

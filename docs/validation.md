@@ -8,7 +8,7 @@ results, and do not silently replace historical experiment records.
 ## Choose the scope
 
 ```bash
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
 python -m pip check
 python scripts/validate_repo.py syntax
 python scripts/validate_repo.py links
@@ -22,6 +22,8 @@ checks installed optional-library imports. Install the complete extras above
 before interpreting a full-suite result; otherwise optional tests can skip.
 The `manifold` extra supplies UMAP for Day 40; its integration smoke test is
 required and does not skip when that dependency is absent.
+The `experimentation` extra supplies statsmodels for the Day 46 visual lab;
+its numerical, simulation and interface tests require the dependency.
 Notebooks additionally use `.[notebooks]` and are not executed by this runner.
 
 For a small change, run its specific test file, then syntax and links:

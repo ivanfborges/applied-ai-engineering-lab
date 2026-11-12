@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**45 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 1 experimentation topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**46 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 2 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -55,8 +55,14 @@ counts, tested pooled Z inference and unpooled Wald intervals, exact binomial
 SRM and repeated fixed-horizon A/A and power checks. Its interpretations await
 author review; latency, cost and safety guardrails are not measured.
 
-- Latest topic: [Day 45 — A/B Testing from Scratch](03-statistics-experimentation/45-ab-testing/)
-- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 1 of 8 topics implemented
+Day 46 adds tested prospective power and sample-size planning, a standard-library
+approximation and SciPy/statsmodels calculations. Its eight-module Streamlit
+lab connects hypothesis regions, a 3D power surface, Monte Carlo uncertainty,
+correlated observations, outcome maturity and practical significance, with
+three reproducible GIFs. Interpretation review remains pending.
+
+- Latest topic: [Day 46 — Power Analysis and Sample Size](03-statistics-experimentation/46-power-analysis/)
+- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 2 of 8 topics implemented
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) and [Experimentation, Causality and Product Thinking](03-statistics-experimentation/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -84,7 +90,7 @@ Interpretations explicitly marked for author review remain pending across the
 do not approve them on the author's behalf.
 Days 36–44 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
-Day 45 interpretation candidates in the
+Days 45–46 interpretation candidates in the
 [experimentation module](03-statistics-experimentation/) also remain pending.
 
 For applied studies using external datasets, see the separate
@@ -140,6 +146,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 43 | [Recommender Systems II](02-unsupervised-recommender-systems/43-recommender-systems-ii/) | Tested BPR gradients/SGD and ranking helpers; synthetic global-round SVD/BPR/content/popularity comparison, validation-selected fusion, candidate budgets and metadata-only item admission |
 | 44 | [Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested ID-based metrics and scikit-learn agreement; eight-section Streamlit lab with editable rankings, AP/RR/NDCG animations, exact 3D permutations, synthetic RAG/context budgets and four GIF exporters |
 | 45 | [A/B Testing from Scratch](03-statistics-experimentation/45-ab-testing/) | Synthetic user-randomized ITT experiment; tested pooled Z-test and unpooled interval, exact SRM, SciPy agreement, repeated A/A calibration and fixed-horizon power checks; interpretation review pending |
+| 46 | [Power Analysis and Sample Size](03-statistics-experimentation/46-power-analysis/) | Tested sizing and statsmodels agreement; eight-module Streamlit lab, offline 3D surface, seeded Monte Carlo with uncertainty, three GIFs and traffic/maturity planning; interpretation review pending |
 
 ## Roadmap
 
@@ -148,7 +155,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
-| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **1/8 studies implemented; interpretation review pending** |
+| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **2/8 studies implemented; interpretation review pending** |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
@@ -204,7 +211,7 @@ python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
 Run all repository quality checks:
 
 ```bash
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
 python scripts/validate_repo.py all
 ```
 
@@ -262,7 +269,7 @@ applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
-├── 03-statistics-experimentation/          # Day 45 implemented; 46–52 planned
+├── 03-statistics-experimentation/          # Days 45–46 implemented; 47–52 planned
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started

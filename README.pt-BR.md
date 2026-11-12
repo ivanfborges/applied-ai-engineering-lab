@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**45 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 1 de experimentação.** O roteiro
+**46 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 2 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -31,17 +31,22 @@ animações de AP/RR/NDCG, permutações exatas em 3D, simulação RAG com orça
 de contexto e exportação de quatro GIFs. As interpretações aguardam revisão. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
-O [tópico mais recente, Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
+O [Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
 inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
-com **1 de 8 tópicos implementados**. Inclui randomização sintética por usuário,
+agora com **2 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
 análise por intenção de tratar, teste Z com variância combinada sob a hipótese
 nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
 SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
 não foram medidos; as interpretações aguardam revisão.
+O [tópico mais recente, Dia 46 — Poder estatístico e tamanho de amostra](03-statistics-experimentation/46-power-analysis/)
+adiciona dimensionamento testado com SciPy/statsmodels e um laboratório
+Streamlit com oito módulos: regiões de erro, curvas e superfície 3D de poder,
+Monte Carlo com incerteza, correlação, maturação dos resultados e relevância
+prática. Inclui três GIFs reproduzíveis; as interpretações aguardam revisão.
 São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
-aprendizado não supervisionado e recomendação (9/9) e experimentação (1/8).
-Os Dias 46–52 e os módulos 4–11 continuam planejados. Os candidatos de
-interpretação dos Dias 36–45 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9) e experimentação (2/8).
+Os Dias 47–52 e os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–46 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
@@ -86,7 +91,7 @@ python 00-foundations/01-ai-ml-genai-landscape/example.py
 Para a suíte integral, inclua as bibliotecas opcionais utilizadas pelos estudos:
 
 ```sh
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
 python scripts/validate_repo.py all
 ```
 
