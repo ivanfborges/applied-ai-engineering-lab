@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**48 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 4 de experimentação.** O roteiro
+**49 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 5 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -33,7 +33,7 @@ de contexto e exportação de quatro GIFs. As interpretações aguardam revisão
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
 O [Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
 inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
-agora com **4 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
+agora com **5 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
 análise por intenção de tratar, teste Z com variância combinada sob a hipótese
 nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
 SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
@@ -51,16 +51,21 @@ de Pareto factível em 3D, política conservadora de rollout, armadilhas de
 agregação e dois GIFs sob demanda. O estudo histórico com comparações pontuais
 permanece separado; as interpretações aguardam revisão e não há autorização
 de implantação.
-O [tópico mais recente, Dia 48 — Testes múltiplos e falsos positivos](03-statistics-experimentation/48-multiple-testing/)
+O [Dia 48 — Testes múltiplos e falsos positivos](03-statistics-experimentation/48-multiple-testing/)
 adiciona Bonferroni, Holm e Benjamini–Hochberg testados, comparação com
 statsmodels/SciPy e simulações sintéticas de FWER, FDR e poder com erro
 Monte Carlo. Análises interinas aninhadas comparam horizonte fixo, peeking
 ingênuo e Bonferroni entre análises planejadas. As interpretações aguardam
 revisão do autor.
+O [tópico mais recente, Dia 49 — Inferência causal I: DAGs e confundidores](03-statistics-experimentation/49-causal-inference-i-dags-confounders/)
+adiciona regras de d-separation e critério backdoor original testados,
+equivalência FWL/OLS, padronização por estratos e comparação sintética repetida
+entre ajustes por confundidor, mediador e collider. As interpretações aguardam
+revisão; o grafo assumido não estabelece efeitos de um produto real.
 São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
-aprendizado não supervisionado e recomendação (9/9) e experimentação (4/8).
-Os Dias 49–52 e os módulos 4–11 continuam planejados. Os candidatos de
-interpretação dos Dias 36–48 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9) e experimentação (5/8).
+Os Dias 50–52 e os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–49 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar
