@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**44 estudos implementados: 15 de fundamentos, 20 de ML clássico e 9 de aprendizado não supervisionado/recomendação.** O roteiro
+**45 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 1 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -22,7 +22,7 @@ adiciona fatoração BPR e gradientes testados, comparação com SVD, conteúdo 
 popularidade, seleção do peso híbrido na validação e avaliação de candidatos.
 As interações são sintéticas, com cortes temporais globais. Um caso separado
 verifica a entrada de item novo por metadados, sem medir sua relevância.
-O [tópico mais recente, Dia 44 — Métricas de Ranking](02-unsupervised-recommender-systems/44-ranking-metrics/)
+O [Dia 44 — Métricas de Ranking](02-unsupervised-recommender-systems/44-ranking-metrics/)
 adiciona Precision@K, Recall@K, AP/MAP, RR/MRR e NDCG testados, múltiplos
 relevantes por consulta, convenções explícitas e comparação com scikit-learn.
 Os casos sintéticos separam efeitos da ordenação e do universo de candidatos.
@@ -31,9 +31,17 @@ animações de AP/RR/NDCG, permutações exatas em 3D, simulação RAG com orça
 de contexto e exportação de quatro GIFs. As interpretações aguardam revisão. O
 [módulo de aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/)
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
-São três módulos iniciados: fundamentos (15/15), ML clássico (20/20) e
-aprendizado não supervisionado e recomendação (9/9). Os módulos 3–11 continuam
-planejados. Os candidatos de interpretação dos Dias 36–44 aguardam revisão do autor.
+O [tópico mais recente, Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
+inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
+com **1 de 8 tópicos implementados**. Inclui randomização sintética por usuário,
+análise por intenção de tratar, teste Z com variância combinada sob a hipótese
+nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
+SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
+não foram medidos; as interpretações aguardam revisão.
+São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
+aprendizado não supervisionado e recomendação (9/9) e experimentação (1/8).
+Os Dias 46–52 e os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–45 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar

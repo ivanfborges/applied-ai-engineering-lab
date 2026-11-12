@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**44 implemented studies: 15 foundations, 20 classical ML topics and 9 unsupervised learning/recommender topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**45 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 1 experimentation topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 The implemented material connects mathematical foundations to model evaluation
 and inference through synthetic experiments and tested numerical code. Topics
@@ -50,9 +50,14 @@ Its eight-section Streamlit visual lab adds editable rankings, AP/RR/NDCG
 animations, a discrete 3D landscape, four GIF exporters and a synthetic
 RAG reranking/context-budget simulation, with interpretation review pending.
 
-- Latest topic: [Day 44 — Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/)
-- Latest implemented module: [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) — 9 of 9 topics implemented
-- Implemented modules: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/) and [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/)
+Day 45 starts experimentation with synthetic user-level randomization, ITT
+counts, tested pooled Z inference and unpooled Wald intervals, exact binomial
+SRM and repeated fixed-horizon A/A and power checks. Its interpretations await
+author review; latency, cost and safety guardrails are not measured.
+
+- Latest topic: [Day 45 — A/B Testing from Scratch](03-statistics-experimentation/45-ab-testing/)
+- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 1 of 8 topics implemented
+- Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) and [Experimentation, Causality and Product Thinking](03-statistics-experimentation/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -79,6 +84,8 @@ Interpretations explicitly marked for author review remain pending across the
 do not approve them on the author's behalf.
 Days 36–44 interpretation candidates in the
 [unsupervised module](02-unsupervised-recommender-systems/) also await author review.
+Day 45 interpretation candidates in the
+[experimentation module](03-statistics-experimentation/) also remain pending.
 
 For applied studies using external datasets, see the separate
 [TopVistos classification study](https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA)
@@ -132,6 +139,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 42 | [Recommender Systems I](02-unsupervised-recommender-systems/42-recommender-systems-i/) | Tested overlap Pearson, cold-start fallbacks and temporal rating holdout; ten-scene offline lab with traced recommendations, masked 3D factors, onboarding, ranking and exposure simulations |
 | 43 | [Recommender Systems II](02-unsupervised-recommender-systems/43-recommender-systems-ii/) | Tested BPR gradients/SGD and ranking helpers; synthetic global-round SVD/BPR/content/popularity comparison, validation-selected fusion, candidate budgets and metadata-only item admission |
 | 44 | [Ranking Metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested ID-based metrics and scikit-learn agreement; eight-section Streamlit lab with editable rankings, AP/RR/NDCG animations, exact 3D permutations, synthetic RAG/context budgets and four GIF exporters |
+| 45 | [A/B Testing from Scratch](03-statistics-experimentation/45-ab-testing/) | Synthetic user-randomized ITT experiment; tested pooled Z-test and unpooled interval, exact SRM, SciPy agreement, repeated A/A calibration and fixed-horizon power checks; interpretation review pending |
 
 ## Roadmap
 
@@ -140,7 +148,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 0 | Foundations | 1–15 | **15/15 studies implemented** |
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
-| 3 | Experimentation, Causality, and Product Thinking | 45–52 | Planned |
+| 3 | Experimentation, Causality, and Product Thinking | 45–52 | **1/8 studies implemented; interpretation review pending** |
 | 4 | Deep Learning | 53–62 | Planned |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
@@ -253,8 +261,8 @@ The intended evidence is:
 applied-ai-engineering-lab/
 ├── 00-foundations/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
-├── 02-unsupervised-recommender-systems/    # Days 36–43 implemented; 44 planned
-├── 03-statistics-experimentation/          # published when started
+├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
+├── 03-statistics-experimentation/          # Day 45 implemented; 46–52 planned
 ├── 04-deep-learning/                       # published when started
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started

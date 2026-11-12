@@ -66,5 +66,6 @@ documents exact neighborhood/expansion GIFs, density and scaling controls,
 standalone offline parameter/3D explorers and three inspected preview candidates.
 Its visual interpretation candidates also remain pending author review.
 
-Future work follows the roadmap: Module 3 starts with Day 45, A/B testing.
+Continue with [Module 3](../03-statistics-experimentation/), now started with
+[Day 45, A/B testing](../03-statistics-experimentation/45-ab-testing/).
 No placeholder topic folders are published.
