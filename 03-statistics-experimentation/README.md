@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 3 spans global Days 45–52. **3 of 8 studies are implemented.** The public
+Module 3 spans global Days 45–52. **4 of 8 studies are implemented.** The public
 directory follows the canonical `03-statistics-experimentation` name in the
 repository structure. Future topics remain planned in the roadmap.
 
@@ -11,6 +11,7 @@ repository structure. Future topics remain planned in the roadmap.
 | 45 | [A/B testing from scratch](45-ab-testing/) | Synthetic user-level ITT experiment and tested inference; twelve visual modules, five GIFs and offline browser verification across 42 scenarios; interpretation review pending |
 | 46 | [Power analysis and sample size](46-power-analysis/) | Tested sizing and statsmodels agreement; eight-module Streamlit lab, 3D power surface, seeded Monte Carlo, three GIFs and maturity-aware traffic planning; interpretation review pending |
 | 47 | [Product metrics and guardrails](47-product-metrics-guardrails/) | Nine-section Streamlit lab, coherent activity and censored survival, latency/economics/safety, feasible 3D Pareto set, conservative rollout policy, aggregation traps and two on-demand GIFs; interpretation review pending |
+| 48 | [Multiple testing and false positives](48-multiple-testing/) | Tested Bonferroni/Holm/BH/BY, six-experiment offline visual lab, four GIFs, interactive 3D FWER controls, synthetic FDR/power and shared-path peeking with Monte Carlo uncertainty; interpretation review pending |
 
 Day 45 connects a hypothetical AI-workflow change to a binary user outcome,
 making the randomization unit, observation window, denominator and stopping
@@ -47,7 +48,21 @@ survival, latency-tail animations, break-even economics, detector sensitivity,
 population trade-off geometry and an illustrative uncertainty-aware policy.
 Generated GIFs stay ignored; author interpretation review remains pending.
 
-Days 48–52 are planned: multiple testing, DAGs and confounders, propensity scores and matching,
+Day 48 separates family-level false positives, expected false discovery
+proportions and repeated significance decisions. Its
+[dated synthetic record](48-multiple-testing/notes.md#executed-synthetic-study--2026-11-12)
+reports global-null and mixed-family simulations with Monte Carlo uncertainty,
+plus a shared-trajectory comparison of fixed horizon, naive peeking and
+Bonferroni across ten planned looks. **Author review is pending.** No
+arbitrary-dependence or anytime-valid guarantee is inferred from the run.
+
+Its separate [visual laboratory](48-multiple-testing/VISUAL_LAB.md) adds
+null-test accumulation, correction-rule animation, effect-size and PSD
+correlation sweeps, a disclosed selected peeking path and an offline 3D
+analytical surface. The original study record remains separate; generated
+reports stay ignored and interpretation review remains pending.
+
+Days 49–52 are planned: DAGs and confounders, propensity scores and matching,
 difference-in-differences and uplift modeling. No placeholder folders are added.
 
 Use each topic's execution instructions and focused tests. The shared

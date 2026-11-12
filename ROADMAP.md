@@ -208,9 +208,136 @@ Statistical power, effect size, sample size estimation and business constraints.
 
 Conversion, retention, churn, latency, revenue, cost and safety metrics.
 
-### Day 48 — Multiple Testing and False Positives
-
-Bonferroni correction, FDR and peeking problem.
+### Read these public repository files before making changes: 
+- README.md
+- ROADMAP.md
+- REPO_STRUCTURE.md
+- docs/methodology.md
+Read these local workflow files: 
+- .local/workflow/STUDY_CONTEXT.md
+- .local/workflow/CODEX_PROMPT.md
+- .local/workflow/PUBLICATION_CHECKLIST.md
+Day:
+47 
+Topic:
+Day 47 — Product Metrics and Guardrails
+Conversion, retention, churn, latency, revenue, cost and safety metrics.
+The author manually saved the ChatGPT study response at:
+.local\raw-study\03-experimentation-causality\47-product-metrics-guardrails\day47_whole.md
+Read that file as source material. It is a private, ignored working artifact: 
+- do not create, move, rename, rewrite, or publish it;
+- do not create or modify LinkedIn drafts;
+- do not copy the raw response wholesale into public documentation.
+Objective:
+Create or update the corresponding public topic folder, following the roadmap,
+repository structure, and quality standards. Transform the raw source into
+reviewed, topic-specific documentation and executable examples. 
+Create files only when they materially help the topic. Possible files include: 
+- README.md
+- notes.md
+- example.py
+- from_scratch.py
+- notebook.ipynb
+- tests/
+- interview_questions.md
+- references.md
+Requirements: 
+1. Follow the folder naming convention in REPO_STRUCTURE.md.
+2. Keep the topic README in English.
+3. Explain the overview, concepts, relevance, files, execution, and key
+   takeaways without forcing an identical template on every topic.
+4. Use notes.md for deeper intuition, theory, formulas, assumptions,
+   trade-offs, applications, limitations, and common mistakes when that depth
+   is useful.
+5. Prefer simple, executable, educational code and common dependencies.
+6. Use specialized frameworks only when the topic requires them.
+7. Do not create unnecessary architecture or generic filler.
+8. Do not invent benchmarks, executions, observations, or personal
+   conclusions.
+9. Clearly identify synthetic data and document any public dataset source.
+10. Keep first-principles implementations educational rather than presenting
+    them as production library replacements.
+11. Add comments only where they explain important logic or decisions.
+12. Use valid imports, relative paths, deterministic seeds where relevant, and
+    explicit errors for invalid inputs.
+13. Tailor files to the technical question. Do not create files merely because
+    they appear in a template.
+14. Treat suggested experiments as suggestions until they are actually run.
+15. When Codex runs an experiment, record its hypothesis, configuration,
+    result, interpretation candidate, and limitation. Mark the interpretation
+    for author review rather than presenting it as the author's conclusion.
+16. Add tests for reusable numerical or application logic when proportionate.
+17. Generated outputs are ignored by default. Version only a small,
+    intentional preview set referenced by public documentation.
+18. Before linking a local asset, verify that it is tracked or deliberately
+    unignored rather than merely present locally.
+19. Do not start the separate visual phase unless this prompt explicitly asks
+    for visuals. Visual work must follow
+    .local/workflow/VISUAL_WORKFLOW.md.
+20. Update README.md and README.pt-BR.md after the implementation is validated:
+    - synchronize actual day, latest topic and module counts in both languages;
+    - add the topic to the implemented-studies table and module index when present;
+    - keep implementation and interpretation-review status separate;
+    - add a highlight only when it is among the strongest examples;
+    - keep future modules marked as planned.
+21. Do not add .gitkeep placeholders for future modules.
+22. Run relevant examples, tests, syntax checks, and internal-link checks
+    before declaring completion. Report only checks actually run.
+23. Preserve unrelated user changes already present in the worktree.
+24. Do not commit or push unless the author explicitly requests it.
+25. Follow .local/workflow/PUBLICATION_CHECKLIST.md. Use global roadmap day
+    numbers, GitHub-compatible math delimiters outside code, and canonical extras.
+    Preserve dated experiment records; distinguish new runs from historical ones.
+Before editing, briefly show: 
+- the target public folder;
+- files planned for creation or modification;
+- validations you intend to run;
+- any decision that requires the author's input.
+After editing, summarize: 
+- public files created or changed;
+- commands used to run examples;
+- tests and checks actually executed;
+- EN/PT README and module-index progress changes;
+- outputs selected or left ignored;
+- interpretations and conclusions requiring manual review;
+- a suggested commit message.
+ 
+--- 
+ 
+## Short Codex Prompt 
+ 
+```text 
+Read README.md, ROADMAP.md, REPO_STRUCTURE.md, docs/methodology.md, 
+.local/workflow/STUDY_CONTEXT.md, .local/workflow/CODEX_PROMPT.md, 
+and .local/workflow/PUBLICATION_CHECKLIST.md. 
+ 
+Day: 
+[DAY_NUMBER] 
+ 
+Topic: 
+[TEMA_DO_DIA] 
+ 
+Private raw study source saved manually by the author: 
+[RAW_STUDY_PATH] 
+ 
+Read the raw source without creating, moving, rewriting, or publishing it. 
+Do not create or modify LinkedIn drafts. 
+ 
+Create only the topic-specific public files that add technical value. Keep the 
+content rigorous, executable, and relevant to senior Data Science or Applied 
+AI Engineering work. Do not invent executed experiments, results, benchmarks, 
+or author conclusions. Keep proposed experiments clearly labeled. 
+ 
+Run proportionate examples, tests, syntax checks, and internal-link checks. 
+Keep generated outputs ignored unless a small selected preview is deliberately 
+referenced publicly. Do not perform the separate visual phase unless asked; 
+visual work follows .local/workflow/VISUAL_WORKFLOW.md. 
+ 
+Synchronize implementation progress in the EN/PT root READMEs and existing 
+module index; keep interpretation review separate. Follow the shared publication 
+checklist. Do not commit or push without explicit authorization. 
+Report files changed, checks actually run, 
+manual-review items, and a suggested commit message.
 
 ### Day 49 — Causal Inference I: DAGs and Confounders
 

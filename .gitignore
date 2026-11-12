@@ -307,3 +307,10 @@ outputs/
 !03-statistics-experimentation/46-power-analysis/assets/power_growth.gif
 !03-statistics-experimentation/46-power-analysis/assets/effective_sample_size.gif
 !03-statistics-experimentation/46-power-analysis/assets/effect_size_sample_size.png
+
+# Day 48: three inspected scientific previews and one downloadable offline 3D artifact.
+03-statistics-experimentation/48-multiple-testing/assets/*
+!03-statistics-experimentation/48-multiple-testing/assets/03_bh_step_up.gif
+!03-statistics-experimentation/48-multiple-testing/assets/04_error_control_tradeoffs.png
+!03-statistics-experimentation/48-multiple-testing/assets/05_peeking_problem.gif
+!03-statistics-experimentation/48-multiple-testing/assets/02_fwer_surface.html
