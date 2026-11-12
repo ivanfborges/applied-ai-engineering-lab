@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**49 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 5 de experimentação.** O roteiro
+**50 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação e 6 de experimentação.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -33,7 +33,7 @@ de contexto e exportação de quatro GIFs. As interpretações aguardam revisão
 tem **9 de 9 tópicos implementados**; a revisão das interpretações continua pendente.
 O [Dia 45 — A/B Testing do zero](03-statistics-experimentation/45-ab-testing/)
 inicia o [módulo de experimentação, causalidade e produto](03-statistics-experimentation/),
-agora com **5 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
+agora com **6 de 8 tópicos implementados**. O Dia 45 inclui randomização sintética por usuário,
 análise por intenção de tratar, teste Z com variância combinada sob a hipótese
 nula, intervalo com variâncias separadas, SRM binomial exato, comparação com
 SciPy e repetições A/A e de poder em horizonte fixo. Latência, custo e segurança
@@ -57,15 +57,25 @@ statsmodels/SciPy e simulações sintéticas de FWER, FDR e poder com erro
 Monte Carlo. Análises interinas aninhadas comparam horizonte fixo, peeking
 ingênuo e Bonferroni entre análises planejadas. As interpretações aguardam
 revisão do autor.
-O [tópico mais recente, Dia 49 — Inferência causal I: DAGs e confundidores](03-statistics-experimentation/49-causal-inference-i-dags-confounders/)
+O [Dia 49 — Inferência causal I: DAGs e confundidores](03-statistics-experimentation/49-causal-inference-i-dags-confounders/)
 adiciona regras de d-separation e critério backdoor original testados,
 equivalência FWL/OLS, padronização por estratos e comparação sintética repetida
 entre ajustes por confundidor, mediador e collider. As interpretações aguardam
 revisão; o grafo assumido não estabelece efeitos de um produto real.
+O [tópico mais recente, Dia 50 — Inferência causal II: propensity score e matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/)
+adiciona matching por logit com reposição e caliper explícito, ponderação
+normalizada para ATE/ATT, balanceamento e ESS por grupo testados. Um estudo
+sintético repetido de menor sobreposição registra retenção, reutilização de
+controles e erro de estimação. As interpretações aguardam revisão do autor.
+O laboratório visual separado em Matplotlib tem nove capítulos, superfície
+3D de propensão verdadeira/estimada, seis GIFs via Pillow, sliders nativos,
+comparação repetida de ATE/ATT e confundimento oculto. Nesse gerador, efeitos
+negativos significam minutos economizados; os registros do estudo anterior
+permanecem separados e a revisão das interpretações continua pendente.
 São quatro módulos iniciados: fundamentos (15/15), ML clássico (20/20),
-aprendizado não supervisionado e recomendação (9/9) e experimentação (5/8).
-Os Dias 50–52 e os módulos 4–11 continuam planejados. Os candidatos de
-interpretação dos Dias 36–49 aguardam revisão do autor.
+aprendizado não supervisionado e recomendação (9/9) e experimentação (6/8).
+Os Dias 51–52 e os módulos 4–11 continuam planejados. Os candidatos de
+interpretação dos Dias 36–50 aguardam revisão do autor.
 Implementação concluída não equivale a aprovação pessoal das interpretações.
 
 ## Por onde começar

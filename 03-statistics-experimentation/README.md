@@ -2,7 +2,7 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 3 spans global Days 45–52. **5 of 8 studies are implemented.** The public
+Module 3 spans global Days 45–52. **6 of 8 studies are implemented.** The public
 directory follows the canonical `03-statistics-experimentation` name in the
 repository structure. Future topics remain planned in the roadmap.
 
@@ -13,6 +13,7 @@ repository structure. Future topics remain planned in the roadmap.
 | 47 | [Product metrics and guardrails](47-product-metrics-guardrails/) | Nine-section Streamlit lab, coherent activity and censored survival, latency/economics/safety, feasible 3D Pareto set, conservative rollout policy, aggregation traps and two on-demand GIFs; interpretation review pending |
 | 48 | [Multiple testing and false positives](48-multiple-testing/) | Tested Bonferroni/Holm/BH/BY, six-experiment offline visual lab, four GIFs, interactive 3D FWER controls, synthetic FDR/power and shared-path peeking with Monte Carlo uncertainty; interpretation review pending |
 | 49 | [Causal inference I: DAGs and confounders](49-causal-inference-i-dags-confounders/) | Tested d-separation and original backdoor criterion, FWL/OLS agreement and standardization; repeated synthetic adjustment comparison with known total/direct effects; interpretation review pending |
+| 50 | [Causal inference II: propensity score and matching](50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weights, SMD and ESS; nine-chapter Matplotlib lab, native sliders, true/fitted 3D surface, six Pillow GIFs, repeated estimation and hidden confounding; interpretation review pending |
 
 Day 45 connects a hypothetical AI-workflow change to a binary user outcome,
 making the randomization unit, observation window, denominator and stopping
@@ -70,8 +71,24 @@ bias, with FWL agreement and empirical standardization. **Author review of
 interpretations is pending.** The constructed model establishes no causal
 claim about a real AI assistant.
 
-Days 50–52 are planned: propensity scores and matching,
-difference-in-differences and uplift modeling. No placeholder folders are added.
+Day 50 connects estimated assignment probabilities to matching and weighting
+under explicit identification assumptions. Its
+[dated synthetic study](50-causal-inference-ii-propensity-score-matching/notes.md#executed-synthetic-study--2026-11-12)
+compares practical overlap, balance, control reuse, retained treated units and
+sample-target estimation error. **Author review of interpretations is pending.**
+Caliper retention changes the reported population; the implementation provides
+point estimates without observational-data confidence intervals.
+
+Its separate [Matplotlib visual lab](50-causal-inference-ii-propensity-score-matching/VISUAL_LAB.md)
+uses resolution time in minutes, with negative effects representing savings.
+Nine chapters include assignment geometry, practical/structural support,
+matching and IPW animations, Love plots, weight concentration, independent
+ATE/ATT simulations and an oracle-only hidden-confounder demonstration. Native
+sliders and mouse rotation complement headless PNG/Pillow GIF generation.
+Generated outputs remain ignored and interpretation review remains pending.
+
+Days 51–52 are planned: difference-in-differences and uplift modeling.
+No placeholder folders are added.
 
 Use each topic's execution instructions and focused tests. The shared
 [validation contract](../docs/validation.md) describes repository checks and
