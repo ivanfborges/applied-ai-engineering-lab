@@ -125,6 +125,31 @@ def test_policy_pass_fail_inconclusive_detection_and_hard_stop():
         rollout_policy(users,invalid,good.cost)
 
 
+@pytest.mark.parametrize("dtype", ["bool", "int64", "float64"])
+def test_rollout_policy_accepts_equivalent_binary_flag_dtypes(dtype):
+    users, _ = simulate(n=200, seed=47)
+    expected = rollout_policy(users, POLICY, TREATMENT.cost)
+    candidate = users.copy()
+    candidate["served_ok"] = candidate["served_ok"].astype(dtype)
+
+    actual = rollout_policy(candidate, POLICY, TREATMENT.cost)
+
+    pd.testing.assert_frame_equal(actual, expected)
+    error_row = actual.loc[actual.check == "Request error rate"].iloc[0]
+    treatment = candidate.loc[candidate.arm == "treatment"]
+    assert error_row.observed == pytest.approx((treatment.served_ok == 0).mean())
+
+
+@pytest.mark.parametrize("invalid", [-1, 2, 0.5, np.nan, "False"])
+def test_rollout_policy_rejects_invalid_binary_flags(invalid):
+    users, _ = simulate(n=200, seed=47)
+    users["served_ok"] = users["served_ok"].astype(object)
+    users.loc[users.index[0], "served_ok"] = invalid
+
+    with pytest.raises(ValueError, match="served_ok"):
+        rollout_policy(users, POLICY, TREATMENT.cost)
+
+
 def test_no_conversions_does_not_crash_or_pass_economics():
     zero=replace(TREATMENT,conversion=0)
     users,_=simulate(treatment=zero,n=100)

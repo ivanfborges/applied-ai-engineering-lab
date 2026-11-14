@@ -243,7 +243,7 @@ def rollout_policy(users: pd.DataFrame, settings: dict, treatment_cost_mean: flo
     add("Cost per conversion", cost_per_outcome(float(t.cost.sum()), kt),
         (cost_lo / p_hi, cost_hi / p_lo if p_lo else np.inf), settings["cost_conversion"],
         scope="Exact conversion + known bounded-cost Hoeffding; union bound")
-    errors = int((~t.served_ok).sum())
+    errors = int((~t.served_ok.astype(bool)).sum())
     add("Request error rate", errors / nt, binomial_interval(errors, nt, confidence), settings["error"])
     detected = "unsafe_detected" if "unsafe_detected" in users else "unsafe"
     sc, st = int(c[detected].sum()), int(t[detected].sum())
