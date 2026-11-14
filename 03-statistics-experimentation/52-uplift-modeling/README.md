@@ -93,8 +93,10 @@ The script never chooses a winner, treatment fraction or threshold on test
 outcomes. Oracle CATE RMSE and oracle policy values are synthetic diagnostics.
 
 See the [dated run record](notes.md#executed-synthetic-study--2026-11-12)
-for actual configuration, results and limitations. **Interpretation status:
-author review required.** Local verification does not approve interpretations.
+for actual configuration, results and limitations. Its three interpretations
+received a scoped AI-assistant technical review
+([52-A/B/C](../../docs/CURATION.md)), not personal author approval. The separate
+visual interpretations remain pending; future run reports start pending too.
 
 ## Files and next questions
 

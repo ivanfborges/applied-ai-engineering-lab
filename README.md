@@ -12,92 +12,16 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 **52 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 8 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
-The implemented material connects mathematical foundations to model evaluation
-and inference through synthetic experiments and tested numerical code. Topics
-16–35 cover the ML lifecycle, validation boundaries, linear regression theory
-and implementation, regularization, logistic regression, classification metrics,
-neighbor and probabilistic models, tree ensembles through modern gradient boosting,
-support vector machines, feature engineering with point-in-time transaction aggregates,
-imbalanced classification with training-only resampling and validation-selected policies,
-missing-data strategies with frozen-model feature-loss checks, and explainability
-with grouped permutation, PDP/ICE agreement, and probability SHAP reconstruction.
-Day 36 starts unsupervised learning with tested K-Means updates, synthetic
-scaling and cluster-count diagnostics, and frozen-pipeline inference.
-Day 37 adds tested DBSCAN neighborhood expansion, border-point ambiguity and
-synthetic density-parameter sweeps against a K-Means baseline.
-Day 38 adds tested average-linkage merges, four-linkage comparisons, Ward tree
-cuts and tied-height boundaries for interpreting dendrograms.
-Day 39 adds tested PCA projection/reconstruction, a fold-local Wine classification
-comparison and a synthetic low-variance-signal counterexample.
-Day 40 adds t-SNE/UMAP neighborhood diagnostics on public digits, controlled
-parameter/seed comparisons, a finite-difference-tested educational KL gradient
-and a ten-module offline visual lab with real 3D fits and recorded optimization.
-Day 41 adds synthetic normal-only anomaly detection with MAD, Isolation Forest
-and One-Class SVM, separate threshold calibration, frozen-score policy comparisons
-and tested educational isolation paths.
-Day 42 adds explicit-rating collaborative filtering with tested overlap Pearson,
-positive-neighbor predictions, cold-start fallbacks and a synthetic frozen-time
-rating-error comparison with separate warm/cold reporting. Its ten-scene offline
-visual lab adds traced neighbor contributions, real masked 3D factorization,
-onboarding animations, ranking metrics and a declared exposure-loop simulation.
-Day 43 adds tested BPR gradients and factorization, SVD/content/popularity
-comparisons, validation-selected fusion, candidate-recall boundaries and a
-metadata-only item admission probe on globally time-split synthetic interactions.
-Day 44 adds tested Precision@K, Recall@K, AP/MAP, RR/MRR and graded NDCG,
-explicit denominator and no-answer policies, scikit-learn agreement and synthetic
-order/candidate-universe diagnostics with multiple relevant items per query.
-Its eight-section Streamlit visual lab adds editable rankings, AP/RR/NDCG
-animations, a discrete 3D landscape, four GIF exporters and a synthetic
-RAG reranking/context-budget simulation, with interpretation review pending.
+Explore [Foundations](00-foundations/) for mathematical and statistical building
+blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
+model development, evaluation and explanations.
 
-Day 45 starts experimentation with synthetic user-level randomization, ITT
-counts, tested pooled Z inference and unpooled Wald intervals, exact binomial
-SRM and repeated fixed-horizon A/A and power checks. Its interpretations await
-author review; latency, cost and safety guardrails are not measured.
-
-Day 46 adds tested prospective power and sample-size planning, a standard-library
-approximation and SciPy/statsmodels calculations. Its eight-module Streamlit
-lab connects hypothesis regions, a 3D power surface, Monte Carlo uncertainty,
-correlated observations, outcome maturity and practical significance, with
-three reproducible GIFs. Interpretation review remains pending.
-
-Day 47 adds a tested synthetic product scorecard and nine-section Streamlit lab:
-conversion uncertainty, coherent activity and censored subscription survival,
-latency tails, break-even economics, rare safety events, feasible Pareto sets,
-an illustrative confidence-bound rollout policy, aggregation traps and two
-on-demand GIFs. The historical point-check study remains separate; interpretation
-review is pending and no release approval is implied.
-
-Day 48 adds tested Bonferroni, Holm and Benjamini–Hochberg adjustments,
-library agreement and seeded synthetic global-null/mixed-family studies
-with Monte Carlo uncertainty. A nested-look simulation compares fixed-horizon
-testing, naive peeking and a finite-look Bonferroni budget; interpretation
-review remains pending.
-
-Day 49 adds tested DAG path rules and the original backdoor criterion, FWL/OLS
-agreement, discrete-stratum standardization and a repeated synthetic comparison
-of confounder, mediator and collider adjustments. Interpretation review remains
-pending; the assumed graph does not establish real product effects.
-
-Day 50 adds tested logit-score matching with replacement and explicit calipers,
-normalized ATE/ATT weighting, fixed-reference balance and arm-specific ESS.
-A repeated synthetic overlap stress study records retention, control reuse and
-estimation error. A separate nine-chapter Matplotlib lab adds true/fitted 3D
-assignment geometry, six Pillow GIFs, native sliders, repeated ATE/ATT comparisons
-and hidden confounding on a minutes-outcome generator; interpretation review
-remains pending.
-
-Day 51 adds a tested balanced-panel Difference-in-Differences example with
-manual/TWFE agreement, team-clustered intervals, a paired differential-trend
-scenario and a genuine-pre-period placebo. All outcomes are synthetic
-productivity points; interpretation review remains pending.
-
-Day 52 adds a tested synthetic Random Forest T-Learner, training-only uplift
-strata, IPW ranking and fixed cost/capacity policies. Repeated heterogeneous
-and constant-effect controls separate response prediction from incremental
-value. Its nine-module offline visual lab adds synchronized 3D CATE surfaces,
-S/T-Learner contrasts, four GIFs, subgroup intervals and interactive IPW
-targeting, costs and overlap. Interpretation review remains pending.
+[Unsupervised learning and recommenders](02-unsupervised-recommender-systems/)
+connect representation choices, clustering, anomaly calibration and ranking.
+[Experimentation and causal reasoning](03-statistics-experimentation/) connect
+randomization, guardrails, multiplicity, identification assumptions and
+incremental targeting. Studies include tested educational implementations and
+bounded experiments, not production deployments.
 
 - Latest topic: [Day 52 — Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/)
 - Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 8 of 8 topics implemented
@@ -117,19 +41,18 @@ is documented separately.
 | What does a fitted linear model actually establish? | [Linear regression theory](01-classical-machine-learning/18-linear-regression-theory/) | OLS geometry, residual diagnostics and tests. Training identities do not establish generalization or causality. |
 | Can I inspect the optimizer itself? | [Gradient descent from scratch](00-foundations/06-gradient-descent-from-scratch/) | NumPy implementation and convergence diagnostics on synthetic data. Educational implementation; no dedicated test suite yet. |
 | Why is association insufficient for intervention? | [Correlation vs causation](00-foundations/13-correlation-causation/) | Known synthetic generators for confounding and selection. No causal identification on business data. |
-| Were the features actually available at prediction time? | [Feature engineering](01-classical-machine-learning/32-feature-engineering/) | Event and availability cutoffs, train-fitted transforms and tests. Favorable synthetic target; not a deployment simulation. |
-| Is balancing the data the same as choosing an action policy? | [Imbalanced data](01-classical-machine-learning/33-imbalanced-data/) | Training-only resampling and validation-selected thresholds. Illustrative costs; no validated business benefit. |
-| What does an explanation measure, and what does it not prove? | [Explainability](01-classical-machine-learning/35-explainability-classical-ml/) | Permutation, PDP/ICE and SHAP reconstruction checks. No causal or calibration guarantee. |
+| Does preserving variance preserve predictive information? | [PCA in practice](02-unsupervised-recommender-systems/39-pca-in-practice/) | Fold-local Wine comparison and a low-variance-signal counterexample. Variance retention is not predictive validation. |
+| What does a ranking score leave out? | [Ranking metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested item-ID metrics, denominator policies and candidate-universe controls. Candidate-conditioned NDCG does not measure retrieval recall. |
+| Can adjustment repair weak overlap? | [Propensity score and matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Matching, weighting, balance, retention and ESS on synthetic data. Algebraic correctness does not establish causal identification. |
 
 For a short visit, read the selected study's question and limitations, then
 inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-Days 36–44 interpretation candidates in the
-[unsupervised module](02-unsupervised-recommender-systems/) also await author review.
-Days 45–52 interpretation candidates in the
-[experimentation module](03-statistics-experimentation/) also remain pending.
+The same distinction applies to the unsupervised and experimentation modules:
+explicitly pending items remain pending; scoped technical reviews are identified
+separately in the [curation record](docs/CURATION.md).
 
 For applied studies using external datasets, see the separate
 [TopVistos classification study](https://github.com/ivanfborges/ML_olympiad_for_students-topvistos_EUA)

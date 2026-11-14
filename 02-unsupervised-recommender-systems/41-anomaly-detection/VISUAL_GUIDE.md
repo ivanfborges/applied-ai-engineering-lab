@@ -52,8 +52,8 @@ profiles use separate default directories; a custom directory cannot mix profile
 
 The lab reuses the tested [educational forest](from_scratch.py) and score/metric
 helpers in [example.py](example.py). Study scripts and the historical nonvisual
-experiment record remain unchanged. Root READMEs and the module index were
-deliberately left unchanged in this visual task.
+experiment record remain separate from these visual runs. Current curriculum
+progress is recorded in the [module index](../README.md).
 
 | Setting | Quick | Full |
 |---|---:|---:|

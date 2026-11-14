@@ -105,8 +105,10 @@ fitted scaling/centering and the component version consistent.
 
 The [dated experiment record](notes.md#executed-experiments--2026-10-29) separates
 configuration, measurements, interpretation candidates and limitations.
-**Author review required:** passing tests verifies specified software behavior;
-it does not approve the interpretations on the author's behalf.
+Interpretations A and C received a scoped AI-assistant technical review
+([39-A/B](../../docs/CURATION.md)); B, D and the separate visual interpretations
+remain pending author review. Passing tests does not approve interpretations
+on the author's behalf.
 
 Explained variance is a property of a fitted representation. It is neither a
 classification score nor the percentage of semantic information preserved.

@@ -150,8 +150,10 @@ than uncertainty for a particular observational effect.
 
 ## Executed synthetic study — 2026-11-12
 
-**Status:** executed locally by Codex; interpretation candidates **author review
-required**. No earlier experiment record is replaced.
+**Status:** executed locally by Codex. The two interpretations below received
+a scoped AI-assistant technical review on November 13, 2026
+([50-A/B](../../docs/CURATION.md)), not personal author approval. Numerical
+records are unchanged; the separate visual interpretations remain pending.
 
 **Hypothesis:** with measured confounding and adequate practical overlap,
 matching and IPW will reduce the unadjusted error in this generator. Increasing
@@ -234,13 +236,22 @@ Here every reference is 2.0. RMSE and error summaries are in outcome units.
 | 3 | IPW ATE | 0.5973 | 0.3836 | 0.1213 | 0.6994 |
 | 3 | IPW ATT | 0.4938 | 0.1699 | 0.0537 | 0.5194 |
 
-**Interpretation candidates — author review required:** adjustment reduced
-error relative to the unadjusted association in these generated samples. The
-weaker-overlap scenario showed more matching reuse, lower IPW ESS and larger
-repeated error. A caliper improved the displayed balance but removed treated
-units; the constant effect conceals the practical consequences of changing the
-population. These observations do not rank the methods generally or approve a
-real assistant rollout.
+**Scoped technical interpretations:**
+
+- **50-A — Adjustment and overlap:** adjusted methods had lower recorded RMSE
+  than the unadjusted association in both scenarios. Stronger assignment
+  produced greater repeated error for each adjusted method and concentrated
+  effective information; this is conditional on the known confounders and
+  correctly specified logistic functional family. Ten replications of this
+  generator do not establish a general method ranking or causal identification
+  in observational data.
+- **50-B — Retention and reuse:** the caliper improved the displayed
+  first-seed balance and reduced reuse relative to unrestricted matching, but
+  excluded treated units. Its target is the retained-treated population, not
+  automatically the original ATT. The constant effect makes all target truths
+  equal here, concealing the practical cost of that change. Matching frequency
+  weights and IPW weights have different meanings; neither ESS nor balance
+  certifies identification or authorizes a rollout.
 
 **Limitations:** ten repetitions provide only modest Monte Carlo precision.
 The data favor the correct logistic functional family, although regularization

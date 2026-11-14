@@ -51,7 +51,9 @@ the topic's historical twelve-factor study; interpretation review remains pendin
 
 Implementation and automated validation are separate from author review of
 interpretations. The dated experiment records in Days 36–44 contain measured
-observations and explicitly pending interpretation candidates. These establish
+observations and explicitly pending interpretation candidates. A scoped
+AI-assistant technical review of four items in Days 39/43 is identified in the
+[curation record](../docs/CURATION.md); other candidates remain pending. These establish
 neither real-world segmentation or incident-detection quality nor recommendation or retrieval gains.
 See the [publication methodology](../docs/methodology.md).
 
@@ -66,6 +68,6 @@ documents exact neighborhood/expansion GIFs, density and scaling controls,
 standalone offline parameter/3D explorers and three inspected preview candidates.
 Its visual interpretation candidates also remain pending author review.
 
-Continue with [Module 3](../03-statistics-experimentation/), now started with
-[Day 45, A/B testing](../03-statistics-experimentation/45-ab-testing/).
+Continue with [Module 3](../03-statistics-experimentation/), which contains all
+eight implemented studies from A/B testing through uplift modeling (Days 45–52).
 No placeholder topic folders are published.

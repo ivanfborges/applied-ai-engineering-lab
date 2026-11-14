@@ -199,21 +199,25 @@ policy treated 23.4583%–30% of the holdout. Its oracle net value averaged
 2.173065, compared with 2.179685 for uplift top 30% and 2.478333 for response
 top 30%. Oracle values are diagnostics available only in this simulation.
 
-**Interpretation candidates — author review required.**
+**Scoped technical review — November 13, 2026.** The AI assistant reviewed
+52-A/B/C against source, policy definitions and this historical record;
+see the [curation record](../../docs/CURATION.md). This is not personal author
+approval. The measurements/configuration are unchanged and the separate visual
+interpretations remain pending.
 
-- In this particular heterogeneous generator, response and effect signals both
+- **52-A — Comparator strength:** in this heterogeneous generator, response and effect signals both
   depend on the first two features in similar directions. Control-response
   ranking is therefore a strong comparator: its mean Qini exceeded the
   T-Learner's. The small mean IPW net difference between top-30% policies is
   smaller than its Monte Carlo error. These runs do not establish T-Learner
   superiority, even though targeting concentrated benefit relative to the
   random comparator.
-- The homogeneous generator has no true CATE ranking advantage, and
+- **52-B — Homogeneous control:** the generator has no true CATE ranking advantage, and
   $100\times0.05-5=0$: all policies have zero true incremental net value.
   The nonzero measured gains/net values illustrate sampling variation and
   model noise, not profitable subgroups. Ten repetitions do not establish
   general calibration or a false-positive rate.
-- Fixed thresholds and economics can leave capacity unused. Their measured
+- **52-C — Frozen policy:** fixed thresholds and economics can leave capacity unused. Their measured
   ordering does not establish a best treatment fraction or justify a rollout.
 
 **Limitations.** These are small Monte Carlo studies of two chosen generators,
@@ -223,8 +227,8 @@ The study has complete outcomes, no hidden confounding, no interference,
 fixed values/costs and no compliance or eligibility complications. Response
 signals align with uplift here; other generators can reverse the ordering.
 No model calibration, subgroup coverage, fairness, production guardrail or
-prospective policy experiment was evaluated. Conclusions remain pending
-manual author review.
+prospective policy experiment was evaluated. Scoped technical review is not
+personal author approval or validation of those unmeasured properties.
 
 ## Further experiments — suggested, not executed
 

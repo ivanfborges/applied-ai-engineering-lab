@@ -38,6 +38,32 @@ this review and retain their pending status. Reports produced by future script
 runs start pending: reviewing a dated public interpretation does not pre-approve
 new measurements, configurations or explanations.
 
+## Scoped technical review — November 13, 2026
+
+Under the author's authorization to execute the review plan, the AI assistant
+reviewed nine interpretation items in the historical study records below.
+The review compared local source, evaluation boundaries, metric definitions
+and recorded observations. It narrowed/adopted the wording only for these items.
+**This is assistant-performed technical review, not personal author analysis or
+human approval.** No historical experiment was rerun for this editorial review;
+the associated configurations and measurement tables were preserved.
+
+| Study / items | Reviewed record | Decision and retained boundary |
+|---|---|---|
+| 39 · 39-A/B | [Wine representation comparison (A) and synthetic signal-loss counterexample (C)](../02-unsupervised-recommender-systems/39-pca-in-practice/notes.md#executed-experiments--2026-10-29) | Separate CV selection from an unavailable held-out baseline comparison. Retain the raw-unit counterexample without attributing its whole difference to component count or generalizing below-chance performance. |
+| 43 · 43-A/B | [Selected fusion, candidate budgets and metadata-only admission](../02-unsupervised-recommender-systems/43-recommender-systems-ii/README.md#executed-record--november-6-2026) | Weight zero means content-only selection, not a fusion gain. Distinguish candidate recall, final aggregate metrics and rankings; admission is not cold-item relevance. |
+| 50 · 50-A/B | [Adjustment, overlap, caliper retention and reuse](../03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/notes.md#executed-synthetic-study--2026-11-12) | Restrict lower recorded error to the specified generator and ten replications. Preserve target changes under calipers and distinguish frequency reuse from IPW weight concentration. Balance/ESS do not establish identification. |
+| 52 · 52-A/B/C | [Comparator strength, homogeneous control and frozen targeting policies](../03-statistics-experimentation/52-uplift-modeling/notes.md#executed-synthetic-study--2026-11-12) | Do not claim T-Learner superiority. Constant-effect economics imply zero true incremental net value; sampled nonzero estimates do not identify profitable subgroups. Fixed capacity is not an optimized treatment fraction. |
+
+The separate visual interpretations, PCA records B/D, other studies and future
+run reports are outside this scope and retain their pending status. Automated
+checks are recorded separately; passing them does not expand this review.
+
+Navigation now uses eight complementary entry questions, adding PCA (39),
+ranking evaluation (44) and propensity adjustment (50) to the original five.
+The former highlights 32/33/35 remain in the full inventory and ML index.
+Their October review and all dated validation records remain historical.
+
 ## Selection
 
 The five entry points cover complementary questions: lifecycle (16), evaluation

@@ -177,8 +177,11 @@ python 02-unsupervised-recommender-systems/39-pca-in-practice/example.py
 python 02-unsupervised-recommender-systems/39-pca-in-practice/from_scratch.py
 ```
 
-**All interpretation candidates below require author review.** These measured
-values do not constitute the author's conclusions or production evidence.
+**Review scope:** interpretations A and C received a scoped AI-assistant
+technical review on November 13, 2026 (39-A/B in the
+[curation record](../../docs/CURATION.md)). B and D remain author-review
+candidates. This is not personal author approval or production evidence;
+the measurements and configurations below remain historical.
 
 ### A. Wine: variance threshold versus fixed predictive representations
 
@@ -204,10 +207,12 @@ the table's candidate order. Only the selected representation is evaluated on te
 CV selected the 95% rule. Refit on all 133 training rows, it retained ten PCs;
 its final test balanced accuracy was **0.97222222**.
 
-**Interpretation candidate — author review required:** two PCs and the full
-representation shared a CV mean here, while the threshold representation had
-the highest mean. The threshold's fold-specific dimensions illustrate that it
-is a fitted rule. These small differences do not establish general superiority.
+**Scoped technical interpretation — 39-A:** the 95% rule had the highest
+recorded CV mean and selected different dimensions across folds, as expected
+for a fitted rule. The two-PC and unreduced candidates shared a mean, not
+identical fold scores. Only the selected rule received a test-label score:
+there is no held-out comparison establishing that it outperforms the baseline.
+Fixed regularization and this small split also limit attribution to compression.
 
 **Limitation:** one small outer split, dependent CV folds, fixed regularization,
 no uncertainty interval and no paired statistical comparison. The selected
@@ -263,11 +268,13 @@ These are two fixed configurations, with no model selection on test labels.
 **Measured result:** raw one-PC training EVR **0.99997235**; test balanced
 accuracy **1.00000000** for the baseline and **0.46894689** after compression.
 
-**Interpretation candidate — author review required:** this constructed setting
-demonstrates that variance retention can prioritize a nuisance direction while
-removing the useful label dimension. The finite-sample compressed result near
-chance is compatible with that mechanism; its value below 0.5 is not a general
-property of PCA.
+**Scoped technical interpretation — 39-B:** the raw-unit one-PC pipeline
+retained nearly all input variance yet performed near chance, unlike the
+two-feature standardized baseline. Here the label depends on a deliberately
+small-variance feature, so the retained raw direction prioritizes nuisance
+variation. This is a counterexample to using variance retention as a predictive
+guarantee, not an isolated comparison of component count with preprocessing
+held fixed. The below-0.5 result is not a general property of PCA.
 
 **Limitation:** deliberately extreme scale imbalance, deterministic threshold
 labels, one seed and no standardized-PCA control run. This does not show that

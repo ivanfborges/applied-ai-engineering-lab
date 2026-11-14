@@ -13,9 +13,9 @@ repository structure. Future topics remain planned in the roadmap.
 | 47 | [Product metrics and guardrails](47-product-metrics-guardrails/) | Nine-section Streamlit lab, coherent activity and censored survival, latency/economics/safety, feasible 3D Pareto set, conservative rollout policy, aggregation traps and two on-demand GIFs; interpretation review pending |
 | 48 | [Multiple testing and false positives](48-multiple-testing/) | Tested Bonferroni/Holm/BH/BY, six-experiment offline visual lab, four GIFs, interactive 3D FWER controls, synthetic FDR/power and shared-path peeking with Monte Carlo uncertainty; interpretation review pending |
 | 49 | [Causal inference I: DAGs and confounders](49-causal-inference-i-dags-confounders/) | Tested d-separation and original backdoor criterion, FWL/OLS agreement and standardization; repeated synthetic adjustment comparison with known total/direct effects; interpretation review pending |
-| 50 | [Causal inference II: propensity score and matching](50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weights, SMD and ESS; nine-chapter Matplotlib lab, native sliders, true/fitted 3D surface, six Pillow GIFs, repeated estimation and hidden confounding; interpretation review pending |
+| 50 | [Causal inference II: propensity score and matching](50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weights, SMD and ESS; nine-chapter Matplotlib lab, native sliders, true/fitted 3D surface, six Pillow GIFs, repeated estimation and hidden confounding; scoped study review recorded, visual interpretations pending |
 | 51 | [Difference-in-Differences](51-difference-in-differences/) | Tested balanced-panel manual/TWFE agreement, team-clustered intervals and paired synthetic trend/pre-placebo diagnostics; interpretation review pending |
-| 52 | [Uplift modeling](52-uplift-modeling/) | Tested T-Learner and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity targeting and overlap; interpretation review pending |
+| 52 | [Uplift modeling](52-uplift-modeling/) | Tested T-Learner and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity targeting and overlap; scoped study review recorded, visual interpretations pending |
 
 Day 45 connects a hypothetical AI-workflow change to a binary user outcome,
 making the randomization unit, observation window, denominator and stopping
@@ -27,7 +27,8 @@ guardrail compliance is established.
 The [visual guide](45-ab-testing/VISUAL_LAB.md) separates analytical curves,
 Monte Carlo measurements and hypothetical product decisions. Generated HTML,
 PNGs and GIFs stay ignored pending preview selection; no public asset is
-automatically selected. Root README updates are deferred to author review.
+automatically selected. Implementation progress and interpretation-review status
+are tracked separately in the [repository overview](../README.md).
 
 Day 46 connects prospective sensitivity to feasible sample counts, allocation,
 calendar time and illustrative serving expense. Its
@@ -77,7 +78,9 @@ Day 50 connects estimated assignment probabilities to matching and weighting
 under explicit identification assumptions. Its
 [dated synthetic study](50-causal-inference-ii-propensity-score-matching/notes.md#executed-synthetic-study--2026-11-12)
 compares practical overlap, balance, control reuse, retained treated units and
-sample-target estimation error. **Author review of interpretations is pending.**
+sample-target estimation error. A scoped AI-assistant technical review of the
+two study interpretations is recorded in [curation](../docs/CURATION.md);
+this is not personal author approval.
 Caliper retention changes the reported population; the implementation provides
 point estimates without observational-data confidence intervals.
 
@@ -99,7 +102,8 @@ Day 52 connects response modeling to incremental targeting and fixed-policy
 evaluation. Its [dated synthetic study](52-uplift-modeling/notes.md#executed-synthetic-study--2026-11-12)
 compares a T-Learner, control-response ranking and training-only strata on
 independent randomized holdouts, with cost-aware policies and a homogeneous
-effect control. **Author review of interpretations is pending.** The results
+effect control. Its three study interpretations have a scoped AI-assistant
+technical review in [curation](../docs/CURATION.md), not personal author approval. The results
 do not establish T-Learner superiority or real-world incremental profit.
 
 Its separate [offline visual laboratory](52-uplift-modeling/VISUAL_LAB.md)

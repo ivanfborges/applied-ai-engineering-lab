@@ -38,6 +38,32 @@ configurações e ambientes permanecem históricos. Os visuais separados de
 Relatórios de futuras execuções começam pendentes: revisar uma interpretação
 pública datada não aprova novas medições, configurações ou explicações.
 
+## Revisão técnica delimitada — 13/11/2026
+
+Sob autorização do autor para executar o plano, o assistente de IA revisou nove
+itens de interpretação dos registros históricos abaixo, confrontando fonte local,
+fronteiras de avaliação, definições de métricas e observações registradas. A
+redação foi adotada/restringida somente nesses itens. **Esta é revisão técnica
+realizada pelo assistente, não análise pessoal ou aprovação humana do autor.**
+Nenhum experimento histórico foi reexecutado para a revisão editorial; suas
+configurações e tabelas de medições foram preservadas.
+
+| Estudo / itens | Registro revisado | Decisão e limite preservado |
+|---|---|---|
+| 39 · 39-A/B | [Comparação Wine (A) e contraexemplo sintético (C)](../02-unsupervised-recommender-systems/39-pca-in-practice/notes.md#executed-experiments--2026-10-29) | Distinguir seleção por CV de comparação inexistente com baseline no teste. Preservar o contraexemplo em unidades brutas sem atribuir toda a diferença ao número de componentes ou generalizar desempenho abaixo do acaso. |
+| 43 · 43-A/B | [Fusão selecionada, candidatos e admissão por metadados](../02-unsupervised-recommender-systems/43-recommender-systems-ii/README.md#executed-record--november-6-2026) | Peso zero significa conteúdo puro, não ganho de fusão. Separar recall de candidatos, métricas agregadas e rankings; admissão não mede relevância de item novo. |
+| 50 · 50-A/B | [Ajuste, overlap, retenção por caliper e reutilização](../03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/notes.md#executed-synthetic-study--2026-11-12) | Restringir menor erro ao gerador e às dez repetições. Preservar mudança de população e distinguir frequências de reutilização de pesos IPW. Balanceamento/ESS não estabelecem identificação. |
+| 52 · 52-A/B/C | [Comparador, controle homogêneo e políticas fixas](../03-statistics-experimentation/52-uplift-modeling/notes.md#executed-synthetic-study--2026-11-12) | Não afirmar superioridade do T-Learner. A economia do efeito constante implica valor incremental verdadeiro zero; estimativas não nulas não identificam subgrupos lucrativos. Capacidade fixa não otimiza a fração tratada. |
+
+Interpretações visuais separadas, registros B/D do PCA, outros estudos e relatórios
+futuros estão fora do escopo e mantêm suas pendências. Testes automatizados são
+registrados separadamente; sua aprovação não amplia esta revisão.
+
+A navegação agora usa oito perguntas complementares, acrescentando PCA (39),
+ranking (44) e ajuste por propensão (50) às cinco entradas originais. Os antigos
+destaques 32/33/35 permanecem no inventário e índice de ML. A revisão de outubro
+e as validações datadas continuam históricas.
+
 ## Seleção
 
 As cinco entradas cobrem ciclo de ML (16), fronteiras de avaliação (17), premissas

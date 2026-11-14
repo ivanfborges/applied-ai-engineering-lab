@@ -65,8 +65,8 @@ Per-user score normalization uses all eligible items before restricting
 candidates. It uses no held-out labels and is unchanged across candidate budgets.
 Tied scores use ascending item ID. Candidate recall and final metrics average
 over **all** 80 users, including retrieval failures. With one positive per user,
-Recall@10 equals hit rate; NDCG@10 rewards its position. The next roadmap topic,
-Day 44, remains planned and will study ranking metrics more broadly.
+Recall@10 equals hit rate; NDCG@10 rewards its position.
+[Day 44](../44-ranking-metrics/) studies ranking metrics more broadly.
 
 The cold-item probe is separate from these metrics. After fitting, append item
 100 with no interactions and metadata matching user 0's strongest observed
@@ -112,13 +112,21 @@ the content top twenty and therefore the candidate union. Its collaborative
 fallback was zero. There is no fitted collaborative vector or relevance label
 for that appended ID.
 
-**Interpretation candidates — author review required:** the small retrieval
-budget lost one test hit relative to full-catalog ranking (25/80 versus 26/80).
-The larger budget matched the full-catalog metrics for this configuration;
-this does not guarantee identical behavior on other data. Content-only selection
-is consistent with the genre-driven generator favoring metadata. The BPR
-objective and passing gradient tests do not establish that BPR will outperform
-reconstruction or popularity with these fixed hyperparameters.
+**Scoped technical review — November 13, 2026:** the AI assistant reviewed
+the two interpretations below against the source and this historical record;
+see [43-A/B](../../docs/CURATION.md). This is not a personal analysis or approval
+by the author. Configurations and measured values are unchanged.
+
+- **43-A — Selection:** validation chose collaborative weight zero. The
+  selected full-catalog fusion is content-only, not evidence of a hybrid gain.
+  Metadata defines this generator's preference signal, making content a strong
+  comparator. Correct BPR gradients do not establish a ranking advantage.
+- **43-B — Retrieval and admission:** the small budget lost one test hit
+  relative to full-catalog ranking (25/80 versus 26/80); the larger budget
+  matched its metrics in this run. Candidate recall limits achievable final
+  recall on these same targets, but matching aggregate metrics does not prove
+  identical rankings. The appended metadata-only item demonstrates admission
+  under the declared fallback, not relevance or cold-start quality.
 
 **Limitations:** one seed, one final event per user, homogeneous history lengths,
 no impression or exposure policy, no drift or repeated consumption, and no

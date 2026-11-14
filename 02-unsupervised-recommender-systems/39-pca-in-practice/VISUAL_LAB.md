@@ -211,10 +211,8 @@ were visually inspected. Matplotlib desktop `--show` was not exercised in the
 headless validation. Synthetic examples and screenshots do not certify scientific
 interpretations on the author's behalf.
 
-After author review, a root README evidence update could mention the eight-demo
-PCA visual lab, offline k-selectable 3D explorer and tested geometric states.
-No topic counts change: Day 39 remains the latest study and this module stays
-at 4/9. Root READMEs are intentionally left unchanged by this visual phase.
+For current study counts and navigation, see the [module index](../README.md).
+The dated visual measurements above are independent of later curriculum progress.
 
 Implementation references: [Plotly offline HTML export](https://plotly.com/python/interactive-html-export/),
 [3D scatter](https://plotly.com/python/3d-scatter-plots/),

@@ -65,7 +65,9 @@ versions, configuration and results. In the baseline first seed, the unadjusted
 contrast was 4.3450, matching ATT 1.9670 and IPW ATE 2.0664, against truth 2.
 With weaker practical overlap, first-seed IPW ATE treated ESS fell from 971.2
 to 33.1, and uncalipered matching reused one control 504 times.
-**Interpretation candidates require author review.**
+The two historical-study interpretations received a scoped AI-assistant
+technical review ([50-A/B](../../docs/CURATION.md)), not personal author
+approval. Separate visual interpretations remain pending.
 
 ## Interactive visual learning lab
 
