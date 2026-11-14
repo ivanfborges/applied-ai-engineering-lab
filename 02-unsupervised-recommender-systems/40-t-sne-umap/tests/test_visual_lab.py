@@ -47,6 +47,7 @@ def test_local_bandwidth_changes_but_probabilities_remain_normalized():
     np.testing.assert_allclose(achieved, 15, rtol=2e-7)
 
 
+@pytest.mark.numerical
 def test_adaptive_affinity_gradient_and_force_sum():
     rng = np.random.default_rng(8)
     P = core.perplexity_affinities(rng.normal(size=(12, 4)), 5)[0]
@@ -98,6 +99,7 @@ def test_invalid_descent_controls(kwargs):
 
 
 @pytest.mark.parametrize("k", [5, 15])
+@pytest.mark.integration
 def test_umap_fuzzy_union_matches_the_actual_fitted_graph(k):
     stages = core.umap_graph_stages(k, epochs=30)
     directed = stages["directed"]
@@ -124,6 +126,7 @@ def test_cache_uses_input_parameters_and_retains_original_timing(tmp_path):
 
 
 @pytest.mark.parametrize("method", ["PCA", "t-SNE", "UMAP"])
+@pytest.mark.integration
 def test_real_three_dimensional_fits(method, tmp_path):
     X, labels, _ = core.digits_sample(110)
     Y, info = core.fit_embedding(X, method, tmp_path, n_components=3, iterations=350, epochs=30)
@@ -157,6 +160,7 @@ def test_group_geometry_is_translation_and_rotation_invariant():
     assert json.loads(json.dumps(core.group_geometry(X.astype(np.float32), labels)))
 
 
+@pytest.mark.rendering
 def test_temporary_gif_png_and_offline_html_exports(tmp_path):
     scenes.prepare(tmp_path)
     kernels = scenes.kernels(tmp_path, {})

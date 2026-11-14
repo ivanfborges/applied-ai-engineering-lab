@@ -35,6 +35,7 @@ def test_fwer_surface_broadcast_and_monotonicity():
 
 
 @pytest.mark.parametrize("method", METHODS)
+@pytest.mark.integration
 def test_vectorized_adjustments_match_statsmodels_and_educational_core(method):
     rng = np.random.default_rng(48)
     p = np.vstack([rng.uniform(size=(15, 5)), [0, 1, .03, .04, .03], [.001, .012, .021, .049, .2]])
@@ -57,6 +58,7 @@ def test_last_passing_rank_and_holm_dominates_bonferroni():
     assert reference_check(p, .05)["families_checked"] == 32
 
 
+@pytest.mark.numerical
 def test_mean_fdp_includes_zero_discovery_runs_and_known_counts():
     rejected = np.array([[True, False], [True, True], [False, False]])
     counts, summary = discovery_counts(rejected, np.array([True, False]))
@@ -138,6 +140,7 @@ def test_invalid_configuration_fails(kwargs):
         LabConfig(**kwargs)
 
 
+@pytest.mark.rendering
 def test_small_all_export_smoke_and_real_gif_frames(tmp_path, capsys):
     from visualize_day48 import main, surface_figure
     report = main(["--output-dir", str(tmp_path), "--repetitions", "100", "--frames", "8",

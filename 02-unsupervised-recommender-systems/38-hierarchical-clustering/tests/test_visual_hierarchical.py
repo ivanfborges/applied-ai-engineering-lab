@@ -17,6 +17,7 @@ visual = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(visual)
 
 
+@pytest.mark.numerical
 def test_average_control_and_exact_partition_with_zero_heights():
     Z = linkage([[1.], [2.], [8.], [9.]], method="average")
     np.testing.assert_allclose(Z[:, 2], [1, 1, 7])
@@ -130,6 +131,7 @@ def test_genuine_three_dimensional_slider_uses_one_tree():
     assert fig.layout.scene.uirevision == "fixed-geometry"
 
 
+@pytest.mark.integration
 def test_embedding_math_nonzero_vectors_and_average_linkage():
     settings = visual.embedding_control()
     for _, X, metric, Z, distances in settings:
@@ -152,6 +154,7 @@ def test_partition_input_errors(bad):
         visual.exact_partition(linkage([[0.], [1.], [4.]], method="average"), bad)
 
 
+@pytest.mark.rendering
 def test_cli_fast_render_html_and_skip_does_not_overwrite(tmp_path):
     assert visual.main(["--scene", "4", "--fast", "--output-dir", str(tmp_path)]) == 0
     gif = tmp_path / "04_dendrogram_cuts.gif"
@@ -169,6 +172,7 @@ def test_cli_fast_render_html_and_skip_does_not_overwrite(tmp_path):
     assert len(list(tmp_path.glob("visual_run_*.json"))) == 2
 
 
+@pytest.mark.rendering
 def test_single_merge_animation_and_static_export_to_temporary_directory(tmp_path):
     visual.style()
     result = visual.render_process(tmp_path, fast=True)

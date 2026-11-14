@@ -36,6 +36,7 @@ finally:
 scratch, core, render = loaded["from_scratch"], loaded["dbscan_visual_core"], loaded["generate_visualizations"]
 
 
+@pytest.mark.numerical
 def test_trace_records_real_noise_to_border_and_only_expands_core():
     result = core.expansion_experiment()
     steps = result["steps"]
@@ -56,6 +57,7 @@ def test_trace_records_real_noise_to_border_and_only_expands_core():
     assert len(steps) < 100
 
 
+@pytest.mark.integration
 def test_snapshots_are_independent_and_engine_agrees_with_library():
     result = core.expansion_experiment()
     with threadpool_limits(limits=1):
@@ -132,6 +134,7 @@ def test_trace_preserves_input_validation(kwargs, message):
         scratch.dbscan_trace(**kwargs)
 
 
+@pytest.mark.rendering
 def test_cli_list_and_single_png_export(tmp_path, capsys):
     assert render.main(["--list"]) == 0
     assert "Exact DBSCAN expansion" in capsys.readouterr().out
@@ -144,6 +147,7 @@ def test_cli_list_and_single_png_export(tmp_path, capsys):
     assert 'href="04_kmeans_vs_dbscan.png"' in gallery
 
 
+@pytest.mark.rendering
 def test_pillow_export_uses_real_epsilon_frames(tmp_path):
     render.style()
     result = render.render_epsilon(tmp_path)
@@ -208,6 +212,7 @@ def test_density_rejects_non_2d_coordinates():
         core.fixed_radius_density([[0, 0, 0]], [[0, 0, 0]], 1)
 
 
+@pytest.mark.rendering
 def test_three_feature_geometry_tooltips_and_standalone_export(tmp_path):
     X = core.three_dimensional_data()
     assert X.shape == (304, 3) and np.linalg.matrix_rank(X-X.mean(axis=0)) == 3

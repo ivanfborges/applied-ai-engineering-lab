@@ -148,28 +148,75 @@ def check_links() -> None:
     print(f"Internal link check passed for {checked} links in {len(markdown_files)} files.")
 
 
-def _run(command: list[str]) -> None:
-    result = subprocess.run(command, cwd=REPOSITORY_ROOT, check=False)
+def select_scope(paths: set[str], scope: str | None) -> list[str]:
+    """Select a public file/subtree, never an ignored or escaping path."""
+    if scope is None:
+        return sorted(paths)
+    normalized = scope.replace("\\", "/")
+    if (
+        not normalized
+        or normalized.startswith("/")
+        or ":" in normalized
+        or ".." in normalized.split("/")
+    ):
+        raise ValidationError("Scope must be a repository-relative public path.")
+    normalized = posixpath.normpath(normalized)
+    resolved = (REPOSITORY_ROOT / normalized).resolve()
+    if not resolved.is_relative_to(REPOSITORY_ROOT.resolve()):
+        raise ValidationError("Scope escapes the repository.")
+    selected = sorted(
+        path for path in paths
+        if normalized == "." or path == normalized or path.startswith(normalized + "/")
+    )
+    if not selected:
+        raise ValidationError(f"No public entries match scope: {scope}")
+    return selected
+
+
+def _run(command: list[str], *, threads: int = 1) -> None:
+    """Limit native pools in a child without changing the calling shell."""
+    if isinstance(threads, bool) or not isinstance(threads, int) or threads < 1:
+        raise ValidationError("threads must be a positive integer")
+    environment = os.environ.copy()
+    for name in (
+        "OMP_NUM_THREADS", "OPENBLAS_NUM_THREADS", "MKL_NUM_THREADS",
+        "NUMBA_NUM_THREADS", "NUMEXPR_NUM_THREADS",
+    ):
+        environment[name] = str(threads)
+    environment.update(MPLBACKEND="Agg", STREAMLIT_BROWSER_GATHER_USAGE_STATS="false")
+    result = subprocess.run(command, cwd=REPOSITORY_ROOT, check=False, env=environment)
     if result.returncode:
         raise ValidationError(
             f"Command failed with exit code {result.returncode}: {' '.join(command)}"
         )
 
 
-def run_tests() -> None:
-    """Run every public test file in isolation to avoid topic import clashes."""
-    test_files = sorted(
+def run_tests(
+    *, scope: str | None = None, exclude_rendering: bool = False, threads: int = 1
+) -> None:
+    """Run the explicit selection in isolation; the default retains all tests."""
+    if exclude_rendering and scope is None:
+        raise ValidationError("Excluding rendering requires an explicit scope.")
+    test_files = {
         path
         for path in publication_files()
         if Path(path).name.startswith("test_") and path.lower().endswith(".py")
-    )
+    }
     if not test_files:
         raise ValidationError("No public test files were discovered.")
+    selected = select_scope(test_files, scope)
+    selection = "partial" if scope is not None else "complete public inventory"
+    print(f"Test selection: {selection}; scope={scope or '.'}; child numeric threads={threads}.", flush=True)
+    if exclude_rendering:
+        print("Excluding marked rendering tests; unmarked legacy tests remain eligible.", flush=True)
 
-    for relative_path in test_files:
+    for relative_path in selected:
         print(f"Running tests: {relative_path}", flush=True)
-        _run([sys.executable, "-m", "pytest", "-q", relative_path])
-    print(f"Test check passed for {len(test_files)} isolated test files.")
+        command = [sys.executable, "-m", "pytest", "-q", relative_path]
+        if exclude_rendering:
+            command.extend(["-m", "not rendering"])
+        _run(command, threads=threads)
+    print(f"Test check passed for {len(selected)} isolated test files ({selection}).")
 
 
 def _run_streamlit_app(relative_path: str) -> None:
@@ -193,25 +240,27 @@ def _run_streamlit_app(relative_path: str) -> None:
     print(f"Streamlit smoke test passed: {relative_path}")
 
 
-def check_streamlit_apps() -> None:
+def check_streamlit_apps(*, scope: str | None = None, threads: int = 1) -> None:
     """Smoke-test selected apps in separate processes to isolate imports."""
-    for app_path in STREAMLIT_APPS:
+    print(f"App selection: {'partial' if scope is not None else 'complete registry'}; child numeric threads={threads}.", flush=True)
+    for app_path in select_scope({path.as_posix() for path in STREAMLIT_APPS}, scope):
         _run(
             [
                 sys.executable,
                 str(Path(__file__).resolve()),
                 "_streamlit_app",
-                app_path.as_posix(),
-            ]
+                app_path,
+            ],
+            threads=threads,
         )
 
 
-def run_all() -> None:
+def run_all(*, threads: int = 1) -> None:
     """Run the complete local equivalent of the CI workflow."""
     check_syntax()
     check_links()
-    run_tests()
-    check_streamlit_apps()
+    run_tests(threads=threads)
+    check_streamlit_apps(threads=threads)
 
 
 def parse_arguments() -> argparse.Namespace:
@@ -221,22 +270,40 @@ def parse_arguments() -> argparse.Namespace:
         choices=("all", "syntax", "links", "tests", "apps", "_streamlit_app"),
     )
     parser.add_argument("path", nargs="?")
-    return parser.parse_args()
+    parser.add_argument("--scope", help="Public topic directory or test file; tests/apps only.")
+    parser.add_argument(
+        "--threads", type=int, default=1,
+        help="Native numeric threads per child (default: 1); not a RAM/total CPU cap.",
+    )
+    parser.add_argument(
+        "--exclude-rendering", action="store_true",
+        help="With tests --scope, deselect explicitly marked rendering tests.",
+    )
+    args = parser.parse_args()
+    if args.threads < 1:
+        parser.error("--threads must be positive")
+    if args.path and args.command != "_streamlit_app":
+        parser.error("Use --scope for tests/apps, not a positional path.")
+    if args.scope is not None and args.command not in ("tests", "apps"):
+        parser.error("--scope is only supported for tests/apps; all always retains full coverage.")
+    if args.exclude_rendering and (args.command != "tests" or args.scope is None):
+        parser.error("--exclude-rendering requires tests and an explicit --scope.")
+    return args
 
 
 def main() -> int:
     args = parse_arguments()
     try:
         if args.command == "all":
-            run_all()
+            run_all(threads=args.threads)
         elif args.command == "syntax":
             check_syntax()
         elif args.command == "links":
             check_links()
         elif args.command == "tests":
-            run_tests()
+            run_tests(scope=args.scope, exclude_rendering=args.exclude_rendering, threads=args.threads)
         elif args.command == "apps":
-            check_streamlit_apps()
+            check_streamlit_apps(scope=args.scope, threads=args.threads)
         elif args.command == "_streamlit_app":
             if not args.path:
                 raise ValidationError("_streamlit_app requires a repository path.")

@@ -54,3 +54,8 @@ packages = []
 addopts = "-ra --strict-markers"
 testpaths = ["00-foundations"]
 python_files = ["test_*.py"]
+markers = [
+    "numerical: focused mathematical or algorithmic invariants",
+    "integration: real library, fitted-model, cache or orchestration checks",
+    "rendering: real raster/animation or standalone visual export",
+]
