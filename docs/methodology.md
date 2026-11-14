@@ -44,6 +44,10 @@ Depending on the topic, the public result may include:
 Not every topic requires the same files. The technical question determines the
 appropriate structure.
 
+The [visual preview policy](visual-assets.md) defines selection budgets,
+lossless-comparison criteria and justified exceptions. Keep useful previews;
+do not publish every export or remove them solely because they are regenerable.
+
 ## Use of AI
 
 AI tools assist research, drafting, implementation suggestions, visualization,

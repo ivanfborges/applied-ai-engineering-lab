@@ -22,8 +22,9 @@ checks installed optional-library imports. Install the complete extras above
 before interpreting a full-suite result; otherwise optional tests can skip.
 The `manifold` extra supplies UMAP for Day 40; its integration smoke test is
 required and does not skip when that dependency is absent.
-The `experimentation` extra supplies statsmodels for the Day 46 visual lab;
-its numerical, simulation and interface tests require the dependency.
+The `experimentation` extra supplies statsmodels for the Day 46 visual lab,
+Day 48 correction checks and Day 51 clustered inference; their relevant tests
+require the dependency.
 Notebooks additionally use `.[notebooks]` and are not executed by this runner.
 
 For a small change, run its specific test file, then syntax and links:
@@ -90,3 +91,65 @@ as ignored local review records, not public assets. No historical tables or
 tracked previews were regenerated. This run does not establish Linux CI,
 notebook execution, browser/GitHub rendering, production readiness or personal
 review of scientific interpretations.
+
+## Browser review — November 13, 2026
+
+The AI assistant checked existing local exports for Days 49/52 and the running
+Streamlit apps for Days 44/46/47/51 using cached Playwright CLI 0.1.24 and
+Chrome 157.0.8103.51 on Windows. HTTP servers bound only to loopback; external
+page HTTP(S) requests were blocked, and Streamlit telemetry was disabled.
+No application changes or historical-asset regeneration were needed for this
+browser review. Implementation fixes elsewhere in the review have separate tests.
+
+| Surface | Verified scope |
+|---|---|
+| Day 49 causal explorer | 55 scenarios, including 35 stored Python expectation cases, path/adjustment controls, keyboard operation, animation and real 3D camera interaction |
+| Day 52 uplift explorer | 33 checks across nine modules: surface identities, ranking endpoints, fixed policies, overlap regimes, synchronized camera and selected mobile layout |
+| Day 44 ranking app | Eight sections; rank swap updates RR@5; desktop and selected mobile rendering |
+| Day 46 power app | Eight sections and reset; desktop and selected mobile rendering |
+| Day 47 product-metrics app | Nine sections, confirmed-incident hard stop and reset; desktop and selected mobile rendering; no GIF-export button triggered |
+| Day 51 DiD app | Seven tabs, keyboard-operated oracle toggle, spillover/anticipation modes and 3D rendering; selected mobile layout |
+
+The completed runs had no JavaScript/console errors or external page requests.
+Ten Plotly Canvas2D readback-performance warnings were observed. Headless Chrome
+used software WebGL (SwiftShader): this is not a native-GPU performance test,
+cross-browser review, GitHub rendering check or full accessibility audit.
+Desktop viewport was 1440×1000; selected mobile views used 430×900.
+Day 49 mobile was not checked. Scientific interpretations remain a separate review.
+
+Initial harness attempts read an asynchronous metric too early, carried a mobile
+viewport into another app and misidentified a native switch's interaction model.
+The harness was corrected using rendered DOM and keyboard behavior; failed
+attempts and completed-run logs are preserved separately as ignored local records.
+Browser checks do not replace the canonical automated suite or Linux CI.
+
+## Full reference check — November 14, 2026
+
+The AI assistant ran `python scripts/validate_repo.py all` on the review working
+tree on Windows x64 in a separate stable Python 3.11.14 environment. All six
+extras in the installation command above were installed together. Dependency
+compatibility and imports of imbalanced-learn, SHAP, XGBoost, LightGBM,
+CatBoost, UMAP, statsmodels and NetworkX passed before the suite.
+
+- Syntax: 355 public Python files parsed.
+- Local links: 1,195 targets checked across 238 Markdown files.
+- Tests: 2,214 passed, plus 133 subtests, in 103 isolated files; no failures or skips.
+- Apps: all six registered headless AppTest smoke checks passed.
+
+The tests emitted three SHAP/Matplotlib pending-deprecation warnings. The app
+smokes emitted six bare-mode ScriptRunContext warnings and no app exceptions.
+The canonical command took 960 seconds locally; this is validation duration,
+not an application-performance benchmark.
+
+Key versions: NumPy 2.4.6, pandas 3.1.1, SciPy 1.17.1, scikit-learn 1.9.1,
+Matplotlib 3.11.2, pytest 9.2.0, Streamlit 1.67.0, Plotly 6.9.0,
+imbalanced-learn 0.14.2, SHAP 0.50.0, XGBoost 3.2.0, LightGBM 4.7.0,
+CatBoost 1.2.10, UMAP 0.5.12, statsmodels 0.15.0 and NetworkX 3.6.1.
+The complete 72-distribution manifest and logs remain ignored local review records.
+
+Tracked-file hashes were unchanged during validation. No historical tables,
+notebooks or tracked previews were regenerated, and existing environments were
+not modified. This dated compatibility reference is not a lockfile or a rerun
+of historical experiments. Linux CI for the published revision is separate
+evidence; this local run does not establish notebook execution, cross-browser
+compatibility, production readiness or personal author approval.

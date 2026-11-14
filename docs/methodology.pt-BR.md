@@ -22,6 +22,10 @@ limitação. Simulações não são benchmarks de produção. Referências e cr�
 permanecem nos estudos. Contexto pessoal, rascunhos e prompts operacionais não
 constituem evidências públicas acabadas.
 
+A [política de previews visuais](visual-assets.md), em inglês, define orçamentos
+de seleção, comparação sem perda e exceções justificadas. Manter prévias úteis,
+sem publicar todo export nem removê-las somente por serem regeneráveis.
+
 Quando a revisão técnica das interpretações é delegada a um assistente de IA,
 a [curadoria](CURATION.pt-BR.md) identifica quem revisou, escopo e limitações.
 Essa revisão pode refinar uma interpretação publicada, mas não deve ser
