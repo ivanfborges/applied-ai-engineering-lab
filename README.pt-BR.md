@@ -80,6 +80,8 @@ um lock: versões numéricas podem variar entre instalações.
 O `python -m pytest` padrão cobre Foundations, não todo o repositório.
 Veja o [contrato de validação](docs/validation.md) para comandos, cobertura,
 isolamento e limites. Notebooks e aparência no navegador exigem revisão separada.
+Para alterações cotidianas, prefira [checks por tópico e limites de recursos](docs/validation.md#focused-iteration-and-resource-limits)
+em vez de executar todo o currículo novamente.
 
 Para explorar a interface do pipeline localmente:
 

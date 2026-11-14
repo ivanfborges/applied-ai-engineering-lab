@@ -33,6 +33,38 @@ For a small change, run its specific test file, then syntax and links:
 python -m pytest -q scripts/tests/test_validate_repo.py
 ```
 
+## Focused iteration and resource limits
+
+Do not rerun the whole curriculum after every local change. Select a public
+topic directory or test file; the runner still isolates each selected file:
+
+```bash
+python scripts/validate_repo.py tests --scope scripts/tests
+python scripts/validate_repo.py tests --scope 03-statistics-experimentation/47-product-metrics-guardrails
+python scripts/validate_repo.py tests --scope 02-unsupervised-recommender-systems/37-dbscan-density-based-clustering --exclude-rendering
+```
+
+`--exclude-rendering` requires an explicit test scope and deselects only tests
+marked `rendering`. Seven real-export functions in Days 37/38/40/48 are initially
+classified; other legacy rendering may be unmarked and remains eligible. This
+is a **partial check**, not a guarantee of zero rendering or full coverage.
+Numerical/integration checks in those visual test files remain eligible.
+Read pytest's actual passed, skipped and deselected counts. An empty selection
+fails instead of being presented as a successful validation.
+
+Keep real-export tests when changing visual behavior. `tests` without a scope
+and `all` retain every test, including rendering; `all` rejects selection flags.
+Scope also works for `apps`, but only selects entries from its explicit registry.
+For documentation-only edits, run `syntax` and `links`; for shared logic or
+dependency changes, use wider regression coverage and the complete CI gate.
+
+Test/app child processes default to one numeric thread per OpenBLAS, MKL,
+OpenMP, NumExpr and Numba pool, with the Agg backend and Streamlit telemetry off.
+Use `--threads 2` explicitly to request two. These settings are applied before
+child imports without changing the parent shell; they are not a total CPU/RAM
+cap. Do not add process-level parallelism on top without measuring resource use.
+Avoid running installation, training and full visual exports concurrently.
+
 ## What the runner establishes
 
 | Check | Contract | Boundary |

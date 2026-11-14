@@ -186,7 +186,9 @@ The syntax, internal-link, test, and Streamlit smoke-test checks can also be
 run separately with `syntax`, `links`, `tests`, or `apps` in place of `all`.
 The complete check needs the optional libraries above. Plain `python -m pytest`
 is not repository-wide; see the [validation contract](docs/validation.md) for
-isolated topic tests, coverage and limitations.
+isolated topic tests, coverage and limitations. For everyday edits, use
+[focused checks and resource limits](docs/validation.md#focused-iteration-and-resource-limits)
+instead of rerunning the whole curriculum.
 
 Start a local visual laboratory:
 
