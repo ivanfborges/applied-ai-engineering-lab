@@ -105,7 +105,9 @@ provisional/final noise is `-1`, and nonnegative labels denote cluster IDs.
 Counts are precomputed in a quadratic distance matrix; captions show when
 the algorithm consults them. Snapshots are exact and paused, never interpolated.
 Core roles are fixed for this input and parameter pair. Snapshot generation
-is limited to 200 points; the selected control uses only 27. Trace snapshots
+is limited to 200 points, checked before the quadratic distance allocation;
+the selected control uses only 27. This trace-only cap does not apply to
+`dbscan_numpy`, which still uses quadratic storage. Trace snapshots
 add memory beyond the $O(n^2)$ distances/neighborhoods. This is educational
 code, not a production library replacement or performance benchmark.
 

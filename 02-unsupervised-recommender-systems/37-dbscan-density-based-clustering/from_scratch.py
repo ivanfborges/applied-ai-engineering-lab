@@ -19,7 +19,7 @@ class DBSCANStep(NamedTuple):
     expanded: np.ndarray
 
 
-def _prepare_neighbors(X, eps, min_samples):
+def _prepare_neighbors(X, eps, min_samples, *, record=False):
     raw = np.asarray(X)
     if np.iscomplexobj(raw):
         raise ValueError("X must contain real coordinates")
@@ -35,6 +35,8 @@ def _prepare_neighbors(X, eps, min_samples):
         raise ValueError("min_samples must be a positive integer")
 
     n = len(X)
+    if record and n > 200:
+        raise ValueError("The educational trace is limited to 200 points")
     distances = np.empty((n, n), dtype=float)
     # Row-wise differences avoid an additional n x n x features tensor.
     try:
@@ -49,10 +51,8 @@ def _prepare_neighbors(X, eps, min_samples):
 
 
 def _run_dbscan(X, eps, min_samples, *, record):
-    neighbors, core = _prepare_neighbors(X, eps, min_samples)
+    neighbors, core = _prepare_neighbors(X, eps, min_samples, record=record)
     n = len(neighbors)
-    if record and n > 200:
-        raise ValueError("The educational trace is limited to 200 points")
     labels = np.full(n, -2, dtype=int)
     visited = np.zeros(n, dtype=bool)
     expanded = np.zeros(n, dtype=bool)
@@ -117,6 +117,7 @@ def dbscan_trace(X, eps=0.18, min_samples=7):
 
     Uses the same engine as dbscan_numpy. Intermediate noise is provisional;
     only core points enter the queue. Trace storage adds O(number_of_steps * n).
+    Oversized traces are rejected before allocating the quadratic distance matrix.
     """
     return _run_dbscan(X, eps, min_samples, record=True)
 

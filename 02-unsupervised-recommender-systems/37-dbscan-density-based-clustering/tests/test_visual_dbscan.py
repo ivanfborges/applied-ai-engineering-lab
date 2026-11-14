@@ -5,6 +5,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from unittest.mock import patch
 
 import numpy as np
 from PIL import Image
@@ -91,9 +92,44 @@ def test_trace_shared_border_is_order_dependent_without_merging_cores():
     assert reverse[4] != reverse[0]
 
 
-def test_trace_rejects_unbounded_animation_inputs():
-    with pytest.raises(ValueError, match="200 points"):
-        scratch.dbscan_trace(np.zeros((201, 2)))
+@pytest.mark.parametrize("as_list", [False, True])
+def test_trace_rejects_oversized_input_before_distances(as_list):
+    points = np.zeros((201, 2))
+    if as_list:
+        points = points.tolist()
+    with patch.object(scratch.np, "empty", wraps=scratch.np.empty) as allocate:
+        with patch.object(scratch.np.linalg, "norm", wraps=scratch.np.linalg.norm) as norm:
+            with pytest.raises(ValueError, match="200 points"):
+                scratch.dbscan_trace(points)
+            allocate.assert_not_called()
+            norm.assert_not_called()
+
+
+def test_trace_accepts_exactly_200_points():
+    points = np.arange(200, dtype=float).reshape(-1, 1)
+    labels, is_core, steps = scratch.dbscan_trace(points, eps=0.1, min_samples=1)
+    np.testing.assert_array_equal(labels, np.arange(200))
+    assert is_core.all()
+    np.testing.assert_array_equal(steps[-1].labels, labels)
+    assert steps[-1].visited.all()
+
+
+def test_nonrecording_mode_is_not_capped_by_trace_limit():
+    points = np.arange(201, dtype=float).reshape(-1, 1)
+    labels, is_core = scratch.dbscan_numpy(points, eps=0.1, min_samples=1)
+    np.testing.assert_array_equal(labels, np.arange(201))
+    assert is_core.all()
+
+
+@pytest.mark.parametrize("kwargs, message", [
+    ({"X": [[np.nan]]}, "finite 2D"),
+    ({"X": [[1j]]}, "real coordinates"),
+    ({"X": [[0.]], "eps": 0}, "eps"),
+    ({"X": [[0.]], "min_samples": True}, "min_samples"),
+])
+def test_trace_preserves_input_validation(kwargs, message):
+    with pytest.raises(ValueError, match=message):
+        scratch.dbscan_trace(**kwargs)
 
 
 def test_cli_list_and_single_png_export(tmp_path, capsys):
