@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**52 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics and 8 experimentation topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**53 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 1 deep learning topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -23,9 +23,12 @@ randomization, guardrails, multiplicity, identification assumptions and
 incremental targeting. Studies include tested educational implementations and
 bounded experiments, not production deployments.
 
-- Latest topic: [Day 52 — Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/)
-- Latest implemented module: [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) — 8 of 8 topics implemented
-- Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/) and [Experimentation, Causality and Product Thinking](03-statistics-experimentation/)
+[Deep Learning](04-deep-learning/) begins with perceptrons, nonlinear hidden
+representations and the distinction between capacity, fitting and generalization.
+
+- Latest topic: [Day 53 — Perceptron and MLPs](04-deep-learning/53-perceptron-mlps/)
+- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 1 of 10 topics implemented; interpretation review pending
+- Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) and [Deep Learning](04-deep-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -50,7 +53,7 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-The same distinction applies to the unsupervised and experimentation modules:
+The same distinction applies to the unsupervised, experimentation and deep learning modules:
 explicitly pending items remain pending; scoped technical reviews are identified
 separately in the [curation record](docs/CURATION.md).
 
@@ -114,6 +117,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 50 | [Causal Inference II: Propensity Score and Matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Tested matching, ATE/ATT weighting, balance and ESS; nine-chapter Matplotlib lab, native sliders, 3D assignment surface, six Pillow GIFs, repeated estimation and hidden confounding; interpretation review pending |
 | 51 | [Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/) | Tested manual/TWFE agreement, team-clustered intervals and synthetic differential-trend/pre-placebo diagnostics; interpretation review pending |
 | 52 | [Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/) | Tested T-Learner, strata and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity policies and overlap diagnostics; interpretation review pending |
+| 53 | [Perceptron and MLPs](04-deep-learning/53-perceptron-mlps/) | Tested perceptron, constructive XOR and NumPy gradients; synthetic logistic/identity/ReLU holdout comparison; interpretation review pending |
 
 ## Roadmap
 
@@ -123,7 +127,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
-| 4 | Deep Learning | 53–62 | Planned |
+| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **1/10 studies implemented; interpretation review pending** |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |
@@ -239,7 +243,7 @@ applied-ai-engineering-lab/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
 ├── 03-statistics-experimentation/          # Days 45–52 implemented
-├── 04-deep-learning/                       # published when started
+├── 04-deep-learning/                       # Day 53 implemented; Days 54–62 planned
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started
 ├── 07-agents/                              # published when started

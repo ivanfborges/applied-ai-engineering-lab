@@ -1,0 +1,7 @@
+# Minimal standalone lab dependencies; versions for the repository are governed
+# by ../../pyproject.toml. Prefer its editable install for repository validation.
+numpy
+matplotlib
+scikit-learn
+plotly
+Pillow
