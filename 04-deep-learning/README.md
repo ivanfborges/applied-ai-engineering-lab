@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **4 of 10 studies are implemented.**
-Days 57–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **5 of 10 studies are implemented.**
+Days 58–62 remain planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -11,6 +11,7 @@ Days 57–62 remain planned; no placeholder topic folders are published.
 | 54 | [Backpropagation](54-backpropagation/) | Tested chain rule, finite differences, update semantics and weighted microbatch gradients; synthetic regression and eight-module visual lab with six GIFs and offline 3D loss surface; author interpretation review required |
 | 55 | [Activation Functions](55-activation-functions/) | Tested derivatives/autograd, two native slider explorers, four GIFs, offline probability simplex and matched CPU MLP surfaces with an affine control; author interpretation review required |
 | 56 | [Optimizers](56-optimizers/) | Tested NumPy/PyTorch rules; eight-scene offline lab with seven GIFs, interactive 3D step inspection, moment histories and decay decomposition; matched synthetic CPU MLP configurations; author interpretation review required |
+| 57 | [Regularization in Deep Learning](57-regularization/) | Tested dropout, BatchNorm, SGD/L2 and full checkpoint restoration; six-page Streamlit lab, offline 3D decay, five GIFs and three-seed 2D CPU comparison, separate from the analytical study; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -47,6 +48,16 @@ exercise. Rates are illustrative and no general optimizer ranking is claimed.
 The separate [visual guide](56-optimizers/VISUAL_LAB.md) connects rotated and
 Rosenbrock geometry to actual update vectors, internal states, bias correction,
 coupled/decoupled decay, rate sensitivity and controlled synthetic noise.
+
+Day 57 asks how activation noise, decay, normalization and stopping change
+training and selection. Its [dated analytical record](57-regularization/notes.md#executed-study--2026-11-18)
+separates mechanism checks from a single-seed synthetic comparison. Different
+checkpoint policies and update budgets prevent a general ranking of techniques;
+the final test is reserved for the configuration selected on validation.
+The separate [visual guide](57-regularization/VISUAL_LAB.md) covers forward
+masks, coupled/decoupled decay, BatchNorm running statistics, stopping-rule
+replay and three-seed 2D training; it preserves the analytical study's distinct
+20-feature configuration and evidence boundaries.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their
