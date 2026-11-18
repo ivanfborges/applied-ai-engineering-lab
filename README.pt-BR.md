@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**53 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 1 de deep learning.** O roteiro
+**54 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 2 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,14 +17,15 @@ São quatro módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
 e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
 O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(1/10); os Dias 54–62 continuam planejados.
+(2/10); os Dias 55–62 continuam planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 53 — Perceptron e MLPs](04-deep-learning/53-perceptron-mlps/).
-Ele inclui perceptron, XOR construtivo, gradientes NumPy testados e comparação
-sintética entre regressão logística e MLPs com ativações identidade/ReLU.
+O tópico mais recente é o [Dia 54 — Backpropagation](04-deep-learning/54-backpropagation/).
+Ele inclui regra da cadeia com caminhos compartilhados, diferenças finitas
+para todos os parâmetros, atualizações simultâneas, acumulação ponderada de
+gradientes e ajuste de uma regressão sintética em NumPy.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

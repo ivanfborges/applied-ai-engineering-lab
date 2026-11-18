@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**53 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 1 deep learning topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**54 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 2 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -24,10 +24,11 @@ incremental targeting. Studies include tested educational implementations and
 bounded experiments, not production deployments.
 
 [Deep Learning](04-deep-learning/) begins with perceptrons, nonlinear hidden
-representations and the distinction between capacity, fitting and generalization.
+representations and explicit backpropagation, separating capacity, gradients,
+fitting and generalization.
 
-- Latest topic: [Day 53 — Perceptron and MLPs](04-deep-learning/53-perceptron-mlps/)
-- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 1 of 10 topics implemented; interpretation review pending
+- Latest topic: [Day 54 — Backpropagation](04-deep-learning/54-backpropagation/)
+- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 2 of 10 topics implemented; interpretation review pending
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) and [Deep Learning](04-deep-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -118,6 +119,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 51 | [Difference-in-Differences](03-statistics-experimentation/51-difference-in-differences/) | Tested manual/TWFE agreement, team-clustered intervals and synthetic differential-trend/pre-placebo diagnostics; interpretation review pending |
 | 52 | [Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/) | Tested T-Learner, strata and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity policies and overlap diagnostics; interpretation review pending |
 | 53 | [Perceptron and MLPs](04-deep-learning/53-perceptron-mlps/) | Tested perceptron, constructive XOR and NumPy gradients; synthetic logistic/identity/ReLU holdout comparison; interpretation review pending |
+| 54 | [Backpropagation](04-deep-learning/54-backpropagation/) | Tested shared-path chain rule, all-parameter finite differences, simultaneous updates and weighted microbatch gradients; synthetic regression fitting; interpretation review pending |
 
 ## Roadmap
 
@@ -127,7 +129,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
-| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **1/10 studies implemented; interpretation review pending** |
+| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **2/10 studies implemented; interpretation review pending** |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |

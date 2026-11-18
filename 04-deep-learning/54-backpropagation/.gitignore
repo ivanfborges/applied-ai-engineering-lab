@@ -1,0 +1,7 @@
+visuals/
+!visuals/
+visuals/*
+!visuals/computational_graph.gif
+!visuals/gradient_descent.gif
+!visuals/gradient_flow.gif
+!visuals/loss_landscape_3d.html

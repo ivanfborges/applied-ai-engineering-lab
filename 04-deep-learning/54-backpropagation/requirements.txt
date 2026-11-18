@@ -1,0 +1,5 @@
+# Standalone compatibility list. Canonical repository bounds: ../../pyproject.toml
+numpy
+matplotlib
+plotly
+Pillow
