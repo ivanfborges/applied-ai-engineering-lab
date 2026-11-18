@@ -2,14 +2,15 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **3 of 10 studies are implemented.**
-Days 56–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **4 of 10 studies are implemented.**
+Days 57–62 remain planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
 | 53 | [Perceptron and MLPs](53-perceptron-mlps/) | Tested perceptron, constructive XOR and NumPy gradients; synthetic comparison and nine-part offline visual lab with real checkpoints, six GIFs and three interactive HTMLs; author interpretation review required |
 | 54 | [Backpropagation](54-backpropagation/) | Tested chain rule, finite differences, update semantics and weighted microbatch gradients; synthetic regression and eight-module visual lab with six GIFs and offline 3D loss surface; author interpretation review required |
 | 55 | [Activation Functions](55-activation-functions/) | Tested derivatives/autograd, two native slider explorers, four GIFs, offline probability simplex and matched CPU MLP surfaces with an affine control; author interpretation review required |
+| 56 | [Optimizers](56-optimizers/) | Tested NumPy/PyTorch rules; eight-scene offline lab with seven GIFs, interactive 3D step inspection, moment histories and decay decomposition; matched synthetic CPU MLP configurations; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -38,6 +39,14 @@ quality ranking or calibration benefit is inferred from the temperature sweep.
 The separate [visual guide](55-activation-functions/VISUAL_LAB.md) connects
 local slopes, controlled gradient chains, dying neurons, coupled class scores,
 attention normalization and actual nonlinear decision surfaces.
+
+Day 56 asks how gradient history and parameter decay change an update.
+Its [dated numerical record](56-optimizers/notes.md#executed-study--2026-11-18)
+separates exact update controls from a single-seed synthetic classification
+exercise. Rates are illustrative and no general optimizer ranking is claimed.
+The separate [visual guide](56-optimizers/VISUAL_LAB.md) connects rotated and
+Rosenbrock geometry to actual update vectors, internal states, bias correction,
+coupled/decoupled decay, rate sensitivity and controlled synthetic noise.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their

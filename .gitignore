@@ -42,6 +42,12 @@ data/processed/
 models/
 outputs/
 
+# Day 56: three inspected previews; generated reports and HTML remain local.
+04-deep-learning/56-optimizers/assets/*
+!04-deep-learning/56-optimizers/assets/01_optimizer_trajectories.gif
+!04-deep-learning/56-optimizers/assets/05_adam_bias_correction.png
+!04-deep-learning/56-optimizers/assets/06_weight_decay_comparison.png
+
 # Day 55: three inspected teaching previews; full exports and run records stay local.
 04-deep-learning/55-activation-functions/assets/*
 !04-deep-learning/55-activation-functions/assets/01_activation_derivatives.png
