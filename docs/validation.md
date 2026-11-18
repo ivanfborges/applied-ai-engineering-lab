@@ -8,7 +8,8 @@ results, and do not silently replace historical experiment records.
 ## Choose the scope
 
 ```bash
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
+python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning]"
 python -m pip check
 python scripts/validate_repo.py syntax
 python scripts/validate_repo.py links
@@ -20,6 +21,10 @@ python scripts/validate_repo.py apps
 local check sequence used by [CI](../.github/workflows/quality.yml). CI also
 checks installed optional-library imports. Install the complete extras above
 before interpreting a full-suite result; otherwise optional tests can skip.
+The `deep-learning` extra supplies PyTorch for Day 55 autograd and actual
+CPU MLP tests; these tests require it and do not silently skip. Installing
+the CPU wheel first avoids requiring GPU libraries. The Day 55 guide records
+its tested environment separately from the historical reference runs below.
 The `manifold` extra supplies UMAP for Day 40; its integration smoke test is
 required and does not skip when that dependency is absent.
 The `experimentation` extra supplies statsmodels for the Day 46 visual lab,
@@ -158,8 +163,8 @@ Browser checks do not replace the canonical automated suite or Linux CI.
 ## Full reference check — November 14, 2026
 
 The AI assistant ran `python scripts/validate_repo.py all` on the review working
-tree on Windows x64 in a separate stable Python 3.11.14 environment. All six
-extras in the installation command above were installed together. Dependency
+tree on Windows x64 in a separate stable Python 3.11.14 environment. The six
+optional extras used on that date were installed together. Dependency
 compatibility and imports of imbalanced-learn, SHAP, XGBoost, LightGBM,
 CatBoost, UMAP, statsmodels and NetworkX passed before the suite.
 

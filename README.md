@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**54 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 2 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**55 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 3 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -27,8 +27,8 @@ bounded experiments, not production deployments.
 representations and explicit backpropagation, separating capacity, gradients,
 fitting and generalization.
 
-- Latest topic: [Day 54 — Backpropagation](04-deep-learning/54-backpropagation/)
-- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 2 of 10 topics implemented; interpretation review pending
+- Latest topic: [Day 55 — Activation Functions](04-deep-learning/55-activation-functions/)
+- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 3 of 10 topics implemented; interpretation review pending
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) and [Deep Learning](04-deep-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -120,6 +120,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 52 | [Uplift Modeling](03-statistics-experimentation/52-uplift-modeling/) | Tested T-Learner, strata and IPW; nine-module offline lab with synchronized 3D CATE, S/T comparisons, four GIFs, subgroup intervals, cost/capacity policies and overlap diagnostics; interpretation review pending |
 | 53 | [Perceptron and MLPs](04-deep-learning/53-perceptron-mlps/) | Tested perceptron, constructive XOR and NumPy gradients; synthetic logistic/identity/ReLU holdout comparison; interpretation review pending |
 | 54 | [Backpropagation](04-deep-learning/54-backpropagation/) | Tested shared-path chain rule, all-parameter finite differences, simultaneous updates and weighted microbatch gradients; synthetic regression fitting; interpretation review pending |
+| 55 | [Activation Functions](04-deep-learning/55-activation-functions/) | Tested derivatives/autograd, two slider explorers, four teaching GIFs, offline softmax simplex and matched CPU MLP surfaces with an affine control; interpretation review pending |
 
 ## Roadmap
 
@@ -129,7 +130,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
-| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **2/10 studies implemented; interpretation review pending** |
+| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **3/10 studies implemented; interpretation review pending** |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |
@@ -184,7 +185,8 @@ python 00-foundations/06-gradient-descent-from-scratch/from_scratch.py
 Run all repository quality checks:
 
 ```bash
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
+python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning]"
 python scripts/validate_repo.py all
 ```
 
@@ -245,7 +247,7 @@ applied-ai-engineering-lab/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
 ├── 03-statistics-experimentation/          # Days 45–52 implemented
-├── 04-deep-learning/                       # Day 53 implemented; Days 54–62 planned
+├── 04-deep-learning/                       # Days 53–55 implemented; Days 56–62 planned
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started
 ├── 07-agents/                              # published when started

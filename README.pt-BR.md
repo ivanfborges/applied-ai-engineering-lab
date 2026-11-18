@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**54 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 2 de deep learning.** O roteiro
+**55 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 3 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,15 +17,19 @@ São quatro módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
 e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
 O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(2/10); os Dias 55–62 continuam planejados.
+(3/10); os Dias 56–62 continuam planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 54 — Backpropagation](04-deep-learning/54-backpropagation/).
-Ele inclui regra da cadeia com caminhos compartilhados, diferenças finitas
-para todos os parâmetros, atualizações simultâneas, acumulação ponderada de
-gradientes e ajuste de uma regressão sintética em NumPy.
+O tópico mais recente é o [Dia 55 — Funções de ativação](04-deep-learning/55-activation-functions/).
+Ele inclui derivadas de sigmoid, tanh, ReLU, Leaky ReLU e GELU, Jacobiano da
+softmax com eixo explícito e entropia cruzada estável a partir de logits.
+As verificações usam entradas sintéticas fixas e três temperaturas, sem treino
+nos exemplos analíticos. O laboratório visual separado inclui dois exploradores
+com sliders, quatro GIFs, simplex 3D offline e MLPs PyTorch em CPU com dados
+sintéticos e controle afim. O estudo usa uma única seed/divisão e não estabelece
+superioridade geral entre ativações.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
@@ -75,7 +79,8 @@ python 00-foundations/01-ai-ml-genai-landscape/example.py
 Para a suíte integral, inclua as bibliotecas opcionais utilizadas pelos estudos:
 
 ```sh
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation]"
+python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning]"
 python scripts/validate_repo.py all
 ```
 

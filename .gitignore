@@ -42,6 +42,12 @@ data/processed/
 models/
 outputs/
 
+# Day 55: three inspected teaching previews; full exports and run records stay local.
+04-deep-learning/55-activation-functions/assets/*
+!04-deep-learning/55-activation-functions/assets/01_activation_derivatives.png
+!04-deep-learning/55-activation-functions/assets/04_dying_relu.gif
+!04-deep-learning/55-activation-functions/assets/09_decision_boundaries.png
+
 # Curated Day 4 previews referenced by the public documentation.
 !00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/
 00-foundations/04-eigenvalues-eigenvectors-pca-svd/outputs/*
