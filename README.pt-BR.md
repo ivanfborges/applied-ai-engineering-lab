@@ -6,32 +6,35 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**61 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 9 de deep learning.** O roteiro
+**62 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 10 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
 
-São quatro módulos com todos os tópicos implementados:
+São cinco módulos com todos os tópicos implementados:
 [Fundamentos](00-foundations/) (15/15),
 [ML clássico](01-classical-machine-learning/) (20/20),
-[Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
-e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
-O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(9/10); o Dia 62 continua planejado.
+[Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9),
+[Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
+e [Deep Learning](04-deep-learning/) (10/10).
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 61 — Autoencoders](04-deep-learning/61-autoencoders/).
-Ele conecta encoder, representação latente e decoder à reconstrução e à
-detecção de anomalias. O exemplo linear em NumPy expõe gradientes e uma
-referência de reconstrução por PCA; o PyTorch usa treino apenas com observações
-normais, calibração independente e comparação com PCA e Isolation Forest.
-Os dados são inteiramente sintéticos, com dois mecanismos de anomalia.
-O laboratório visual separado reúne dez demonstrações em Matplotlib/Pillow,
-checkpoints reais, reconstrução 3D e controles de espaço latente e limiar.
-Os protocolos analítico e visual permanecem separados; reconstrução precisa
-não garante detecção de anomalias nem utilidade em produção.
+O tópico mais recente é o [Dia 62 — PyTorch Training Loop](04-deep-learning/62-pytorch-training-loop/).
+Ele conecta Dataset/DataLoader, logits, loss, backward e atualização à seleção
+por validação e avaliação final. O exemplo NumPy expõe gradientes logísticos;
+o PyTorch compara um modelo linear com uma MLP em dados inteiramente sintéticos,
+com normalização ajustada apenas no treino. Os testes cobrem gradientes,
+limpeza de buffers, lotes desiguais, avaliação sem alteração de estado e
+restauração do checkpoint. Na seed 42, a validação selecionou a MLP, que obteve
+77,33% de acurácia no teste final de 300 casos. O registro datado preserva
+hipótese, configuração e limites: uma seed e um orçamento fixo não estabelecem
+superioridade geral nem desempenho em produção.
+O laboratório visual separado acrescenta dez demonstrações, quatro GIFs e
+três HTMLs offline: lotes reais, forward/backward, superfície logística 3D,
+controles de otimizador/taxa/lote e um dashboard sincronizado por update.
+Seu protocolo de 600 casos e MLP 2→8→1 permanece separado do estudo analítico.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

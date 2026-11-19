@@ -1,0 +1,4 @@
+/assets/*
+!/assets/01_dataset_batches.gif
+!/assets/07_final_comparison.png
+!/assets/08_training_validation.png

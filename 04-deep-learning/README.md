@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **9 of 10 studies are implemented.**
-Day 62 remains planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **10 of 10 studies are implemented.**
+Author interpretation review remains pending; implementation is not approval.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -16,6 +16,7 @@ Day 62 remains planned; no placeholder topic folders are published.
 | 59 | [CNNs](59-cnns/) | Tested operators, exact spatial support and checkpoints; Streamlit lab, six GIFs, offline RGB/tensor 3D and paired synthetic CNN/MLP stress/failure analysis; separate analytical/visual protocols; author interpretation review required |
 | 60 | [RNNs, LSTMs and GRUs](60-rnn-lstm-gru/) | Tested cells, chunked states and checkpoints; offline gate controls, five GIFs, real autograd, trained PCA trajectories in 3D and three-seed synthetic comparison; distinct analytical/visual protocols; author interpretation review required |
 | 61 | [Autoencoders](61-autoencoders/) | Tested linear gradients/autograd and PCA bound; separate ten-demo Matplotlib/Pillow lab with real checkpoints, rotating 3D reconstruction, live latent/threshold controls and synthetic bottleneck/contamination/denoising experiments; analytical and visual protocols remain distinct; author interpretation review required |
+| 62 | [PyTorch Training Loop](62-pytorch-training-loop/) | Tested gradients, weighted losses and restored checkpoints; ten-part visual lab with four GIFs, offline 3D objective, optimizer/rate/batch controls and synchronized update replay; analytical/visual protocols remain distinct; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -103,6 +104,19 @@ Its separate [visual lab](61-autoencoders/VISUAL_GUIDE.md) probes curved geometr
 initialization seeds, observation/label ambiguity and legitimate regime shifts,
 using live Matplotlib controls and actual checkpoint outputs rather than
 interpolated learning curves. Its test mixture differs from the analytical study.
+
+Day 62 asks what turns a batch into a parameter update and a held-out score.
+Its [dated execution record](62-pytorch-training-loop/notes.md#executed-study--2026-11-19)
+separates manual NumPy optimization on a linear training task from a PyTorch
+nonlinear holdout exercise. Validation selects the architecture and epoch;
+only the restored selected model is evaluated on test. Weighted batch means,
+mode/gradient boundaries and copied snapshots are checked explicitly. One
+synthetic seed and fixed training budget establish no general model ranking.
+The separate [visual lab](62-pytorch-training-loop/VISUAL_GUIDE.md) records
+DataLoader IDs, activations, autograd adjoints, parameter deltas and checkpoint
+predictions. Its 3D landscape uses the actual two-parameter logistic objective;
+the dashboard labels pre/post values from the same update. Visual observations
+use a distinct 600-row, 2→8→1 protocol and retain separate dated evidence.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their
