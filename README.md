@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**59 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 7 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**60 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 8 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -27,8 +27,8 @@ bounded experiments, not production deployments.
 representations and explicit backpropagation, separating capacity, gradients,
 fitting and generalization.
 
-- Latest topic: [Day 59 — CNNs](04-deep-learning/59-cnns/)
-- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 7 of 10 topics implemented; interpretation review pending
+- Latest topic: [Day 60 — RNNs, LSTMs and GRUs](04-deep-learning/60-rnn-lstm-gru/)
+- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 8 of 10 topics implemented; interpretation review pending
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) and [Deep Learning](04-deep-learning/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -125,6 +125,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 57 | [Regularization in Deep Learning](04-deep-learning/57-regularization/) | Tested dropout/BatchNorm/SGD mechanisms and complete checkpoint restoration; six synthetic CPU MLP configurations, validation selection and one selected-model test evaluation; unequal checkpoint policies and budgets; interpretation review pending |
 | 58 | [Weight Initialization and Training Stability](04-deep-learning/58-weight-initialization/) | Tested initialization/gradients; offline selectable dashboard, measured 3D propagation surface, five GIFs, BN/LN mechanisms, multi-seed synthetic training and optional Jacobian SVDs, distinct from the zero-update analytical study; interpretation review pending |
 | 59 | [CNNs](04-deep-learning/59-cnns/) | Tested operators and spatial support; Streamlit lab, six GIFs, offline RGB/tensor 3D and paired synthetic CNN/MLP training with real checkpoints and stress/failure analysis; distinct from the 16×16 analytical study; interpretation review pending |
+| 60 | [RNNs, LSTMs and GRUs](04-deep-learning/60-rnn-lstm-gru/) | Tested cells, chunked states and checkpoints; offline gate controls, five GIFs, actual autograd, PCA state trajectories in 3D and three-seed synthetic comparison with an optional parameter-budget control; analytical/visual protocols separate; interpretation review pending |
 
 ## Roadmap
 
@@ -134,7 +135,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 1 | Classical Machine Learning | 16–35 | **20/20 studies implemented; interpretation review tracked separately** |
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
-| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **7/10 studies implemented; interpretation review pending** |
+| 4 | [Deep Learning](04-deep-learning/) | 53–62 | **8/10 studies implemented; interpretation review pending** |
 | 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |
@@ -251,7 +252,7 @@ applied-ai-engineering-lab/
 ├── 01-classical-machine-learning/          # Days 16–35 implemented
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
 ├── 03-statistics-experimentation/          # Days 45–52 implemented
-├── 04-deep-learning/                       # Days 53–59 implemented; Days 60–62 planned
+├── 04-deep-learning/                       # Days 53–60 implemented; Days 61–62 planned
 ├── 05-transformers-llms/                   # published when started
 ├── 06-rag-semantic-search/                 # published when started
 ├── 07-agents/                              # published when started

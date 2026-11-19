@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **7 of 10 studies are implemented.**
-Days 60–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **8 of 10 studies are implemented.**
+Days 61–62 remain planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -14,6 +14,7 @@ Days 60–62 remain planned; no placeholder topic folders are published.
 | 57 | [Regularization in Deep Learning](57-regularization/) | Tested dropout, BatchNorm, SGD/L2 and full checkpoint restoration; six-page Streamlit lab, offline 3D decay, five GIFs and three-seed 2D CPU comparison, separate from the analytical study; author interpretation review required |
 | 58 | [Weight Initialization and Training Stability](58-weight-initialization/) | Tested initialization/gradients; offline dashboard, measured 3D propagation surface, five GIFs, BN/LN mechanisms, multi-seed synthetic training and optional Jacobian SVDs; separate analytical/visual protocols; author interpretation review required |
 | 59 | [CNNs](59-cnns/) | Tested operators, exact spatial support and checkpoints; Streamlit lab, six GIFs, offline RGB/tensor 3D and paired synthetic CNN/MLP stress/failure analysis; separate analytical/visual protocols; author interpretation review required |
+| 60 | [RNNs, LSTMs and GRUs](60-rnn-lstm-gru/) | Tested cells, chunked states and checkpoints; offline gate controls, five GIFs, real autograd, trained PCA trajectories in 3D and three-seed synthetic comparison; distinct analytical/visual protocols; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -79,6 +80,17 @@ The separate [visual lab](59-cnns/VISUAL_LAB.md) makes weighted sums, channel
 mixing, pooling and receptive fields inspectable. It adds two-seed 32×32
 CNN/MLP measurements, real filter checkpoints and translation/noise diagnostics
 without pooling them with the earlier 16×16 analytical evidence.
+
+Day 60 asks how a recurrent state preserves an early observation across later
+distractors. Its [dated analytical record](60-rnn-lstm-gru/notes.md#executed-study--2026-11-19)
+separates exact gate/state checks from a fixed-budget synthetic recall exercise.
+The observed long-sequence RNN success and gated-model failures are specific to
+one seed and configuration; the study does not establish a general ranking or
+diagnose temporal gradient failures from accuracy alone.
+The separate [visual lab](60-rnn-lstm-gru/VISUAL_LAB.md) adds manual/computed
+gate controls, actual input-loss gradients, trained-state PCA trajectories,
+three-seed recall comparisons and a separate approximate-parameter-budget run.
+Scalar gradient products and untrained attention remain explicitly conceptual.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their

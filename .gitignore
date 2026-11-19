@@ -42,6 +42,13 @@ data/processed/
 models/
 outputs/
 
+# Day 60: three teaching GIFs and one standalone offline gate explorer.
+04-deep-learning/60-rnn-lstm-gru/assets/*
+!04-deep-learning/60-rnn-lstm-gru/assets/01_rnn_unrolled.gif
+!04-deep-learning/60-rnn-lstm-gru/assets/02_gradient_vanishing_exploding.gif
+!04-deep-learning/60-rnn-lstm-gru/assets/03_lstm_memory_flow.gif
+!04-deep-learning/60-rnn-lstm-gru/assets/03_lstm_gates_interactive.html
+
 # Day 59: four inspected teaching previews; collections and records remain ignored.
 04-deep-learning/59-cnns/assets/*
 !04-deep-learning/59-cnns/assets/01_convolution_sliding.gif
