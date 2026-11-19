@@ -5,6 +5,11 @@
 Module 4 spans global Days 53–62. **10 of 10 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
 
+For a short visit, start with [Day 62's explicit training and selection loop](62-pytorch-training-loop/)
+or [Day 54's independently checked gradients](54-backpropagation/). The
+[interpretation-review queue](../docs/CURATION.md#deep-learning-review-queue--november-19-2026)
+identifies a small set of pending decisions without approving other studies.
+
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
 | 53 | [Perceptron and MLPs](53-perceptron-mlps/) | Tested perceptron, constructive XOR and NumPy gradients; synthetic comparison and nine-part offline visual lab with real checkpoints, six GIFs and three interactive HTMLs; author interpretation review required |

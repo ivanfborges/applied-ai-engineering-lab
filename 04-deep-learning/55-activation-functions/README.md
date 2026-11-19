@@ -43,8 +43,9 @@ python scripts/validate_repo.py links
 The two analytical scripts print JSON and write no files. No autograd framework
 is needed for those explicit derivatives. GELU uses SciPy's standard-normal
 CDF, not a custom CDF solver. The separate visual lab uses PyTorch CPU for
-autograd and small matched MLPs; a fuller training-loop study remains planned
-for Day 62.
+autograd and small matched MLPs; the implemented
+[Day 62 — PyTorch Training Loop](../62-pytorch-training-loop/) follows the
+complete framework-based training and evaluation path.
 
 ## Explore the visual learning lab
 

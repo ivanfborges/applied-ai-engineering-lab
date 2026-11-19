@@ -198,7 +198,10 @@ Batch-order SHA-256:
 `0f2dca710c0261dcd516555385dd151aeeb54b9262e472f7a24c3b2e9b1b283e`.
 Models without BatchNorm had 5,634 trainable parameters; those with it had 5,890.
 
-**Commands actually executed**, from the root, with the selected stable interpreter:
+**Historical commands actually executed**, from the root, with the executor's
+private stable interpreter. That environment directory is not included in a
+clone; the portable `python` commands in the [README](README.md) use your own
+activated environment and print JSON without overwriting these records:
 
 ```powershell
 New-Item -ItemType Directory -Force outputs | Out-Null

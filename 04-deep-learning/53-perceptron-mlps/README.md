@@ -34,6 +34,10 @@ Use stable Python 3.11+ in an isolated environment. Dependencies and bounds
 come from [pyproject.toml](../../pyproject.toml); no deep-learning framework or
 additional optional extra is needed for this topic.
 
+The local [requirements.txt](requirements.txt) is a minimal runtime list only
+for standalone copying of this lab. Use the root configuration and `dev` for
+repository tests; the standalone list does not freeze versions or supply pytest.
+
 ```powershell
 python -m pip install -e ".[dev]"
 python 04-deep-learning/53-perceptron-mlps/example.py

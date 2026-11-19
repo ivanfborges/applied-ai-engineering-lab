@@ -64,6 +64,28 @@ ranking evaluation (44) and propensity adjustment (50) to the original five.
 The former highlights 32/33/35 remain in the full inventory and ML index.
 Their October review and all dated validation records remain historical.
 
+## Deep Learning review queue — November 19, 2026
+
+Under authorization to execute the review plan, the AI assistant compared the
+local implementations and dated analytical records below and prepared this
+queue. **This is assistant-performed technical curation, not personal author
+analysis or approval.** No historical measurement, table or interpretation
+status was replaced. Existing automated checks are separate evidence.
+
+| Study | Question and record | Technical boundary retained | Decision owner / status |
+|---|---|---|---|
+| 54 | [What do finite differences and microbatch agreement establish?](../04-deep-learning/54-backpropagation/notes.md#executed-study--2026-11-18) | Agreement supports the stated derivatives at tested parameters. Training loss reduction on the same synthetic curve does not establish generalization or convergence guarantees. | Author: adopt, narrow or rewrite the interpretation; pending. |
+| 58 | [Does preserved forward scale imply stable gradients?](../04-deep-learning/58-weight-initialization/notes.md#executed-study--2026-11-18) | Distinguish second moment from variance, loss adjoints from a fixed output probe, and initialization diagnostics from supervised training. One probe is not a Jacobian spectrum. | Author: confirm the explanatory scope; pending. |
+| 60 | [What follows when this RNN succeeds and gated models fail?](../04-deep-learning/60-rnn-lstm-gru/notes.md#executed-study--2026-11-19) | Preserve the observed failure of the hypothesized gated advantage under this seed/budget. Accuracy alone does not identify vanishing gradients or rank architectures generally. | Author: review the rejected hypothesis and alternative explanations; pending. |
+| 61 | [Is reconstruction error a measure of rarity?](../04-deep-learning/61-autoencoders/notes.md#executed-study--2026-11-19) | Retain mechanism-specific misses and the independent normal calibration. Ranking, alert policy and deployment prevalence are distinct; the PCA bound concerns the centered training objective. | Author: review the anomaly assumptions and practical limit; pending. |
+| 62 | [What does the selected holdout score establish?](../04-deep-learning/62-pytorch-training-loop/notes.md#executed-study--2026-11-19) | Validation selects epoch and architecture before one selected-model test evaluation. The NumPy, PyTorch analytical and visual protocols are distinct, synthetic exercises. | Author: review the evidence and generalization limits; pending. |
+
+These five items are a selected queue, not an exhaustive scientific review of
+Days 53–62. Separate visual results, unlisted studies and future executions
+remain outside it. The root now adds Day 62 as a ninth technical entry question;
+the full inventory and roadmap are preserved. Permission to edit and passing
+tests do not promote any candidate to a personal conclusion.
+
 ## Selection
 
 The five entry points cover complementary questions: lifecycle (16), evaluation

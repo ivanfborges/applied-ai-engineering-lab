@@ -64,6 +64,28 @@ ranking (44) e ajuste por propensão (50) às cinco entradas originais. Os antig
 destaques 32/33/35 permanecem no inventário e índice de ML. A revisão de outubro
 e as validações datadas continuam históricas.
 
+## Fila de revisão de Deep Learning — 19/11/2026
+
+Sob autorização para executar o plano, o assistente de IA confrontou as
+implementações locais e os registros analíticos datados abaixo e preparou esta
+fila. **É curadoria técnica do assistente, não análise pessoal ou aprovação
+do autor.** Medições, tabelas e estados históricos de interpretação foram
+preservados. Testes automatizados são uma forma separada de evidência.
+
+| Estudo | Pergunta e registro | Limite técnico preservado | Responsável / estado |
+|---|---|---|---|
+| 54 | [O que diferenças finitas e microbatches demonstram?](../04-deep-learning/54-backpropagation/notes.md#executed-study--2026-11-18) | Acordo sustenta derivadas nos parâmetros testados. Reduzir loss na mesma curva sintética não estabelece generalização ou convergência garantida. | Autor: adotar, restringir ou reescrever; pendente. |
+| 58 | [Preservar escala forward implica gradientes estáveis?](../04-deep-learning/58-weight-initialization/notes.md#executed-study--2026-11-18) | Distinguir segundo momento de variância, gradiente da loss de adjunto de saída fixo e inicialização de treinamento supervisionado. Uma direção não define o espectro do Jacobiano. | Autor: confirmar o alcance da explicação; pendente. |
+| 60 | [O que concluir do sucesso deste RNN e falha dos modelos com gates?](../04-deep-learning/60-rnn-lstm-gru/notes.md#executed-study--2026-11-19) | Preservar a hipótese não sustentada nesta seed/orçamento. Acurácia não identifica causa de vanishing gradients nem estabelece ranking geral. | Autor: revisar hipótese rejeitada e explicações alternativas; pendente. |
+| 61 | [Erro de reconstrução mede raridade?](../04-deep-learning/61-autoencoders/notes.md#executed-study--2026-11-19) | Preservar falhas por mecanismo e calibração normal independente. Ranking, política de alerta e prevalência operacional diferem; o limite PCA refere-se ao objetivo centrado de treino. | Autor: revisar premissas de anomalia e limite prático; pendente. |
+| 62 | [O que o score do modelo selecionado estabelece?](../04-deep-learning/62-pytorch-training-loop/notes.md#executed-study--2026-11-19) | Validação escolhe época e arquitetura antes do teste único do selecionado. Protocolos NumPy, PyTorch analítico e visual são exercícios sintéticos distintos. | Autor: revisar evidência e limite de generalização; pendente. |
+
+São cinco itens selecionados, não revisão científica integral dos Dias 53–62.
+Resultados visuais separados, estudos não listados e novas execuções ficam
+fora desta fila. A raiz acrescenta o Dia 62 como nona pergunta de entrada,
+preservando inventário e roadmap. Autorização para editar e testes aprovados
+não promovem candidatos a conclusões pessoais.
+
 ## Seleção
 
 As cinco entradas cobrem ciclo de ML (16), fronteiras de avaliação (17), premissas

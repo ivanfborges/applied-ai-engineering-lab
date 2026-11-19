@@ -165,10 +165,18 @@ retained validation loss, without assuming a universal ordering or benefit.
 3.11.14, NumPy 2.4.6, scikit-learn 1.9.1, PyTorch 2.15.0+cpu, Matplotlib 3.11.2,
 Plotly 6.9.0, Pillow 12.3.0 and Streamlit 1.67.0 on Windows x64.
 
-The actual generation command was:
+Historical command, using the executor's private stable environment:
 
 ```powershell
 & .local/environments/n09-full-2026-11-13/Scripts/python.exe 04-deep-learning/57-regularization/visualizations.py --export --epochs 120 --n 400 --grid 41 --frames 24 --seeds 157 158 159 --evaluate-test --output 04-deep-learning/57-regularization/outputs/visual-2026-11-18
+```
+
+For a new clone, activate your own canonical environment and use `python`
+instead of the private interpreter path. Preserve the historical destination;
+an equivalent new execution is:
+
+```powershell
+python 04-deep-learning/57-regularization/visualizations.py --export --epochs 120 --n 400 --grid 41 --frames 24 --seeds 157 158 159 --evaluate-test --output 04-deep-learning/57-regularization/outputs/my-new-visual-run
 ```
 
 **Results:** selection used retained validation CE only. Each selected model

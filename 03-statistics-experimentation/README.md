@@ -114,9 +114,9 @@ interactive cost/capacity policies. Browser controls operate offline; generated
 HTML and images remain ignored, with interpretation review pending.
 
 All eight module studies are implemented. The next module,
-[Deep Learning](../04-deep-learning/), has begun with Day 53; its remaining
-topics and later modules stay planned in the roadmap. No placeholder folders
-are added.
+[Deep Learning](../04-deep-learning/), now has all ten studies (Days 53–62)
+implemented, with interpretation review pending. Later modules remain planned
+in the roadmap. No placeholder folders are added.
 
 Use each topic's execution instructions and focused tests. The shared
 [validation contract](../docs/validation.md) describes repository checks and

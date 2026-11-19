@@ -70,6 +70,55 @@ child imports without changing the parent shell; they are not a total CPU/RAM
 cap. Do not add process-level parallelism on top without measuring resource use.
 Avoid running installation, training and full visual exports concurrently.
 
+### Daily Deep Learning checks
+
+Keep standalone use and repository validation separate. Days 53/54 retain
+minimal `requirements.txt` lists for copying those educational labs outside
+the repository; these are runtime conveniences, not frozen environments or
+alternate dependency bounds. For repository tests, use the root `pyproject.toml`
+and `dev` extra, plus `deep-learning` for PyTorch tests. Day 61's requirements
+file is a root-install shortcut, not a standalone package. No new shared
+framework is needed to make these independent studies uniform.
+
+After changing numerical logic, run its analytical file, then syntax/links.
+Use the repository-relative path of the linked analytical file as `--scope`:
+
+| Day | Analytical checks for routine iteration |
+|---:|---|
+| 53 | [test_perceptron_mlps.py](../04-deep-learning/53-perceptron-mlps/tests/test_perceptron_mlps.py) |
+| 54 | [test_backpropagation.py](../04-deep-learning/54-backpropagation/tests/test_backpropagation.py) |
+| 55 | [test_activation_functions.py](../04-deep-learning/55-activation-functions/tests/test_activation_functions.py) |
+| 56 | [test_optimizers.py](../04-deep-learning/56-optimizers/tests/test_optimizers.py) |
+| 57 | [test_regularization.py](../04-deep-learning/57-regularization/tests/test_regularization.py) |
+| 58 | [test_initialization.py](../04-deep-learning/58-weight-initialization/tests/test_initialization.py) |
+| 59 | [test_cnns.py](../04-deep-learning/59-cnns/tests/test_cnns.py) |
+| 60 | [test_recurrent.py](../04-deep-learning/60-rnn-lstm-gru/tests/test_recurrent.py) |
+| 61 | [test_autoencoders.py](../04-deep-learning/61-autoencoders/tests/test_autoencoders.py) |
+| 62 | [test_training_loop.py](../04-deep-learning/62-pytorch-training-loop/tests/test_training_loop.py) |
+
+For example:
+
+```bash
+python scripts/validate_repo.py tests --scope 04-deep-learning/54-backpropagation/tests/test_backpropagation.py
+python scripts/validate_repo.py tests --scope 04-deep-learning/62-pytorch-training-loop/tests/test_training_loop.py
+python scripts/validate_repo.py syntax
+python scripts/validate_repo.py links
+```
+
+To include a topic's non-rendering visual invariants, use an explicit partial
+selection such as `tests --scope 04-deep-learning/54-backpropagation --exclude-rendering`.
+Run the topic without that exclusion when exports change, and retain the full
+CI gate. Tests within visual files can still fit models, draw canvases or
+exercise widgets even when marked export tests are excluded.
+
+In the November 19 local review at `7153bd4`, the 20 Deep Learning test files
+passed 696 cases. The serial syntax/link/test/diff commands took about 800 s
+on that Windows CPU environment. Visual test files for Days 54, 55 and 57 took
+approximately 107, 120 and 107 s respectively, including their numerical and
+integration work. These are dated execution durations, not a CI prediction or
+equal-coverage speed benchmark. Subsequent focused checks must report their
+own changed scope rather than relabeling this baseline as a new full run.
+
 ## What the runner establishes
 
 | Check | Contract | Boundary |

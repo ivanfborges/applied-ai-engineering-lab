@@ -19,8 +19,10 @@ python 04-deep-learning/58-weight-initialization/main.py --mode interactive --op
 For CPU-only PyTorch, follow [the shared instructions](../../docs/validation.md).
 NumPy, Matplotlib, Plotly and Pillow are already canonical dependencies. No new
 framework, notebook kernel, CDN, network connection, server or GPU is required.
-In Ivan's workspace, use the stable interpreter selected by the local workflow;
-the global Python and old `.venv` are not the execution reference.
+Use `python` from your activated stable environment. Private interpreter paths
+in dated verification transcripts identify the executor's environment; those
+directories are not included in a clone. The portable commands above do not
+depend on them.
 
 ```powershell
 python 04-deep-learning/58-weight-initialization/main.py --mode quick --seed 61 --depth 40 --width 96 --output-dir outputs/day58/custom --no-display
@@ -388,6 +390,5 @@ internal-link checking covered 1,412 targets in 259 Markdown files. The offline
 dependency check reported all 78 installed packages compatible. Tests wrote
 real exports only to temporary directories and did not overwrite public previews.
 The suite was scoped to Day 58; no full-curriculum, CI or production validation
-is claimed. Raw private source SHA-256 remained unchanged, and LinkedIn drafts
-were not modified. Root EN/PT and module navigation remain synchronized at
-58 implemented studies, 6/10 in Deep Learning, with interpretation review pending.
+is claimed. The historical analytical record and its interpretation-review
+status were preserved.

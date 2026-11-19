@@ -180,10 +180,18 @@ the test gap alone cannot diagnose its cause. Neither model family is claimed
 to have converged or received optimal tuning. No repeated-seed, real-data,
 runtime benchmark, accelerator or distribution-shift evidence was collected.
 
-Execution from the repository root, using the workflow's stable interpreter:
+Historical execution from the repository root, using the executor's private
+stable interpreter (not a path included in a clone):
 
 ```powershell
 & ./.local/environments/n09-full-2026-11-13/Scripts/python.exe 04-deep-learning/62-pytorch-training-loop/example.py --output 04-deep-learning/62-pytorch-training-loop/outputs/run-2026-11-19-analytical.json
+```
+
+For a new execution, use your activated environment and preserve the dated
+record by choosing a fresh filename:
+
+```powershell
+python 04-deep-learning/62-pytorch-training-loop/example.py --output 04-deep-learning/62-pytorch-training-loop/outputs/my-new-analytical-run.json
 ```
 
 The ignored JSON was inspected and contains exact scalar histories and metrics;

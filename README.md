@@ -48,6 +48,7 @@ is documented separately.
 | Does preserving variance preserve predictive information? | [PCA in practice](02-unsupervised-recommender-systems/39-pca-in-practice/) | Fold-local Wine comparison and a low-variance-signal counterexample. Variance retention is not predictive validation. |
 | What does a ranking score leave out? | [Ranking metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested item-ID metrics, denominator policies and candidate-universe controls. Candidate-conditioned NDCG does not measure retrieval recall. |
 | Can adjustment repair weak overlap? | [Propensity score and matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Matching, weighting, balance, retention and ESS on synthetic data. Algebraic correctness does not establish causal identification. |
+| What turns a batch into an update and a held-out score? | [PyTorch training loop](04-deep-learning/62-pytorch-training-loop/) | Explicit gradients, weighted batch losses, copied checkpoints and validation-only selection. One synthetic configuration, not a model ranking; interpretation review pending. |
 
 For a short visit, read the selected study's question and limitations, then
 inspect its code and tests. For the full curriculum, use the inventory below.
