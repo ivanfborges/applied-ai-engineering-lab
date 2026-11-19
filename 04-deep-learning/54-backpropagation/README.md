@@ -40,7 +40,8 @@ python scripts/validate_repo.py links
 
 Only NumPy is needed for the two analytical examples; pytest is supplied by `dev`. The
 backward pass is written for this specific architecture, with no generic
-autodiff engine. PyTorch training-loop practice remains planned for Day 62.
+autodiff engine. For a framework-based loop, see the implemented
+[Day 62 — PyTorch Training Loop](../62-pytorch-training-loop/).
 Both analytical scripts print JSON to standard output and write no artifacts.
 
 ## What is being differentiated?
@@ -99,8 +100,11 @@ Compare exact scalar derivative products across backward depth:
 
 Open the [offline interactive 3D landscape](visuals/loss_landscape_3d.html)
 locally to rotate, zoom and inspect all four learning-rate trajectories.
-GitHub shows HTML source; download the file for interaction. The
-[visual guide](VISUAL_LAB.md) also covers chain-rule multiplication, local
+GitHub shows HTML source; download the file for interaction. New exports go to
+a fresh ignored `outputs/visual-lab/run-*` directory; they do not replace the
+curated `visuals/` previews above. An explicit `--output` must be a new or
+empty directory. The [visual guide](VISUAL_LAB.md) also covers chain-rule
+multiplication, local
 perturbations, activation derivatives, finite differences, clipping and
 unequal-microbatch accumulation. It documents `--quick`, custom output paths
 and the distinct two-parameter visual model without a bias.

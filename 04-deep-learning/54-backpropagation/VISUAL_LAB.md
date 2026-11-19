@@ -35,16 +35,26 @@ optional and is not installed automatically. If available, the lab compares
 the two-parameter manual gradients with float64 CPU autograd; otherwise the
 dated report explicitly says that comparison was not performed.
 
+The standalone list supplies runtime libraries, not pytest or a frozen
+numerical environment. Use the root installation above for repository tests;
+do not treat the two lists as competing sources of dependency bounds.
+
 The default command with no flags also generates all modules. Output defaults
-to `visuals/` beside the script, regardless of the current working directory.
+to a fresh ignored `outputs/visual-lab/run-<UTC timestamp>-<suffix>/` beside
+the script, regardless of the current working directory. The command prints
+that directory; open its generated `loss_landscape_3d.html` to interact.
 Each invocation also creates a distinct `run-<UTC timestamp>.json` with
 configuration, versions, numerical observations, interpretation status and
-decoded-output hashes. Named exports are replaced when regenerated; earlier
-dated records remain. Use a new directory to retain alternate exports.
+decoded-output hashes. Explicit output directories must be new or empty;
+nonempty destinations and existing export files are rejected rather than
+overwritten. Repeating a command without `--output` creates a separate run.
+The selected `visuals/` previews are historical public artifacts, not the
+default generation destination. Review new exports before deliberately
+promoting an individual preview; do not bulk-copy a run over that directory.
 
 ```powershell
-python visual_lab.py --all --quick --output visuals/quick
-python visual_lab.py --only loss_landscape --frames 30 --grid 51 --steps 180 --output visuals/custom
+python visual_lab.py --all --quick
+python visual_lab.py --only loss_landscape --frames 30 --grid 51 --steps 180 --output outputs/custom-landscape-new
 ```
 
 Default quality requests 60 frames, a 91×91 surface grid and 180 optimization

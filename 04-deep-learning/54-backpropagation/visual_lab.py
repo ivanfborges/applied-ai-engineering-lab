@@ -9,6 +9,7 @@ import json
 from pathlib import Path
 import platform
 import re
+from uuid import uuid4
 
 
 MODES = {
@@ -135,7 +136,8 @@ def build_lab(output, *, mode="all", quick=False, frames=None, grid=None, steps=
     }
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     record_path = Path(output) / f"run-{stamp}.json"
-    record_path.write_text(json.dumps(report, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    with record_path.open("x", encoding="utf-8") as destination:
+        destination.write(json.dumps(report, indent=2, allow_nan=False) + "\n")
     print(f"Verified {len(paths)} outputs. Dated record: {record_path}", flush=True)
     return report
 
@@ -146,7 +148,8 @@ def main(argv=None):
     choice.add_argument("--all", action="store_true", help="generate all eight modules (also the default)")
     choice.add_argument("--only", choices=list(MODES), help="generate a single module")
     choice.add_argument("--list", action="store_true", help="list modules without loading plotting dependencies")
-    parser.add_argument("--output", type=Path, default=Path(__file__).resolve().parent / "visuals")
+    parser.add_argument("--output", type=Path,
+                        help="New or empty directory; default: a fresh ignored outputs/visual-lab/run-* directory")
     parser.add_argument("--quick", action="store_true", help="24 frames and a 41x41 surface grid; same numerical experiment")
     parser.add_argument("--frames", type=int, help="18..120 frames; default 60")
     parser.add_argument("--grid", type=int, help="21..151 points per grid axis; default 91")
@@ -157,7 +160,12 @@ def main(argv=None):
             print(f"{name:24} {question}")
         return
     try:
-        build_lab(args.output, mode=args.only or "all", quick=args.quick,
+        output = args.output
+        if output is None:
+            stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+            output = (Path(__file__).resolve().parent / "outputs" / "visual-lab"
+                      / f"run-{stamp}-{uuid4().hex[:8]}")
+        build_lab(output, mode=args.only or "all", quick=args.quick,
                   frames=args.frames, grid=args.grid, steps=args.steps)
     except (ValueError, OSError) as error:
         parser.exit(2, f"Visual lab error: {error}\n")

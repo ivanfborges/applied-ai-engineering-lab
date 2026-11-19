@@ -131,6 +131,59 @@ def test_list_without_plot_import_and_optional_autograd():
     assert report["status"] in ("compared", "not performed: PyTorch is not installed")
 
 
+def test_cli_defaults_to_distinct_ignored_runs_without_touching_previews(monkeypatch):
+    import visual_lab
+    outputs = []
+    monkeypatch.setattr(visual_lab, "build_lab", lambda output, **kwargs: outputs.append(output))
+    visual_lab.main(["--all"])
+    visual_lab.main(["--only", "gradient_flow"])
+    topic = Path(visual_lab.__file__).resolve().parent
+    assert outputs[0] != outputs[1]
+    for output in outputs:
+        assert output.parent == topic / "outputs" / "visual-lab"
+        assert output.name.startswith("run-")
+        root = topic.parents[1]
+        result = subprocess.run(["git", "check-ignore", "--", output.relative_to(root).as_posix()],
+                                cwd=root, capture_output=True, text=True)
+        assert result.returncode == 0
+        assert not output.exists()  # The fake builder must not create or render anything.
+
+
+def test_existing_run_is_rejected_without_changing_any_file(tmp_path, monkeypatch):
+    import visual_render
+    sentinel = tmp_path / "computational_graph.gif"
+    sentinel.write_bytes(b"historical preview")
+    monkeypatch.setattr(visual_render.Renderer, "computational_graph",
+                        lambda self: pytest.fail("a nonempty output must fail before rendering"))
+    with pytest.raises(FileExistsError, match="new or empty"):
+        build_lab(tmp_path, mode="computational_graph")
+    assert sentinel.read_bytes() == b"historical preview"
+    assert sorted(p.name for p in tmp_path.iterdir()) == [sentinel.name]
+
+
+@pytest.mark.parametrize("kind", ["png", "gif", "html"])
+def test_renderer_refuses_replacing_a_file_created_after_initialization(tmp_path, kind):
+    import matplotlib.pyplot as plt
+    from visual_render import Renderer
+    renderer = Renderer(tmp_path, frames=2, grid=21)
+    name = "loss_landscape_3d.html" if kind == "html" else "existing." + kind
+    target = tmp_path / name
+    target.write_bytes(b"preserve")
+    with pytest.raises(FileExistsError):
+        if kind == "html":
+            x, y = synthetic_data()
+            traces = [descent(x, y, steps=1, learning_rate=rate) for rate in (.001, .01, .1, 1.)]
+            renderer.loss_landscape(x, y, traces)
+        else:
+            figure = plt.figure()
+            if kind == "png":
+                renderer.png(figure, name)
+            else:
+                renderer.gif(figure, lambda frame: None, name)
+    assert target.read_bytes() == b"preserve"
+    assert plt.get_fignums() == []
+
+
 @pytest.mark.rendering
 def test_all_real_exports_in_temporary_directory(tmp_path):
     from PIL import Image
@@ -156,3 +209,7 @@ def test_all_real_exports_in_temporary_directory(tmp_path):
                 external_scripts.append(dict(attrs)["src"])
     ScriptParser().feed(html)
     assert external_scripts == []
+    original = {path: path.read_bytes() for path in tmp_path.iterdir()}
+    with pytest.raises(FileExistsError, match="new or empty"):
+        build_lab(tmp_path, frames=18, grid=21, steps=20)
+    assert {path: path.read_bytes() for path in tmp_path.iterdir()} == original

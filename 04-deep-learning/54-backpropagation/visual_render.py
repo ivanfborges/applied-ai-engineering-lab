@@ -24,6 +24,8 @@ RATE_COLORS = ("#2563eb", "#7c3aed", "#15803d", "#a16207")
 class Renderer:
     def __init__(self, output, *, frames=60, grid=91, dpi=100):
         self.output = Path(output)
+        if self.output.exists() and (not self.output.is_dir() or any(self.output.iterdir())):
+            raise FileExistsError("Output must be a new or empty directory; existing exports are preserved.")
         self.output.mkdir(parents=True, exist_ok=True)
         self.frames, self.grid, self.dpi = frames, grid, dpi
         plt.rcParams.update({
@@ -44,17 +46,24 @@ class Renderer:
                             wspace=0.30, hspace=0.45)
         return fig, axes
 
-    def png(self, fig, name):
+    def _destination(self, name):
         path = self.output / name
+        if path.exists():
+            raise FileExistsError(f"Refusing to overwrite existing export: {path}")
+        return path
+
+    def png(self, fig, name):
         try:
-            fig.savefig(path, dpi=self.dpi)
+            path = self._destination(name)
+            with path.open("xb") as destination:
+                fig.savefig(destination, format="png", dpi=self.dpi)
         finally:
             plt.close(fig)
         return path
 
     def gif(self, fig, update, name, *, fps=8):
-        path = self.output / name
         try:
+            path = self._destination(name)
             animation = FuncAnimation(fig, update, frames=self.frames, interval=1000/fps,
                                       repeat=True, blit=False)
             animation.save(path, writer=PillowWriter(fps=fps), dpi=self.dpi)
@@ -190,6 +199,7 @@ class Renderer:
         return contour
 
     def loss_landscape(self, x, y, traces):
+        path = self._destination("loss_landscape_3d.html")
         main = traces[2]
         points = np.concatenate([t["theta"] for t in traces])
         w1 = np.linspace(min(-2.5, points[:, 0].min()-.2), max(2.5, points[:, 0].max()+.2), self.grid)
@@ -234,8 +244,8 @@ Click legend entries to hide/show rates; double-click to isolate one rate. Traje
 Colors distinguish rates, not quality. All observations are synthetic; author interpretation review required.
 This HTML embeds Plotly and works offline. GitHub displays source; download the file and open it locally.</p></footer></main>
 <script>document.getElementById('reset-camera').addEventListener('click',()=>Plotly.relayout('loss-chart',{'scene.camera':{eye:{x:1.55,y:1.55,z:0.9},center:{x:0,y:0,z:0},up:{x:0,y:0,z:1}}}));window.labReady=true;</script></body></html>"""
-        path = self.output / "loss_landscape_3d.html"
-        path.write_text(page, encoding="utf-8")
+        with path.open("x", encoding="utf-8") as destination:
+            destination.write(page)
         outputs = [path]
         fig, axes = self.figure("03 / Gradient descent follows the computed loss",
             "Actual two-parameter neural objective; same initialization [0.5, 0.8]. No bias.\n"
