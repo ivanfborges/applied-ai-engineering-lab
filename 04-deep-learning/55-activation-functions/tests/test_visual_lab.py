@@ -116,8 +116,11 @@ def test_seeded_training_is_repeatable_and_validation_separate(small_study):
     assert len(hashes) == 1
     # Composition of affine layers has zero grid curvature in logit space.
     z = small_study["models"]["identity"]["logits"]
-    np.testing.assert_allclose(np.diff(z, n=2, axis=0), 0, atol=2e-6)
-    np.testing.assert_allclose(np.diff(z, n=2, axis=1), 0, atol=2e-6)
+    # Float32 affine layers accumulate CPU-dependent roundoff, amplified by
+    # second differences. Keep the bound relative to dtype and logit scale.
+    curvature_atol = 16 * np.finfo(z.dtype).eps * max(1.0, float(np.max(np.abs(z))))
+    np.testing.assert_allclose(np.diff(z, n=2, axis=0), 0, rtol=0, atol=curvature_atol)
+    np.testing.assert_allclose(np.diff(z, n=2, axis=1), 0, rtol=0, atol=curvature_atol)
 
 
 def test_activation_slider_updates_actual_function_and_zero_convention():
