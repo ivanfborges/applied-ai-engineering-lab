@@ -1,0 +1,3 @@
+# Compatibility entry point; run pip from the repository root.
+# Dependency names and bounds remain centralized in pyproject.toml.
+-e .[deep-learning]

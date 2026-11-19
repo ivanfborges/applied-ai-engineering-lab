@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **8 of 10 studies are implemented.**
-Days 61–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **9 of 10 studies are implemented.**
+Day 62 remains planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -15,6 +15,7 @@ Days 61–62 remain planned; no placeholder topic folders are published.
 | 58 | [Weight Initialization and Training Stability](58-weight-initialization/) | Tested initialization/gradients; offline dashboard, measured 3D propagation surface, five GIFs, BN/LN mechanisms, multi-seed synthetic training and optional Jacobian SVDs; separate analytical/visual protocols; author interpretation review required |
 | 59 | [CNNs](59-cnns/) | Tested operators, exact spatial support and checkpoints; Streamlit lab, six GIFs, offline RGB/tensor 3D and paired synthetic CNN/MLP stress/failure analysis; separate analytical/visual protocols; author interpretation review required |
 | 60 | [RNNs, LSTMs and GRUs](60-rnn-lstm-gru/) | Tested cells, chunked states and checkpoints; offline gate controls, five GIFs, real autograd, trained PCA trajectories in 3D and three-seed synthetic comparison; distinct analytical/visual protocols; author interpretation review required |
+| 61 | [Autoencoders](61-autoencoders/) | Tested linear gradients/autograd and PCA bound; separate ten-demo Matplotlib/Pillow lab with real checkpoints, rotating 3D reconstruction, live latent/threshold controls and synthetic bottleneck/contamination/denoising experiments; analytical and visual protocols remain distinct; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -91,6 +92,17 @@ The separate [visual lab](60-rnn-lstm-gru/VISUAL_LAB.md) adds manual/computed
 gate controls, actual input-loss gradients, trained-state PCA trajectories,
 three-seed recall comparisons and a separate approximate-parameter-budget run.
 Scalar gradient products and untrained attention remain explicitly conceptual.
+
+Day 61 asks whether reconstruction error measures rarity. Its
+[dated analytical record](61-autoencoders/notes.md#executed-study--2026-11-19)
+separates a NumPy linear/PCA training identity from a synthetic PyTorch anomaly
+study. Both reconstruction methods missed the injected in-subspace cases at
+the frozen calibration thresholds; this single-seed exercise establishes no
+general detector ranking. Author interpretation review remains pending.
+Its separate [visual lab](61-autoencoders/VISUAL_GUIDE.md) probes curved geometry,
+initialization seeds, observation/label ambiguity and legitimate regime shifts,
+using live Matplotlib controls and actual checkpoint outputs rather than
+interpolated learning curves. Its test mixture differs from the analytical study.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their

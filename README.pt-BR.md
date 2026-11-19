@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**60 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 8 de deep learning.** O roteiro
+**61 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 9 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,27 +17,21 @@ São quatro módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
 e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
 O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(8/10); os Dias 61–62 continuam planejados.
+(9/10); o Dia 62 continua planejado.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 60 — RNNs, LSTMs e GRUs](04-deep-learning/60-rnn-lstm-gru/).
-Ele conecta estado recorrente, BPTT, memória com gates e limites de acesso ao
-histórico a uma comparação PyTorch em CPU. A célula LSTM em NumPy é verificada
-contra PyTorch; os testes também cobrem estado entre trechos e restauração do
-checkpoint selecionado por validação. O experimento usa sequências inteiramente
-sintéticas de 10 e 50 passos, uma seed e tamanhos iguais de estado, com
-orçamentos desiguais de parâmetros. Com 50 passos, a RNN obteve 99,8% de acurácia
-de teste e LSTM/GRU ficaram próximas do acaso nessa configuração. O resultado
-não estabelece superioridade geral: o registro datado preserva hipótese,
-configuração, controles, métricas e limitações. Um controle que lê diretamente
-o primeiro passo resolve o gerador sem recorrência.
-O laboratório visual separado acrescenta cinco GIFs, controles locais de gates,
-gradientes reais por autograd, trajetórias treinadas em 3D com PCA e comparação
-sintética em três seeds, além de um protocolo de parâmetros aproximados.
-Os HTMLs abrem sem servidor ou internet. A variação entre seeds no estudo
-visual não substitui nem se mistura ao registro analítico anterior.
+O tópico mais recente é o [Dia 61 — Autoencoders](04-deep-learning/61-autoencoders/).
+Ele conecta encoder, representação latente e decoder à reconstrução e à
+detecção de anomalias. O exemplo linear em NumPy expõe gradientes e uma
+referência de reconstrução por PCA; o PyTorch usa treino apenas com observações
+normais, calibração independente e comparação com PCA e Isolation Forest.
+Os dados são inteiramente sintéticos, com dois mecanismos de anomalia.
+O laboratório visual separado reúne dez demonstrações em Matplotlib/Pillow,
+checkpoints reais, reconstrução 3D e controles de espaço latente e limiar.
+Os protocolos analítico e visual permanecem separados; reconstrução precisa
+não garante detecção de anomalias nem utilidade em produção.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
