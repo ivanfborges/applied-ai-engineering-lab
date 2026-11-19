@@ -42,6 +42,12 @@ data/processed/
 models/
 outputs/
 
+# Day 58: inspected moments, normalization mechanisms and paired propagation.
+04-deep-learning/58-weight-initialization/assets/*
+!04-deep-learning/58-weight-initialization/assets/initialization_moments.png
+!04-deep-learning/58-weight-initialization/assets/normalization_axes.png
+!04-deep-learning/58-weight-initialization/assets/xavier_vs_he.gif
+
 # Day 56: three inspected previews; generated reports and HTML remain local.
 04-deep-learning/56-optimizers/assets/*
 !04-deep-learning/56-optimizers/assets/01_optimizer_trajectories.gif

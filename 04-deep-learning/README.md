@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **5 of 10 studies are implemented.**
-Days 58–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **6 of 10 studies are implemented.**
+Days 59–62 remain planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -12,6 +12,7 @@ Days 58–62 remain planned; no placeholder topic folders are published.
 | 55 | [Activation Functions](55-activation-functions/) | Tested derivatives/autograd, two native slider explorers, four GIFs, offline probability simplex and matched CPU MLP surfaces with an affine control; author interpretation review required |
 | 56 | [Optimizers](56-optimizers/) | Tested NumPy/PyTorch rules; eight-scene offline lab with seven GIFs, interactive 3D step inspection, moment histories and decay decomposition; matched synthetic CPU MLP configurations; author interpretation review required |
 | 57 | [Regularization in Deep Learning](57-regularization/) | Tested dropout, BatchNorm, SGD/L2 and full checkpoint restoration; six-page Streamlit lab, offline 3D decay, five GIFs and three-seed 2D CPU comparison, separate from the analytical study; author interpretation review required |
+| 58 | [Weight Initialization and Training Stability](58-weight-initialization/) | Tested initialization/gradients; offline dashboard, measured 3D propagation surface, five GIFs, BN/LN mechanisms, multi-seed synthetic training and optional Jacobian SVDs; separate analytical/visual protocols; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -58,6 +59,14 @@ The separate [visual guide](57-regularization/VISUAL_LAB.md) covers forward
 masks, coupled/decoupled decay, BatchNorm running statistics, stopping-rule
 replay and three-seed 2D training; it preserves the analytical study's distinct
 20-feature configuration and evidence boundaries.
+
+Day 58 asks how initialization scale changes forward magnitude and backward
+sensitivity before learning. Its [dated analytical record](58-weight-initialization/notes.md#executed-study--2026-11-18)
+separates squared-output loss gradients from a shared output-adjoint probe.
+Finite-width second moments do not establish Jacobian conditioning, convergence
+or generalization. Its separate [visual lab](58-weight-initialization/VISUAL_LAB.md)
+executes paired multi-seed propagation, normalization mechanisms and synthetic
+training; those measurements retain a distinct configuration and review status.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their

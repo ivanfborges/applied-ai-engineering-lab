@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**57 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 5 de deep learning.** O roteiro
+**58 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 6 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,19 +17,22 @@ São quatro módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
 e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
 O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(5/10); os Dias 58–62 continuam planejados.
+(6/10); os Dias 59–62 continuam planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 57 — Regularização em Deep Learning](04-deep-learning/57-regularization/).
-Ele separa dropout, weight decay, BatchNorm e early stopping, com mecanismos
-NumPy verificados e restauração completa de checkpoints, incluindo buffers.
-O exemplo em CPU compara seis configurações de MLP em dados sintéticos, com
-pesos lineares iniciais e ordem dos lotes controlados, pré-processamento
-ajustado apenas no treino e seleção por validação. Apenas o modelo escolhido
-recebe uma avaliação final no teste. Uma seed, parâmetros ilustrativos,
-políticas de checkpoint e quantidades de atualizações diferentes limitam a comparação.
+O tópico mais recente é o [Dia 58 — Inicialização de Pesos e Estabilidade de Treinamento](04-deep-learning/58-weight-initialization/).
+Ele conecta Xavier, He, vanishing/exploding gradients e normalização, com
+propagação NumPy, inicializadores PyTorch e gradientes por diferenças finitas
+verificados. O diagnóstico sintético em CPU compara cinco configurações,
+separando o gradiente do loss quadrático de uma sonda com gradiente de saída
+fixo. Uma seed e redes de largura constante delimitam a evidência; não há
+atualizações de pesos ou treinamento supervisionado na fase analítica.
+O laboratório visual separado acrescenta dashboard HTML offline com seletores,
+superfície 3D de propagação medida, cinco GIFs, mecanismos de BatchNorm/LayerNorm,
+treinamento sintético com múltiplas seeds e espectros opcionais do Jacobiano.
+Esses experimentos têm protocolo próprio e não estabelecem um ranking universal.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
