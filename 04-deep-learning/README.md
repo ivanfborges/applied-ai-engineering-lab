@@ -2,8 +2,8 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 4 spans global Days 53–62. **6 of 10 studies are implemented.**
-Days 59–62 remain planned; no placeholder topic folders are published.
+Module 4 spans global Days 53–62. **7 of 10 studies are implemented.**
+Days 60–62 remain planned; no placeholder topic folders are published.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -13,6 +13,7 @@ Days 59–62 remain planned; no placeholder topic folders are published.
 | 56 | [Optimizers](56-optimizers/) | Tested NumPy/PyTorch rules; eight-scene offline lab with seven GIFs, interactive 3D step inspection, moment histories and decay decomposition; matched synthetic CPU MLP configurations; author interpretation review required |
 | 57 | [Regularization in Deep Learning](57-regularization/) | Tested dropout, BatchNorm, SGD/L2 and full checkpoint restoration; six-page Streamlit lab, offline 3D decay, five GIFs and three-seed 2D CPU comparison, separate from the analytical study; author interpretation review required |
 | 58 | [Weight Initialization and Training Stability](58-weight-initialization/) | Tested initialization/gradients; offline dashboard, measured 3D propagation surface, five GIFs, BN/LN mechanisms, multi-seed synthetic training and optional Jacobian SVDs; separate analytical/visual protocols; author interpretation review required |
+| 59 | [CNNs](59-cnns/) | Tested operators, exact spatial support and checkpoints; Streamlit lab, six GIFs, offline RGB/tensor 3D and paired synthetic CNN/MLP stress/failure analysis; separate analytical/visual protocols; author interpretation review required |
 
 Day 53 asks why nonlinear hidden representations change what a network can
 express. Its [dated analytical record](53-perceptron-mlps/notes.md#executed-study--2026-11-18)
@@ -67,6 +68,17 @@ Finite-width second moments do not establish Jacobian conditioning, convergence
 or generalization. Its separate [visual lab](58-weight-initialization/VISUAL_LAB.md)
 executes paired multi-seed propagation, normalization mechanisms and synthetic
 training; those measurements retain a distinct configuration and review status.
+
+Day 59 asks how local shared filters and spatial aggregation support image
+classification. Its [dated analytical record](59-cnns/notes.md#executed-study--2026-11-18)
+separates single-channel operator checks from learned filters on synthetic
+bars. Pooling changes spatial resolution, while global averaging does not
+guarantee translation invariance. The same-generator test result establishes
+neither realistic image performance nor robustness under distribution shift.
+The separate [visual lab](59-cnns/VISUAL_LAB.md) makes weighted sums, channel
+mixing, pooling and receptive fields inspectable. It adds two-seed 32×32
+CNN/MLP measurements, real filter checkpoints and translation/noise diagnostics
+without pooling them with the earlier 16×16 analytical evidence.
 
 Use the topic's execution commands and focused tests. The shared
 [validation contract](../docs/validation.md) describes the checks and their

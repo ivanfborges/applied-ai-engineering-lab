@@ -42,6 +42,13 @@ data/processed/
 models/
 outputs/
 
+# Day 59: four inspected teaching previews; collections and records remain ignored.
+04-deep-learning/59-cnns/assets/*
+!04-deep-learning/59-cnns/assets/01_convolution_sliding.gif
+!04-deep-learning/59-cnns/assets/06_receptive_field_growth.gif
+!04-deep-learning/59-cnns/assets/09_filter_learning.gif
+!04-deep-learning/59-cnns/assets/10_cnn_vs_mlp.png
+
 # Day 58: inspected moments, normalization mechanisms and paired propagation.
 04-deep-learning/58-weight-initialization/assets/*
 !04-deep-learning/58-weight-initialization/assets/initialization_moments.png

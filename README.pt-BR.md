@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**58 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 6 de deep learning.** O roteiro
+**59 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 7 de deep learning.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,22 +17,24 @@ São quatro módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9)
 e [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8).
 O quinto módulo com estudos implementados é [Deep Learning](04-deep-learning/)
-(6/10); os Dias 59–62 continuam planejados.
+(7/10); os Dias 60–62 continuam planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 58 — Inicialização de Pesos e Estabilidade de Treinamento](04-deep-learning/58-weight-initialization/).
-Ele conecta Xavier, He, vanishing/exploding gradients e normalização, com
-propagação NumPy, inicializadores PyTorch e gradientes por diferenças finitas
-verificados. O diagnóstico sintético em CPU compara cinco configurações,
-separando o gradiente do loss quadrático de uma sonda com gradiente de saída
-fixo. Uma seed e redes de largura constante delimitam a evidência; não há
-atualizações de pesos ou treinamento supervisionado na fase analítica.
-O laboratório visual separado acrescenta dashboard HTML offline com seletores,
-superfície 3D de propagação medida, cinco GIFs, mecanismos de BatchNorm/LayerNorm,
-treinamento sintético com múltiplas seeds e espectros opcionais do Jacobiano.
-Esses experimentos têm protocolo próprio e não estabelecem um ranking universal.
+O tópico mais recente é o [Dia 59 — CNNs](04-deep-learning/59-cnns/).
+Ele conecta filtros compartilhados, canais, stride, padding, campo receptivo
+e pooling a um classificador PyTorch de 98 parâmetros. A implementação NumPy
+é verificada contra PyTorch, com testes de geometria espacial e treino em CPU.
+O experimento usa barras inteiramente sintéticas, 256 imagens de treino e 128
+de teste com outra seed. O resultado mede apenas transferência para novas
+amostras do mesmo gerador; não estabelece robustez ou desempenho em imagens
+reais. O registro datado preserva configuração, métricas e limitações.
+O laboratório visual separado acrescenta operações passo a passo, seis GIFs,
+dashboard Streamlit, canais RGB e arquitetura em 3D offline, checkpoints reais
+e comparação CNN/MLP em imagens de 32×32, com deslocamentos, ruído e análise
+de falhas. Esse protocolo usa duas seeds e não substitui o estudo analítico
+de 16×16 nem estabelece um ranking geral entre arquiteturas.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
