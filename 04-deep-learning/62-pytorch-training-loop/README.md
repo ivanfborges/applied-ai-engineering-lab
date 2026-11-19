@@ -85,6 +85,11 @@ Everything runs on CPU with the same canonical installation above.
 
 ![Measured online and frozen training loss, validation loss and selected epoch](assets/08_training_validation.png)
 
+The historical preview's right panel says “Observed population gap”. Its
+plotted quantity is the **empirical validation–frozen-training BCE difference**,
+not a known population-risk gap. The generator uses that more precise label;
+the original preview and measurements are preserved.
+
 The [selected-model boundary comparison](assets/07_final_comparison.png) is a
 third curated preview. These previews come from the distinct 600-row,
 2→8→1 visual protocol. They must not be combined with the historical

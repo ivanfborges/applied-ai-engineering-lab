@@ -21,6 +21,11 @@ Dependency ranges remain in [pyproject.toml](../../pyproject.toml). NumPy,
 Matplotlib, Pillow and Plotly are base dependencies; PyTorch is supplied by
 `deep-learning`. No separate dependency list or external image renderer is used.
 
+Use `python` from your own activated environment. Paths under `.local/` in
+dated verification transcripts identify the executor's private environment,
+not a dependency supplied by a fresh clone. Use a new output filename or run
+directory instead of replacing an earlier record.
+
 `--quick` generates the dataset GIF plus dataset, BCE, training/validation and
 dashboard PNGs. Defaults: 240 observations, 16 epochs, 12 requested frames and
 a 25×25 boundary grid. `--all` generates all ten demonstrations: nine PNGs,
@@ -278,6 +283,14 @@ not mobile, accessibility or cross-browser validation.
 The latest full gallery decoded successfully: nine PNGs, all 43 composited
 frames across four GIFs, and three HTML files. Export hashes matched their
 manifests, and the selected previews matched the full-run files byte-for-byte.
-The prior analytical implementation, its dated result, the private raw studies
-and the unrelated Day 61 files retained their recorded hashes. Interpretations
-remain pending author review; no commit or push was performed.
+The analytical implementation and its dated result were preserved.
+Interpretations remain pending author review.
+
+### Label clarification — 2026-11-19
+
+The generator now calls the right panel of `08_training_validation.png` an
+“Empirical validation–train gap (signed)”: validation BCE minus frozen training
+BCE on their respective samples. The historical selected preview retains its
+earlier “Observed population gap” title. No values, curves, checkpoint choices
+or historical images were changed; this is a terminology correction, not a
+new experiment or an estimate of a known population-risk gap.

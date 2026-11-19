@@ -333,7 +333,7 @@ def training_visual(lab: dict, folder: Path) -> None:
     axes[1].plot(epoch, gap, color=COLORS["gradient"])
     axes[1].axhline(0, color="grey", linewidth=1)
     axes[1].scatter(best, gap[best], c=COLORS["update"], s=70)
-    axes[1].set(xlabel="Epoch", ylabel="Validation BCE − frozen train BCE (nats)", title="Observed population gap (signed)")
+    axes[1].set(xlabel="Epoch", ylabel="Validation BCE − frozen train BCE (nats)", title="Empirical validation–train gap (signed)")
     finish(fig, "08 · Validation selects a checkpoint; online training loss has different semantics",
            "train() + updates during epoch → eval() + inference_mode() at a fixed checkpoint",
            "A positive gap can have several causes; these observations alone do not establish overfitting.")

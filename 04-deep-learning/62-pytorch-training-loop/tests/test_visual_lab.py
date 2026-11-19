@@ -40,6 +40,23 @@ def test_partitions_scaling_orders_and_unequal_tail(small_lab):
     np.testing.assert_array_equal(run["orders"], small_lab["linear"]["orders"])
 
 
+def test_training_gap_is_labeled_as_an_empirical_sample_difference(small_lab, tmp_path, monkeypatch):
+    captured = []
+
+    def inspect(figure, destination):
+        axis = figure.axes[1]
+        rows = small_lab["mlp"]["history"]
+        expected = [row["validation_loss"] - row["train_loss"] for row in rows]
+        np.testing.assert_allclose(axis.lines[0].get_ydata(), expected)
+        assert axis.get_title() == "Empirical validation–train gap (signed)"
+        captured.append(destination.name)
+
+    monkeypatch.setattr(visuals, "save_png", inspect)
+    visuals.training_visual(small_lab, tmp_path)
+    assert captured == ["08_training_validation.png"]
+    assert list(tmp_path.iterdir()) == []
+
+
 def test_event_forward_chain_rule_and_parameter_gradients_replay(small_lab):
     for event in small_lab["mlp"]["events"]:
         model = core.make_model("mlp", 0)
