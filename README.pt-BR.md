@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**62 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação e 10 de deep learning.** O roteiro
+**63 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 1 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -17,26 +17,23 @@ São cinco módulos com todos os tópicos implementados:
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9),
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
+O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
+foi iniciado e tem 1/15 estudos implementados; os Dias 64–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 62 — PyTorch Training Loop](04-deep-learning/62-pytorch-training-loop/).
-Ele conecta Dataset/DataLoader, logits, loss, backward e atualização à seleção
-por validação e avaliação final. O exemplo NumPy expõe gradientes logísticos;
-o PyTorch compara um modelo linear com uma MLP em dados inteiramente sintéticos,
-com normalização ajustada apenas no treino. Os testes cobrem gradientes,
-limpeza de buffers, lotes desiguais, avaliação sem alteração de estado e
-restauração do checkpoint. Na seed 42, a validação selecionou a MLP, que obteve
-77,33% de acurácia no teste final de 300 casos. O registro datado preserva
-hipótese, configuração e limites: uma seed e um orçamento fixo não estabelecem
-superioridade geral nem desempenho em produção.
-O laboratório visual separado acrescenta dez demonstrações, quatro GIFs e
-três HTMLs offline: lotes reais, forward/backward, superfície logística 3D,
-controles de otimizador/taxa/lote e um dashboard sincronizado por update.
-Seu protocolo de 600 casos e MLP 2→8→1 permanece separado do estudo analítico.
+O tópico mais recente é o [Dia 63 — Classical NLP](05-transformers-llms/63-classical-nlp/).
+Ele conecta normalização Unicode, tokenização e n-grams à informação preservada
+nas representações lexicais. Inclui contagens didáticas verificadas contra
+scikit-learn e diagnósticos TF-IDF em seis frases administrativas sintéticas,
+com controles para perda de negação e consultas sem features conhecidas.
+Stemming e lematização são ilustrados por regras limitadas de sufixos e uma
+tabela fechada com POS fornecido, sem alegação de análise linguística geral.
+O registro datado separa resultados observados de candidatos de interpretação;
+não há benchmark de relevância ou evidência de desempenho em produção.
 A revisão das interpretações pelo autor está pendente.
-Os módulos 5–11 continuam planejados; o inventário em inglês detalha cada estudo.
+Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
 Implementação, verificação automatizada e revisão de interpretações são estados
 distintos. Itens explicitamente pendentes continuam pendentes; revisões técnicas

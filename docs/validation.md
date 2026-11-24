@@ -9,7 +9,8 @@ results, and do not silently replace historical experiment records.
 
 ```bash
 python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning,nlp]"
+python -m nltk.downloader -d .local/nltk_data wordnet
 python -m pip check
 python scripts/validate_repo.py syntax
 python scripts/validate_repo.py links
@@ -31,6 +32,11 @@ The `experimentation` extra supplies statsmodels for the Day 46 visual lab,
 Day 48 correction checks and Day 51 clustered inference; their relevant tests
 require the dependency.
 Notebooks additionally use `.[notebooks]` and are not executed by this runner.
+Day 63's visual lab uses the `nlp` extra for NLTK and an explicit WordNet
+download for resource-backed morphology. Its analytical scripts need neither.
+CI installs both for the real morphology tests; runtime sections report a missing
+resource and allow unrelated demonstrations to continue. Widgets never download
+resources. WordNet data stays ignored under `.local/nltk_data/`.
 
 For a small change, run its specific test file, then syntax and links:
 

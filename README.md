@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**62 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics and 10 deep learning topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**63 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics, 10 deep learning topics and 1 NLP/Transformers/LLMs topic.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -25,11 +25,12 @@ bounded experiments, not production deployments.
 
 [Deep Learning](04-deep-learning/) begins with perceptrons, nonlinear hidden
 representations and explicit backpropagation, separating capacity, gradients,
-fitting and generalization.
+fitting and generalization. [NLP, Transformers and LLMs](05-transformers-llms/)
+opens with classical text representations, information loss and lexical features.
 
-- Latest topic: [Day 62 — PyTorch Training Loop](04-deep-learning/62-pytorch-training-loop/)
-- Latest module with implemented studies: [Deep Learning](04-deep-learning/) — 10 of 10 topics implemented; interpretation review pending
-- Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/) and [Deep Learning](04-deep-learning/)
+- Latest topic: [Day 63 — Classical NLP](05-transformers-llms/63-classical-nlp/)
+- Latest module with implemented studies: [NLP, Transformers and LLMs](05-transformers-llms/) — 1 of 15 topics implemented; interpretation review pending
+- Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/), [Deep Learning](04-deep-learning/) and [NLP, Transformers and LLMs](05-transformers-llms/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
 Planned modules are not presented as completed work. A module directory is
@@ -55,7 +56,7 @@ inspect its code and tests. For the full curriculum, use the inventory below.
 Interpretations explicitly marked for author review remain pending across the
 [ML module](01-classical-machine-learning/). Implementation and passing tests
 do not approve them on the author's behalf.
-The same distinction applies to the unsupervised, experimentation and deep learning modules:
+The same distinction applies to the unsupervised, experimentation, deep learning and NLP modules:
 explicitly pending items remain pending; scoped technical reviews are identified
 separately in the [curation record](docs/CURATION.md).
 
@@ -129,6 +130,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 60 | [RNNs, LSTMs and GRUs](04-deep-learning/60-rnn-lstm-gru/) | Tested cells, chunked states and checkpoints; offline gate controls, five GIFs, actual autograd, PCA state trajectories in 3D and three-seed synthetic comparison with an optional parameter-budget control; analytical/visual protocols separate; interpretation review pending |
 | 61 | [Autoencoders](04-deep-learning/61-autoencoders/) | Tested linear gradients/autograd and PCA reconstruction bound; synthetic normal-only PyTorch/PCA/Isolation Forest comparison with independent calibration and two anomaly mechanisms; interpretation review pending |
 | 62 | [PyTorch Training Loop](04-deep-learning/62-pytorch-training-loop/) | Tested gradients, weighted losses and checkpoints; ten-part visual lab with four GIFs, offline 3D objective, optimizer controls and synchronized update replay; separate analytical/visual protocols; interpretation review pending |
+| 63 | [Classical NLP](05-transformers-llms/63-classical-nlp/) | Tested Unicode analyzer and n-gram counts against scikit-learn; synthetic sparse lexical diagnostics, negation-loss and OOV controls; limited morphology demonstrations; interpretation review pending |
 
 ## Roadmap
 
@@ -139,7 +141,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
 | 4 | [Deep Learning](04-deep-learning/) | 53–62 | **10/10 studies implemented; interpretation review pending** |
-| 5 | NLP, Transformers, and LLMs | 63–77 | Planned |
+| 5 | [NLP, Transformers, and LLMs](05-transformers-llms/) | 63–77 | **1/15 studies implemented; interpretation review pending** |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |
 | 8 | MLOps and LLMOps | 101–114 | Planned |
@@ -256,7 +258,7 @@ applied-ai-engineering-lab/
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
 ├── 03-statistics-experimentation/          # Days 45–52 implemented
 ├── 04-deep-learning/                       # Days 53–62 implemented
-├── 05-transformers-llms/                   # published when started
+├── 05-transformers-llms/                   # Day 63 implemented; Days 64–77 planned
 ├── 06-rag-semantic-search/                 # published when started
 ├── 07-agents/                              # published when started
 ├── 08-mlops-llmops/                        # published when started

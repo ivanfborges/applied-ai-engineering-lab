@@ -42,6 +42,9 @@ data/processed/
 models/
 outputs/
 
+# Day 63 visual lab: all exports remain local pending preview review.
+05-transformers-llms/63-classical-nlp/assets/generated/
+
 # Day 60: three teaching GIFs and one standalone offline gate explorer.
 04-deep-learning/60-rnn-lstm-gru/assets/*
 !04-deep-learning/60-rnn-lstm-gru/assets/01_rnn_unrolled.gif

@@ -22,6 +22,9 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
+nlp = [
+    "nltk>=3.9,<4",
+]
 deep-learning = [
     "torch>=2.6,<3",
 ]
