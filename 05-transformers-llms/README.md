@@ -2,16 +2,17 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **3 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **4 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 66–77 remain planned in the roadmap, including attention,
-Transformers, LLM tokenization, training and inference.
+Days 67–77 remain planned in the roadmap, including Transformer architecture,
+multi-head attention, LLM tokenization, training and inference.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
 | 63 | [Classical NLP](63-classical-nlp/) | Tested Unicode/count core; separate 13-group offline visual lab with real NLTK morphology, local BPE, TF-IDF/SVD geometry, Counter language models and judged synthetic retrieval/OCR experiments; author interpretation review required |
 | 64 | [Bag of Words, TF-IDF and Text Similarity](64-bow-tfidf-text-similarity/) | Tested analytical TF-IDF/cosine; separate 18-section offline visual lab with true 3D vocabulary vectors, CSR bytes, BM25, query contributions, SVD, lexical RRF and judged synthetic retrieval; author interpretation review required |
 | 65 | [Word2Vec, GloVe and Static Embeddings](65-static-embeddings/) | Tested full-softmax CBOW/Skip-gram and GloVe gradients; synthetic cosine neighborhoods and analogy failures/successes; author interpretation review required |
+| 66 | [Attention Mechanism](66-attention-mechanism/) | Tested Q/K/V attention, row normalization and masks; CPU PyTorch SDPA agreement, synthetic causal/value controls and seeded scaling experiment; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -38,3 +39,10 @@ rankings on 32 synthetic sentences. Low reconstruction loss and selected
 positive similarity margins did not establish useful neighborhoods in every
 case. Negative sampling remains theory only; no semantic benchmark or production
 retriever was evaluated.
+
+Day 66 asks how compatibility scores become a weighted value representation.
+Its [dated analytical record](66-attention-mechanism/notes.md#execution-record--2026-11-24)
+separates numerical equivalence and controlled synthetic changes from pending
+interpretations. The NumPy reference supports rectangular cross-attention and
+explicit visibility masks, rejecting fully blocked rows. No trained semantic
+model, performance benchmark or production inference system was evaluated.

@@ -54,6 +54,18 @@ outputs/
 !05-transformers-llms/65-static-embeddings/outputs/previews/42_similarity_comparison.png
 !05-transformers-llms/65-static-embeddings/outputs/previews/30_polysemy_frequency_experiment.gif
 
+# Day 66: six inspected previews; dated exports, HTML and measurements stay local.
+!05-transformers-llms/66-attention-mechanism/outputs/
+05-transformers-llms/66-attention-mechanism/outputs/*
+!05-transformers-llms/66-attention-mechanism/outputs/previews/
+05-transformers-llms/66-attention-mechanism/outputs/previews/*
+!05-transformers-llms/66-attention-mechanism/outputs/previews/03_attention_pipeline.gif
+!05-transformers-llms/66-attention-mechanism/outputs/previews/02_query_key_alignment.gif
+!05-transformers-llms/66-attention-mechanism/outputs/previews/06_weighted_value_aggregation.gif
+!05-transformers-llms/66-attention-mechanism/outputs/previews/04_attention_entropy.png
+!05-transformers-llms/66-attention-mechanism/outputs/previews/08_full_vs_causal_attention.png
+!05-transformers-llms/66-attention-mechanism/outputs/previews/11_attention_complexity.png
+
 # Day 63 visual lab: all exports remain local pending preview review.
 05-transformers-llms/63-classical-nlp/assets/generated/
 
