@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**63 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 1 de NLP/Transformers/LLMs.** O roteiro
+**65 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 3 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,18 +18,16 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 1/15 estudos implementados; os Dias 64–77 seguem planejados.
+foi iniciado e tem 3/15 estudos implementados; os Dias 66–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 63 — Classical NLP](05-transformers-llms/63-classical-nlp/).
-Ele conecta normalização Unicode, tokenização e n-grams à informação preservada
-nas representações lexicais. Inclui contagens didáticas verificadas contra
-scikit-learn e diagnósticos TF-IDF em seis frases administrativas sintéticas,
-com controles para perda de negação e consultas sem features conhecidas.
-Stemming e lematização são ilustrados por regras limitadas de sufixos e uma
-tabela fechada com POS fornecido, sem alegação de análise linguística geral.
+O tópico mais recente é o [Dia 65 — Word2Vec, GloVe and Static Embeddings](05-transformers-llms/65-static-embeddings/).
+Ele conecta semântica distribucional, previsão de contexto e reconstrução de
+coocorrências. Inclui CBOW e Skip-gram com softmax completo e GloVe em NumPy,
+com gradientes verificados por diferenças finitas. O corpus de 32 frases
+sintéticas permite inspecionar cosseno, vizinhos e analogias, inclusive falhas.
 O registro datado separa resultados observados de candidatos de interpretação;
 não há benchmark de relevância ou evidência de desempenho em produção.
 A revisão das interpretações pelo autor está pendente.

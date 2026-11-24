@@ -42,6 +42,18 @@ data/processed/
 models/
 outputs/
 
+# Day 65: six locally inspected preview candidates; dated experiments stay ignored.
+!05-transformers-llms/65-static-embeddings/outputs/
+05-transformers-llms/65-static-embeddings/outputs/*
+!05-transformers-llms/65-static-embeddings/outputs/previews/
+05-transformers-llms/65-static-embeddings/outputs/previews/*
+!05-transformers-llms/65-static-embeddings/outputs/previews/44_sgns_training_evolution.gif
+!05-transformers-llms/65-static-embeddings/outputs/previews/05_negative_sampling_dynamics.gif
+!05-transformers-llms/65-static-embeddings/outputs/previews/17_glove_matrix_reconstruction.gif
+!05-transformers-llms/65-static-embeddings/outputs/previews/27_learned_vector_analogy.gif
+!05-transformers-llms/65-static-embeddings/outputs/previews/42_similarity_comparison.png
+!05-transformers-llms/65-static-embeddings/outputs/previews/30_polysemy_frequency_experiment.gif
+
 # Day 63 visual lab: all exports remain local pending preview review.
 05-transformers-llms/63-classical-nlp/assets/generated/
 
