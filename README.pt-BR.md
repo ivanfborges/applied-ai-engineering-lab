@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**69 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 7 de NLP/Transformers/LLMs.** O roteiro
+**70 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 8 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,23 +18,23 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 7/15 estudos implementados; os Dias 70–77 seguem planejados.
+foi iniciado e tem 8/15 estudos implementados; os Dias 71–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 69 — Positional Encoding](05-transformers-llms/69-positional-encoding/).
-Ele conecta equivariância de atenção, posições sinusoidais, tabelas absolutas,
-rotações RoPE e vieses causais ALiBi. Inclui implementações NumPy testadas,
-controles de permutação com PyTorch em CPU e comparação entre atenção completa
-e cache com offsets corretos ou IDs reiniciados. Os vetores são sintéticos e
-os pesos não foram treinados. O registro datado separa identidades numéricas
-de qualidade de modelo; não é um benchmark de linguagem natural, validação de
-contexto longo ou evidência de produção.
-O laboratório visual offline reúne 13 demonstrações, 12 GIFs, geometria exata
-e projetada por PCA, rotações por pares, ALiBi e controles interativos de
-atenção. A precisão de fases RoPE em float32/64 foi medida separadamente;
-a página de RAG mostra montagem de contexto e desenho de avaliação, sem LLM.
+O tópico mais recente é o [Dia 70 — Feed-Forward Networks, Residual Connections and Layer Normalization](05-transformers-llms/70-transformer-ffn-residual-norm/).
+Ele conecta transformação por token, caminhos residuais e normalização das
+features. Inclui FFN e LayerNorm em NumPy, produto vetor-Jacobiano testado
+contra diferenças finitas e autograd, além de blocos PyTorch em CPU com
+parâmetros iniciais pareados. O diagnóstico usa três sementes, remoção dos
+residuais e um controle com normalização final comum. Os tensores são
+sintéticos e não houve treinamento. O registro datado separa propagação na
+inicialização de convergência, qualidade de linguagem e evidência de produção.
+O laboratório visual separado reúne onze grupos, nove GIFs e doze HTMLs
+interativos offline, com geometria de normalização, gating SwiGLU, fluxo real
+forward/backward e diagnósticos por profundidade em CPU. Os exports permanecem
+ignorados; a seleção de previews públicos aguarda decisão do autor.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

@@ -10,7 +10,7 @@ production-oriented reasoning across Data Science and Applied AI Engineering.
 
 ## Current Status
 
-**69 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics, 10 deep learning topics and 7 NLP/Transformers/LLMs topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
+**70 implemented studies: 15 foundations, 20 classical ML topics, 9 unsupervised learning/recommender topics, 8 experimentation topics, 10 deep learning topics and 8 NLP/Transformers/LLMs topics.** The 140-topic roadmap is a learning plan, not 140 delivered projects. Numerical implementations, reported observations and author-reviewed conclusions have different evidence requirements; see the [curation record](docs/CURATION.md).
 
 Explore [Foundations](00-foundations/) for mathematical and statistical building
 blocks, and [Classical ML](01-classical-machine-learning/) for leakage-aware
@@ -28,8 +28,8 @@ representations and explicit backpropagation, separating capacity, gradients,
 fitting and generalization. [NLP, Transformers and LLMs](05-transformers-llms/)
 opens with classical text representations, information loss and lexical features.
 
-- Latest topic: [Day 69 — Positional Encoding](05-transformers-llms/69-positional-encoding/)
-- Latest module with implemented studies: [NLP, Transformers and LLMs](05-transformers-llms/) — 7 of 15 topics implemented; interpretation review pending
+- Latest topic: [Day 70 — Feed-Forward Networks, Residual Connections and Layer Normalization](05-transformers-llms/70-transformer-ffn-residual-norm/)
+- Latest module with implemented studies: [NLP, Transformers and LLMs](05-transformers-llms/) — 8 of 15 topics implemented; interpretation review pending
 - Modules with implemented studies: [Foundations](00-foundations/), [Classical Machine Learning](01-classical-machine-learning/), [Unsupervised Learning and Recommender Systems](02-unsupervised-recommender-systems/), [Experimentation, Causality and Product Thinking](03-statistics-experimentation/), [Deep Learning](04-deep-learning/) and [NLP, Transformers and LLMs](05-transformers-llms/)
 - Full plan: [140-day study roadmap](ROADMAP.md)
 
@@ -137,6 +137,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 67 | [Transformer Architecture I](05-transformers-llms/67-transformer-architecture-i/) | Tested fixed-parameter NumPy encoder-decoder composition and CPU PyTorch reversal training; shifted targets, causal invariance and disjoint-sequence autoregressive evaluation; interpretation review pending |
 | 68 | [Transformer Architecture II: Multi-Head Attention](05-transformers-llms/68-transformer-architecture-ii/) | Tested NumPy/PyTorch per-head parity; offline lab with 3D projection/QKV controls, ten GIFs, maps/graphs, causal and identical-map controls, theoretical KV/complexity explorers and CPU online softmax; interpretation review pending |
 | 69 | [Positional Encoding](05-transformers-llms/69-positional-encoding/) | Tested positional identities and cache offsets; offline lab with 13 demonstrations, 12 GIFs, exact/PCA geometry, rotary planes, ALiBi, matched attention and measured float32/64 precision; interpretation review pending |
+| 70 | [Feed-Forward Networks, Residual Connections and Layer Normalization](05-transformers-llms/70-transformer-ffn-residual-norm/) | Tested FFN/LayerNorm forward and VJP; separate eleven-group offline lab with actual forward/backward traces, nine GIFs, twelve interactive HTMLs, normalization/gating controls and paired CPU depth diagnostics; no training; interpretation review pending |
 
 ## Roadmap
 
@@ -147,7 +148,7 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 2 | Unsupervised Learning and Recommender Systems | 36–44 | **9/9 studies implemented; interpretation review pending** |
 | 3 | Experimentation, Causality, and Product Thinking | 45–52 | **8/8 studies implemented; interpretation review pending** |
 | 4 | [Deep Learning](04-deep-learning/) | 53–62 | **10/10 studies implemented; interpretation review pending** |
-| 5 | [NLP, Transformers, and LLMs](05-transformers-llms/) | 63–77 | **7/15 studies implemented; interpretation review pending** |
+| 5 | [NLP, Transformers, and LLMs](05-transformers-llms/) | 63–77 | **8/15 studies implemented; interpretation review pending** |
 | 6 | Embeddings, Semantic Search, and RAG | 78–88 | Planned |
 | 7 | Agents and Agentic Workflows | 89–100 | Planned |
 | 8 | MLOps and LLMOps | 101–114 | Planned |
@@ -264,7 +265,7 @@ applied-ai-engineering-lab/
 ├── 02-unsupervised-recommender-systems/    # Days 36–44 implemented
 ├── 03-statistics-experimentation/          # Days 45–52 implemented
 ├── 04-deep-learning/                       # Days 53–62 implemented
-├── 05-transformers-llms/                   # Days 63–69 implemented; Days 70–77 planned
+├── 05-transformers-llms/                   # Days 63–70 implemented; Days 71–77 planned
 ├── 06-rag-semantic-search/                 # published when started
 ├── 07-agents/                              # published when started
 ├── 08-mlops-llmops/                        # published when started
