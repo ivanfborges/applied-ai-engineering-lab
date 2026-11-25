@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**67 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 5 de NLP/Transformers/LLMs.** O roteiro
+**68 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 6 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,19 +18,23 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 5/15 estudos implementados; os Dias 68–77 seguem planejados.
+foi iniciado e tem 6/15 estudos implementados; os Dias 69–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 67 — Transformer Architecture I](05-transformers-llms/67-transformer-architecture-i/).
-Ele conecta encoder, decoder, atenção causal e cruzada, FFNs, resíduos e
-normalização. Inclui um bloco NumPy com parâmetros fixos e treino PyTorch em CPU
-para reversão de sequências sintéticas. Os testes verificam deslocamento dos
-alvos, causalidade, gradientes e geração sem acesso aos alvos. A avaliação separa
-teacher forcing de geração autoregressiva em sequências distintas das de treino.
-O registro datado distingue resultados sintéticos de candidatos de interpretação;
-não é um benchmark de linguagem natural ou evidência de produção.
+O tópico mais recente é o [Dia 68 — Transformer Architecture II: Multi-Head Attention](05-transformers-llms/68-transformer-architecture-ii/).
+Ele conecta projeções, múltiplas distribuições de atenção e combinação das
+cabeças. Inclui um forward NumPy e comparação por cabeça com PyTorch em CPU,
+controles causais e de padding, além de um experimento de cabeças e escala com
+largura fixa. Os vetores são sintéticos e os pesos não foram treinados.
+O laboratório visual offline organiza dez módulos com geometria 3D, dez GIFs,
+mapas e grafos por cabeça, projeções/PCA, causalidade e mistura das saídas.
+Inclui exploradores teóricos de MHA/GQA/MQA, KV cache e complexidade, além de
+uma demonstração numérica de softmax em blocos em CPU.
+O registro datado distingue paridade numérica e concentração das distribuições
+de qualidade de modelo; não é um benchmark de linguagem natural ou evidência
+de produção.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

@@ -2,10 +2,10 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **5 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **6 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 68–77 remain planned in the roadmap, including multi-head attention,
-positional encoding, LLM tokenization, training and inference.
+Days 69–77 remain planned in the roadmap, including positional encoding,
+LLM tokenization, training and inference.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -14,6 +14,7 @@ positional encoding, LLM tokenization, training and inference.
 | 65 | [Word2Vec, GloVe and Static Embeddings](65-static-embeddings/) | Tested full-softmax CBOW/Skip-gram and GloVe gradients; synthetic cosine neighborhoods and analogy failures/successes; author interpretation review required |
 | 66 | [Attention Mechanism](66-attention-mechanism/) | Tested Q/K/V attention, row normalization and masks; CPU PyTorch SDPA agreement, synthetic causal/value controls and seeded scaling experiment; author interpretation review required |
 | 67 | [Transformer Architecture I](67-transformer-architecture-i/) | Tested NumPy encoder-decoder composition, shifted targets and causal invariance; CPU PyTorch synthetic reversal with disjoint-sequence teacher-forced/autoregressive evaluation; author interpretation review required |
+| 68 | [Transformer Architecture II: Multi-Head Attention](68-transformer-architecture-ii/) | Tested NumPy/PyTorch parity; separate offline visual lab with 3D projection/QKV controls, ten GIFs, maps/graphs, diversity interventions, theoretical KV/complexity and CPU online softmax; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -56,3 +57,21 @@ NumPy block retains parameters across calls but remains untrained. Tests cover
 causal invariance, source sensitivity, target shifting and finite gradients.
 No natural-language benchmark, training ablation or production system was evaluated;
 interpretation candidates remain pending author review.
+
+Day 68 asks what multiple routing distributions add at fixed model width.
+Its [dated analytical record](68-transformer-architecture-ii/notes.md#execution-record--2026-11-25)
+reports matched-weight NumPy/PyTorch forward agreement, a future-token
+perturbation control and a head-width/scaling sweep on untrained synthetic
+vectors. Tests include an independent per-head loop and identical-map/distinct-value
+counterexample. GQA/MQA and KV cache calculations remain theory only; no model
+quality, pruning or runtime benchmark was evaluated. Interpretation candidates
+remain pending author review.
+
+Its separate [visual guide](68-transformer-architecture-ii/VISUAL_LAB.md) documents
+the seed-168 lab, actual intermediate tensors, direct/PCA projection spaces,
+constructed routing advantage, causal-prefix controls and identical-map/distinct-value
+interventions. Ten learning modules connect all fifteen visual questions through
+offline HTML, GIFs and inspectable frames. MHA/GQA/MQA/cache comparisons are
+theoretical; the online-softmax identity is computed in CPU NumPy and does not
+reproduce a FlashAttention GPU kernel. Visual measurements and browser checks
+remain distinct from the earlier analytical run and author interpretation review.
