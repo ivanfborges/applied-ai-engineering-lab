@@ -38,6 +38,20 @@ CI installs both for the real morphology tests; runtime sections report a missin
 resource and allow unrelated demonstrations to continue. Widgets never download
 resources. WordNet data stays ignored under `.local/nltk_data/`.
 
+Day 72 uses `tiktoken` from the same `nlp` extra. Its real-encoding tests
+require `cl100k_base` and `o200k_base` resources and do not skip on missing
+dependencies. Prepare them with
+`python -c "import tiktoken; [tiktoken.get_encoding(n) for n in ('cl100k_base', 'o200k_base')]"`
+while online, as CI does during dependency installation. Later runs use the
+hash-verified cache. `TIKTOKEN_CACHE_DIR` can select an ignored local directory;
+otherwise the library uses a system temporary cache. These are tokenizer files,
+not model weights. Tests do not send text to an LLM API.
+Its visual lab additionally uses the same extra's `tokenizers` and `sentencepiece`
+to train small synthetic local models. No Hugging Face model download or account
+is used. Topic tests include AppTest interactions and two temporary real-export
+checks; `--exclude-rendering` omits those exports only. The ten-section app is
+checked directly by its topic tests rather than added to the six-app global registry.
+
 For a small change, run its specific test file, then syntax and links:
 
 ```bash

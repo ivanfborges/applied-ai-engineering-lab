@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**71 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 9 de NLP/Transformers/LLMs.** O roteiro
+**72 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 10 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,21 +18,19 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 9/15 estudos implementados; os Dias 72–77 seguem planejados.
+foi iniciado e tem 10/15 estudos implementados; os Dias 73–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 71 — Encoder-only, Decoder-only and Encoder-Decoder Models](05-transformers-llms/71-encoder-decoder-models/).
-Ele distingue arquitetura, visibilidade dos tokens e objetivos de treinamento
-nas famílias BERT, GPT e T5. Inclui atenção e alinhamento de alvos em NumPy,
-além de blocos PyTorch em CPU com pesos pareados para comparar atenção
-bidirecional e causal. Os controles verificam isolamento de prefixos,
-condicionamento pela fonte e padding no encoder e na cross-attention.
-Os vetores são sintéticos, os blocos têm inicialização aleatória e não houve
-treinamento nem avaliação de qualidade linguística. O registro datado mantém
-esses resultados separados de benchmarks e evidência de produção.
-O JSON gerado permanece ignorado; nenhum preview público foi selecionado.
+O tópico mais recente é o [Dia 72 — Tokenization for LLMs](05-transformers-llms/72-tokenization/).
+Ele conecta BPE, WordPiece e SentencePiece aos limites de contexto, tamanho
+do vocabulário e custos hipotéticos. Inclui BPE educacional determinístico,
+comparação real dos encodings `cl100k_base` e `o200k_base`, reconstrução Unicode
+por bytes e cálculos testados de contexto, custo e parâmetros. Os oito probes
+são sintéticos; não houve avaliação de qualidade linguística, latência ou
+faturamento real. O registro datado separa observações desses limites.
+O JSON e os vocabulários em cache permanecem ignorados; nenhum preview foi criado.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
@@ -84,7 +82,9 @@ Para a suíte integral, inclua as bibliotecas opcionais utilizadas pelos estudos
 
 ```sh
 python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
-python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning]"
+python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning,nlp]"
+python -m nltk.downloader -d .local/nltk_data wordnet
+python -c "import tiktoken; [tiktoken.get_encoding(n) for n in ('cl100k_base', 'o200k_base')]"
 python scripts/validate_repo.py all
 ```
 

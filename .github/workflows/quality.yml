@@ -40,11 +40,12 @@ jobs:
           python -m pip install "torch>=2.6,<3" --index-url https://download.pytorch.org/whl/cpu
           python -m pip install -e ".[dev,imbalance,explainability,boosting,manifold,experimentation,deep-learning,nlp]"
           python -m nltk.downloader -d .local/nltk_data wordnet
+          python -c "import tiktoken; [tiktoken.get_encoding(name) for name in ('cl100k_base', 'o200k_base')]"
 
       - name: Check installed dependency contract
         run: |
           python -m pip check
-          python -c "import imblearn, shap, xgboost, lightgbm, catboost, umap, statsmodels, torch, nltk"
+          python -c "import imblearn, shap, xgboost, lightgbm, catboost, umap, statsmodels, torch, nltk, tiktoken, tokenizers, sentencepiece"
 
       - name: Check Python syntax
         run: python scripts/validate_repo.py syntax

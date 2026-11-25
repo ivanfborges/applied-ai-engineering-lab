@@ -2,10 +2,10 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **9 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **10 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 72–77 remain planned in the roadmap, including LLM tokenization,
-training and inference.
+Days 73–77 remain planned in the roadmap, including pretraining,
+fine-tuning, inference, prompting and structured outputs.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -18,6 +18,7 @@ training and inference.
 | 69 | [Positional Encoding](69-positional-encoding/) | Tested positional identities/cache offsets; separate offline lab with 13 demonstrations, 12 GIFs, exact/PCA geometry, rotary pair contributions, ALiBi and measured float32/64 precision; author interpretation review required |
 | 70 | [Feed-Forward Networks, Residual Connections and Layer Normalization](70-transformer-ffn-residual-norm/) | Tested FFN/LayerNorm forward and VJP; eleven-group offline lab with nine GIFs, twelve interactive HTMLs, actual forward/backward traces, normalization/gating controls and paired CPU depth diagnostics; no training; author interpretation review required |
 | 71 | [Encoder-only, Decoder-only and Encoder-Decoder Models](71-encoder-decoder-models/) | Tested attention and target shifts; paired causal/bidirectional CPU blocks, source-conditioned targets and padding isolation on synthetic vectors; no training or language benchmark; author interpretation review required |
+| 72 | [Tokenization for LLMs](72-tokenization/) | Tested character BPE ranks, real byte-BPE IDs/Unicode reconstruction and hypothetical context/cost budgets; eight synthetic probes, no model quality or provider billing evaluation; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -124,3 +125,16 @@ agrees with CPU PyTorch SDPA on a rectangular masked case. These are
 connectivity checks, not pretrained-model comparisons, language-quality
 measurements or serving benchmarks. Interpretation candidates require author
 review; the generated JSON remains ignored.
+
+Day 72 asks how learned text units affect sequence length and request budgets.
+Its [dated analytical record](72-tokenization/notes.md#execution-record--2026-11-25)
+reports deterministic character-BPE merges and actual counts under two named
+pretrained byte encodings. The notes distinguish WordPiece inference from its
+reconstructed training score and SentencePiece from the algorithms it supports.
+Hypothetical cost and weight calculations are separate from measured token
+counts. Its separate [visual guide](72-tokenization/VISUAL_LAB.md) documents
+sixteen CPU visual groups and a ten-section live dashboard, including locally
+trained WordPiece/SentencePiece models, Unigram paths, Unicode, multilingual/OCR
+counts and token-safe chunking. No LLM API or language-quality benchmark was
+executed. Interpretations and preview selection require author review; generated
+exports, local models and full JSON traces stay ignored.

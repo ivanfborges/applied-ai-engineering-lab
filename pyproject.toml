@@ -24,6 +24,9 @@ dependencies = [
 [project.optional-dependencies]
 nlp = [
     "nltk>=3.9,<4",
+    "tiktoken>=0.12,<1",
+    "tokenizers>=0.22,<0.23",
+    "sentencepiece>=0.2,<0.3",
 ]
 deep-learning = [
     "torch>=2.6,<3",
