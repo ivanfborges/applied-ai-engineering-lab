@@ -42,6 +42,12 @@ data/processed/
 models/
 outputs/
 
+# Day 69: three inspected previews; galleries, frames and dated records stay ignored.
+05-transformers-llms/69-positional-encoding/assets/*
+!05-transformers-llms/69-positional-encoding/assets/rope_relative_shift_invariance.gif
+!05-transformers-llms/69-positional-encoding/assets/positional_encoding_heatmap.png
+!05-transformers-llms/69-positional-encoding/assets/attention_mechanisms_comparison.png
+
 # Day 68: four inspected previews; complete galleries, frames and run records stay local.
 05-transformers-llms/68-transformer-architecture-ii/assets/*
 !05-transformers-llms/68-transformer-architecture-ii/assets/01_multi_head_attention_pipeline.gif

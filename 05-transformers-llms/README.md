@@ -2,9 +2,9 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **6 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **7 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 69–77 remain planned in the roadmap, including positional encoding,
+Days 70–77 remain planned in the roadmap, including feed-forward blocks,
 LLM tokenization, training and inference.
 
 | Day | Implemented study | Evidence and review status |
@@ -15,6 +15,7 @@ LLM tokenization, training and inference.
 | 66 | [Attention Mechanism](66-attention-mechanism/) | Tested Q/K/V attention, row normalization and masks; CPU PyTorch SDPA agreement, synthetic causal/value controls and seeded scaling experiment; author interpretation review required |
 | 67 | [Transformer Architecture I](67-transformer-architecture-i/) | Tested NumPy encoder-decoder composition, shifted targets and causal invariance; CPU PyTorch synthetic reversal with disjoint-sequence teacher-forced/autoregressive evaluation; author interpretation review required |
 | 68 | [Transformer Architecture II: Multi-Head Attention](68-transformer-architecture-ii/) | Tested NumPy/PyTorch parity; separate offline visual lab with 3D projection/QKV controls, ten GIFs, maps/graphs, diversity interventions, theoretical KV/complexity and CPU online softmax; author interpretation review required |
+| 69 | [Positional Encoding](69-positional-encoding/) | Tested positional identities/cache offsets; separate offline lab with 13 demonstrations, 12 GIFs, exact/PCA geometry, rotary pair contributions, ALiBi and measured float32/64 precision; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -75,3 +76,21 @@ offline HTML, GIFs and inspectable frames. MHA/GQA/MQA/cache comparisons are
 theoretical; the online-softmax identity is computed in CPU NumPy and does not
 reproduce a FlashAttention GPU kernel. Visual measurements and browser checks
 remain distinct from the earlier analytical run and author interpretation review.
+
+Day 69 asks how content-only attention acquires information about token order.
+Its [dated analytical record](69-positional-encoding/notes.md#execution-record--2026-11-25)
+separates equivariance, fixed-coordinate and fixed-causal-mask interventions.
+NumPy checks cover sinusoidal offset identities, rotary norm/relative-dot-product
+properties and supplied-slope ALiBi distributions. A one-layer cache comparison
+detects inconsistent new-token position IDs. No training, long-context quality
+benchmark or production cache runtime was evaluated; interpretation candidates
+remain pending author review.
+
+Its separate [visual guide](69-positional-encoding/VISUAL_LAB.md) documents
+seed-269 synthetic controls, exact coordinates versus fixed PCA bases,
+uncentered linear vector addition, multifrequency rotary contributions and
+matched causal attention comparisons. Twelve GIFs complement offline Plotly
+controls; the precision scene measures float32/64 phase construction rather
+than trained-model extrapolation. The RAG scene constructs a synthetic prompt
+and an evaluation design without running an LLM. Visual measurements remain
+separate from the original analytical run and author interpretation review.
