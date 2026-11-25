@@ -2,10 +2,10 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **8 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **9 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 71–77 remain planned in the roadmap, including model families,
-LLM tokenization, training and inference.
+Days 72–77 remain planned in the roadmap, including LLM tokenization,
+training and inference.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -17,6 +17,7 @@ LLM tokenization, training and inference.
 | 68 | [Transformer Architecture II: Multi-Head Attention](68-transformer-architecture-ii/) | Tested NumPy/PyTorch parity; separate offline visual lab with 3D projection/QKV controls, ten GIFs, maps/graphs, diversity interventions, theoretical KV/complexity and CPU online softmax; author interpretation review required |
 | 69 | [Positional Encoding](69-positional-encoding/) | Tested positional identities/cache offsets; separate offline lab with 13 demonstrations, 12 GIFs, exact/PCA geometry, rotary pair contributions, ALiBi and measured float32/64 precision; author interpretation review required |
 | 70 | [Feed-Forward Networks, Residual Connections and Layer Normalization](70-transformer-ffn-residual-norm/) | Tested FFN/LayerNorm forward and VJP; eleven-group offline lab with nine GIFs, twelve interactive HTMLs, actual forward/backward traces, normalization/gating controls and paired CPU depth diagnostics; no training; author interpretation review required |
+| 71 | [Encoder-only, Decoder-only and Encoder-Decoder Models](71-encoder-decoder-models/) | Tested attention and target shifts; paired causal/bidirectional CPU blocks, source-conditioned targets and padding isolation on synthetic vectors; no training or language benchmark; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -113,3 +114,13 @@ forward/backward tensors. Nine GIFs and twelve standalone offline HTMLs are
 generated alongside PNGs and CSVs. These runs remain separate from the
 analytical record; all exports and preview-selection decisions await human
 curation, and interpretations remain pending author review.
+
+Day 71 asks how information visibility and prediction targets distinguish
+BERT, GPT and T5-style families. Its
+[dated analytical record](71-encoder-decoder-models/notes.md#execution-record--2026-11-25)
+reports random-block perturbations, causal prefix invariance and source
+padding controls in both encoding and cross-attention. A NumPy reference
+agrees with CPU PyTorch SDPA on a rectangular masked case. These are
+connectivity checks, not pretrained-model comparisons, language-quality
+measurements or serving benchmarks. Interpretation candidates require author
+review; the generated JSON remains ignored.

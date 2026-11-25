@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**70 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 8 de NLP/Transformers/LLMs.** O roteiro
+**71 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 9 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,23 +18,21 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 8/15 estudos implementados; os Dias 71–77 seguem planejados.
+foi iniciado e tem 9/15 estudos implementados; os Dias 72–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 70 — Feed-Forward Networks, Residual Connections and Layer Normalization](05-transformers-llms/70-transformer-ffn-residual-norm/).
-Ele conecta transformação por token, caminhos residuais e normalização das
-features. Inclui FFN e LayerNorm em NumPy, produto vetor-Jacobiano testado
-contra diferenças finitas e autograd, além de blocos PyTorch em CPU com
-parâmetros iniciais pareados. O diagnóstico usa três sementes, remoção dos
-residuais e um controle com normalização final comum. Os tensores são
-sintéticos e não houve treinamento. O registro datado separa propagação na
-inicialização de convergência, qualidade de linguagem e evidência de produção.
-O laboratório visual separado reúne onze grupos, nove GIFs e doze HTMLs
-interativos offline, com geometria de normalização, gating SwiGLU, fluxo real
-forward/backward e diagnósticos por profundidade em CPU. Os exports permanecem
-ignorados; a seleção de previews públicos aguarda decisão do autor.
+O tópico mais recente é o [Dia 71 — Encoder-only, Decoder-only and Encoder-Decoder Models](05-transformers-llms/71-encoder-decoder-models/).
+Ele distingue arquitetura, visibilidade dos tokens e objetivos de treinamento
+nas famílias BERT, GPT e T5. Inclui atenção e alinhamento de alvos em NumPy,
+além de blocos PyTorch em CPU com pesos pareados para comparar atenção
+bidirecional e causal. Os controles verificam isolamento de prefixos,
+condicionamento pela fonte e padding no encoder e na cross-attention.
+Os vetores são sintéticos, os blocos têm inicialização aleatória e não houve
+treinamento nem avaliação de qualidade linguística. O registro datado mantém
+esses resultados separados de benchmarks e evidência de produção.
+O JSON gerado permanece ignorado; nenhum preview público foi selecionado.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

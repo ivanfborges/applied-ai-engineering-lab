@@ -42,6 +42,13 @@ data/processed/
 models/
 outputs/
 
+# Day 71: four inspected previews; complete galleries and run records stay local.
+05-transformers-llms/71-encoder-decoder-models/assets/*
+!05-transformers-llms/71-encoder-decoder-models/assets/architecture_comparison.png
+!05-transformers-llms/71-encoder-decoder-models/assets/attention_probabilities.png
+!05-transformers-llms/71-encoder-decoder-models/assets/causal_invariance.png
+!05-transformers-llms/71-encoder-decoder-models/assets/hidden_representation_evolution.gif
+
 # Day 69: three inspected previews; galleries, frames and dated records stay ignored.
 05-transformers-llms/69-positional-encoding/assets/*
 !05-transformers-llms/69-positional-encoding/assets/rope_relative_shift_invariance.gif
