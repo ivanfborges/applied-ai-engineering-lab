@@ -2,9 +2,9 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **12 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **13 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 75–77 remain planned in the roadmap, covering inference, prompting
+Days 76–77 remain planned in the roadmap, covering prompting
 and structured outputs.
 
 | Day | Implemented study | Evidence and review status |
@@ -21,6 +21,7 @@ and structured outputs.
 | 72 | [Tokenization for LLMs](72-tokenization/) | Tested character BPE ranks, real byte-BPE IDs/Unicode reconstruction and hypothetical context/cost budgets; eight synthetic probes, no model quality or provider billing evaluation; author interpretation review required |
 | 73 | [LLM Pretraining](73-llm-pretraining/) | Tested CLM/MLM and explicit NumPy gradients; separate 31-artifact offline lab with actual probability/embedding/attention evolution, ten synthetic training scenarios, prefix-only leakage controls and analytical scale/compute; author interpretation review required |
 | 74 | [Fine-Tuning, Instruction Tuning and Alignment](74-fine-tuning-alignment/) | Tested DPO derivatives, response masks and LoRA freezing/merge; separate 14-demo CPU visual lab with 13 GIFs, 21 PNGs and 14 offline HTMLs: reward/KL, matrix ranks, quantization simulation, forgetting and proxy failures; author interpretation review required |
+| 75 | [LLM Inference and Decoding](75-llm-inference-decoding/) | Tested NumPy temperature/top-k/top-p, stable ties and generation stops; synthetic frequencies, filtering interactions and seeded sequence controls; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -180,3 +181,13 @@ These visual configurations and records are separate from the analytical study.
 There is no natural-language, human-feedback, measured-memory or production
 benchmark. All generated assets stay ignored pending author curation; root
 overview updates and interpretation review remain pending.
+
+Day 75 asks how conditional token scores become a controlled output sequence.
+Its [dated analytical record](75-llm-inference-decoding/notes.md#execution-record--2026-11-26)
+reports five temperature conditions with 10,000 draws each, 36 filtering
+configurations, seeded context-dependent sequences and separate EOS/text-stop/
+token-budget outcomes. Numerical tests include threshold-crossing tokens,
+finite extreme logits and matches spanning synthetic fragments. This is an
+educational non-streaming decoder, without pretrained weights, tokenizer
+integration or model-quality/serving benchmarks. Interpretations require author
+review; the dated JSON remains ignored.

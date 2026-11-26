@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**74 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 12 de NLP/Transformers/LLMs.** O roteiro
+**75 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 13 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,19 +18,18 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 12/15 estudos implementados; os Dias 75–77 seguem planejados.
+foi iniciado e tem 13/15 estudos implementados; os Dias 76–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 74 — Fine-Tuning, Instruction Tuning and Alignment](05-transformers-llms/74-fine-tuning-alignment/).
-Ele separa os objetivos SFT/DPO dos mecanismos de adaptação LoRA/adapters e
-discute RLHF, instruction tuning, QLoRA e quando ajustar parâmetros faz sentido.
-O exemplo em CPU usa um seletor sintético de quatro categorias de resposta,
-com métricas distintas de tarefa, preferência e divergência da referência SFT.
-Os testes verificam gradientes DPO, máscaras de resposta, pesos congelados,
-fusão LoRA e reprodução determinística. Não houve treino de LLM, avaliação
-com feedback humano ou benchmark de memória/velocidade. O registro JSON fica ignorado.
+O tópico mais recente é o [Dia 75 — LLM Inference and Decoding](05-transformers-llms/75-llm-inference-decoding/).
+Ele separa previsões do modelo, seleção de tokens e condições de término.
+O exemplo NumPy usa logits e transições sintéticas para medir entropia,
+frequências amostrais, suporte após top-k/top-p e reprodução com seed.
+Os testes verificam a ordem dos filtros, desempates, estabilidade numérica,
+EOS, stops entre fragmentos e limites de tokens. Não houve avaliação de LLM,
+qualidade factual ou desempenho de serving. O registro JSON fica ignorado.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 
