@@ -26,7 +26,8 @@ bounded experiments, not production deployments.
 [Deep Learning](04-deep-learning/) begins with perceptrons, nonlinear hidden
 representations and explicit backpropagation, separating capacity, gradients,
 fitting and generalization. [NLP, Transformers and LLMs](05-transformers-llms/)
-opens with classical text representations, information loss and lexical features.
+connects text representations, attention and training objectives to decoding,
+prompt evaluation and structured-output contracts, with bounded synthetic studies.
 
 - Latest topic: [Day 77 — Structured Outputs](05-transformers-llms/77-structured-outputs/)
 - Latest module with implemented studies: [NLP, Transformers and LLMs](05-transformers-llms/) — 15 of 15 topics implemented; interpretation review pending
@@ -50,6 +51,8 @@ is documented separately.
 | What does a ranking score leave out? | [Ranking metrics](02-unsupervised-recommender-systems/44-ranking-metrics/) | Tested item-ID metrics, denominator policies and candidate-universe controls. Candidate-conditioned NDCG does not measure retrieval recall. |
 | Can adjustment repair weak overlap? | [Propensity score and matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Matching, weighting, balance, retention and ESS on synthetic data. Algebraic correctness does not establish causal identification. |
 | What turns a batch into an update and a held-out score? | [PyTorch training loop](04-deep-learning/62-pytorch-training-loop/) | Explicit gradients, weighted batch losses, copied checkpoints and validation-only selection. One synthetic configuration, not a model ranking; interpretation review pending. |
+| Does teacher-forced accuracy describe free-running generation? | [Transformer architecture I](05-transformers-llms/67-transformer-architecture-i/) | Disjoint synthetic reversal sequences, shifted targets and separate evaluation modes. Token accuracy and sequence exact match answer different questions; no translation benchmark; interpretation review pending. |
+| Is a valid structured response safe to consume? | [Structured outputs](05-transformers-llms/77-structured-outputs/) | Tested parsing, types, arithmetic and reference gates; separate toy permission and retry controls. A valid contract is not truth or authorization; no provider or production evaluation; interpretation review pending. |
 
 For a short visit, read the selected study's question and limitations, then
 inspect its code and tests. For the full curriculum, use the inventory below.
@@ -141,9 +144,9 @@ and [Rio Airbnb geospatial ML study](https://github.com/ivanfborges/eng_dados-an
 | 71 | [Encoder-only, Decoder-only and Encoder-Decoder Models](05-transformers-llms/71-encoder-decoder-models/) | Tested NumPy attention and shifted inputs; paired CPU PyTorch causal/bidirectional controls, source-conditioned targets and padding isolation; random synthetic blocks, no training or language benchmark; interpretation review pending |
 | 72 | [Tokenization for LLMs](05-transformers-llms/72-tokenization/) | Tested educational BPE ranks, real byte-BPE IDs/Unicode round trips and context/cost arithmetic; eight synthetic probes across two explicit encodings, no language-quality or billing benchmark; interpretation review pending |
 | 73 | [LLM Pretraining](05-transformers-llms/73-llm-pretraining/) | Tested CLM/MLM and NumPy gradients; separate CPU visual lab with 9 GIFs, 10 PNGs, 12 offline HTMLs, measured training/embeddings/attention, prefix-only leakage controls and analytical scale/compute; interpretation review pending |
-| 74 | [Fine-Tuning, Instruction Tuning and Alignment](05-transformers-llms/74-fine-tuning-alignment/) | Tested DPO gradients, response masks, frozen reference and LoRA merge; synthetic CPU response-selector SFT/DPO with separate task/preference metrics; no LLM or human-feedback evaluation; interpretation review pending |
-| 75 | [LLM Inference and Decoding](05-transformers-llms/75-llm-inference-decoding/) | Tested NumPy temperature/top-k/top-p, seeded sampling and EOS/text-stop/token-budget contracts; synthetic entropy, candidate-support and sequence controls; no real-model quality or serving benchmark; interpretation review pending |
-| 76 | [Prompt Engineering with Rigor](05-transformers-llms/76-prompt-engineering/) | Three inspectable prompt versions; tested strict output validation, reference scoring and bounded retries on authored synthetic responses; no LLM comparison; interpretation review pending |
+| 74 | [Fine-Tuning, Instruction Tuning and Alignment](05-transformers-llms/74-fine-tuning-alignment/) | Tested DPO gradients, response masks, frozen reference and LoRA merge; separate CPU visual lab with reward/KL controls, adapters, quantization simulation, forgetting and proxy failures; no LLM or human-feedback evaluation; interpretation review pending |
+| 75 | [LLM Inference and Decoding](05-transformers-llms/75-llm-inference-decoding/) | Tested NumPy sampling and termination contracts; separate offline lab with synthetic probabilities, greedy/beam enumeration and theoretical cache controls; selected previews, no real-model quality or serving benchmark; interpretation review pending |
+| 76 | [Prompt Engineering with Rigor](05-transformers-llms/76-prompt-engineering/) | Three inspectable prompts; tested strict validation, reference scoring and retries on authored responses; separate synthetic visual lab, offline replay and opt-in provider adapter; no executed LLM comparison claimed; interpretation review pending |
 | 77 | [Structured Outputs](05-transformers-llms/77-structured-outputs/) | Tested strict contracts and validation gates; 13-demo CPU visual lab with 6 GIFs, 4 PNGs and 8 offline HTMLs: toy grammar, masking, coercion, actual funnels, retry Monte Carlo and permission controls; no provider evaluation; interpretation review pending |
 
 ## Roadmap

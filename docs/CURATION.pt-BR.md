@@ -86,6 +86,27 @@ fora desta fila. A raiz acrescenta o Dia 62 como nona pergunta de entrada,
 preservando inventário e roadmap. Autorização para editar e testes aprovados
 não promovem candidatos a conclusões pessoais.
 
+## Fila de revisão de NLP, Transformers e LLMs — 26/11/2026
+
+Sob autorização para concluir o plano de revisão do módulo, o assistente de IA
+confrontou as implementações analíticas locais e os registros datados abaixo.
+**Esta é curadoria técnica do assistente, não análise pessoal ou aprovação do
+autor.** Medições, configurações e estados de interpretação históricos foram
+preservados. Os testes automatizados são evidência separada; os treinamentos
+históricos não foram repetidos para esta atualização documental.
+
+| Estudo | Pergunta e registro | Limite técnico preservado | Responsável / estado |
+|---|---|---|---|
+| 67 | [Acurácia com teacher forcing descreve geração livre?](../05-transformers-llms/67-transformer-architecture-i/notes.md#execution-record--2026-11-25) | A execução fixa de inversão sintética tem acurácia de tokens diferente, mas exact match de sequência igual nos dois modos. Sequências distintas não estabelecem tradução, generalização de comprimento ou ranking; a causa dos erros individuais não foi investigada. | Autor: adotar, restringir ou reescrever a interpretação das duas métricas; pendente. |
+| 73 | [Loss de CLM e MLM permite ranquear objetivos de pré-treino?](../05-transformers-llms/73-llm-pretraining/notes.md#execution-record--2026-11-25) | Visibilidade, posições avaliadas e referências de entropia diferem. O split por combinações excluídas muda o suporte empírico; o gap treino/validação não identifica memorização por si só. Não houve teste independente ou avaliação em texto real. | Autor: revisar interpretação da referência entrópica e generalização; pendente. |
+| 77 | [O que uma saída estruturada válida ainda não garante?](../05-transformers-llms/77-structured-outputs/notes.md#execution-record--2026-11-26) | Fixtures separam parsing, tipos, aritmética e referência exata; a referência sintética conhecida é um oracle excepcionalmente forte. O [registro visual separado](../05-transformers-llms/77-structured-outputs/VISUAL_LAB.md#execution-record--2026-11-26) acrescenta controles didáticos de permissão e modelos assumidos de retry, não garantia operacional de autorização ou confiabilidade. | Autor: revisar a fronteira entre contrato, evidência factual, retries e permissão; pendente. |
+
+A raiz acrescenta os Dias 67 e 77 como duas perguntas complementares. O Dia 73
+permanece nesta fila e no inventário completo. Seleção não é endosso pessoal;
+outros estudos, interpretações visuais separadas e novas medições conservam
+seus próprios estados de revisão. Testes aprovados e autorização para editar
+não promovem esses candidatos em lote a conclusões pessoais.
+
 ## Seleção
 
 As cinco entradas cobrem ciclo de ML (16), fronteiras de avaliação (17), premissas

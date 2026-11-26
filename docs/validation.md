@@ -139,6 +139,88 @@ integration work. These are dated execution durations, not a CI prediction or
 equal-coverage speed benchmark. Subsequent focused checks must report their
 own changed scope rather than relabeling this baseline as a new full run.
 
+### Daily NLP, Transformers and LLMs checks
+
+For Days 63–77, use an analytical test file for a routine numerical edit rather
+than exporting an entire topic gallery. To run the complete analytical set,
+install `.[dev,deep-learning,nlp]`; individual topics may need fewer extras.
+Day 72's analytical tests require the prepared real-encoding resources described
+above. WordNet is required by Day 63's visual morphology, not its analytical
+file. Do not download or install anything during a test just to hide a missing
+prerequisite.
+
+Use the repository-relative path of the linked file as `--scope`. Each selected
+file still runs in its own process:
+
+| Day | Analytical checks for routine iteration |
+|---:|---|
+| 63 | [test_classical_nlp.py](../05-transformers-llms/63-classical-nlp/tests/test_classical_nlp.py) |
+| 64 | [test_tfidf.py](../05-transformers-llms/64-bow-tfidf-text-similarity/tests/test_tfidf.py) |
+| 65 | [test_embeddings.py](../05-transformers-llms/65-static-embeddings/tests/test_embeddings.py) |
+| 66 | [test_attention.py](../05-transformers-llms/66-attention-mechanism/tests/test_attention.py) |
+| 67 | [test_transformer_architecture.py](../05-transformers-llms/67-transformer-architecture-i/tests/test_transformer_architecture.py) |
+| 68 | [test_multi_head_attention.py](../05-transformers-llms/68-transformer-architecture-ii/tests/test_multi_head_attention.py) |
+| 69 | [test_positional_encoding.py](../05-transformers-llms/69-positional-encoding/tests/test_positional_encoding.py) |
+| 70 | [test_transformer_components.py](../05-transformers-llms/70-transformer-ffn-residual-norm/tests/test_transformer_components.py) |
+| 71 | [test_architectures.py](../05-transformers-llms/71-encoder-decoder-models/tests/test_architectures.py) |
+| 72 | [test_tokenization.py](../05-transformers-llms/72-tokenization/tests/test_tokenization.py) |
+| 73 | [test_pretraining.py](../05-transformers-llms/73-llm-pretraining/tests/test_pretraining.py) |
+| 74 | [test_alignment.py](../05-transformers-llms/74-fine-tuning-alignment/tests/test_alignment.py) |
+| 75 | [test_decoding.py](../05-transformers-llms/75-llm-inference-decoding/tests/test_decoding.py) |
+| 76 | [test_prompt_evaluation.py](../05-transformers-llms/76-prompt-engineering/tests/test_prompt_evaluation.py) |
+| 77 | [test_structured_outputs.py](../05-transformers-llms/77-structured-outputs/tests/test_structured_outputs.py) |
+
+For example, from the repository root:
+
+```powershell
+python scripts/validate_repo.py tests --scope 05-transformers-llms/63-classical-nlp/tests/test_classical_nlp.py
+python scripts/validate_repo.py tests --scope 05-transformers-llms/75-llm-inference-decoding/tests/test_decoding.py
+python scripts/validate_repo.py syntax
+python scripts/validate_repo.py links
+```
+
+To prepare a predictable ignored cache location in PowerShell, set it **before**
+running the resource-preparation command or tests:
+
+```powershell
+$env:TIKTOKEN_CACHE_DIR = "$PWD/.local/tiktoken"
+$env:NLTK_DATA = "$PWD/.local/nltk_data"
+```
+
+Changing the cache path does not populate it. Prepare resources explicitly
+while online using the commands above; subsequent offline checks must use that
+same populated location. These variables select data directories, not a Python
+interpreter; keep the intended isolated environment active. Other shells should
+set the equivalent environment variables using their own syntax.
+
+Choose additional checks according to the change:
+
+- Numerical visual logic: run the topic's visual-core file too. Such tests may
+  fit small CPU models; they are not guaranteed cheap because no GIF is saved.
+- App behavior: run the topic's AppTest file. Days 63, 64, 72 and 75 have direct
+  topic tests; the global `apps` registry does not automatically discover every
+  new `app.py` or `interactive_demo.py`. AppTest is not browser validation.
+- Export or presentation behavior: include the relevant rendering/export file,
+  preferably before requesting a full gallery. A directory scope includes all
+  its test files, including exports. `--exclude-rendering` is a partial selection,
+  not a no-compute mode.
+- Documentation only: syntax, links and diff review; exercise a changed command
+  proportionately rather than repeating historical training protocols.
+
+Day 76's [visual guide](../05-transformers-llms/76-prompt-engineering/VISUAL_LAB.md)
+separates simulation, offline replay and opt-in provider collection. Its tests
+use fixtures/fakes, not paid API requests. Do not enable real-provider mode to
+complete the repository test workflow.
+
+In the November 26 local review at `bf6edf3`, 1,170 module cases passed across
+48 isolated files: 605 analytical and 565 visual/app/export cases. The serial
+test commands took about 766 s including two AppTest-file retries after fixing
+the private offline harness's Windows-loopback restriction. The Day 70 export
+file took about 120 s and Day 77's about 77 s. These are dated observations with
+different coverage, not speed benchmarks or CI predictions. The full curriculum
+numerical suite was not repeated in that review. Keep complete tests and app
+smokes in CI; scoped daily checks do not replace that gate.
+
 ## What the runner establishes
 
 | Check | Contract | Boundary |

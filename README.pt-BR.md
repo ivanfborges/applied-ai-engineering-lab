@@ -22,6 +22,14 @@ e [NLP, Transformers e LLMs](05-transformers-llms/) (15/15).
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
+O módulo de [NLP, Transformers e LLMs](05-transformers-llms/) conecta
+representações de texto, atenção e objetivos de treino a decodificação,
+avaliação de prompts e contratos de saída estruturada. Os laboratórios separados
+dos Dias 74–75 incluem adaptação sintética, controles de preferências,
+decodificação e cache teórico; não medem qualidade de LLM ou serving real.
+O [guia visual do Dia 76](05-transformers-llms/76-prompt-engineering/VISUAL_LAB.md)
+distingue simulação, replay e adaptador opcional de provedor: implementação não
+é evidência de comparação executada com um modelo.
 O tópico mais recente é o [Dia 77 — Structured Outputs](05-transformers-llms/77-structured-outputs/).
 Ele conecta JSON Schema e validação estrita com Pydantic a regras aritméticas,
 comparação com referência e retries limitados. O laboratório visual separado tem
@@ -51,6 +59,8 @@ de escopo limitado estão identificadas no [registro de curadoria](docs/CURATION
 | O que uma métrica de ranking deixa de fora? | [Métricas de ranking](02-unsupervised-recommender-systems/44-ranking-metrics/) | Métricas por ID testadas, denominadores e universo de candidatos explícitos. NDCG condicionado aos candidatos não mede recall de recuperação. |
 | Ajustar resolve sobreposição fraca? | [Propensity score e matching](03-statistics-experimentation/50-causal-inference-ii-propensity-score-matching/) | Matching, pesos, balanceamento, retenção e ESS em dados sintéticos. Correção algébrica não estabelece identificação causal. |
 | Como um lote vira atualização e resultado fora do treino? | [Loop de treino PyTorch](04-deep-learning/62-pytorch-training-loop/) | Gradientes explícitos, médias ponderadas, checkpoints copiados e seleção só por validação. Uma configuração sintética, não um ranking; interpretação pendente. |
+| Acurácia com teacher forcing descreve geração livre? | [Arquitetura Transformer I](05-transformers-llms/67-transformer-architecture-i/) | Sequências sintéticas de inversão distintas, alvos deslocados e avaliação por modo. Acurácia de tokens e exact match de sequência respondem perguntas diferentes; sem benchmark de tradução; interpretação pendente. |
+| Uma saída estruturada válida pode ser consumida com segurança? | [Saídas estruturadas](05-transformers-llms/77-structured-outputs/) | Parsing, tipos, aritmética e referência testados; controles separados de permissão e retry didáticos. Contrato válido não é verdade nem autorização; sem avaliação de provedor ou produção; interpretação pendente. |
 
 Em uma visita curta, leia a pergunta e os limites do estudo e examine seu código
 e seus testes. Os materiais técnicos detalhados permanecem em inglês.

@@ -86,6 +86,28 @@ remain outside it. The root now adds Day 62 as a ninth technical entry question;
 the full inventory and roadmap are preserved. Permission to edit and passing
 tests do not promote any candidate to a personal conclusion.
 
+## NLP, Transformers and LLMs review queue — November 26, 2026
+
+Under authorization to complete the module review plan, the AI assistant
+compared the local analytical implementations and dated records below and
+prepared this selected queue. **This is assistant-performed technical curation,
+not the author's personal analysis or approval.** Historical measurements,
+configurations and interpretation statuses remain unchanged. Automated checks
+are separate evidence; none of these historical training runs was repeated for
+this documentation update.
+
+| Study | Question and record | Technical boundary retained | Decision owner / status |
+|---|---|---|---|
+| 67 | [Does teacher-forced accuracy describe free-running generation?](../05-transformers-llms/67-transformer-architecture-i/notes.md#execution-record--2026-11-25) | The fixed synthetic reversal run has different token accuracy but equal sequence exact match under the two evaluation modes. Disjoint sequences do not establish translation, length generalization or a model ranking; the cause of individual errors was not investigated. | Author: adopt, narrow or rewrite the interpretation of the two metrics; pending. |
+| 73 | [Can CLM and MLM loss values rank pretraining objectives?](../05-transformers-llms/73-llm-pretraining/notes.md#execution-record--2026-11-25) | Visibility, scored positions and entropy references differ. The excluded-combination split changes empirical support; the train/validation gap alone does not identify memorization. No independent test or real-text evaluation was performed. | Author: review the entropy-reference and generalization interpretation; pending. |
+| 77 | [What does a valid structured response still fail to guarantee?](../05-transformers-llms/77-structured-outputs/notes.md#execution-record--2026-11-26) | Fixtures separate parsing, types, arithmetic and exact reference gates; the known synthetic reference is an unusually strong oracle. The [separate visual record](../05-transformers-llms/77-structured-outputs/VISUAL_LAB.md#execution-record--2026-11-26) adds toy permission controls and assumed retry models, not a deployed authorization or reliability guarantee. | Author: review the boundary among contract, factual evidence, retries and permission; pending. |
+
+The root adds Days 67 and 77 as two complementary entry questions. Day 73 remains
+in this queue and the complete inventory. Selection is not personal endorsement;
+other studies, separate visual interpretations and future measurements retain
+their own review status. Do not promote these candidates in bulk because tests
+passed or editing was authorized.
+
 ## Selection
 
 The five entry points cover complementary questions: lifecycle (16), evaluation
