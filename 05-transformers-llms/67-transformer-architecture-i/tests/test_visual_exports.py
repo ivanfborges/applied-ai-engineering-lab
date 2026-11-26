@@ -74,9 +74,20 @@ def test_cli_skips_missing_training_explicitly(tmp_path):
     assert not (tmp_path / "checkpoints").exists()
 
 
-def test_cli_interactive_only_no_unrelated_training_or_raster(tmp_path):
+@pytest.mark.parametrize("reverse_html_order", [False, True])
+def test_cli_interactive_only_no_unrelated_training_or_raster(tmp_path, monkeypatch, reverse_html_order):
     folder = main(["--only", "positional_encoding", "--interactive", "--output-dir", str(tmp_path)])
-    assert [path.name for path in folder.glob("*.html")] == ["02_positional_encoding_3d.html", "index.html"]
+    original_glob = Path.glob
+
+    def ordered_glob(directory, pattern):
+        paths = list(original_glob(directory, pattern))
+        if directory == folder and pattern == "*.html":
+            paths.sort(key=lambda path: path.name, reverse=reverse_html_order)
+        return iter(paths)
+
+    # Exercise both filesystem enumeration orders after generating real files.
+    monkeypatch.setattr(Path, "glob", ordered_glob)
+    assert sorted(path.name for path in folder.glob("*.html")) == ["02_positional_encoding_3d.html", "index.html"]
     assert not list(folder.glob("*.gif"))
     assert not (tmp_path / "checkpoints").exists()
 
