@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**72 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 10 de NLP/Transformers/LLMs.** O roteiro
+**73 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 11 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,19 +18,21 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 10/15 estudos implementados; os Dias 73–77 seguem planejados.
+foi iniciado e tem 11/15 estudos implementados; os Dias 74–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 72 — Tokenization for LLMs](05-transformers-llms/72-tokenization/).
-Ele conecta BPE, WordPiece e SentencePiece aos limites de contexto, tamanho
-do vocabulário e custos hipotéticos. Inclui BPE educacional determinístico,
-comparação real dos encodings `cl100k_base` e `o200k_base`, reconstrução Unicode
-por bytes e cálculos testados de contexto, custo e parâmetros. Os oito probes
-são sintéticos; não houve avaliação de qualidade linguística, latência ou
-faturamento real. O registro datado separa observações desses limites.
-O JSON e os vocabulários em cache permanecem ignorados; nenhum preview foi criado.
+O tópico mais recente é o [Dia 73 — LLM Pretraining](05-transformers-llms/73-llm-pretraining/).
+Ele relaciona predição do próximo token e reconstrução de tokens mascarados com
+qualidade dos dados, número de parâmetros, exposição a tokens e compute aproximado.
+Inclui a implementação analítica e um laboratório visual separado com 9 GIFs,
+10 PNGs e 12 HTMLs locais: trajetórias reais de treino, probabilidades,
+embeddings/PCA e atenção, ablação de vazamento com avaliação apenas por prefixo,
+condições sintéticas de dados e simuladores analíticos de escala e compute.
+Os registros datados separam as fases e distinguem medições de estimativas;
+não houve ajuste de leis de escala ou avaliação de qualidade linguística.
+Exports, métricas e pesos permanecem ignorados, com seleção de previews pendente.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

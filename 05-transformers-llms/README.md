@@ -2,10 +2,10 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **10 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **11 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 73–77 remain planned in the roadmap, including pretraining,
-fine-tuning, inference, prompting and structured outputs.
+Days 74–77 remain planned in the roadmap, including fine-tuning,
+inference, prompting and structured outputs.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -19,6 +19,7 @@ fine-tuning, inference, prompting and structured outputs.
 | 70 | [Feed-Forward Networks, Residual Connections and Layer Normalization](70-transformer-ffn-residual-norm/) | Tested FFN/LayerNorm forward and VJP; eleven-group offline lab with nine GIFs, twelve interactive HTMLs, actual forward/backward traces, normalization/gating controls and paired CPU depth diagnostics; no training; author interpretation review required |
 | 71 | [Encoder-only, Decoder-only and Encoder-Decoder Models](71-encoder-decoder-models/) | Tested attention and target shifts; paired causal/bidirectional CPU blocks, source-conditioned targets and padding isolation on synthetic vectors; no training or language benchmark; author interpretation review required |
 | 72 | [Tokenization for LLMs](72-tokenization/) | Tested character BPE ranks, real byte-BPE IDs/Unicode reconstruction and hypothetical context/cost budgets; eight synthetic probes, no model quality or provider billing evaluation; author interpretation review required |
+| 73 | [LLM Pretraining](73-llm-pretraining/) | Tested CLM/MLM and explicit NumPy gradients; separate 31-artifact offline lab with actual probability/embedding/attention evolution, ten synthetic training scenarios, prefix-only leakage controls and analytical scale/compute; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -138,3 +139,24 @@ trained WordPiece/SentencePiece models, Unigram paths, Unicode, multilingual/OCR
 counts and token-safe chunking. No LLM API or language-quality benchmark was
 executed. Interpretations and preview selection require author review; generated
 exports, local models and full JSON traces stay ignored.
+
+Day 73 asks how self-supervision turns text into prediction targets and what
+training loss can establish. Its
+[dated analytical record](73-llm-pretraining/notes.md#execution-record--2026-11-25)
+reports CLM and MLM runs on twelve synthetic sentences with four reserved
+animal-food combinations, plus a separate NumPy bigram fit. Analytical entropy
+references explain nonzero training loss; token exposure and theoretical `6ND`
+accounting are separated from measured wall time. CLM/MLM losses are different
+objectives, not a capability ranking. No real-text benchmark or empirical
+scaling law is claimed; interpretations require author review and generated
+JSON records remain ignored.
+
+Its separate [visual guide](73-llm-pretraining/VISUAL_LAB.md) records new
+quick/full experiments on an expanded symbolic grammar, with pooled PCA,
+per-head attention from the actual models and measured data/capacity scenarios.
+The full ablation's unmasked accuracy changed from 99.06% with complete inputs
+to 30.31% with only the available prefix, versus 46.25% in both causal protocols.
+Nine GIFs, ten PNGs and twelve local HTMLs distinguish measured dynamics from
+assumed scaling surfaces and compute estimates. All generated artifacts remain
+ignored pending curation; no real-text or production conclusion is claimed,
+and interpretation remains pending author review.
