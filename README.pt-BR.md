@@ -6,30 +6,31 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**75 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 13 de NLP/Transformers/LLMs.** O roteiro
+**77 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 15 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
 
-São cinco módulos com todos os tópicos implementados:
+São seis módulos com todos os tópicos implementados:
 [Fundamentos](00-foundations/) (15/15),
 [ML clássico](01-classical-machine-learning/) (20/20),
 [Aprendizado não supervisionado e recomendação](02-unsupervised-recommender-systems/) (9/9),
-[Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
-e [Deep Learning](04-deep-learning/) (10/10).
-O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 13/15 estudos implementados; os Dias 76–77 seguem planejados.
+[Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8),
+[Deep Learning](04-deep-learning/) (10/10)
+e [NLP, Transformers e LLMs](05-transformers-llms/) (15/15).
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 75 — LLM Inference and Decoding](05-transformers-llms/75-llm-inference-decoding/).
-Ele separa previsões do modelo, seleção de tokens e condições de término.
-O exemplo NumPy usa logits e transições sintéticas para medir entropia,
-frequências amostrais, suporte após top-k/top-p e reprodução com seed.
-Os testes verificam a ordem dos filtros, desempates, estabilidade numérica,
-EOS, stops entre fragmentos e limites de tokens. Não houve avaliação de LLM,
-qualidade factual ou desempenho de serving. O registro JSON fica ignorado.
+O tópico mais recente é o [Dia 77 — Structured Outputs](05-transformers-llms/77-structured-outputs/).
+Ele conecta JSON Schema e validação estrita com Pydantic a regras aritméticas,
+comparação com referência e retries limitados. O laboratório visual separado tem
+13 demonstrações, com 6 GIFs, 4 PNGs e 8 HTMLs offline: gramática restrita, máscaras
+de tokens, coerção, funil de validação real, simulações de retry e autorização.
+O funil usa 108 respostas sintéticas; o Monte Carlo simula 100 mil requisições por
+modelo de falha. Quatro previews são selecionados para o portfólio; galerias e
+registros completos ficam ignorados. Não houve chamada a LLM ou ferramenta real
+nem avaliação de provider.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

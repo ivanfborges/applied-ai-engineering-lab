@@ -2,10 +2,9 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **13 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **15 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 76–77 remain planned in the roadmap, covering prompting
-and structured outputs.
+The following RAG module remains planned in the roadmap.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -22,6 +21,8 @@ and structured outputs.
 | 73 | [LLM Pretraining](73-llm-pretraining/) | Tested CLM/MLM and explicit NumPy gradients; separate 31-artifact offline lab with actual probability/embedding/attention evolution, ten synthetic training scenarios, prefix-only leakage controls and analytical scale/compute; author interpretation review required |
 | 74 | [Fine-Tuning, Instruction Tuning and Alignment](74-fine-tuning-alignment/) | Tested DPO derivatives, response masks and LoRA freezing/merge; separate 14-demo CPU visual lab with 13 GIFs, 21 PNGs and 14 offline HTMLs: reward/KL, matrix ranks, quantization simulation, forgetting and proxy failures; author interpretation review required |
 | 75 | [LLM Inference and Decoding](75-llm-inference-decoding/) | Tested NumPy temperature/top-k/top-p, stable ties and generation stops; synthetic frequencies, filtering interactions and seeded sequence controls; author interpretation review required |
+| 76 | [Prompt Engineering with Rigor](76-prompt-engineering/) | Three inspectable prompts; tested strict validation, fixed-denominator reference metrics and bounded retries on authored synthetic responses; no LLM comparison; author interpretation review required |
+| 77 | [Structured Outputs](77-structured-outputs/) | Tested contracts/gates; separate 13-demo CPU lab with 6 GIFs, 4 PNGs, 8 offline HTMLs: toy grammar, masks, actual 108-record funnel, strictness and 100k-request retry simulations; no provider evaluation; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -191,3 +192,31 @@ finite extreme logits and matches spanning synthetic fragments. This is an
 educational non-streaming decoder, without pretrained weights, tokenizer
 integration or model-quality/serving benchmarks. Interpretations require author
 review; the dated JSON remains ignored.
+
+Day 76 asks how prompt specifications become observable extraction behavior.
+Its [dated evaluator record](76-prompt-engineering/notes.md#execution-record--2026-11-26)
+reports strict parsing, typed validation, reference equality and complete-output
+coverage for nine hand-authored response fixtures. The separate retry control
+stops on a schema-valid wrong total. V1/V2/V3 are inspectable instructions, not
+evaluated model configurations; no prompt ranking, API cost/latency or injection
+robustness is claimed. Interpretations require author review; generated JSON
+records remain ignored.
+
+Day 77 asks which checks justify consuming a structured response. Its
+[dated analytical record](77-structured-outputs/notes.md#execution-record--2026-11-26)
+reports five scripted synthetic sequences with separate parsing, schema,
+arithmetic and reference gates. A fabricated but internally consistent invoice
+is rejected before any second attempt; malformed responses have a finite total
+call budget. A one-step NumPy mask renormalizes permitted token probabilities.
+No provider, real-document extraction or production guardrail system was
+evaluated. Interpretations require author review; the dated JSON stays ignored.
+
+Its separate [visual companion](77-structured-outputs/VISUAL_LAB.md) adds a
+finite-state toy grammar, layered validation of 108 authored responses, independent
+typing/extra-field controls and three seeded retry models with 100,000 synthetic
+requests each. Curves and surfaces distinguish theoretical reliability/cost from
+Monte Carlo observations. A valid synthetic tool proposal is independently
+denied permission. Four inspected image previews are selected; complete offline
+HTMLs and dated experiment records remain ignored. No real LLM, live tool,
+provider cost or production reliability was evaluated; interpretation review
+remains pending.

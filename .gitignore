@@ -42,6 +42,13 @@ data/processed/
 models/
 outputs/
 
+# Day 77: four inspected teaching previews; complete interactive galleries stay local.
+05-transformers-llms/77-structured-outputs/assets/*
+!05-transformers-llms/77-structured-outputs/assets/constrained_decoding.gif
+!05-transformers-llms/77-structured-outputs/assets/validation_funnel.png
+!05-transformers-llms/77-structured-outputs/assets/retry_reliability_surface.png
+!05-transformers-llms/77-structured-outputs/assets/production_guardrails_pipeline.gif
+
 # Day 75: three inspected visual previews; full galleries and records stay ignored.
 05-transformers-llms/75-llm-inference-decoding/assets/*
 !05-transformers-llms/75-llm-inference-decoding/assets/temperature_softmax.gif
