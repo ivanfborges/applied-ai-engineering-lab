@@ -35,13 +35,15 @@ of representation choices; Day 64 develops weighting and similarity further.
 ## Run from the repository root
 
 Use Python 3.11+ and the canonical dependencies in
-[pyproject.toml](../../pyproject.toml). No NLP model or corpus download is needed.
+[pyproject.toml](../../pyproject.toml). The analytical scripts and test file below
+need no NLP model or corpus download. The separate visual lab has additional
+resource requirements described below.
 
 ```powershell
 python -m pip install -e ".[dev]"
 python 05-transformers-llms/63-classical-nlp/from_scratch.py
 python 05-transformers-llms/63-classical-nlp/example.py
-python scripts/validate_repo.py tests --scope 05-transformers-llms/63-classical-nlp
+python scripts/validate_repo.py tests --scope 05-transformers-llms/63-classical-nlp/tests/test_classical_nlp.py
 python scripts/validate_repo.py syntax
 python scripts/validate_repo.py links
 ```

@@ -77,8 +77,9 @@ Production implications are bounded: output caps can truncate a structured
 response, filter order changes retained mass, and RNG replay differs from shared
 state. The cache plots use explicit theoretical work/storage assumptions plus
 a one-layer numerical check; they do not measure serving latency. No real-model
-or optional pretrained-model experiment is claimed. Interpretations and final
-publication require human review; root README evidence updates remain pending.
+or optional pretrained-model experiment is claimed. The root inventory includes
+both phases; interpretations remain pending human review. Preview selection
+does not approve scientific conclusions on the author's behalf.
 
 ### Selected previews
 

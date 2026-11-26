@@ -9,10 +9,14 @@ reference accuracy and complete-output coverage. This distinction matters when
 document extraction or RAG results feed downstream software: a valid JSON object
 can still contain an invented value.
 
-**Implemented:** offline synthetic fixtures, strict validation, reference scoring
-and a bounded retry demonstration. **No LLM was evaluated.** The bundled responses
+**Analytical study:** offline synthetic fixtures, strict validation, reference scoring
+and a bounded retry demonstration. **No LLM was evaluated in that study.** The bundled responses
 were deliberately written to exercise failures; they are not outputs of any prompt
 version. Interpretation candidates remain **author review required**.
+
+A [separate visual lab](VISUAL_LAB.md) explores explicit synthetic assumptions
+and can replay recorded evaluations. Its optional real-provider adapter is
+opt-in; its existence is not evidence of an executed LLM comparison.
 
 ## Inspect and execute
 
@@ -38,11 +42,11 @@ new UTC-dated JSON record under ignored `outputs/`, including Python version,
 input hashes, per-case scores and the explicit evidence type. It makes zero API
 requests, needs no credentials and measures no provider latency or cost.
 
-For tests, use the repository's canonical `dev` extra:
+For analytical tests, use the repository's canonical `dev` extra:
 
 ```powershell
 python -m pip install -e ".[dev]"
-python scripts/validate_repo.py tests --scope 05-transformers-llms/76-prompt-engineering
+python scripts/validate_repo.py tests --scope 05-transformers-llms/76-prompt-engineering/tests/test_prompt_evaluation.py
 python scripts/validate_repo.py syntax
 python scripts/validate_repo.py links
 ```
@@ -75,11 +79,29 @@ are non-null; it is a coverage diagnostic, not permission to accept the result.
 | [notes.md](notes.md) | Conditional generation, evaluation design, execution record and limitations |
 | [interview_questions.md](interview_questions.md) | Questions about generalization, contracts and failure policy |
 | [references.md](references.md) | Primary documentation and prompt-sensitivity research |
+| [VISUAL_LAB.md](VISUAL_LAB.md) | Offline simulation, replay, output policy and optional real-mode boundaries |
+
+## Separate visual lab
+
+From the repository root, with the same canonical dependencies installed:
+
+```powershell
+python 05-transformers-llms/76-prompt-engineering/visualize.py --help
+python 05-transformers-llms/76-prompt-engineering/visualize.py --experiment reliability --quick --seed 42
+```
+
+The second command creates a fresh ignored simulation directory, not model
+measurements. It needs no credentials or provider SDK. The [visual guide](VISUAL_LAB.md)
+describes the other demonstrations, replay and the explicit real-provider mode,
+which can incur charges and is never selected by these commands. No preview is
+selected for publication; generated galleries and records remain ignored.
 
 Prompt components specify intended behavior; evaluation must establish observed
 behavior. This example verifies the evaluator rather than ranking V1/V2/V3.
 Delimiters cannot enforce authorization, and retries cannot establish truth.
-Real-model comparisons, holdout evaluation, prompt ablations and provider-level
-structured generation remain proposed work. Day 77 covers structured outputs in
+The optional adapter can collect real-model comparisons, but no provider result
+is established by the analytical fixtures or synthetic visual scenarios.
+Holdout evaluation and provider-level structured generation remain proposed work.
+Day 77 covers structured outputs in
 greater depth. No production extraction, OCR, adversarial robustness or business
 impact is established by these fixtures.

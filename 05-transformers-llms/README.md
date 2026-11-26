@@ -10,7 +10,7 @@ The following RAG module remains planned in the roadmap.
 |---:|---|---|
 | 63 | [Classical NLP](63-classical-nlp/) | Tested Unicode/count core; separate 13-group offline visual lab with real NLTK morphology, local BPE, TF-IDF/SVD geometry, Counter language models and judged synthetic retrieval/OCR experiments; author interpretation review required |
 | 64 | [Bag of Words, TF-IDF and Text Similarity](64-bow-tfidf-text-similarity/) | Tested analytical TF-IDF/cosine; separate 18-section offline visual lab with true 3D vocabulary vectors, CSR bytes, BM25, query contributions, SVD, lexical RRF and judged synthetic retrieval; author interpretation review required |
-| 65 | [Word2Vec, GloVe and Static Embeddings](65-static-embeddings/) | Tested full-softmax CBOW/Skip-gram and GloVe gradients; synthetic cosine neighborhoods and analogy failures/successes; author interpretation review required |
+| 65 | [Word2Vec, GloVe and Static Embeddings](65-static-embeddings/) | Tested full-softmax CBOW/Skip-gram and GloVe gradients; separate visual lab with actual SGNS training, synthetic cosine neighborhoods and analogy failures/successes; author interpretation review required |
 | 66 | [Attention Mechanism](66-attention-mechanism/) | Tested Q/K/V attention, row normalization and masks; CPU PyTorch SDPA agreement, synthetic causal/value controls and seeded scaling experiment; author interpretation review required |
 | 67 | [Transformer Architecture I](67-transformer-architecture-i/) | Tested NumPy encoder-decoder composition, shifted targets and causal invariance; CPU PyTorch synthetic reversal with disjoint-sequence teacher-forced/autoregressive evaluation; author interpretation review required |
 | 68 | [Transformer Architecture II: Multi-Head Attention](68-transformer-architecture-ii/) | Tested NumPy/PyTorch parity; separate offline visual lab with 3D projection/QKV controls, ten GIFs, maps/graphs, diversity interventions, theoretical KV/complexity and CPU online softmax; author interpretation review required |
@@ -20,8 +20,8 @@ The following RAG module remains planned in the roadmap.
 | 72 | [Tokenization for LLMs](72-tokenization/) | Tested character BPE ranks, real byte-BPE IDs/Unicode reconstruction and hypothetical context/cost budgets; eight synthetic probes, no model quality or provider billing evaluation; author interpretation review required |
 | 73 | [LLM Pretraining](73-llm-pretraining/) | Tested CLM/MLM and explicit NumPy gradients; separate 31-artifact offline lab with actual probability/embedding/attention evolution, ten synthetic training scenarios, prefix-only leakage controls and analytical scale/compute; author interpretation review required |
 | 74 | [Fine-Tuning, Instruction Tuning and Alignment](74-fine-tuning-alignment/) | Tested DPO derivatives, response masks and LoRA freezing/merge; separate 14-demo CPU visual lab with 13 GIFs, 21 PNGs and 14 offline HTMLs: reward/KL, matrix ranks, quantization simulation, forgetting and proxy failures; author interpretation review required |
-| 75 | [LLM Inference and Decoding](75-llm-inference-decoding/) | Tested NumPy temperature/top-k/top-p, stable ties and generation stops; synthetic frequencies, filtering interactions and seeded sequence controls; author interpretation review required |
-| 76 | [Prompt Engineering with Rigor](76-prompt-engineering/) | Three inspectable prompts; tested strict validation, fixed-denominator reference metrics and bounded retries on authored synthetic responses; no LLM comparison; author interpretation review required |
+| 75 | [LLM Inference and Decoding](75-llm-inference-decoding/) | Tested NumPy temperature/top-k/top-p, stable ties and generation stops; separate offline lab with synthetic probability/sampling controls, beam enumeration and theoretical cache accounting; no real-model quality or serving benchmark; author interpretation review required |
+| 76 | [Prompt Engineering with Rigor](76-prompt-engineering/) | Three inspectable prompts and tested reference scoring/retries on authored responses; separate synthetic visual lab, offline replay and opt-in provider adapter; no executed LLM comparison claimed; author interpretation review required |
 | 77 | [Structured Outputs](77-structured-outputs/) | Tested contracts/gates; separate 13-demo CPU lab with 6 GIFs, 4 PNGs, 8 offline HTMLs: toy grammar, masks, actual 108-record funnel, strictness and 100k-request retry simulations; no provider evaluation; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
@@ -47,8 +47,10 @@ Day 65 asks whether context fitting guarantees useful vector geometry. Its
 reports all three objectives, original-dimensional cosine search and analogy
 rankings on 32 synthetic sentences. Low reconstruction loss and selected
 positive similarity margins did not establish useful neighborhoods in every
-case. Negative sampling remains theory only; no semantic benchmark or production
-retriever was evaluated.
+case. Negative sampling is not implemented in those analytical scripts. The
+separate [visual lab](65-static-embeddings/VISUAL_LAB.md) implements SGNS on a
+larger synthetic corpus and records its own configurations and results. Neither
+phase establishes a semantic benchmark or production retriever.
 
 Day 66 asks how compatibility scores become a weighted value representation.
 Its [dated analytical record](66-attention-mechanism/notes.md#execution-record--2026-11-24)
@@ -180,8 +182,8 @@ fitting, exact finite-policy optimization, DPO, LoRA/SVD, an implemented adapter
 uniform quantization, conflicting-task forgetting and reward misspecification.
 These visual configurations and records are separate from the analytical study.
 There is no natural-language, human-feedback, measured-memory or production
-benchmark. All generated assets stay ignored pending author curation; root
-overview updates and interpretation review remain pending.
+benchmark. All generated assets stay ignored pending author curation;
+interpretation review remains pending. The root inventory includes both phases.
 
 Day 75 asks how conditional token scores become a controlled output sequence.
 Its [dated analytical record](75-llm-inference-decoding/notes.md#execution-record--2026-11-26)
@@ -193,6 +195,12 @@ educational non-streaming decoder, without pretrained weights, tokenizer
 integration or model-quality/serving benchmarks. Interpretations require author
 review; the dated JSON remains ignored.
 
+Its separate [visual guide](75-llm-inference-decoding/VISUAL_LAB.md) covers
+probability/sampling controls, exhaustive comparison on a fixed beam-search tree
+and theoretical cache accounting. Selected previews are public; full exports stay
+ignored. These synthetic demonstrations do not measure real-model quality or
+serving performance.
+
 Day 76 asks how prompt specifications become observable extraction behavior.
 Its [dated evaluator record](76-prompt-engineering/notes.md#execution-record--2026-11-26)
 reports strict parsing, typed validation, reference equality and complete-output
@@ -201,6 +209,12 @@ stops on a schema-valid wrong total. V1/V2/V3 are inspectable instructions, not
 evaluated model configurations; no prompt ranking, API cost/latency or injection
 robustness is claimed. Interpretations require author review; generated JSON
 records remain ignored.
+
+The separate [visual guide](76-prompt-engineering/VISUAL_LAB.md) distinguishes
+synthetic simulation, offline replay and an explicit optional real-provider
+adapter. An adapter implementation or replay of fixtures is not an executed
+model comparison. No provider measurement is added by publishing the guide;
+all generated galleries and records remain ignored.
 
 Day 77 asks which checks justify consuming a structured response. Its
 [dated analytical record](77-structured-outputs/notes.md#execution-record--2026-11-26)
