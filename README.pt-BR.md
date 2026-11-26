@@ -6,7 +6,7 @@ Laboratório público de estudos de Ciência de Dados e IA aplicada, com apoio d
 IA na pesquisa, implementação e edição. Conecta teoria, código executável,
 experimentos sintéticos, visualizações e testes.
 
-**73 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 11 de NLP/Transformers/LLMs.** O roteiro
+**74 estudos implementados: 15 de fundamentos, 20 de ML clássico, 9 de aprendizado não supervisionado/recomendação, 8 de experimentação, 10 de deep learning e 12 de NLP/Transformers/LLMs.** O roteiro
 de 140 tópicos é um plano de aprendizado. As próximas áreas não são projetos
 já entregues. [Inventário completo em inglês](README.md#implemented-studies)
 e [roteiro](ROADMAP.md).
@@ -18,21 +18,19 @@ São cinco módulos com todos os tópicos implementados:
 [Experimentação, causalidade e produto](03-statistics-experimentation/) (8/8)
 e [Deep Learning](04-deep-learning/) (10/10).
 O sexto módulo, [NLP, Transformers e LLMs](05-transformers-llms/),
-foi iniciado e tem 11/15 estudos implementados; os Dias 74–77 seguem planejados.
+foi iniciado e tem 12/15 estudos implementados; os Dias 75–77 seguem planejados.
 
 Os estudos conectam implementação numérica, avaliação sem vazamento,
 representações, ranking e decisões sob incerteza. Incluem experimentos
 delimitados e código didático testado, não implantações em produção.
-O tópico mais recente é o [Dia 73 — LLM Pretraining](05-transformers-llms/73-llm-pretraining/).
-Ele relaciona predição do próximo token e reconstrução de tokens mascarados com
-qualidade dos dados, número de parâmetros, exposição a tokens e compute aproximado.
-Inclui a implementação analítica e um laboratório visual separado com 9 GIFs,
-10 PNGs e 12 HTMLs locais: trajetórias reais de treino, probabilidades,
-embeddings/PCA e atenção, ablação de vazamento com avaliação apenas por prefixo,
-condições sintéticas de dados e simuladores analíticos de escala e compute.
-Os registros datados separam as fases e distinguem medições de estimativas;
-não houve ajuste de leis de escala ou avaliação de qualidade linguística.
-Exports, métricas e pesos permanecem ignorados, com seleção de previews pendente.
+O tópico mais recente é o [Dia 74 — Fine-Tuning, Instruction Tuning and Alignment](05-transformers-llms/74-fine-tuning-alignment/).
+Ele separa os objetivos SFT/DPO dos mecanismos de adaptação LoRA/adapters e
+discute RLHF, instruction tuning, QLoRA e quando ajustar parâmetros faz sentido.
+O exemplo em CPU usa um seletor sintético de quatro categorias de resposta,
+com métricas distintas de tarefa, preferência e divergência da referência SFT.
+Os testes verificam gradientes DPO, máscaras de resposta, pesos congelados,
+fusão LoRA e reprodução determinística. Não houve treino de LLM, avaliação
+com feedback humano ou benchmark de memória/velocidade. O registro JSON fica ignorado.
 A revisão das interpretações pelo autor está pendente.
 Os módulos 6–11 continuam planejados; o inventário em inglês detalha cada estudo.
 

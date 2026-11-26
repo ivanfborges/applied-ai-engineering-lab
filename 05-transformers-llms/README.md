@@ -2,10 +2,10 @@
 
 [Repository overview](../README.md) · [Full roadmap](../ROADMAP.md)
 
-Module 5 spans global Days 63–77. **11 of 15 studies are implemented.**
+Module 5 spans global Days 63–77. **12 of 15 studies are implemented.**
 Author interpretation review remains pending; implementation is not approval.
-Days 74–77 remain planned in the roadmap, including fine-tuning,
-inference, prompting and structured outputs.
+Days 75–77 remain planned in the roadmap, covering inference, prompting
+and structured outputs.
 
 | Day | Implemented study | Evidence and review status |
 |---:|---|---|
@@ -20,6 +20,7 @@ inference, prompting and structured outputs.
 | 71 | [Encoder-only, Decoder-only and Encoder-Decoder Models](71-encoder-decoder-models/) | Tested attention and target shifts; paired causal/bidirectional CPU blocks, source-conditioned targets and padding isolation on synthetic vectors; no training or language benchmark; author interpretation review required |
 | 72 | [Tokenization for LLMs](72-tokenization/) | Tested character BPE ranks, real byte-BPE IDs/Unicode reconstruction and hypothetical context/cost budgets; eight synthetic probes, no model quality or provider billing evaluation; author interpretation review required |
 | 73 | [LLM Pretraining](73-llm-pretraining/) | Tested CLM/MLM and explicit NumPy gradients; separate 31-artifact offline lab with actual probability/embedding/attention evolution, ten synthetic training scenarios, prefix-only leakage controls and analytical scale/compute; author interpretation review required |
+| 74 | [Fine-Tuning, Instruction Tuning and Alignment](74-fine-tuning-alignment/) | Tested DPO derivatives, response masks and LoRA freezing/merge; separate 14-demo CPU visual lab with 13 GIFs, 21 PNGs and 14 offline HTMLs: reward/KL, matrix ranks, quantization simulation, forgetting and proxy failures; author interpretation review required |
 
 Day 63 asks which textual differences a representation should preserve. Its
 [notes and dated analytical record](63-classical-nlp/notes.md) distinguish exact
@@ -160,3 +161,22 @@ Nine GIFs, ten PNGs and twelve local HTMLs distinguish measured dynamics from
 assumed scaling surfaces and compute estimates. All generated artifacts remain
 ignored pending curation; no real-text or production conclusion is claimed,
 and interpretation remains pending author review.
+
+Day 74 asks when behavior adaptation warrants changing model parameters. Its
+[dated analytical record](74-fine-tuning-alignment/notes.md#execution-record--2026-11-25)
+reports SFT and DPO using the same low-rank update on a synthetic response
+selector, with independent training/evaluation inputs and a frozen SFT reference.
+Task accuracy, chosen probability, preference margins and KL are reported
+separately. That analytical example does not evaluate natural-language instruction
+generalization, PPO or actual QLoRA. Interpretations require author review;
+the original generated JSON stays ignored.
+
+Its separate [visual guide](74-fine-tuning-alignment/VISUAL_LAB.md) maps fourteen
+demos to actual synthetic training, analytical objectives and theoretical storage.
+Thirteen GIFs, twenty-one PNGs and fourteen offline HTMLs show reward-model
+fitting, exact finite-policy optimization, DPO, LoRA/SVD, an implemented adapter,
+uniform quantization, conflicting-task forgetting and reward misspecification.
+These visual configurations and records are separate from the analytical study.
+There is no natural-language, human-feedback, measured-memory or production
+benchmark. All generated assets stay ignored pending author curation; root
+overview updates and interpretation review remain pending.
